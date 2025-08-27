@@ -1,23 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://triaduct.github.io/offshoregeotechnics/guide.html</loc>
-    <lastmod>2025-08-27T10:28:43.213Z</lastmod>
+    <loc>https://triaduct.github.io/offshoregeotechnics/learning-objectives.html</loc>
+    <lastmod>2025-08-27T12:18:08.011Z</lastmod>
   </url>
   <url>
-    <loc>https://triaduct.github.io/offshoregeotechnics/learning-objectives.html</loc>
-    <lastmod>2025-08-27T10:28:43.213Z</lastmod>
+    <loc>https://triaduct.github.io/offshoregeotechnics/notes/1_intro.html</loc>
+    <lastmod>2025-08-27T12:18:08.011Z</lastmod>
+  </url>
+  <url>
+    <loc>https://triaduct.github.io/offshoregeotechnics/notes/3-2_geophysical-investigation.html</loc>
+    <lastmod>2025-08-27T12:18:08.011Z</lastmod>
   </url>
   <url>
     <loc>https://triaduct.github.io/offshoregeotechnics/schedule.html</loc>
-    <lastmod>2025-08-27T10:28:43.214Z</lastmod>
+    <lastmod>2025-08-27T12:18:08.178Z</lastmod>
   </url>
   <url>
     <loc>https://triaduct.github.io/offshoregeotechnics/readme.html</loc>
-    <lastmod>2025-08-27T10:28:43.213Z</lastmod>
+    <lastmod>2025-08-27T12:18:08.178Z</lastmod>
   </url>
   <url>
     <loc>https://triaduct.github.io/offshoregeotechnics/resources.html</loc>
-    <lastmod>2025-08-27T10:28:43.214Z</lastmod>
+    <lastmod>2025-08-27T12:18:08.178Z</lastmod>
+  </url>
+  <url>
+    <loc>https://triaduct.github.io/offshoregeotechnics/guide.html</loc>
+    <lastmod>2025-08-27T12:18:08.011Z</lastmod>
+  </url>
+  <url>
+    <loc>https://triaduct.github.io/offshoregeotechnics/notes/3-3_geotechnical-investigation.html</loc>
+    <lastmod>2025-08-27T12:18:08.011Z</lastmod>
+  </url>
+  <url>
+    <loc>https://triaduct.github.io/offshoregeotechnics/notes/3-1_site-investigation.html</loc>
+    <lastmod>2025-08-27T12:18:08.011Z</lastmod>
+  </url>
+  <url>
+    <loc>https://triaduct.github.io/offshoregeotechnics/notes/2_marine-geology.html</loc>
+    <lastmod>2025-08-27T12:18:08.011Z</lastmod>
   </url>
 </urlset>
