@@ -5,7 +5,10 @@ project:
   
 website:
   title: "CIEM 2301: Offshore Geotechnics"
-  site-url: https://offshoregeotechnics.github.io
+  site-url: https://triaduct.github.io/offshoregeotechnics
+  comments:
+    giscus: 
+      repo: triaduct/offshoregeotechnics
   sidebar:
     style: "docked"
     search: true
