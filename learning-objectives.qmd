@@ -1,0 +1,13 @@
+---
+title: "Learning Objectives"
+format: html
+---
+
+# Learning objectives
+After this course, students are expected to:
+
+- Describe the geotechnical challenges unique to offshore environments.
+- Design a suitable foundation system for an offshore wind turbine according to the latest axial and lateral pile capacity models
+- Critically assess the reliability of different site investigation techniques in offshore settings.
+- Evaluate the suitability of a foundation concept for a given offshore wind farm
+- Develop a risk mitigation strategy for offshore geohazards

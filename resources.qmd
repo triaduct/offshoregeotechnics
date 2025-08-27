@@ -1,0 +1,20 @@
+---
+title: "Resources"
+format: html
+---
+
+Lecture notes and some recommended resources are also included on Brightspace directly.  
+## Other resources
+
+### Python packages
+
+### Websites
+
+### Books
+- Randolph
+- Dean
+
+
+* Gouvernec dashboard
+* Bruno Stuyts
+* 4c offshore

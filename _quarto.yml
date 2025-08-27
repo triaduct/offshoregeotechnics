@@ -1,0 +1,94 @@
+project:
+  type: website
+  title: "Offshore Geotechnics"
+  output-dir: _output
+  
+website:
+  title: "CIEM 2301: Offshore Geotechnics"
+  site-url: https://offshoregeotechnics.github.io
+  sidebar:
+    style: "docked"
+    search: true
+    reader-mode: true
+    contents:
+      - text: "🏠 Home"
+        href: readme.md
+      - section: "ℹ️ Course info"
+        # schedule
+        # Learning objectives
+        contents:
+          - text: "Learning objectives"
+            href: learning-objectives.qmd
+          - text: "Schedule"
+            href: schedule.qmd
+          - text: "Guide"
+            href: guide.md
+          - text: "Resources"
+            href: resources.qmd
+            
+      - section: "📚 Course notes"
+        contents:
+          - href: notes/1_intro.ipynb
+          - href: notes/2_marine-geology.ipynb
+          - section: "Site investigation"
+            contents:
+              - text: "Overview"
+                href: notes/3-1_site-investigation.ipynb
+              - text: "Geophysical investigation"
+                href: notes/3-2_geophysical-investigation.ipynb
+              - text: "Intrusive investigation"
+                href: notes/3-3_geotechnical-investigation.ipynb
+          - section: "Axial response of piles in sand"
+            contents:
+              - href: notes/4_mechanisms-sand.ipynb
+              - href: notes/5_axial-design-sand.ipynb
+          - section: "Axial response of piles in clay"
+            contents:
+              - href: notes/6_mechanisms-clay.ipynb
+              - href: notes/7_axial-design-clay.ipynb
+          - section: "Pile installation"
+            contents:
+              - href: notes/8-1_pile-driveability.ipynb
+              - href: notes/8-2_challenging-soils.ipynb
+          - section: "Shallow foundations"
+            contents:
+              - href: notes/shallow-foundations.ipynb
+              - href: notes/interaction-diagram.qmd   # The Shiny app
+       # - section: "🛠️ Resources" 
+           # General resources
+           # Guide to quarto
+           # Guide to Python/Jupyter
+           # 
+       
+
+  # navbar:
+  #   background: primary
+  # page-footer:
+  #   background: light
+  #   left: "Copyright 2025, MY INSTITUTION"
+
+biliography: bibliography.bib
+
+format:
+  html:
+    author: "[Kevin Duffy](https://www.tudelft.nl/en/staff/k.duffy/)"
+    author-meta: "Kevin Duffy"
+    
+    date: today
+    date-modified: last-modified
+    date-format: "DD MMMM YYYY"
+
+    email-obfuscation: javascript
+    link-external-newwindow: true
+    link-external-icon: true
+    link-external-filter: ^(?:http:|https:)\/\/(?:lse-dsi\.github\.io\/|localhost)  
+
+    theme:
+      light: flatly
+      dark: darkly
+    css: styles.css
+    toc: true
+    code-fold: true
+    code-summary: "Show the code"
+    warning: false
+    lightbox: true
