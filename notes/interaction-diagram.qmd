@@ -1,0 +1,91 @@
+---
+title: "App: Interaction Diagram"
+format: html
+filters:
+  - shinylive
+---
+
+This is an implementation of the model by Vulpe et al. (2014), who developed a generalised interaction model based on a set of 3D finite element tests on linear-elastic--perfectly plastic soil. 
+
+The model focusses on the $H-M$ space, where both $H$ and $M$ are normalised by the vertical load to account for the interaction between combined vertical and horizontal loading as well as combined vertical and moment loading. 
+
+
+```{shinylive-python}
+#| standalone: true
+#| viewerHeight: 700
+
+from shiny import App, render, ui
+import numpy as np
+import matplotlib.pyplot as plt
+
+def vulpe_2014_hm_plane(v, D, d, su_mudline, k):
+    """
+    Returns the failure surface in terms of h/h_star and m/m_star
+    """
+    # === Derived parameters ===
+    su0 = su_mudline + k*d
+    embedment_ratio = d / D
+
+    # === Normalised load space ===
+    n = 1000  # higher resolution for better contours
+    h = np.linspace(-2, 2, n)
+    m = np.linspace(-2, 2, n)
+    h_grid, m_grid = np.meshgrid(h, m, indexing='ij')
+
+    # === Fitting functions ===
+    q = 4.69
+    p = 2.12
+    h_star = 1 - v**q
+    m_star = 1 - v**p
+
+    alpha = 2.28 - 1.03 * embedment_ratio if v > 0.5 else 2.55 - 1.43 * embedment_ratio
+    beta  = 0.05 - 1.15 * embedment_ratio if v > 0.5 else -0.09 - 0.88 * embedment_ratio
+
+    # === Failure function ===
+    vals = (np.abs(h_grid / h_star) ** alpha
+            + (m_grid / m_star) ** alpha
+            + 2 * beta * ((h_grid * m_grid) / (h_star * m_star)))
+
+    # === Extract points near failure surface ===
+    tolerance = 0.001
+    mask = np.abs(vals - 1) < tolerance
+    h_vals = h_grid[mask]/h_star
+    m_vals = m_grid[mask]/m_star
+
+    return h_vals, m_vals
+
+app_ui = ui.page_fluid(
+    ui.layout_sidebar(
+        ui.sidebar(
+            ui.input_slider("v", "Normalised vertical load (-)", min=0, max=0.99, value=0.5, step=0.05),
+            ui.input_slider("D", "Diameter (m)", min=5, max=30, value=10, step=1),
+            ui.input_slider("d", "Embedment (m)", min=0, max=10, value=0.5, step=1),
+            ui.input_slider("su_mudline", "Undrained shear strength at mudline (kPa)", min=5, max=100, value=30, step=5),
+            ui.input_slider("k", "Undrained shear strength gradient (kPa/m)", min=0, max=5, value=0, step=1),
+        ),
+        ui.output_plot("plot"),
+    ),
+)
+
+
+def server(input, output, session):
+    @output
+    @render.plot(alt="Sine wave")
+    
+    def plot():
+        x,y = vulpe_2014_hm_plane(input.v(), input.D(), input.d(), input.su_mudline(), input.k())
+
+        fig, ax = plt.subplots()
+        ax.plot(x,y)
+        
+        ax.axvline(0,c="k",lw=0.5)
+        ax.set_xlim(-1,1.5)
+        ax.set_ylim(0,1.5)
+        ax.set_xlabel("Normalised horizontal load $h \slash h^*$")
+        ax.set_ylabel("Normalised moment load $m \slash m^*$")
+        return fig
+
+app = App(app_ui, server)
+
+
+```
