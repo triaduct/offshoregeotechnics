@@ -58,7 +58,7 @@ website:
           - section: "Shallow foundations"
             contents:
               - href: notes/shallow-foundations.ipynb
-              - href: notes/interaction-diagram.qmd   # The Shiny app
+              # - href: playground/interaction-diagram.qmd   # The Shiny app
        # - section: "🛠️ Resources" 
            # General resources
            # Guide to quarto
