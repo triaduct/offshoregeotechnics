@@ -92,3 +92,6 @@ format:
     code-summary: "Show the code"
     warning: false
     lightbox: true
+    
+execute:
+  freeze: auto   # Ensures Python scripts are only executed locally and not by github pages
