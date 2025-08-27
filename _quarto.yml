@@ -9,7 +9,7 @@ website:
   comments:
     giscus: 
       repo: triaduct/offshoregeotechnics
-      repod-id: "R_kgDOPlCh8A"
+      repo-id: "R_kgDOPlCh8A"
       category-id: "DIC_kwDOPlCh8M4CuqJo"
   sidebar:
     style: "docked"
