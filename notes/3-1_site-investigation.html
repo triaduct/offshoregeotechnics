@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Kevin Duffy">
-<meta name="dcterms.date" content="2025-08-27">
+<meta name="dcterms.date" content="2025-08-28">
 
 <title>Site investigation – CIEM 2301: Offshore Geotechnics</title>
 <style>
@@ -450,10 +450,10 @@ div.csl-indent {
   <li><a href="#desk-study" id="toc-desk-study" class="nav-link active" data-scroll-target="#desk-study">Desk study</a></li>
   <li><a href="#geohazards" id="toc-geohazards" class="nav-link" data-scroll-target="#geohazards">Geohazards</a></li>
   <li><a href="#other-surveys" id="toc-other-surveys" class="nav-link" data-scroll-target="#other-surveys">Other surveys</a></li>
-  <li><a href="#integrated-ground-model-igm" id="toc-integrated-ground-model-igm" class="nav-link" data-scroll-target="#integrated-ground-model-igm">Integrated ground model (IGM)</a></li>
-  <li><a href="#integrated-ground-modelling-igm" id="toc-integrated-ground-modelling-igm" class="nav-link" data-scroll-target="#integrated-ground-modelling-igm">Integrated Ground Modelling (IGM)</a></li>
-  <li><a href="#interpolation-methods" id="toc-interpolation-methods" class="nav-link" data-scroll-target="#interpolation-methods">Interpolation methods</a></li>
-  <li><a href="#integrating-geotechnical-and-geophysical-data" id="toc-integrating-geotechnical-and-geophysical-data" class="nav-link" data-scroll-target="#integrating-geotechnical-and-geophysical-data">Integrating geotechnical and geophysical data</a></li>
+  <li><a href="#integrated-ground-modelling-igm" id="toc-integrated-ground-modelling-igm" class="nav-link" data-scroll-target="#integrated-ground-modelling-igm">Integrated ground modelling (IGM)</a>
+  <ul class="collapse">
+  <li><a href="#interpolating-soil-properties" id="toc-interpolating-soil-properties" class="nav-link" data-scroll-target="#interpolating-soil-properties">Interpolating soil properties</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -480,14 +480,14 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">27 August 2025</p>
+      <p class="date">28 August 2025</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">27 August 2025</p>
+      <p class="date-modified">28 August 2025</p>
     </div>
   </div>
     
@@ -505,7 +505,7 @@ div.csl-indent {
 <li>Seabed geotechnical survey</li>
 <li>Deep penetration survey</li>
 </ol>
-<p>These are then combined into a ground model <strong>[…]</strong></p>
+<p>These are then combined into a ground model, giving recommendations to designers regarding the likely layering and geotechnical parameters.</p>
 <div id="fig-ijmuiden-ver-studies" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ijmuiden-ver-studies-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -516,7 +516,7 @@ Figure&nbsp;1: Site investigation studies and investigations at IJmuiden Ver, Du
 </figcaption>
 </figure>
 </div>
-<p>In some ways, the process is similar to the onshore investigation–particularly with the desktop study and the geotechnical survey. However, the sheer size of the site (especially for offshore wind farms; <a href="#fig-ijmuiden-ver" class="quarto-xref">Figure&nbsp;2</a>) means geotechnical engineers have to be efficient with their selection of site investigation tools and so geophysical surveys in particular have more of a role to play in understanding the site. Furthermore, the challenges of working at sea means geotechnical surveys have to be executed differently, and so often a shallow (seabed) geotechnical survey is performed separately to a deep (downhole) geotechnical survey.</p>
+<p>In some ways, an offshore site investigationis similar to the onshore investigation–particularly with the desktop study and the geotechnical survey. However, the sheer size of the site (especially for offshore wind farms; <a href="#fig-ijmuiden-ver" class="quarto-xref">Figure&nbsp;2</a>) means geotechnical engineers have to be efficient with their selection of site investigation tools. As a result, geophysical surveys play a much bigger role in offshore works. Furthermore, the challenges of working at sea means geotechnical surveys have to be executed differently, and so often a shallow (seabed) geotechnical survey is performed separately to a deep (downhole) geotechnical survey.</p>
 <div id="fig-ijmuiden-ver" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ijmuiden-ver-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -527,7 +527,6 @@ Figure&nbsp;2: Site investigation data collected at IJmuiden Ver
 </figcaption>
 </figure>
 </div>
-<p><strong>INCLUDE EXAMPLES OF CSOT AND TIME</strong></p>
 <section id="desk-study" class="level2">
 <h2 class="anchored" data-anchor-id="desk-study">Desk study</h2>
 <p>The desk study looks at existing data for the preliminary assessment of site conditions and conceptual design. It can include data such as:</p>
@@ -539,7 +538,7 @@ Figure&nbsp;2: Site investigation data collected at IJmuiden Ver
 <li>Metocean data</li>
 <li>Vessel traffic</li>
 </ul>
-<p>The resources that can be consulted for this are numerous, ranging from public litertaure, geological maps and previous geotechnical investigations (both public and private data). Some example of Dutch-specific resources include:</p>
+<p>The resources that can be consulted for this are numerous, ranging from public literature, geological maps to previous geotechnical investigations (both public and private data). Some example of Dutch-specific resources include:</p>
 <ul>
 <li><a href="https://offshorewind.rvo.nl/">offshorewind.rvo.nl</a>: Data collected from all Dutch offshore wind farms, which is nearly entirely publicly available.</li>
 <li><a href="https://www.dinoloket.nl/">DINOloket</a>: Public data collected from the Dutch North Sea sector, including boreholes, CPTs and seabed samples. Detailed information regarding geological formations is also available.</li>
@@ -549,8 +548,8 @@ Figure&nbsp;2: Site investigation data collected at IJmuiden Ver
 </section>
 <section id="geohazards" class="level2">
 <h2 class="anchored" data-anchor-id="geohazards">Geohazards</h2>
-<p>Identifying geohazards is a critical part of a site investigation. Geohazards are naturally occurring geological features or events that can have an adverse impact on a development. They can be either localised features or regionally extensive, with a example of some geohazards include in <a href="#fig-geohazards" class="quarto-xref">Figure&nbsp;3</a>.</p>
-<p>Assessment of the risk and subsequent mitigation and prevention is an essential part of both the site investigation and design, requiring an understanding of both their causes and implications. This analysis is also specific to the structure in mind. For instance, trapped gas may be considered a&nbsp;risk if present at the location of a potentional borehole but is not, generally, a&nbsp;risk to cable installation or necessarily a risk to&nbsp;installation vessels.&nbsp;</p>
+<p>Identifying geohazards is a critical part of a site investigation. Geohazards are naturally occurring geological features or events that can have an adverse impact on a development. They can be either localised features or regionally extensive, with examples of some geohazards included in <a href="#fig-geohazards" class="quarto-xref">Figure&nbsp;3</a>.</p>
+<p>Assessment of the risk and subsequent mitigation and prevention is an essential part of both the site investigation and design, requiring an understanding of both their causes and implications. This analysis is also specific to the structure being constructed. For instance, trapped gas may be considered a&nbsp;risk if present at the location of a potentional borehole but is generally not a&nbsp;risk to cable installation or vessels.&nbsp;</p>
 <div id="fig-geohazards" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-geohazards-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -566,11 +565,10 @@ Figure&nbsp;3: Some examples of offshore geohazards <span class="citation" data-
 <h2 class="anchored" data-anchor-id="other-surveys">Other surveys</h2>
 <p>Some other surveys are performed in this chapter that won’t be explicitly covered. These include seismic surveys if there’s an earthquake risk, metocean surveys for determining wind, wave and current strengths and frequencies, and environmental impact assessments for assessing the impact of construction on flora and animals in the region-of-interest.</p>
 </section>
-<section id="integrated-ground-model-igm" class="level2">
-<h2 class="anchored" data-anchor-id="integrated-ground-model-igm">Integrated ground model (IGM)</h2>
-<p>Ground models aim to capture the geological, geomorphological and geotechnical features that may influence short-term offshore activities, such as drilling and rig anchoring, as well as the long-term reliability of offshore foundations (<span class="citation" data-cites="isoOilGasIndustries2023">ISO (<a href="#ref-isoOilGasIndustries2023" role="doc-biblioref">2023</a>)</span>). Ground models for very small and simple projects can consist of one single characteristic soil profile, where the elevation and properties of each soil layer are assumed to be constant across the entire site. However, as sites increase in size, the complexity of the ground model must also increase so that the ground conditions are accurately portrayed.</p>
-<p>Wind farms in particular tend to have a low data density in terms of geotechnical data (e.g. <a href="#fig-data-sparsity" class="quarto-xref">Figure&nbsp;4</a>), although by comparison, the proliferation of geophysical data means it’s relatively possible to get a clear picture of layering between investigation points. Nevertheless, understanding precisely the variation within a layer remains a challenge. Particularly for wind farms,</p>
-<p>Collabortive effort between geotechnical engineers, geologist and geophysicists.</p>
+<section id="integrated-ground-modelling-igm" class="level2">
+<h2 class="anchored" data-anchor-id="integrated-ground-modelling-igm">Integrated ground modelling (IGM)</h2>
+<p>Ground models aim to capture the geological, geomorphological and geotechnical features that may influence short-term offshore activities, such as drilling and rig anchoring, as well as the long-term reliability of offshore foundations (<span class="citation" data-cites="isoOilGasIndustries2023">ISO (<a href="#ref-isoOilGasIndustries2023" role="doc-biblioref">2023</a>)</span>). Ground models for very small and simple projects can consist of one single characteristic soil profile, where the elevation and properties of each soil layer are assumed to be constant across the entire site. However, as sites increase in size, the complexity of the ground model must also increase so that the ground conditions are accurately portrayed. Therefore, ground model development becomes an inter-disciplinary collaboration between engineers, geologists and geophysicists.</p>
+<p>Wind farms in particular tend to have a low data density (e.g. <a href="#fig-data-sparsity" class="quarto-xref">Figure&nbsp;4</a>), although by comparison, the proliferation of geophysical data means it’s relatively possible to get a clear picture of layering between investigation points. Nevertheless, understanding precisely the variation within a layer remains a challenge.</p>
 <div id="fig-data-sparsity" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-data-sparsity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -581,9 +579,7 @@ Figure&nbsp;4: Data density at recent wind farm developments in the Dutch North 
 </figcaption>
 </figure>
 </div>
-<p><strong>Also mention parameterisation</strong></p>
-<p>To efficiently represent the site, the site is divided into <strong>ground units</strong> and <strong>soil horizons</strong> (e.g. <a href="#fig-ijv-igm" class="quarto-xref">Figure&nbsp;5</a>). Ground units are layers that are relevant from a geotechnical perspective—which is in turn dependent on the envisaged design (e.g.&nbsp;shallow foundation or a deep foundation pile).</p>
-<p><strong>soil horizons</strong> <strong>GO TO GBM IJV REPORT</strong></p>
+<p>To efficiently represent the site, the site is divided into <strong>ground units</strong> and <strong>soil provinces</strong> (e.g. <a href="#fig-ijv-igm" class="quarto-xref">Figure&nbsp;5</a>). Ground units are layers that are relevant from a geotechnical perspective—which is in turn dependent on the envisaged design (e.g.&nbsp;shallow foundation or a deep foundation pile). Soil provinces then represent geographical areas where the soil stratigraphy and characeristics are relatively similar.</p>
 <div data-layout="[70,30]">
 <div id="fig-ijv-igm" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -602,33 +598,45 @@ Figure&nbsp;5
 </div>
 </div>
 </div>
+<p>Soil Provinces determined by Fugro at IJmuiden Ver wind farm zone</p>
 </div>
-</section>
-<section id="integrated-ground-modelling-igm" class="level2">
-<h2 class="anchored" data-anchor-id="integrated-ground-modelling-igm">Integrated Ground Modelling (IGM)</h2>
-<p>**This section focusses a bit more on state-of-the-art synthetic CPTS</p>
-<div id="fig-sauvin22-ground-modelling" class="quarto-float quarto-figure quarto-figure-center anchored">
+<section id="interpolating-soil-properties" class="level3">
+<h3 class="anchored" data-anchor-id="interpolating-soil-properties">Interpolating soil properties</h3>
+<p>Ground modelling has traditionally been a manual task. At each relevant location, such as a monopile foundation, a soil profile is devised and each layer is assigned geotechnical properties based on in-situ and laboratory tests. For offshore wind farms, this process can become laborious and time-consuming, particularly in cases like IJmuiden Ver where hundreds of wind turbine locations may be planned across a vast area.</p>
+<p>Geostatistical techniques, such as kriging and random field modelling, are often the first port-of-call for interpolating between site investigation points and have been used for many years to model and characterise reservoirs in the oil and gas industry. However, data sparsity across offshore wind farms often makes it difficult to estimate the parameters required for geostatistical techniques, particularly with respect to the spatial variability in the horizontal direction.</p>
+<div id="fig-amaliahaven" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-sauvin22-ground-modelling-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="pics/si/sauvin22-ground-modelling.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Figure&nbsp;6: Different types of seismic waves"><img src="pics/si/sauvin22-ground-modelling.png" class="img-fluid figure-img" style="width:80.0%"></a>
+<div aria-describedby="fig-amaliahaven-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/si/amaliahaven.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Figure&nbsp;6: Synthetic CPT model at a harbour in the port of Rotterdam"><img src="pics/si/amaliahaven.jpg" class="img-fluid figure-img" style="width:90.0%"></a>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sauvin22-ground-modelling-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6: Different types of seismic waves
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-amaliahaven-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Synthetic CPT model at a harbour in the port of Rotterdam
 </figcaption>
 </figure>
 </div>
+<p>More and more research and ground modelling contracts (e.g. <span class="citation" data-cites="sauvinStateoftheArtGroundModel2022">Sauvin et al. (<a href="#ref-sauvinStateoftheArtGroundModel2022" role="doc-biblioref">2022</a>)</span>, <span class="citation" data-cites="peuchenUpscaling15002022">Peuchen et al. (<a href="#ref-peuchenUpscaling15002022" role="doc-biblioref">2022</a>)</span>) are focussing on “non-parameteric” machine learning models to generate synthetic CPTs across a given site. These models help to identify correlations and patterns in large, multivariate datasets, integrating the data together into a site-wide model from which synthetic CPTs at turbine locations can be derived.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Integrating geophysical and geotechnical data">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Integrating geophysical and geotechnical data
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>It’s important to be aware of the level of interpretation that goes into developing combined geophysical-geotechnical models. In particular, <span class="citation" data-cites="vardyStateoftheartRemoteCharacterization2017">Vardy et al. (<a href="#ref-vardyStateoftheartRemoteCharacterization2017" role="doc-biblioref">2017</a>)</span> gives a good overview of this:</p>
+<ul>
+<li>Geotechnical data always involves some degree of sample disturbance or deformation, unlike geophysical data. This can introduce uncertainties when deriving mechanical parameters from geotechnical and geophysical data</li>
+<li>Geophysical and geotechnical data are collected in what are primarily contrasting strain regimes, where geophysical data generally focusses on very small strain and geotechnical data at larger strains</li>
+<li>Where geophysical and geotechnical data have been integrated, the methods either are highly qualitative or suffer from large uncertainties due to imprecisely calibrated relationships between the geophysical and geotechnical parameters—which becomes especially a problem in areas with data sparsity.</li>
+</ul>
+</div>
+</div>
+
+
+
 </section>
-<section id="interpolation-methods" class="level2">
-<h2 class="anchored" data-anchor-id="interpolation-methods">Interpolation methods</h2>
-<p>Ground modelling has traditionally been a manual task. At each relevant location, such as a monopile foundation, a soil profile is devised and each layer is assigned geotechnical properties based on in-situ and laboratory tests. For offshore wind farms, this process can become laborious and time-consuming, particularly in cases like IJmuiden Ver where hundreds of wind turbine locations may be planned across a vast area. Geostatistical techniques, such as kriging and random field modelling, are often the first port-of-call for interpolating between site investigation points (e.g.&nbsp;Vessia et al., 2020; Vanneste et al., 2022), and have been used for many years to model and characterise reservoirs in the oil and gas industry. However, data sparsity across offshore wind farms often makes it difficult to estimate the parameters required for geostatistical techniques, particularly with respect to the spatial variability in the horizontal direction.</p>
-</section>
-<section id="integrating-geotechnical-and-geophysical-data" class="level2">
-<h2 class="anchored" data-anchor-id="integrating-geotechnical-and-geophysical-data">Integrating geotechnical and geophysical data</h2>
-<p>From Vardy et al.&nbsp;2017: Effectively integrating geophysical with geotechnical data is altogether more difficult. This is made more complex by the con￾trasting strain regimes. Geophysical data are at relatively low strains, whereas geotechnical data are at large strain (Clayton 2011). In addition, intrusive methods cause mechanical deforma￾tion, which can be very significant for high-porosity near-surface sediments during geotechnical sampling procedures (e.g., Clayton, Hight and Hopper 1992; Lunne 2012; Priest et al.&nbsp;2015). This deformation inherently alters the nature of the sampled material, introducing uncertainties on key mechanical parameters (e.g., porosity, pore pressure, and undrained shear strength) that are difficult to quantify. Where geophysical and geotechnical data have been integrated, the methods either are highly qualitative (e.g., Vanneste et al.&nbsp;2015) or suffer from large uncertainties due to imprecisely calibrated relationships between the geophysical and geotechnical parameters (e.g., Nauroy et al.&nbsp;1998).</p>
-<p>Furthermore, for imaging the stratigraphy of shallow sediments, one often relies on short-offset single-channel seismic recording systems, which do not allow the derivation of seismic velocities in the subsurface. In contrast, the use of multichannel streamers would alleviate this problem on the condition that the channel spacing is sufficiently small (c., 1 m for a typical high-resolution Boomer or Sparker source) and the active length of the streamer is not shorter than the depth to the deepest target.</p>
-
-
-
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
@@ -637,6 +645,15 @@ Chiocci, Francesco L., Antonio Cattaneo, and Roger Urgeles. 2011. <span>“Seafl
 </div>
 <div id="ref-isoOilGasIndustries2023" class="csl-entry" role="listitem">
 ISO. 2023. <em>Oil and Gas Industries Including Lower Carbon Energy — <span>Offshore</span> Structures — <span>Part</span> 8: <span>Marine</span> Soil Investigations</em>. Vol. 2. International Organization for Standardization.
+</div>
+<div id="ref-peuchenUpscaling15002022" class="csl-entry" role="listitem">
+Peuchen, J., W. van Kesteren, V. Vandeweijer, S. Carpentier, and F. van Erp. 2022. <span>“Upscaling 1 500 000 Synthetic <span>CPTs</span> to Voxel <span>CPT</span> Models of Offshore Sites.”</span> In <em>Cone <span>Penetration Testing</span> 2022</em>, 641–45. Bologna, Italy: CRC Press.
+</div>
+<div id="ref-sauvinStateoftheArtGroundModel2022" class="csl-entry" role="listitem">
+Sauvin, G., M. Vardy, R. T. Klinkvort, M. Vanneste, C. F. Forsberg, and A. Kort. 2022. <span>“State-of-the-<span>Art</span> Ground Model Development for Offshore Renewables – <span>TNW Case Study</span>.”</span> In <em><span>EAGE GET</span> 2022</em>, 2022:1–5. The Hague, The Netherlands: European Association of Geoscientists &amp; Engineers. <a href="https://doi.org/10.3997/2214-4609.202221109">https://doi.org/10.3997/2214-4609.202221109</a>.
+</div>
+<div id="ref-vardyStateoftheartRemoteCharacterization2017" class="csl-entry" role="listitem">
+Vardy, Mark E., Maarten Vanneste, Timothy J. Henstock, Michael A. Clare, Carl Fredrik Forsberg, and Giuseppe Provenzano. 2017. <span>“State-of-the-Art Remote Characterization of Shallow Marine Sediments: The Road to a Fully Integrated Solution.”</span> <em>Near Surface Geophysics</em> 15 (4): 387–402. <a href="https://doi.org/10.3997/1873-0604.2017024">https://doi.org/10.3997/1873-0604.2017024</a>.
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

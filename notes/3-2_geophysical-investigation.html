@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Kevin Duffy">
-<meta name="dcterms.date" content="2025-08-27">
+<meta name="dcterms.date" content="2025-08-28">
 
 <title>Geophysical investigation – CIEM 2301: Offshore Geotechnics</title>
 <style>
@@ -476,7 +476,8 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#seafloor-mapping-techniques" id="toc-seafloor-mapping-techniques" class="nav-link active" data-scroll-target="#seafloor-mapping-techniques">Seafloor mapping techniques</a>
+  <li><a href="#basic-principles" id="toc-basic-principles" class="nav-link active" data-scroll-target="#basic-principles">Basic principles</a></li>
+  <li><a href="#seafloor-mapping-techniques" id="toc-seafloor-mapping-techniques" class="nav-link" data-scroll-target="#seafloor-mapping-techniques">Seafloor mapping techniques</a>
   <ul class="collapse">
   <li><a href="#echo-sounder" id="toc-echo-sounder" class="nav-link" data-scroll-target="#echo-sounder">Echo sounder</a></li>
   <li><a href="#side-scan-sonar-sss" id="toc-side-scan-sonar-sss" class="nav-link" data-scroll-target="#side-scan-sonar-sss">Side scan sonar (SSS)</a></li>
@@ -514,14 +515,14 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">27 August 2025</p>
+      <p class="date">28 August 2025</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">27 August 2025</p>
+      <p class="date-modified">28 August 2025</p>
     </div>
   </div>
     
@@ -533,7 +534,7 @@ window.Quarto = {
 
 
 <p>A geophysical survey is a non-intrusive site investigation method. Processing the geophysical data usually not the job of geotechnical engineers and instead, each project will usually have a team of dedicated geophysicists. Nevertheless understanding the results, particularly in terms of ground modelling and paramaterisation, is an important step that geotechnical engineers need to perform, along with parameterisation.</p>
-<p>There are a range of geophysical methods, each serving different purposes (<a href="#tbl-geophys-tech" class="quarto-xref">Table&nbsp;1</a>)</p>
+<p>There are a range of geophysical methods, each serving different purposes (<a href="#tbl-geophys-tech" class="quarto-xref">Table&nbsp;1</a>).</p>
 <div id="tbl-geophys-tech" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[25,25,25,25]">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-geophys-tech-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -612,20 +613,28 @@ Table&nbsp;1: Some types of geophysical techniques commonly encountered offshore
 </div>
 </figure>
 </div>
-<div class="callout callout-style-default callout-note callout-titled" title="Operating principle of geophysics">
+<section id="basic-principles" class="level1">
+<h1>Basic principles</h1>
+<p>Geophysics focusses on how wave energy is transferred from one place to another. This includes:</p>
+<ol type="1">
+<li><strong>Acoustic waves</strong>: waves that travel through a fluid</li>
+<li><strong>Seismic waves</strong>: waves that travel through earth</li>
+</ol>
+<p>There are also different types of seismic waves (<a href="#fig-seismic-waves" class="quarto-xref">Figure&nbsp;1</a>), and geophysics can target all types. In the shallow marine environment, geophysics tends to focus on gathering P-waves. P-waves are generally easier to collect offshore compare to S-waves since they can tavel through water and don’t required seabed instrumentation to generate or record S-waves.</p>
+<p>For site investigations, most geophysical measurements are obtained by emitting a seismic or acoustic signal and analysing the waves reflected back to a receiver. There are many tools available that generally follow a similar principle: the resolution or spatial detail of the return measurements is dictated by the frequency of the emitted signal.</p>
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Operating principle of geophysics
+Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Geophysics focusses on the propagation of acoustic waves (waves that travel through a fluid) and seismic waves (waves travelling through the earth). These waves are essentially a mode of energy transfer from one place to another, with particles oscillating around an almost fixed position.</p>
-<p>There are also different types of seismic waves (<a href="#fig-seismic-waves" class="quarto-xref">Figure&nbsp;1</a>), and geophysics can target all types. In the shallow marine environment, geophysics tends to focus on gatheringP-waves, largely because they are much easier collect than compared to S-waves (which can’t travel through water) and surface waves (requiring seabed instrumentation which is more complicated to set up)</p>
-<p>For site investigations, most geophysical measurements are obtained by emitting a seismic or acoustic signal and analysing the waves reflected back to a receiver. There are many tools available that generally follow a similar principle: the resolution or spatial detail of the return measurements is dictated by the frequency of the emitted signal.</p>
-<p>In other words, <strong>high frequency signals give high resolution but low penetration, but low frequencies give lower resolutions and greater penetrations.</strong></p>
+<p>High frequency signals give high resolution but low penetration, but low frequencies give lower resolutions and greater penetrations.</p>
+</div>
+</div>
 <div id="fig-seismic-waves" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-seismic-waves-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -636,8 +645,7 @@ Figure&nbsp;1: Different types of seismic waves
 </figcaption>
 </figure>
 </div>
-</div>
-</div>
+</section>
 <section id="seafloor-mapping-techniques" class="level1">
 <h1>Seafloor mapping techniques</h1>
 <section id="echo-sounder" class="level2">
@@ -861,8 +869,7 @@ Figure&nbsp;10: Artefacts on a seismic trace from Hollandse Kust West <a href="h
 </figcaption>
 </figure>
 </div>
-<p><strong>Seismostratigraphic units</strong> are one of the main outputs of the geophysical campaign, and describe geological units that have a distinct seismic expression or are bounded by a distinct layer boundary or horizon above and/or below the formation. These are often identified based on a combination of SBP and UHR data,</p>
-<p>**A bit more detail on identifying reflectors*</p>
+<p><strong>Seismostratigraphic units</strong> are one of the main outputs of the geophysical campaign, and describe geological units that have a distinct seismic expression or are bounded by a distinct layer boundary (i.e.&nbsp;a “reflector”) or horizon above and/or below the formation. These are often identified based on a combination of SBP and UHR data,</p>
 <p><a href="pics/si/geophys-gen/hkw_mcs-uhr_table.png" class="lightbox" data-gallery="my-gallery"><img src="pics/si/geophys-gen/hkw_mcs-uhr_table.png" class="img-fluid" style="width:14.0%"></a> <a href="pics/si/geophys-gen/hkw_mcs-uhr_fig3-10.png" class="lightbox" data-gallery="my-gallery"><img src="pics/si/geophys-gen/hkw_mcs-uhr_fig3-10.png" class="img-fluid" style="width:20.0%"></a> <a href="pics/si/geophys-gen/hkw_mcs-uhr_fig3-17.png" class="lightbox" data-gallery="my-gallery"><img src="pics/si/geophys-gen/hkw_mcs-uhr_fig3-17.png" class="img-fluid" style="width:20.0%"></a> <a href="pics/si/geophys-gen/hkw_mcs-uhr_fig3-18.png" class="lightbox" data-gallery="my-gallery"><img src="pics/si/geophys-gen/hkw_mcs-uhr_fig3-18.png" class="img-fluid" style="width:18.0%"></a> <a href="pics/si/geophys-gen/hkw_mcs-uhr_fig3-19.png" class="lightbox" data-gallery="my-gallery"><img src="pics/si/geophys-gen/hkw_mcs-uhr_fig3-19.png" class="img-fluid" style="width:20.0%"></a></p>
 <div class="figure-caption">
 <p>Figure: Some UHR seismic traces and identified boundaries from Hollandse Kust West, performed by Fugro (click on figure to maximise; from: <a href="https://offshorewind.rvo.nl/">offshorewind.rvo.nl</a></p>
@@ -887,9 +894,9 @@ Side note: what about other onshore geophysical techqniues?
 </section>
 <section id="getting-geotechnical-properties-from-geophysical-models" class="level1">
 <h1>Getting geotechnical properties from geophysical models</h1>
-<p>Geophysical tests are mainly qualitative in nature, that is, they give us an idea of the number of soil layers and the changes in layer boundaries. Of course for geotechnics, obtaining quantitative properties is desirable. These quantitative parameters can include things like soil density, effective stress and porosity, but also especially small-strain parameters like the inital shear stiffness <span class="math inline">\(G_0\)</span>–where traditional large-deformation intrusive tests (like the CPT) are not ideal.</p>
-<p>Maybe from previous courses, you have learned that deriving <span class="math inline">\(G_0\)</span> or other small-strain properties is possible with geophysics–like through MASW tests which use a source and receivers (geophones) placed directly on the ground surface. However, geophysics in a marine environment is dealt with differently to onshore, focussing primarily on P-waves which can travel through water and back to the receiver (unlike S-waves). As we’ve seen throughout this chapter, P-waves can broadly distinguish between granular and cohseive materials, but more detailed lihological information as well as soil behaviour can only be reliabily derived using the S-wave response <span class="citation" data-cites="vardyStateoftheartRemoteCharacterization2017">(<a href="#ref-vardyStateoftheartRemoteCharacterization2017" role="doc-biblioref">Vardy et al. 2017</a>)</span>.</p>
-<p>Nevertheless, improving quantiative, geotechnical derivations from geophysical data is still an ongoing area of research both in terms of the equipment and data processing that is applied (e.g. <span class="citation" data-cites="vardyStateoftheartRemoteCharacterization2017">Vardy et al. (<a href="#ref-vardyStateoftheartRemoteCharacterization2017" role="doc-biblioref">2017</a>)</span>, <span class="citation" data-cites="longMultichannelAnalysisSurface2020">Long et al. (<a href="#ref-longMultichannelAnalysisSurface2020" role="doc-biblioref">2020</a>)</span>) as well as synthetic, AI-based ground models (e.g. <span class="citation" data-cites="carpentierAIBasedGmaxPrediction2024">Carpentier et al. (<a href="#ref-carpentierAIBasedGmaxPrediction2024" role="doc-biblioref">2024</a>)</span>) which we will explore a little more later.</p>
+<p>Geophysical tests are mainly qualitative in nature, that is, they give us an idea of the number of soil layers and the changes in layer boundaries. Of course for geotechnics, obtaining quantitative properties is desirable. These quantitative parameters can include things like soil density, effective stress and porosity, but also especially small-strain parameters like the inital shear stiffness <span class="math inline">\(G_0\)</span>—where traditional large-deformation intrusive tests (like the CPT) are not ideal.</p>
+<p>Maybe from previous courses, you have learned that deriving <span class="math inline">\(G_0\)</span> or other small-strain properties is possible with geophysics—like through MASW tests which use a source and receivers (geophones) placed directly on the ground surface. However, geophysics in a marine environment is dealt with differently to onshore, focussing primarily on P-waves which can travel through water and back to the receiver (unlike S-waves). As we’ve seen throughout this chapter, P-waves can broadly distinguish between granular and cohseive materials, but more detailed lihological information as well as soil behaviour can only be reliabily derived using the S-wave response <span class="citation" data-cites="vardyStateoftheartRemoteCharacterization2017">(<a href="#ref-vardyStateoftheartRemoteCharacterization2017" role="doc-biblioref">Vardy et al. 2017</a>)</span>.</p>
+<p>Nevertheless, improving quantitative, geotechnical derivations from geophysical data is still an ongoing area of research both in terms of the equipment and data processing that is applied (e.g. <span class="citation" data-cites="vardyStateoftheartRemoteCharacterization2017">Vardy et al. (<a href="#ref-vardyStateoftheartRemoteCharacterization2017" role="doc-biblioref">2017</a>)</span>, <span class="citation" data-cites="longMultichannelAnalysisSurface2020">Long et al. (<a href="#ref-longMultichannelAnalysisSurface2020" role="doc-biblioref">2020</a>)</span>) as well as synthetic, AI-based ground models (e.g. <span class="citation" data-cites="carpentierAIBasedGmaxPrediction2024">Carpentier et al. (<a href="#ref-carpentierAIBasedGmaxPrediction2024" role="doc-biblioref">2024</a>)</span>) which we will explore a little more later.</p>
 
 
 
