@@ -61,11 +61,6 @@ website:
             contents:
               - href: notes/shallow-foundations.ipynb
               # - href: playground/interaction-diagram.qmd   # The Shiny app
-       # - section: "🛠️ Resources" 
-           # General resources
-           # Guide to quarto
-           # Guide to Python/Jupyter
-           # 
        
 
   # navbar:
