@@ -1,6 +1,7 @@
 ---
 title: "Schedule Q1 2025"
 format: html
+comments: false
 ---
 
 | Date                    | Time        | Topic                         | Lecturer    |

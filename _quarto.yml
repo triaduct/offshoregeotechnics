@@ -2,6 +2,8 @@ project:
   type: website
   title: "Offshore Geotechnics"
   output-dir: _output
+  preview:
+    port: 4200
   
 website:
   title: "CIEM 2301: Offshore Geotechnics"
@@ -17,7 +19,7 @@ website:
     reader-mode: true
     contents:
       - text: "🏠 Home"
-        href: readme.md
+        href: index.qmd
       - section: "ℹ️ Course info"
         # schedule
         # Learning objectives
@@ -26,10 +28,10 @@ website:
             href: learning-objectives.qmd
           - text: "Schedule"
             href: schedule.qmd
-          - text: "Guide"
-            href: guide.md
           - text: "Resources"
             href: resources.qmd
+          - text: "User guide"
+            href: guide.qmd
             
       - section: "📚 Course notes"
         contents:
@@ -85,11 +87,10 @@ format:
 
     email-obfuscation: javascript
     link-external-newwindow: true
-    link-external-icon: true
     link-external-filter: ^(?:http:|https:)\/\/(?:lse-dsi\.github\.io\/|localhost)  
 
     theme:
-      light: flatly
+      light: cosmo
       dark: darkly
     css: styles.css
     toc: true
@@ -97,6 +98,13 @@ format:
     code-summary: "Show the code"
     warning: false
     lightbox: true
+    reader-mode: true
+    
+    body-footer:
+      left: |
+        Offshore Geotechnics by Kevin Duffy
+      right: |
+        ![Creative Commons License](https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png) [CC BY-N-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/)
     
 execute:
   freeze: auto   # Ensures Python scripts are only executed locally and not by github pages
