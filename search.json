@@ -1,132 +1,5 @@
 [
   {
-    "objectID": "learning-objectives.html",
-    "href": "learning-objectives.html",
-    "title": "Learning Objectives",
-    "section": "",
-    "text": "Learning objectives\nAfter this course, students are expected to:\n\nDescribe the geotechnical challenges unique to offshore environments.\nDesign a suitable foundation system for an offshore wind turbine according to the latest axial and lateral pile capacity models\nCritically assess the reliability of different site investigation techniques in offshore settings.\nEvaluate the suitability of a foundation concept for a given offshore wind farm\nDevelop a risk mitigation strategy for offshore geohazards",
-    "crumbs": [
-      "ℹ️ Course info",
-      "Learning objectives"
-    ]
-  },
-  {
-    "objectID": "notes/1_intro.html",
-    "href": "notes/1_intro.html",
-    "title": "Introduction",
-    "section": "",
-    "text": "The work of engineers in the offshore sector has changed massively in the past decade, shifting from what was mainly oil and gas structures to offshore wind farms. This can even be seen by the recommended textbooks for this course: Randolph and Gouvernec (2011) and Dean (2010). Both books approach offshore engineering from mainly and oil and gas perspective, whilst also acknowledging the geotechnical uncertainies that were ahead in the growing offshore wind industry.\nThe concepts taught in these books are still highly relevant to offshore and onshore design today, as well as research and designs performed in this era. Yet it’s important to be aware of the shift in both the research landscape and standardisation. Oil and gas structures tend to be bespoke design at one single location. However, offshore wind farms tend to span tens of kilometres in length (e.g. Figure 1) and require replicable and efficient designs at all turbine locations across the wind farm.\nMoreover, the growth in the offshore wind sector is expected to continue to grow in the next couple of decades, with annual installations expected to grow from 8 GW in 2024, to 55 GW by 2034 (GWEC 2025). Since the construction of the first offshore wind farm in Denmark in 1991, Vindeby, the inital growth of offshore wind has been pioneered by the North Sea countries—like Denmark, the United Kingdom and the Netherlands. China now leads offshore wind development, and expansion continues in Europe and other countries like in Taiwan and the United States (Figure 2).\nResearch into offshore geotechnics has also rapidly grown as a result, particularly into the influence of wave and wind loading on foundation behaviour. Yet many questions also remain, particularly as many wind farms come into maturity and reach the end of their twenty-five year design lifetime. How might the foundation capacity change over time and how can we decomission or reuse these foundations in a sustainable manner?",
-    "crumbs": [
-      "📚 Course notes",
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "notes/1_intro.html#types-of-offshore-structures",
-    "href": "notes/1_intro.html#types-of-offshore-structures",
-    "title": "Introduction",
-    "section": "Types of offshore structures",
-    "text": "Types of offshore structures\nOffshore structures can be categorised into two types: fixed or floating. Choosing the type of structure is dependent on a variety of factors in a variety of engineering disciplines, including geotechnical, hydraulic, mechanical and structrual engineering.\nWhile the structural concepts may differ significantly, the foundation systems used to secure these installations often share common elements. For example, piles or suction caissons may be used both for fixed installations (to resist vertical and lateral loads) and for floating systems (as anchor points for mooring lines). Consequently, geotechnical engineering plays a central role regardless of whether the superstructure is fixed or floating.\n\nFoundations for fixed structures\nMonopiles are perhaps the simplest foundation solution from a manufacturing and structural perspective, making it particularly useful for production in volume. As a a result, monopiles account for at least 70% of all offshore wind installations in Europe (Wind Europe 2020).\n\n\n\n\n\n\nFigure 3: Monopile and transition pieces the SIF production facility in the port of Rotterdam\n\n\n\nJacket structures (Figure 9) become more cost competitive at deeper water depths (say &gt; 35m), and they are especially common in the oil and gas sector or for substations at offshore farms. A jacket is usually piled into the seabed each, occasionally as a pile group or with a suction bucket at each leg (Figure 9 (b)). Jackets are also particularly prevalant in areas enveloped with very soft to soft clays, like in the Gulf of Mexico or Western Africa.\n\n\n\n\n\n\n\n\n\n\n\n(a) Installation of the “pin piles” at each jacket leg using a jack-up platform (from: BOEM-OPA)\n\n\n\n\n\n\n\n\n\n\n\n(b) Transporting jackets at Seagreen offshore wind farm. Instead of piles, suction buckets are used at each jacket leg (from: Glen Wallace)\n\n\n\n\n\n\n\nFigure 4: Jacket structures, with two different foundation types\n\n\n\n\n\n\n\n\n\nSide note: Bringing a jacket to its final location\n\n\n\n\n\nJackets are also often too heavy to lift directly. Therefore, they are often “skidded” off quayside to bring the jacket from the manufacturing facility on the quayside to a barge on the water. When the jacket reaches its final destination, it is then “launched” off the barge. The buoyancy of the jacket (often improved with additional, temporary buoyancy tanks) is then used used to reduce its weight, helping a crane to orientate it into its final position.\n\n\n\n\n\nGravity-based structures are the behemoths of the offshore industry, and use their own self-weight to resist horizontal loads imposed by wind and waves. Gravity-based foundations were extensively developed for initial oil and gas development in the North Sea where heavily overconsolidated clays and dense sands covered the area, unlike the soft clays of the Gulf of Mexico. These conditions were were less suitable for driving piles in, resulting in gravity-based structures becoming a suitable alternative.\n\n\n\n\n\n\n\n\n\n\n\n(a) Gravity-based foundations for Fecamp offshore wind farm in France (from: offshorewind.biz)\n\n\n\n\n\n\n\n\n\n\n\n(b) Towing Troll-A gravity-based platform to its final location (from: Equinor)\n\n\n\n\n\n\n\nFigure 5: Gravity-based foundations\n\n\n\nAll these structures can be installed using floating barges or ships. However, this also makes construction vulnerable to weather-induced delays such as high winds, waves or swells. Jackups provide an alternative. Jackups are temporary working platforms used for drilling or construction. It consists of a hull and three or more retractable legs, each with fitted with a “spud-can” at the base (Figure 6).\nThe geotechnical concepts governing jackup installation are largely dictated by shallow foundation principles. However, the pull-out resistance of the spudcans, along with potential settlement during operation, are also of critical importance.\n\n\n\n\n\n\nFigure 6: The bottom of a jack-up leg, known as a spudcan (from: COFS)\n\n\n\n\n\n\n\n\n\nSide note on some piling terminology\n\n\n\n\n\nThere are several different colloquial terms for all the foundations we see. While there isn’t a universal agreed-upon definition, some general advice can be:\n\nA pin pile or jacket pile is a slender foundation used to fix each leg of a jacket structures, where the length-to-diameter (slenderness) ratio \\(L/D\\) is at least 10.\nA monopile has an \\(L/D\\) ratio of 8, thus behaving much stiffer compared to a pin pile under horizontal loading.\nA caisson is similar in dimensions to a monopile, but is usually pushed or drilled into place instead of hammered.\nA bucket or skirt has very low \\(L/D\\) ratios, essentially acting as a shallow foundation. Skirts are considered as an add-on to the bottom of a gravity-based foundation to improve the horizontal capacity, whereas buckets is a term usually used for foundations installed with suction pressure.\n\n\n\n\n\n\n\nFigure 7: Some general foundation definitions\n\n\n\n\n\n\n\n\nFoundations for floating structures\nInstalling fixed structures in deep waters (say, &gt;100m) is both technically challenging and expensive. Floating structures therefore became more prevalent as oil and gas exploration moved towards uncharted waters. Floating structures have inveitably been less common in the initial development of offshore wind, yet they starting to become more common are becoming more and more common–with the first commercial wind farm, Hywind in Scotalnd, startingoperation in 2017.\nFrom a structural perspective, there are four main types of floating structures (Figure 8), each using different stabilisation mechanisms to minimise rotation of the superstructure:\n\nA spar platform uses ballast to move the centre-of-gravity below the centre-of-buoyancy, providing a counter-moment to any horizontal actions acting on the structure. Therefore, the geometry of the ballast (often cyclindrical) dictates the buoyancy and stability of the structure.\nA barge-type structure is comparable to a ship, with a shallow draft. It uses a large waterplane area and buoyancy provide stability.\nA tension-leg platform (TLP) uses taut steel moorings fixed to the seabed, with the buoyancy of the TLP hull ensuring that the mooring lines are taut at all times.\nA semi-submersible also uses ballast to lower its centre-of-gravity, as well as spreading out its waterplane area to provide additional stability.\n\nFrom a geotechnical perspective, all of these floating structures require moorings that are fixed to anchors at the seabed. The different types of anchors as well as assessing their performance will be explored later in these notes.\n\n\n\n\n\n\nFigure 8: Types of floating substructures (Scheu et al. 2018)\n\n\n\n\n\nOther structures:\nOffshore structures are also not limited to structures on the same scale as wind turbines or oil and gas platforms. Even the construction of these wind turbines requires the use of temporary structures like mudmats and pile guide frames. These primarily use shallow foundations so we’ll cover them to some extent.\nThis course focusses primarily on offshore foundations and so several things aren’t covered:\n\nElectricity or fuel also needs to be transferred across the site, and therefore pipelines and or interconnectors have a crucial role to play. While these seem deceptively simple at first glance, anticipating how they will behave over their lifetime is a challenge, particularly with regards to cable burial and the local topography.\nDredging operations are another very common offshore activity that isn’t covered, particularly since seabed mobility and dredging machines deserve a stand-alone course in itself.\nCoastal infrastucture, like jetties or harbours, aren’t covered, as well as tunnels and bridge piers/caissons.\n\n\n\n\n\n\n\n\n\n\n\n\n(a) Pile guide frame used for load tests in Taiwan\n\n\n\n\n\n\n\n\n\n\n\n(b) TU Delft centrifuge set-up, examining the influence of submarine landslides on pipeline performance (Zhang and Askarinejad 2019)\n\n\n\n\n\n\n\nFigure 9: Couple more examples of other offshore structures",
-    "crumbs": [
-      "📚 Course notes",
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "notes/1_intro.html#features-of-an-offshore-site",
-    "href": "notes/1_intro.html#features-of-an-offshore-site",
-    "title": "Introduction",
-    "section": "Features of an offshore site",
-    "text": "Features of an offshore site\nEnvironmental loading is one of the main unique features of an offshore site compared to onshore, especially since the relative proportion of horizontal \\(H\\) to vertical \\(V\\) loading is vastly different to onshore structures, where \\(H/V\\) is much lower. An example of some of these loads is given in Figure 10, showing how the loads can applied both on the superstructure or on the foundation itself (e.g. Figure 10).\n\n\n\n\n\n\nFigure 10: Loads acting on a wind turbine with a gravity-based foundation\n\n\n\nRandolph and Gouvernec (2011) give a nice example of how Troll A compares to an equivalent onshore structure—taking the (now abandoned) Dubai Towers skyscraper in Doha, Qatar. The self-weight of both structures is pretty comparable, but the environmental loads on Troll A are around 500% greater than on Dubai Towers—especially wave and current loading. Therefore, Troll A requires a much larger foundation area.\nCrucially, this horizontal loading also creates a lever arm rotating about the bottom of the platform. Therefore in deep waters (say, 100m), overturning will become the dominant failure mechanism. Conversely, in shallow waters, \\(M/HD\\) typically lies in the range 0.35–0.70, and so sliding could become the dominant failure mechanism.\nImportantly, environmental loads are often time-dependent in nature, and thus cyclical loading becomes an even more critical design criteria for offshore geotechnics. Due to the dominance of environmental loading offshore, accounting for the influence of cyclic loading on the soil response is much more important than for a typical onshore structure. Environmental forces impart significant cyclic horizontal, vertical and moment loads to offshore foundation systems, and generate excess pore water pressures in the vicinity of the foundation, reducing the effective stresses in the seabed.\nEnvironmental loads are usually calculated as part of the structural analysis, which is in turn based on meteorological and oceanographic (metocean) data.\n\n\n\n\n\n\nFigure 11: Comparison between the Troll A gas platform and the now-abandoned Dubai Towers project (Randolph and Gouvernec 2011)\n\n\n\n\n\n\n\n\n\nSide note: A one-in-one-hundred-year storm event\n\n\n\n\n\nEnvironmental loads are typically specified in terms of a particular return period. A return period is the average time interval expected between the occurrences of an event of a certain magnitude. Therefore, in any given year, the probability of an \\(N\\) year event happening is approximately\n\\[\np_1 = 1/N\n\\]\nTherefore, the probability that at least one event will happen in the lifespan \\(L\\) of a structure is:\n\\[\np_L = 1-(1-\\frac{1}{N})^L\n\\]\nA 100-year return period, for instance, indicates a 1% probability of such an event occurring in any given year. However, it does not mean that the event will happen exactly once every 100 years.\n\n\n\n\nWind loading\nWind loading is a key environmental action on offshore structures, contributing both directly and indirectly to design considerations. Wind exerts pressure on the exposed parts of the structure above water—such as platforms, turbines, and topsides—generating horizontal forces and overturning moments. Indirectly, wind is the primary driver of surface waves and currents, which usually dominate the geotechnical loading on foundations. While the magnitude of direct wind forces is typically smaller than hydrodynamic loads, they are important for serviceability, fatigue, and operational stability, particularly for tall, slender structures like offshore wind turbines.\n\n\n\n\n\n\nFigure 12: A metocean mast in the foreground—yet another structure that becomes much more complicated to install offshore (source)\n\n\n\n\n\nHydrodynamic loading\nHydrodynamic loading describes the forces caused by the motion of the ocean, including:\n\nHorizontal loading caused by ocean waves or currents\nSediment transport (including erosion, scouring or deposition)\n\nJust like wind loads, hydrodynamic forces are both temporally and spatially dependent. For example, ocean currents vary with depth (Figure 13); thanks in part to wind stresses on the ocean surface, tides, local topography, and differences in water temperature and salinity that give rise to density-driven circulation.\nAs a result, hydrodynamic loads can vary greatly. Near the coast, where tides, winds, and waves act across the entire water column, loads tend to fluctuate strongly and are often highly variable over relatively short time periods. In the deep ocean, density gradients in the seawater, drive slow but persistent circulation patterns, exerting different kinds of forces on subsea infrastructure.\n\n\n\n\n\n\nFigure 13: Different types of ocean currents (Randolph and Gouvernec 2011)\n\n\n\nSurface waves are another source of environmental loading. Their characteristics change with water depth as they transform from deep-water waves to shallow-water waves, turning into breaking waves as they approach the coastline. Waves that travel beyond the wind-affected zone are referred to as swells. Swells propagate across away from their area of generation and can propagate in directions that differ from the direction of the wind. Swells can come from hundreds of kilometres away, and therefore they don’t necessarily occur in locally stormy weather.\nBoth waves and currents can then lead to large amounts of sediment transport through the movement of sand-waves across the seabed, erosion and transport of shoreline deposits or scouring around the the footings of a structure. Scouring and sediment transport is of course heavily dependent on the local soil conditions, as well as the shape of the structure itself.\nWhile precisely quantifying these hydrodynamic forces isn’t often the work of a geotechnical engineer, understanding how these forces vary and their effect on the foundation is still of importance.\n\n\n\n\nIce loading\nJust like wave loading, ice loading is location dependent. How it affects offshore structures depends on its strength, thickness and the velocity at which its moves across the water which are all in turn dependent on the ice age, metocean conditions and water quality–to name but a few (Sanderson 1988).\n\n\n\n\n\n\nFigure 14: Ice-breaking cones at the base of a shallow jacket foundation from Nissum Bredning, Denmark",
-    "crumbs": [
-      "📚 Course notes",
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "notes/1_intro.html#standardisation",
-    "href": "notes/1_intro.html#standardisation",
-    "title": "Introduction",
-    "section": "Standardisation",
-    "text": "Standardisation\nIndustry standards and codes provide a reliable basis for aligning expectations about a product or service, giving a framework that engineers can work with when designing a structure. Onshore, the Eurocode and associated National Annexes (like NEN 9997-1) are often the go-to resource—if not compulsory—and thus each country usually has their own rules and regulations that are specifically designed for the geotechnical conditions, structures and typical practices of that country.\nHowever offshore projects are often international collaborations, employing consultants and contractors from different countries. Furthermore, the unique structures and challenging installation conditions means many national design standards are not designed to accommodate for such construction projects.\nStandards often give a good overview of a particular topic, as well as being an engineer’s mainstay for calculations, so its highly recommended to get familiar with the main standards when coming across a new topic. Some standards that are particularly important for offshore geotechnics:\n\nISO 19901 to 19906: Developed by the International Standards Organisation (ISO), primarily based on initial oil and gas development.\nAPI RP-2GEO: Developed by the American Petroleum Institute and a subset of the API RP 2A. There are two versions: a Working Stress Design (WSD) approach and a Load and Resistance Factor Design (LRFD) version (see below)..\nDNV-RP-C212: Developed by the certification authority DNV-GL. The standard is more specifially tailored towards monopile and shallow foundation design.\n\nThese standards are in addition to the litany of other standards (particularly ISO standards) which guide specific things like in-situ testing, different foundation types or load testing.\nNevertheless, standards should not be regarded as static documents. The process of changing a standard takes time and they often do not include more up-to-date design methods—often since coming to a universal concensus takes time and plenty of research. For instance, the compartively recent growth of the offshore wind sector also means that current standards may not necesarily reflect the unique challenges of offshore wind (Morgan 2023). Likewise, probabilistic methods or the use artificial intellegence algorithms are still at an elemental level in design standards.\nWhen a design and the calculations are prepared, they then get sent to a certification body, like Det Norske Veritas (DNV) or Bureau Veritas.\n\n\n\n\n\n\nLimit state functions\n\n\n\nJust like onshore engineering, offshore design standards are typically written in terms of certain limit states:\n\nThe ultimate limit state (ULS) is the maximum load-carrying capacity of a structure which, if exceeded, would lead to complete collapse.\nThe serviceability limit state (SLS) defines the conditions within which the structure can be kept serviceable. For example, the permanent accumulated rotation at the top of a wind turbine’s foundation often may not exceed 0.5°.\nAccidental limit state (ALS) corresponds to survival conditions in a damaged condition or in the presence of strongly non-linear environmental conditions or for highly unlikely events, like ship allisions.\nFatigue limit states (FLS) are limiting conditions or failures resulting from continued cyclic loading, although this generally pertains to the structure materials themselves.\n\n\n\n\nFactors of safety\nOne way design standards can greatly differ is with how they deal with safety factors. For instance, API RP-2GEO uses working stress design (WSD) by default, where one global safety factor is applied:\n\\[\nR = (G+Q+E) \\gamma_G\n\\]\nwhere \\(R\\) is the soil resistance, \\(G\\) is the permanent load, \\(Q\\) is the variable load, \\(E\\) is the environmental load and \\(\\gamma_G\\) is a safety factor applied to the combined effect of the three different loads, chosen based on the type of failure mechanism. In this case \\(\\gamma_G\\) essentially accounts for tthe natural variability of soil properties, measurement errors, statistical uncertainy and model uncertainty in one factor.\nNowadays, design standards are tending to shift towards a Load and Resistance Factor Design (LRFD) approach, like that in NEN 9997-1. With LRFD, the different types of loads are considered explicitly by using partial safety factors:\n\\[\n\\frac{R}{\\gamma_m} = \\gamma_G G + \\gamma_q Q + \\gamma_e E\n\\]\nHaving been originally designally for WSD, API RP 2GEO now has two versions: one for WSD, and the other for LRFD. Nevertheless, nowadays the ISO and API geotechnical codes are generally aligned with one another, with some small exceptions (Colliat-Dangus et al. 2017).",
-    "crumbs": [
-      "📚 Course notes",
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "notes/3-2_geophysical-investigation.html",
-    "href": "notes/3-2_geophysical-investigation.html",
-    "title": "Geophysical investigation",
-    "section": "",
-    "text": "A geophysical survey is a non-intrusive site investigation method. Processing the geophysical data usually not the job of geotechnical engineers and instead, each project will usually have a team of dedicated geophysicists. Nevertheless understanding the results, particularly in terms of ground modelling and paramaterisation, is an important step that geotechnical engineers need to perform, along with parameterisation.\nThere are a range of geophysical methods, each serving different purposes (Table 1).",
-    "crumbs": [
-      "📚 Course notes",
-      "Site investigation",
-      "Geophysical investigation"
-    ]
-  },
-  {
-    "objectID": "notes/3-2_geophysical-investigation.html#echo-sounder",
-    "href": "notes/3-2_geophysical-investigation.html#echo-sounder",
-    "title": "Geophysical investigation",
-    "section": "Echo sounder",
-    "text": "Echo sounder\nAn echo sounder is typically used get bathymetry data, thus giving important information into the seabed elevation and slope at a given location, as well as potential (or past) slope failures, seabed obstructions and other geohazards. There are two main types of echo sounders: singlebeam echo sounders (SBES) and multibeam echo sounders (MBES). MBES systems generally give more detailed seafloor maps, particularly in deepwater (&gt;25m), whereas SBES systems are generally cheaper and more easier to process, and are thus found on all ocean going vessels.\nIt’s also becoming more common to analyse the backscatter from echo soundings. This can give a very high resolution bathymetry, although samples from seafloor are required to understand the correlation between the soil type and the acoustic wave backscatter.\n\n\n\n\n\n\nFigure 2: Multibeam echo sounder (MBES),",
-    "crumbs": [
-      "📚 Course notes",
-      "Site investigation",
-      "Geophysical investigation"
-    ]
-  },
-  {
-    "objectID": "notes/3-2_geophysical-investigation.html#side-scan-sonar-sss",
-    "href": "notes/3-2_geophysical-investigation.html#side-scan-sonar-sss",
-    "title": "Geophysical investigation",
-    "section": "Side scan sonar (SSS)",
-    "text": "Side scan sonar (SSS)\nSide-scan sonar is a method of underwater imaging using pulses of acoustic energy transmitted out the side of a “towfish” (or equivalent such as an ROV) and across the seafloor. The reflected energy is then used to assess seabed features (such as shipwrecks or pockmarks) in more detail compared to an echo sounder. While direct bathymetry data can be somewhat inferred from side-scan sonar, it becomes challenging due to the changing altitude of the towfish and length of the seismic shadow cast by seabed obstructions and the towfish itself.\n\n\n\n\n\n\nFigure 3: Side scan sonar and the “towfish”. Take note of the shadow underneath the tow fish (remember: side scan sonar can only look to the sides)",
-    "crumbs": [
-      "📚 Course notes",
-      "Site investigation",
-      "Geophysical investigation"
-    ]
-  },
-  {
-    "objectID": "notes/3-2_geophysical-investigation.html#magnetometer",
-    "href": "notes/3-2_geophysical-investigation.html#magnetometer",
-    "title": "Geophysical investigation",
-    "section": "Magnetometer",
-    "text": "Magnetometer\nA magnetomer is used to detect magnetic anomalies on the seabed, such as cables, shipwrecks, debris or anchor chains. Generally these are towed well behind the survey vessel to minimise magnetic inference, and an accurate profile of the total magnetic field at the location is needed so that small magnetic features can be accurately distinguished.\nMagnetometers also play an important role in unexploded ordinance (UXO) surveys (Figure 4), ensuring the UXOs don’t pose a risk to either the intrusive site investigation or construction itself.\n\n\n\n\n\n\nFigure 4: Results of the unexploded ordinanace (UXO) survey at IJmuiden Ver wind farm zone offshorewind.rvo.nl",
-    "crumbs": [
-      "📚 Course notes",
-      "Site investigation",
-      "Geophysical investigation"
-    ]
-  },
-  {
-    "objectID": "notes/3-2_geophysical-investigation.html#comparison-between-surficial-techniques",
-    "href": "notes/3-2_geophysical-investigation.html#comparison-between-surficial-techniques",
-    "title": "Geophysical investigation",
-    "section": "Comparison between surficial techniques",
-    "text": "Comparison between surficial techniques\nTo some extent, echo sounders and sidescan sonar provide very comparable results. Generally speaking, sidescan sonar provides high resolution imagery, making it often easier to distinguish small seabed features, objects or textures (particularly in deeper waters thanks to the towfish). Echo sounders provide high-resolution bathymetry, just like a digital elevation model.\n\n\n\n\n\n\nFigure 5: Shipwreck at Borssele (offshorewind.rvo.nl)\n\n\n\n\n\n\n\n\n\nFigure 6: Pock marks left by a four-legged jack-up at Hollandse Kust West (offshorewind.rvo.nl)\n\n\n\n\n\n\n\n\n\nFigure 7: Part of pipeline coming of above the rock cover at IJmuiden Ver (offshorewind.rvo.nl)",
-    "crumbs": [
-      "📚 Course notes",
-      "Site investigation",
-      "Geophysical investigation"
-    ]
-  },
-  {
-    "objectID": "notes/3-2_geophysical-investigation.html#data-processing-interpretation",
-    "href": "notes/3-2_geophysical-investigation.html#data-processing-interpretation",
-    "title": "Geophysical investigation",
-    "section": "Data processing & interpretation",
-    "text": "Data processing & interpretation\nSeismic profiling involves receiving and processing a huge volumes of data, consisting of acoustic waves of various different frequencies, arriving at various different times to receivers at various different distances from one another.\nTo convert this to a seimsmic profile, the data needs be processed, converted from time-to-depth along with many different processing steps that can help to sequence the data, improve the signal-to-noise ratio (i.e. the data clarity) and remove errors and artefacts from the final trace–ultimately making the final trace more interpretable. However, this process can also be subjective (e.g. Figure 9) and highly dependent on the person processing the data.\n\n\n\n\n\n\nFigure 9: Example on how different interpretations of the same seismic data can lead to different results (Gray, Cox, and Calvert 2023)\n\n\n\nArtefacts can also remain on seismic trace after processing (Figure 10). Acoustic blanking, for instance, describes when the signal is attenuated or masked by, for example, the presence of natural gas or steep-side channels (buried or otherwise). “Seabed multiples” are also a common sight in processed seismic traces, caused by the reflected signal bouncing off the water surface and then again off the seabed.\n\n\n\n\n\n\nFigure 10: Artefacts on a seismic trace from Hollandse Kust West (offshorewind.rvo.nl)\n\n\n\nSeismostratigraphic units are one of the main outputs of the geophysical campaign, and describe geological units that have a distinct seismic expression or are bounded by a distinct layer boundary (i.e. a “reflector”) or horizon above and/or below the formation. These are often identified based on a combination of SBP and UHR data,\n    \n\nFigure: Some UHR seismic traces and identified boundaries from Hollandse Kust West, performed by Fugro (click on figure to maximise; from: offshorewind.rvo.nl\n\n\n\n\n\n\n\nSide note: what about other onshore geophysical techqniues?\n\n\n\n\n\nSome techniques become that we often onshore, are less used offshore–particularly those using receivers directly on the ground surface, such as techniques like resistivity surveys or Multichannel Analysis of Surface Waves (MASW). Nevertheless, this is still an area of continuing research (e.g. Long et al. (2020)) and dependent on the local site conditions and budget.",
-    "crumbs": [
-      "📚 Course notes",
-      "Site investigation",
-      "Geophysical investigation"
-    ]
-  },
-  {
     "objectID": "schedule.html",
     "href": "schedule.html",
     "title": "Schedule Q1 2025",
@@ -135,126 +8,6 @@
     "crumbs": [
       "ℹ️ Course info",
       "Schedule"
-    ]
-  },
-  {
-    "objectID": "readme.html",
-    "href": "readme.html",
-    "title": "CIEM 2301: Offshore Geotechnics",
-    "section": "",
-    "text": "New release: Monday 25th August\n\n\n\nCourses notes on site investigation has been added\n\n\nThis collection of Jupyter notebooks are intended as a set of learning materials for the course CIEM2301 Offshore Geotechnics at Delft University of Technology. The aim is to provide an interactive and accessible way of engaging with the course material, essentially acting as a virtual laboratory.\nCIEM2301 is aimed at geotechnical engineer […]\nIt helps to have some programming experience for using this website, but it’s not essential. A small amount programming experience is recommended for interacting with some of the learning materials here, but also not mandatory. For useful Python packages, students are welcome to check out the in-house repository CPyT or else Groundhog, developed by Bruno Stuyts at Ghent University.\nFor any questions, please get in touch with me (Kevin Duffy), k.duffy@tudelft.nl).\n\nCreative Commons License Information\n \nCIEM 2301: Offshore Geotechnics by Kevin Duffy (Delft University of Technology) is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.",
-    "crumbs": [
-      "🏠 Home"
-    ]
-  },
-  {
-    "objectID": "resources.html",
-    "href": "resources.html",
-    "title": "Resources",
-    "section": "",
-    "text": "Lecture notes and some recommended resources are also included on Brightspace directly.\n## Other resources\n\nPython packages\n\n\nWebsites\n\n\nBooks\n\nRandolph\nDean\nGouvernec dashboard\nBruno Stuyts\n4c offshore",
-    "crumbs": [
-      "ℹ️ Course info",
-      "Resources"
-    ]
-  },
-  {
-    "objectID": "guide.html",
-    "href": "guide.html",
-    "title": "Offshore Geotechnics",
-    "section": "",
-    "text": "This collection of interactive Jupyter notebooks are intended as a set of activities for exploring models of differential equations and understanding their solutions (numerical, graphical, and analytical). Topics covered by these materials include first and second order differential equations, Laplace transforms, and systems of equations (linear and nonlinear). These materials serves as the textbook for the “MATH 3200: Elementary Differential Equations” course at University of Colorado Denver.",
-    "crumbs": [
-      "ℹ️ Course info",
-      "Guide"
-    ]
-  },
-  {
-    "objectID": "guide.html#preface",
-    "href": "guide.html#preface",
-    "title": "Offshore Geotechnics",
-    "section": "",
-    "text": "This collection of interactive Jupyter notebooks are intended as a set of activities for exploring models of differential equations and understanding their solutions (numerical, graphical, and analytical). Topics covered by these materials include first and second order differential equations, Laplace transforms, and systems of equations (linear and nonlinear). These materials serves as the textbook for the “MATH 3200: Elementary Differential Equations” course at University of Colorado Denver.",
-    "crumbs": [
-      "ℹ️ Course info",
-      "Guide"
-    ]
-  },
-  {
-    "objectID": "guide.html#a-virtual-lab-for-experimenting-with-differential-equations",
-    "href": "guide.html#a-virtual-lab-for-experimenting-with-differential-equations",
-    "title": "Offshore Geotechnics",
-    "section": "## A Virtual Lab for Experimenting with Differential Equations",
-    "text": "## A Virtual Lab for Experimenting with Differential Equations\nThese materials are intended as set of activities to experiment and explore differential equations. Each interactive Jupyter notebooks is a “virtual laboratory” where we perform our experiments and summarize the results. The objectives of experimental mathematics are generally to make mathematics more tangible, lively and fun.\nThe intent of introducing Python is not to avoid a deep and rigorous understanding of differential equations and simply use Python to solve differential equations. There are other sources that skim the concepts on the surface and focus on the coding side of things. These materials use Python as an additional tool for further exploring differential equations to gain a deeper insight into modeling with differential equations. Some of the objectives of implementing Python code cells into the materials are to:\n\nDiscover patterns and relationships.\nUse graphical displays to investigate mathematical concepts.\nDevelop and test conjectures.\nExplore results to help construct proofs.\nConfirm analytically derived results.\nGain further insight and intuition.\nBridge the divide between theory and practice.&lt;",
-    "crumbs": [
-      "ℹ️ Course info",
-      "Guide"
-    ]
-  },
-  {
-    "objectID": "guide.html#how-to-access-edit-and-save-notebooks",
-    "href": "guide.html#how-to-access-edit-and-save-notebooks",
-    "title": "Offshore Geotechnics",
-    "section": "## How to Access, Edit and Save Notebooks",
-    "text": "## How to Access, Edit and Save Notebooks\nIn addition to the each individual Jupyter notebook in this repo, there is a html version of the materials available at , https://aspiegler.github.io/Exploring-Differential-Equations/. You cannot edit the text or run code in the html version, but there is a link to each Jupyter notebook at the start of each section.\n\n\nAt the top of each notebook is a “button” such as the one above.\nClick the button to open an interactive Jupyter notebook version in Google Colaboratory (or Colab).\nYou can begin working with the notebook right away in Colab! There is no software to install (or purchase!).\nYou can also access the materials directly on GitHub at https://github.com/CU-Denver-MathStats-OER/ODEs.git.\n\nEach Jupyter notebook contains both narrative text (in Markdown cells) and Python code cells that you can create, modify, and run. Although you do not need a Google account to interact with the notebooks, the Colab notebooks are “shared”, meaning you cannot save any changes to the initial shared document that opens. If you would like to save your changes, you first need to save a copy to your Google Drive. Then you can edit and save changes to your own version.",
-    "crumbs": [
-      "ℹ️ Course info",
-      "Guide"
-    ]
-  },
-  {
-    "objectID": "guide.html#what-programming-background-is-required",
-    "href": "guide.html#what-programming-background-is-required",
-    "title": "Offshore Geotechnics",
-    "section": "What Programming Background is Required?",
-    "text": "What Programming Background is Required?\n\nNo prior experience or knowledge of Python, Markdown, LaTeX, or Colaboratory is assumed or required to begin working with these materials. After working with these materials, you will have some knowledge and experience with Python, Markdown, LaTeX, and Colaboratory!\n\nWelcome to Colaboratory is a helpful notebook (with videos) to help introduce you to Colab.\nHere’s a helpful Markdown guide\n\n\nWhat is Python?\n\nWe will be using Python as a tool for experimenting with differential equations. Python is a widely used programming language suited for many purposes and applications such as computational mathematics, data science, and app development. We will create, modify, and run Python code in Jupyter notebooks. No prior programming experience is required to begin working in Python in these materials.\nThe goal of these materials are to investigate differential equations, not learn how to be an expert Python coder. The hope is that we can use Python as a tool for experimenting and gaining insight into differential equations, and in the process, gain a familiarity with Python and coding so it is no longer a barrier. Have I mentioned no prior programming experience is required to begin working in Python in these materials?\nThere are two Python modules (ode_tools.py and mass_spring.py) that accompany these materials with scripts to perform certain tasks such as plotting slope fields, Euler’s method, plotting phase planes, and widgets for experimenting with mass-spring systems. Whenever these modules are used, instructions are provided. There are more detailed instructions found:\n\nQuick Reference for Python Functions: Chapter 1\nQuick Reference for Python Functions: Chapter 2\nQuick Reference for Python Functions: Chapter 3\n\n\n\nWhat is LaTex?\n\nLaTeX is a system for rendering nice looking mathematical symbols, expressions, and equations. All of the mathematical notation in these materials are created using LaTeX. You can view and edit all of the LaTeX code in the Markdown cells. You do not need to become an expert in LaTeX, but having a familiarity with LaTeX is quite helpful and LaTeX can be used to typeset math in a number of different applications.\n\nHere is a useful dictionary of LaTeX math symbols to get a glimpse of LaTeX.",
-    "crumbs": [
-      "ℹ️ Course info",
-      "Guide"
-    ]
-  },
-  {
-    "objectID": "guide.html#a-remix-of-inquiry-oriented-differential-equations",
-    "href": "guide.html#a-remix-of-inquiry-oriented-differential-equations",
-    "title": "Offshore Geotechnics",
-    "section": "A Remix of Inquiry-Oriented Differential Equations",
-    "text": "A Remix of Inquiry-Oriented Differential Equations\n\nPrior to creating these notebooks, I was teaching differential equation using Inquiry-Oriented Differential Equations (IODE) by Rasmussen, C., Keene, K. A., Dunmyre, J., & Fortune, N. IODE course materials are available at https://iode.sdsu.edu. The IODE content has been kindly shared by the authors for revising, remixing and redistributing.\n\nSome notebooks in these collection are not based on IODE content.\nSome notebooks are almost identical with IODE content.\nSome sections are modifications of IODE materials.\n\nMuch gratitude and thanks to the IODE team for creating and sharing amazing content with instructors and students of differential equations!",
-    "crumbs": [
-      "ℹ️ Course info",
-      "Guide"
-    ]
-  },
-  {
-    "objectID": "guide.html#supplemental-oer-texts",
-    "href": "guide.html#supplemental-oer-texts",
-    "title": "Offshore Geotechnics",
-    "section": "Supplemental OER Texts",
-    "text": "Supplemental OER Texts\n\nBelow are two suggested Open Education Resources (OER) texts for a first course in differential equations for further reading.\n\nNotes on Diffy Qs: Differential Equations for Engineers by Jiri Lebl.\nElementary Differential Equations by William F. Trench",
-    "crumbs": [
-      "ℹ️ Course info",
-      "Guide"
-    ]
-  },
-  {
-    "objectID": "guide.html#how-to-contact-me",
-    "href": "guide.html#how-to-contact-me",
-    "title": "Offshore Geotechnics",
-    "section": "How to Contact Me",
-    "text": "How to Contact Me\n\nIf you have any questions, comments, or suggestions about these materials, please feel free to reach out to me (Adam) at adam.spiegler at ucdenver dot edu.\n\nConsidering using these materials in your course? Please let me know if I can help.\nIf you do use some of these materials in your course, your feedback is welcome and appreciated.\nIf you materials that you would like to share or contribute to this project, great!",
-    "crumbs": [
-      "ℹ️ Course info",
-      "Guide"
-    ]
-  },
-  {
-    "objectID": "guide.html#creative-commons-license-information",
-    "href": "guide.html#creative-commons-license-information",
-    "title": "Offshore Geotechnics",
-    "section": "Creative Commons License Information",
-    "text": "Creative Commons License Information\n\n \nExploring Differential Equations by Adam Spiegler (University of Colorado Denver) is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. This work is funded by an Institutional OER Grant from the Colorado Department of Higher Education (CDHE). Based on a work at https://github.com/CU-Denver-MathStats-OER/ODEs and original content created by Rasmussen, C., Keene, K. A., Dunmyre, J., & Fortune, N. (2018). Inquiry oriented differential equations: Course materials. Available at https://iode.sdsu.edu.\nFor similar interactive OER materials in other courses funded by this project in the Department of Mathematical and Statistical Sciences at the University of Colorado Denver, visit https://github.com/CU-Denver-MathStats-OER.",
-    "crumbs": [
-      "ℹ️ Course info",
-      "Guide"
     ]
   },
   {
@@ -274,7 +27,7 @@
     "href": "notes/3-3_geotechnical-investigation.html#drilling-and-sampling",
     "title": "Geotechnical investigation",
     "section": "Drilling and sampling",
-    "text": "Drilling and sampling\nSamples of the subsurface are required a number of reasons, ranging from simple soil classification to laboratory testing for obtaining geotechnical parameters for design. There are range of different methods (?@fig-sampling-methods.png), the choice of which depends on the desired sample quality, as well as whether or not a seabed or downhole system is being used (which inevitably becomes a question of cost).\nAs mentioned before, seabed systems can provide data in a relatively cost-efficient manner. However in terms of soil sampling, seabed systems and associated sampling techniques can only provided information of the upper few metres, and are therefore are more prevelant for investigating the seabed conditions along pipeline routes. Examples of some sampling techniques include:\n\nGrab samples enables the recovery of soil samples from the seabed. Grab samples provide disturbed providing disturbed material for simple soil classification or mineralogical testing.\nBox cores also samples from just the seabed, but can provided relatively undisturbed samples for exploring strength characteristics, particularly through shear vane testing or mini-penetrometer testing.\nA gravity corer (also known as a drop corer) is a steel tube with a heavy mass on top. The corer is dropped from a height several metres above the seabed, obtaining a disturbed sample for soil classification and mineralogical testing.\nJust like a gravity corer, a vibro corer also obtains disturbed sediment in upper few metres of the seabed. However, a vibro corer is generally preferable for harder soil or dense sand, with a vibrator used to essentially liquefy the soil and achieve greater penetration.\nA piston corer gets relatively undisturbed samples of the upper few metres and can also be integrated in with other techniques, like gravity coring.\n\nDownhole systems are generally preferred for obtaining deep, relatively high quality samples. These samples are collected using push or piston sampling, retrieving generally 1m long segments that are usually first classified and photographed offshore (along with basic index tests like water content, pocket penetrometer), and then prepared for delivery to and onshore laboratory\n\n\n\n\n\n\nFigure 4: Different types of sampling methods from Sterk and Stein, 2015",
+    "text": "Drilling and sampling\nSamples of the subsurface are required a number of reasons, ranging from simple soil classification to laboratory testing for obtaining geotechnical parameters for design. There are range of different methods (Figure 4), the choice of which depends on the desired sample quality, as well as whether or not a seabed or downhole system is being used (which inevitably becomes a question of cost).\nAs mentioned before, seabed systems can provide data in a relatively cost-efficient manner. However in terms of soil sampling, seabed systems and associated sampling techniques can only provided information of the upper few metres, and are therefore are more prevelant for investigating the seabed conditions along pipeline routes. Examples of some sampling techniques include:\n\nGrab samples enables the recovery of soil samples from the seabed. Grab samples provide disturbed providing disturbed material for simple soil classification or mineralogical testing.\nBox cores also samples from just the seabed, but can provided relatively undisturbed samples for exploring strength characteristics, particularly through shear vane testing or mini-penetrometer testing.\nA gravity corer (also known as a drop corer) is a steel tube with a heavy mass on top. The corer is dropped from a height several metres above the seabed, obtaining a disturbed sample for soil classification and mineralogical testing.\nJust like a gravity corer, a vibro corer also obtains disturbed sediment in upper few metres of the seabed. However, a vibro corer is generally preferable for harder soil or dense sand, with a vibrator used to essentially liquefy the soil and achieve greater penetration.\nA piston corer gets relatively undisturbed samples of the upper few metres and can also be integrated in with other techniques, like gravity coring.\n\nDownhole systems are generally preferred for obtaining deep, relatively high quality samples. These samples are collected using push or piston sampling, retrieving generally 1m long segments that are usually first classified and photographed offshore (along with basic index tests like water content, pocket penetrometer), and then prepared for delivery to and onshore laboratory\n\n\n\n\n\n\nFigure 4: Different types of sampling methods from Sterk and Stein, 2015",
     "crumbs": [
       "📚 Course notes",
       "Site investigation",
@@ -378,6 +131,114 @@
     ]
   },
   {
+    "objectID": "notes/1_intro.html",
+    "href": "notes/1_intro.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "The work of engineers in the offshore sector has changed massively in the past decade, shifting from what was mainly oil and gas structures to offshore wind farms. This can even be seen by the recommended textbooks for this course: Randolph and Gouvernec (2011) and Dean (2010). Both books approach offshore engineering from mainly and oil and gas perspective, whilst also acknowledging the geotechnical uncertainies that were ahead in the growing offshore wind industry.\nThe concepts taught in these books are still highly relevant to offshore and onshore design today, as well as research and designs performed in this era. Yet it’s important to be aware of the shift in both the research landscape and standardisation. Oil and gas structures tend to be bespoke design at one single location. However, offshore wind farms tend to span tens of kilometres in length (e.g. Figure 1) and require replicable and efficient designs at all turbine locations across the wind farm.\nMoreover, the growth in the offshore wind sector is expected to continue to grow in the next couple of decades, with annual installations expected to grow from 8 GW in 2024, to 55 GW by 2034 (GWEC 2025). Since the construction of the first offshore wind farm in Denmark in 1991, Vindeby, the inital growth of offshore wind has been pioneered by the North Sea countries—like Denmark, the United Kingdom and the Netherlands. China now leads offshore wind development, and expansion continues in Europe and other countries like in Taiwan and the United States (Figure 2).\nResearch into offshore geotechnics has also rapidly grown as a result, particularly into the influence of wave and wind loading on foundation behaviour. Yet many questions also remain, particularly as many wind farms come into maturity and reach the end of their twenty-five year design lifetime. How might the foundation capacity change over time and how can we decomission or reuse these foundations in a sustainable manner?",
+    "crumbs": [
+      "📚 Course notes",
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "notes/1_intro.html#types-of-offshore-structures",
+    "href": "notes/1_intro.html#types-of-offshore-structures",
+    "title": "Introduction",
+    "section": "Types of offshore structures",
+    "text": "Types of offshore structures\nOffshore structures can be categorised into two types: fixed or floating. Choosing the type of structure is dependent on a variety of factors in a variety of engineering disciplines, including geotechnical, hydraulic, mechanical and structrual engineering.\nWhile the structural concepts may differ significantly, the foundation systems used to secure these installations often share common elements. For example, piles or suction caissons may be used both for fixed installations (to resist vertical and lateral loads) and for floating systems (as anchor points for mooring lines). Consequently, geotechnical engineering plays a central role regardless of whether the superstructure is fixed or floating.\n\nFoundations for fixed structures\nMonopiles are perhaps the simplest foundation solution from a manufacturing and structural perspective, making it particularly useful for production in volume. As a a result, monopiles account for at least 70% of all offshore wind installations in Europe (Wind Europe 2020).\n\n\n\n\n\n\nFigure 3: Monopile and transition pieces the SIF production facility in the port of Rotterdam\n\n\n\nJacket structures (Figure 9) become more cost competitive at deeper water depths (say &gt; 35m), and they are especially common in the oil and gas sector or for substations at offshore farms. A jacket is usually piled into the seabed each, occasionally as a pile group or with a suction bucket at each leg (Figure 9 (b)). Jackets are also particularly prevalant in areas enveloped with very soft to soft clays, like in the Gulf of Mexico or Western Africa.\n\n\n\n\n\n\n\n\n\n\n\n(a) Installation of the “pin piles” at each jacket leg using a jack-up platform (from: BOEM-OPA)\n\n\n\n\n\n\n\n\n\n\n\n(b) Transporting jackets at Seagreen offshore wind farm. Instead of piles, suction buckets are used at each jacket leg (from: Glen Wallace)\n\n\n\n\n\n\n\nFigure 4: Jacket structures, with two different foundation types\n\n\n\n\n\n\n\n\n\nSide note: Bringing a jacket to its final location\n\n\n\n\n\nJackets are also often too heavy to lift directly. Therefore, they are often “skidded” off quayside to bring the jacket from the manufacturing facility on the quayside to a barge on the water. When the jacket reaches its final destination, it is then “launched” off the barge. The buoyancy of the jacket (often improved with additional, temporary buoyancy tanks) is then used used to reduce its weight, helping a crane to orientate it into its final position.\n\n\n\n\n\nGravity-based structures are the behemoths of the offshore industry, and use their own self-weight to resist horizontal loads imposed by wind and waves. Gravity-based foundations were extensively developed for initial oil and gas development in the North Sea where heavily overconsolidated clays and dense sands covered the area, unlike the soft clays of the Gulf of Mexico. These conditions were were less suitable for driving piles in, resulting in gravity-based structures becoming a suitable alternative.\n\n\n\n\n\n\n\n\n\n\n\n(a) Gravity-based foundations for Fecamp offshore wind farm in France (from: offshorewind.biz)\n\n\n\n\n\n\n\n\n\n\n\n(b) Towing Troll-A gravity-based platform to its final location (from: Equinor)\n\n\n\n\n\n\n\nFigure 5: Gravity-based foundations\n\n\n\nAll these structures can be installed using floating barges or ships. However, this also makes construction vulnerable to weather-induced delays such as high winds, waves or swells. Jackups provide an alternative. Jackups are temporary working platforms used for drilling or construction. It consists of a hull and three or more retractable legs, each with fitted with a “spud-can” at the base (Figure 6).\nThe geotechnical concepts governing jackup installation are largely dictated by shallow foundation principles. However, the pull-out resistance of the spudcans, along with potential settlement during operation, are also of critical importance.\n\n\n\n\n\n\nFigure 6: The bottom of a jack-up leg, known as a spudcan (from: COFS)\n\n\n\n\n\n\n\n\n\nSide note on some piling terminology\n\n\n\n\n\nThere are several different colloquial terms for all the foundations we see. While there isn’t a universal agreed-upon definition, some general advice can be:\n\nA pin pile or jacket pile is a slender foundation used to fix each leg of a jacket structures, where the length-to-diameter (slenderness) ratio \\(L/D\\) is at least 10.\nA monopile has an \\(L/D\\) ratio of 8, thus behaving much stiffer compared to a pin pile under horizontal loading.\nA caisson is similar in dimensions to a monopile, but is usually pushed or drilled into place instead of hammered.\nA bucket or skirt has very low \\(L/D\\) ratios, essentially acting as a shallow foundation. Skirts are considered as an add-on to the bottom of a gravity-based foundation to improve the horizontal capacity, whereas buckets is a term usually used for foundations installed with suction pressure.\n\n\n\n\n\n\n\nFigure 7: Some general foundation definitions\n\n\n\n\n\n\n\n\nFoundations for floating structures\nInstalling fixed structures in deep waters (say, &gt;100m) is both technically challenging and expensive. Floating structures therefore became more prevalent as oil and gas exploration moved towards uncharted waters. Floating structures have inveitably been less common in the initial development of offshore wind, yet they starting to become more common are becoming more and more common–with the first commercial wind farm, Hywind in Scotalnd, startingoperation in 2017.\nFrom a structural perspective, there are four main types of floating structures (Figure 8), each using different stabilisation mechanisms to minimise rotation of the superstructure:\n\nA spar platform uses ballast to move the centre-of-gravity below the centre-of-buoyancy, providing a counter-moment to any horizontal actions acting on the structure. Therefore, the geometry of the ballast (often cyclindrical) dictates the buoyancy and stability of the structure.\nA barge-type structure is comparable to a ship, with a shallow draft. It uses a large waterplane area and buoyancy provide stability.\nA tension-leg platform (TLP) uses taut steel moorings fixed to the seabed, with the buoyancy of the TLP hull ensuring that the mooring lines are taut at all times.\nA semi-submersible also uses ballast to lower its centre-of-gravity, as well as spreading out its waterplane area to provide additional stability.\n\nFrom a geotechnical perspective, all of these floating structures require moorings that are fixed to anchors at the seabed. The different types of anchors as well as assessing their performance will be explored later in these notes.\n\n\n\n\n\n\nFigure 8: Types of floating substructures (Scheu et al. 2018)\n\n\n\n\n\nOther structures:\nOffshore structures are also not limited to structures on the same scale as wind turbines or oil and gas platforms. Even the construction of these wind turbines requires the use of temporary structures like mudmats and pile guide frames. These primarily use shallow foundations so we’ll cover them to some extent.\nThis course focusses primarily on offshore foundations and so several things aren’t covered:\n\nElectricity or fuel also needs to be transferred across the site, and therefore pipelines and or interconnectors have a crucial role to play. While these seem deceptively simple at first glance, anticipating how they will behave over their lifetime is a challenge, particularly with regards to cable burial and the local topography.\nDredging operations are another very common offshore activity that isn’t covered, particularly since seabed mobility and dredging machines deserve a stand-alone course in itself.\nCoastal infrastucture, like jetties or harbours, aren’t covered, as well as tunnels and bridge piers/caissons.\n\n\n\n\n\n\n\n\n\n\n\n\n(a) Pile guide frame used for load tests in Taiwan\n\n\n\n\n\n\n\n\n\n\n\n(b) TU Delft centrifuge set-up, examining the influence of submarine landslides on pipeline performance (Zhang and Askarinejad 2019)\n\n\n\n\n\n\n\nFigure 9: Couple more examples of other offshore structures",
+    "crumbs": [
+      "📚 Course notes",
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "notes/1_intro.html#features-of-an-offshore-site",
+    "href": "notes/1_intro.html#features-of-an-offshore-site",
+    "title": "Introduction",
+    "section": "Features of an offshore site",
+    "text": "Features of an offshore site\nEnvironmental loading is one of the main unique features of an offshore site compared to onshore, especially since the relative proportion of horizontal \\(H\\) to vertical \\(V\\) loading is vastly different to onshore structures, where \\(H/V\\) is much lower. An example of some of these loads is given in Figure 10, showing how the loads can applied both on the superstructure or on the foundation itself (e.g. Figure 10).\n\n\n\n\n\n\nFigure 10: Loads acting on a wind turbine with a gravity-based foundation\n\n\n\nRandolph and Gouvernec (2011) give a nice example of how Troll A compares to an equivalent onshore structure—taking the (now abandoned) Dubai Towers skyscraper in Doha, Qatar. The self-weight of both structures is pretty comparable, but the environmental loads on Troll A are around 500% greater than on Dubai Towers—especially wave and current loading. Therefore, Troll A requires a much larger foundation area.\nCrucially, this horizontal loading also creates a lever arm rotating about the bottom of the platform. Therefore in deep waters (say, 100m), overturning will become the dominant failure mechanism. Conversely, in shallow waters, \\(M/HD\\) typically lies in the range 0.35–0.70, and so sliding could become the dominant failure mechanism.\nImportantly, environmental loads are often time-dependent in nature, and thus cyclical loading becomes an even more critical design criteria for offshore geotechnics. Due to the dominance of environmental loading offshore, accounting for the influence of cyclic loading on the soil response is much more important than for a typical onshore structure. Environmental forces impart significant cyclic horizontal, vertical and moment loads to offshore foundation systems, and generate excess pore water pressures in the vicinity of the foundation, reducing the effective stresses in the seabed.\nEnvironmental loads are usually calculated as part of the structural analysis, which is in turn based on meteorological and oceanographic (metocean) data.\n\n\n\n\n\n\nFigure 11: Comparison between the Troll A gas platform and the now-abandoned Dubai Towers project (Randolph and Gouvernec 2011)\n\n\n\n\n\n\n\n\n\nSide note: A one-in-one-hundred-year storm event\n\n\n\n\n\nEnvironmental loads are typically specified in terms of a particular return period. A return period is the average time interval expected between the occurrences of an event of a certain magnitude. Therefore, in any given year, the probability of an \\(N\\) year event happening is approximately\n\\[\np_1 = 1/N\n\\]\nTherefore, the probability that at least one event will happen in the lifespan \\(L\\) of a structure is:\n\\[\np_L = 1-(1-\\frac{1}{N})^L\n\\]\nA 100-year return period, for instance, indicates a 1% probability of such an event occurring in any given year. However, it does not mean that the event will happen exactly once every 100 years.\n\n\n\n\nWind loading\nWind loading is a key environmental action on offshore structures, contributing both directly and indirectly to design considerations. Wind exerts pressure on the exposed parts of the structure above water—such as platforms, turbines, and topsides—generating horizontal forces and overturning moments. Indirectly, wind is the primary driver of surface waves and currents, which usually dominate the geotechnical loading on foundations. While the magnitude of direct wind forces is typically smaller than hydrodynamic loads, they are important for serviceability, fatigue, and operational stability, particularly for tall, slender structures like offshore wind turbines.\n\n\n\n\n\n\nFigure 12: A metocean mast in the foreground—yet another structure that becomes much more complicated to install offshore (source)\n\n\n\n\n\nHydrodynamic loading\nHydrodynamic loading describes the forces caused by the motion of the ocean, including:\n\nHorizontal loading caused by ocean waves or currents\nSediment transport (including erosion, scouring or deposition)\n\nJust like wind loads, hydrodynamic forces are both temporally and spatially dependent. For example, ocean currents vary with depth (Figure 13); thanks in part to wind stresses on the ocean surface, tides, local topography, and differences in water temperature and salinity that give rise to density-driven circulation.\nAs a result, hydrodynamic loads can vary greatly. Near the coast, where tides, winds, and waves act across the entire water column, loads tend to fluctuate strongly and are often highly variable over relatively short time periods. In the deep ocean, density gradients in the seawater, drive slow but persistent circulation patterns, exerting different kinds of forces on subsea infrastructure.\n\n\n\n\n\n\nFigure 13: Different types of ocean currents (Randolph and Gouvernec 2011)\n\n\n\nSurface waves are another source of environmental loading. Their characteristics change with water depth as they transform from deep-water waves to shallow-water waves, turning into breaking waves as they approach the coastline. Waves that travel beyond the wind-affected zone are referred to as swells. Swells propagate across away from their area of generation and can propagate in directions that differ from the direction of the wind. Swells can come from hundreds of kilometres away, and therefore they don’t necessarily occur in locally stormy weather.\nBoth waves and currents can then lead to large amounts of sediment transport through the movement of sand-waves across the seabed, erosion and transport of shoreline deposits or scouring around the the footings of a structure. Scouring and sediment transport is of course heavily dependent on the local soil conditions, as well as the shape of the structure itself.\nWhile precisely quantifying these hydrodynamic forces isn’t often the work of a geotechnical engineer, understanding how these forces vary and their effect on the foundation is still of importance.\n\n\n\n\nIce loading\nJust like wave loading, ice loading is location dependent. How it affects offshore structures depends on its strength, thickness and the velocity at which its moves across the water which are all in turn dependent on the ice age, metocean conditions and water quality–to name but a few (Sanderson 1988).\n\n\n\n\n\n\nFigure 14: Ice-breaking cones at the base of a shallow jacket foundation from Nissum Bredning, Denmark",
+    "crumbs": [
+      "📚 Course notes",
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "notes/1_intro.html#standardisation",
+    "href": "notes/1_intro.html#standardisation",
+    "title": "Introduction",
+    "section": "Standardisation",
+    "text": "Standardisation\nIndustry standards and codes provide a reliable basis for aligning expectations about a product or service, giving a framework that engineers can work with when designing a structure. Onshore, the Eurocode and associated National Annexes (like NEN 9997-1) are often the go-to resource—if not compulsory—and thus each country usually has their own rules and regulations that are specifically designed for the geotechnical conditions, structures and typical practices of that country.\nHowever offshore projects are often international collaborations, employing consultants and contractors from different countries. Furthermore, the unique structures and challenging installation conditions means many national design standards are not designed to accommodate for such construction projects.\nStandards often give a good overview of a particular topic, as well as being an engineer’s mainstay for calculations, so its highly recommended to get familiar with the main standards when coming across a new topic. Some standards that are particularly important for offshore geotechnics:\n\nISO 19901 to 19906: Developed by the International Standards Organisation (ISO), primarily based on initial oil and gas development.\nAPI RP-2GEO: Developed by the American Petroleum Institute and a subset of the API RP 2A. There are two versions: a Working Stress Design (WSD) approach and a Load and Resistance Factor Design (LRFD) version (see below)..\nDNV-RP-C212: Developed by the certification authority DNV-GL. The standard is more specifially tailored towards monopile and shallow foundation design.\n\nThese standards are in addition to the litany of other standards (particularly ISO standards) which guide specific things like in-situ testing, different foundation types or load testing.\nNevertheless, standards should not be regarded as static documents. The process of changing a standard takes time and they often do not include more up-to-date design methods—often since coming to a universal concensus takes time and plenty of research. For instance, the compartively recent growth of the offshore wind sector also means that current standards may not necesarily reflect the unique challenges of offshore wind (Morgan 2023). Likewise, probabilistic methods or the use artificial intellegence algorithms are still at an elemental level in design standards.\nWhen a design and the calculations are prepared, they then get sent to a certification body, like Det Norske Veritas (DNV) or Bureau Veritas.\n\n\n\n\n\n\nLimit state functions\n\n\n\nJust like onshore engineering, offshore design standards are typically written in terms of certain limit states:\n\nThe ultimate limit state (ULS) is the maximum load-carrying capacity of a structure which, if exceeded, would lead to complete collapse.\nThe serviceability limit state (SLS) defines the conditions within which the structure can be kept serviceable. For example, the permanent accumulated rotation at the top of a wind turbine’s foundation often may not exceed 0.5°.\nAccidental limit state (ALS) corresponds to survival conditions in a damaged condition or in the presence of strongly non-linear environmental conditions or for highly unlikely events, like ship allisions.\nFatigue limit states (FLS) are limiting conditions or failures resulting from continued cyclic loading, although this generally pertains to the structure materials themselves.\n\n\n\n\nFactors of safety\nOne way design standards can greatly differ is with how they deal with safety factors. For instance, API RP-2GEO uses working stress design (WSD) by default, where one global safety factor is applied:\n\\[\nR = (G+Q+E) \\gamma_G\n\\]\nwhere \\(R\\) is the soil resistance, \\(G\\) is the permanent load, \\(Q\\) is the variable load, \\(E\\) is the environmental load and \\(\\gamma_G\\) is a safety factor applied to the combined effect of the three different loads, chosen based on the type of failure mechanism. In this case \\(\\gamma_G\\) essentially accounts for tthe natural variability of soil properties, measurement errors, statistical uncertainy and model uncertainty in one factor.\nNowadays, design standards are tending to shift towards a Load and Resistance Factor Design (LRFD) approach, like that in NEN 9997-1. With LRFD, the different types of loads are considered explicitly by using partial safety factors:\n\\[\n\\frac{R}{\\gamma_m} = \\gamma_G G + \\gamma_q Q + \\gamma_e E\n\\]\nHaving been originally designally for WSD, API RP 2GEO now has two versions: one for WSD, and the other for LRFD. Nevertheless, nowadays the ISO and API geotechnical codes are generally aligned with one another, with some small exceptions (Colliat-Dangus et al. 2017).",
+    "crumbs": [
+      "📚 Course notes",
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "CIEM 2301: Offshore Geotechnics",
+    "section": "",
+    "text": "New release: Monday 25th August\n\n\n\nCourses notes on site investigation has been added\nThis collection of Jupyter notebooks are intended as a set of learning materials for the course CIEM2301 Offshore Geotechnics at Delft University of Technology. The aim is to provide an interactive and accessible way of engaging with the course material, essentially acting as a virtual laboratory.\nCIEM2301 is aimed at geotechnical engineer […]\nIt helps to have some programming experience for using this website, but it’s not essential. A small amount programming experience is recommended for interacting with some of the learning materials here, but also not mandatory. For useful Python packages, students are welcome to check out the in-house repository CPyT or else Groundhog, developed by Bruno Stuyts at Ghent University.\nFor any questions, please get in touch with me (Kevin Duffy), k.duffy@tudelft.nl).",
+    "crumbs": [
+      "🏠 Home"
+    ]
+  },
+  {
+    "objectID": "index.html#creative-commons-license-information",
+    "href": "index.html#creative-commons-license-information",
+    "title": "CIEM 2301: Offshore Geotechnics",
+    "section": "Creative Commons License Information",
+    "text": "Creative Commons License Information\n \nCIEM 2301: Offshore Geotechnics by Kevin Duffy (Delft University of Technology) is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.",
+    "crumbs": [
+      "🏠 Home"
+    ]
+  },
+  {
+    "objectID": "guide.html",
+    "href": "guide.html",
+    "title": "User guide",
+    "section": "",
+    "text": "My hope for these notes is for this to become a sort of virtual laboratory by creating interactive elements through Python and Jupyter notebooks. Most notes or books just go through the concepts on a surficial level, and hopefully by going through the actually execution of design methods or analytical models this will hopefully give you a more granular understanding (excuse the pun!) of the different concepts. This comes in addition to workshops during the course itself.\nKnowing Python is not a pre-requisite to using these notes, and I hope the notes provide enough quality information beyond Python so that they’re still useful. Where Python code has been included, it will be structured in such a way to make it very straightforward to change the inputs. Beyond these Python scripts, there’s also the notes themselves, the code outputs, along with other interactive elements.",
+    "crumbs": [
+      "ℹ️ Course info",
+      "User guide"
+    ]
+  },
+  {
+    "objectID": "guide.html#how-to-access-edit-and-save-notebooks",
+    "href": "guide.html#how-to-access-edit-and-save-notebooks",
+    "title": "User guide",
+    "section": "How to access, edit and save notebooks",
+    "text": "How to access, edit and save notebooks\nA notebook is convenient way of including some explanatory text and Python code in one file. Therefore, this website consists of either a stand-alone Markdown file (which is basically a fancy text file) or a combined Markdown/Python notebook—known as Jupyter.\n\nGoogle Colab\nWhere there’s some coding elements in the notes, I’ve included a Google Colab button at the top of the page like this:\n \nWhat is Colab? Colab is a super easy way of editing the notes yourself on your browser. It also doesn’t require you to install Python on your computer. You can simply click on the link above it will enable you to make whatever changes you want and run it right there straight away.\nYou do not need a Google account to interact with the notebooks. However if you would like to save your changes, you first need to save a copy to a Google Drive. Then you can edit and save changes to your own version.\n\n\nGithub\nFurthermore, all of these files are available at https://github.com/triaduct/offshoregeotechnics and you can copy them to your own computer. Github is based on a version control system called Git, making it easier to collaborate with others and track changes effectively. Therefore when copying these notes, you have a couple of choices:\n\nYou can fork the repository: this is recommended if you want to propose changes (always welcome!) or compare your fork with new updates to the notes.\nYou can download a zip file of the code. If you’ve got limited experience with Python and just want to check the code quickly, I’d recommended this.\n\n\n\nQuarto\nThese notes have been developed using Quarto. Quarto provides a really efficient way of making notes, webpages, presentations (to name but a few), all from the same set of notebooks. When I get a chance, I’ll add a short guide to rendering the notes yourself into a custom .pdf or .html (website). But in the meantime, feel free to ask me any questions about it.\nI’ve also taken inspiration from several other Quarto webpages for developing these, so particular thanks to Adam Spiegler and Jon Cardoso for the inspiration.",
+    "crumbs": [
+      "ℹ️ Course info",
+      "User guide"
+    ]
+  },
+  {
+    "objectID": "guide.html#asking-questions",
+    "href": "guide.html#asking-questions",
+    "title": "User guide",
+    "section": "Asking questions",
+    "text": "Asking questions\nAt the bottom of each page, you’ll see a small comment box. This comment box is connected with Github Discussions in the course notes repository and so all comments are public.\nYou can use this comment box to ask questions about the course notes themselves or provide comments or suggestions (which are much welcome!). Hopefully this will also give others a chance to learn a bit more or give them a bit of inspiration—and I’d love to get ideas to improve these notes.\nOtherwise feel free to contact me (Kevin) directly at k.duffy@tudelft.nl. If you’d also like advice on using these materials for your course, please let me know if I can help.",
+    "crumbs": [
+      "ℹ️ Course info",
+      "User guide"
+    ]
+  },
+  {
+    "objectID": "learning-objectives.html",
+    "href": "learning-objectives.html",
+    "title": "Learning Objectives",
+    "section": "",
+    "text": "Learning objectives\nAfter this course, students are expected to:\n\nDescribe the geotechnical challenges unique to offshore environments.\nDesign a suitable foundation system for an offshore wind turbine according to the latest axial and lateral pile capacity models\nCritically assess the reliability of different site investigation techniques in offshore settings.\nEvaluate the suitability of a foundation concept for a given offshore wind farm\nDevelop a risk mitigation strategy for offshore geohazards",
+    "crumbs": [
+      "ℹ️ Course info",
+      "Learning objectives"
+    ]
+  },
+  {
     "objectID": "notes/2_marine-geology.html",
     "href": "notes/2_marine-geology.html",
     "title": "Marine geology",
@@ -415,10 +276,93 @@
     "href": "notes/2_marine-geology.html#sec-depositional-environments",
     "title": "Marine geology",
     "section": "Depositional environments",
-    "text": "Depositional environments\nDepositional environments determine what kind of sediments get deposited, essentially describing the set of physical, chemical or biological processes in which sediments, soil and rocks are added to a landform or land mass.\n\n\n\n\n\n\nFigure 6: Different types of depositional environments (source)\n\n\n\nSome selected environments include:\n\n\n Lacustrine (lakes/wetlands)\nA low energy environment with high sedimentation rates, resulting in primarily fine-grained seidments with high organic contents. Evaporitic deposits are also possible in arid regions, as are varved (laminated) soils if there are seasonal fluctuations in inflow rates.\n\n\n Aeolian (wind-blown)\nWind-blown sediment in what are usually dry or well-drained areas, such as around coastal dunes or deserts. Sediment is generally well-sorted, rounded fine sand dominated by quartz.\n\n\n\nFluvial (river-deposited)\nThe resulting sediment largely depends on the type of river and the level of hydrodynamic activity. Often fine-grained sediment gets brought to sea or deposited in lakes or across flood plains. High lateral variability and sometimes erosion and channelisation of underlying sediment.\n\n\n\nGlacial Hugely variable deposits that depend on the specific glacial process. Examples of sediment includes boulder clay (generally unsorted and unstratified) or outwash sediment (mainly gravel, sand and silt of various degrees of sorting)\n\n\nWhether it’s light, fine-grained clays that get deposited, or heavy, coarse-grained gravels is not just a function of the depositional environment but also the energy within this environment. Taking (river-gradation?) as an example, only heavy sands and gravels can fall out of suspension near the shore—since river mouths or wave action (for example) prevents lighter particles from falling out of suspension. The depositional energy will also affect the particle roundness and sphericity.\nNevertheless Figure 7 is a just a hypothetical example. In reality, local variations and subsequent changes in geological conditions will also affect the type of sediment we see.\n\n\n\n\n\n\n\n\n\n\n\n(a) Sediment distribution across a shoreline profile, showing the so-called “null point theory” (source)\n\n\n\n\n\n\n\n\n\n\n\n\n\n(b) Hjulström’s cruve, used for evaluating the likelihood of erosion, transportation or sedimentation in a river (source)\n\n\n\n\n\n\n\nFigure 7: Influence of particle size/weight and flow velocity on the type of deposition that will occur",
+    "text": "Depositional environments\nDepositional environments determine what kind of sediments get deposited, essentially describing the set of physical, chemical or biological processes in which sediments, soil and rocks are added to a landform or land mass.\n\n\n\n\n\n\nFigure 6: Different types of depositional environments (source)\n\n\n\nSome selected environments include:\n\n\n Lacustrine (lakes/wetlands)\nA low energy environment with high sedimentation rates, resulting in primarily fine-grained seidments with high organic contents. Evaporitic deposits are also possible in arid regions, as are varved (laminated) soils if there are seasonal fluctuations in inflow rates.\n\n\n Aeolian (wind-blown)\nWind-blown sediment in what are usually dry or well-drained areas, such as around coastal dunes or deserts. Sediment is generally well-sorted, rounded fine sand dominated by quartz.\n\n\n\nFluvial (river-deposited)\nThe resulting sediment largely depends on the type of river and the level of hydrodynamic activity. Often fine-grained sediment gets brought to sea or deposited in lakes or across flood plains. High lateral variability and sometimes erosion and channelisation of underlying sediment.\n\n\n\nGlacial Hugely variable deposits that depend on the specific glacial process. Examples of sediment includes boulder clay (generally unsorted and unstratified) or outwash sediment (mainly gravel, sand and silt of various degrees of sorting)\n\n\nWhether it’s light, fine-grained clays that get deposited, or heavy, coarse-grained gravels is not just a function of the depositional environment but also the energy within this environment. Taking Figure 7 as an example, only heavy sands and gravels can fall out of suspension near the shore—since river mouths or wave action (for example) prevents lighter particles from falling out of suspension. The depositional energy will also affect the particle roundness and sphericity.\nNevertheless Figure 7 is just a hypothetical example. In reality, local variations and subsequent changes in geological conditions will also affect the type of sediment we see.\n\n\n\n\n\n\n\n\n\n\n\n(a) Sediment distribution across a shoreline profile, showing the so-called “null point theory” (source)\n\n\n\n\n\n\n\n\n\n\n\n\n\n(b) Hjulström’s cruve, used for evaluating the likelihood of erosion, transportation or sedimentation in a river (source)\n\n\n\n\n\n\n\nFigure 7: Influence of particle size/weight and flow velocity on the type of deposition that will occur",
     "crumbs": [
       "📚 Course notes",
       "Marine geology"
+    ]
+  },
+  {
+    "objectID": "notes/3-2_geophysical-investigation.html",
+    "href": "notes/3-2_geophysical-investigation.html",
+    "title": "Geophysical investigation",
+    "section": "",
+    "text": "A geophysical survey is a non-intrusive site investigation method. Processing the geophysical data usually not the job of geotechnical engineers and instead, each project will usually have a team of dedicated geophysicists. Nevertheless understanding the results, particularly in terms of ground modelling and paramaterisation, is an important step that geotechnical engineers need to perform, along with parameterisation.\nThere are a range of geophysical methods, each serving different purposes (Table 1).",
+    "crumbs": [
+      "📚 Course notes",
+      "Site investigation",
+      "Geophysical investigation"
+    ]
+  },
+  {
+    "objectID": "notes/3-2_geophysical-investigation.html#echo-sounder",
+    "href": "notes/3-2_geophysical-investigation.html#echo-sounder",
+    "title": "Geophysical investigation",
+    "section": "Echo sounder",
+    "text": "Echo sounder\nAn echo sounder is typically used get bathymetry data, thus giving important information into the seabed elevation and slope at a given location, as well as potential (or past) slope failures, seabed obstructions and other geohazards. There are two main types of echo sounders: singlebeam echo sounders (SBES) and multibeam echo sounders (MBES). MBES systems generally give more detailed seafloor maps, particularly in deepwater (&gt;25m), whereas SBES systems are generally cheaper and more easier to process, and are thus found on all ocean going vessels.\nIt’s also becoming more common to analyse the backscatter from echo soundings. This can give a very high resolution bathymetry, although samples from seafloor are required to understand the correlation between the soil type and the acoustic wave backscatter.\n\n\n\n\n\n\nFigure 2: Multibeam echo sounder (MBES),",
+    "crumbs": [
+      "📚 Course notes",
+      "Site investigation",
+      "Geophysical investigation"
+    ]
+  },
+  {
+    "objectID": "notes/3-2_geophysical-investigation.html#side-scan-sonar-sss",
+    "href": "notes/3-2_geophysical-investigation.html#side-scan-sonar-sss",
+    "title": "Geophysical investigation",
+    "section": "Side scan sonar (SSS)",
+    "text": "Side scan sonar (SSS)\nSide-scan sonar is a method of underwater imaging using pulses of acoustic energy transmitted out the side of a “towfish” (or equivalent such as an ROV) and across the seafloor. The reflected energy is then used to assess seabed features (such as shipwrecks or pockmarks) in more detail compared to an echo sounder. While direct bathymetry data can be somewhat inferred from side-scan sonar, it becomes challenging due to the changing altitude of the towfish and length of the seismic shadow cast by seabed obstructions and the towfish itself.\n\n\n\n\n\n\nFigure 3: Side scan sonar and the “towfish”. Take note of the shadow underneath the tow fish (remember: side scan sonar can only look to the sides)",
+    "crumbs": [
+      "📚 Course notes",
+      "Site investigation",
+      "Geophysical investigation"
+    ]
+  },
+  {
+    "objectID": "notes/3-2_geophysical-investigation.html#magnetometer",
+    "href": "notes/3-2_geophysical-investigation.html#magnetometer",
+    "title": "Geophysical investigation",
+    "section": "Magnetometer",
+    "text": "Magnetometer\nA magnetomer is used to detect magnetic anomalies on the seabed, such as cables, shipwrecks, debris or anchor chains. Generally these are towed well behind the survey vessel to minimise magnetic inference, and an accurate profile of the total magnetic field at the location is needed so that small magnetic features can be accurately distinguished.\nMagnetometers also play an important role in unexploded ordinance (UXO) surveys (Figure 4), ensuring the UXOs don’t pose a risk to either the intrusive site investigation or construction itself.\n\n\n\n\n\n\nFigure 4: Results of the unexploded ordinanace (UXO) survey at IJmuiden Ver wind farm zone offshorewind.rvo.nl",
+    "crumbs": [
+      "📚 Course notes",
+      "Site investigation",
+      "Geophysical investigation"
+    ]
+  },
+  {
+    "objectID": "notes/3-2_geophysical-investigation.html#comparison-between-surficial-techniques",
+    "href": "notes/3-2_geophysical-investigation.html#comparison-between-surficial-techniques",
+    "title": "Geophysical investigation",
+    "section": "Comparison between surficial techniques",
+    "text": "Comparison between surficial techniques\nTo some extent, echo sounders and sidescan sonar provide very comparable results. Generally speaking, sidescan sonar provides high resolution imagery, making it often easier to distinguish small seabed features, objects or textures (particularly in deeper waters thanks to the towfish). Echo sounders provide high-resolution bathymetry, just like a digital elevation model.\n\n\n\n\n\n\nFigure 5: Shipwreck at Borssele (offshorewind.rvo.nl)\n\n\n\n\n\n\n\n\n\nFigure 6: Pock marks left by a four-legged jack-up at Hollandse Kust West (offshorewind.rvo.nl)\n\n\n\n\n\n\n\n\n\nFigure 7: Part of pipeline coming of above the rock cover at IJmuiden Ver (offshorewind.rvo.nl)",
+    "crumbs": [
+      "📚 Course notes",
+      "Site investigation",
+      "Geophysical investigation"
+    ]
+  },
+  {
+    "objectID": "notes/3-2_geophysical-investigation.html#data-processing-interpretation",
+    "href": "notes/3-2_geophysical-investigation.html#data-processing-interpretation",
+    "title": "Geophysical investigation",
+    "section": "Data processing & interpretation",
+    "text": "Data processing & interpretation\nSeismic profiling involves receiving and processing a huge volumes of data, consisting of acoustic waves of various different frequencies, arriving at various different times to receivers at various different distances from one another.\nTo convert this to a seimsmic profile, the data needs be processed, converted from time-to-depth along with many different processing steps that can help to sequence the data, improve the signal-to-noise ratio (i.e. the data clarity) and remove errors and artefacts from the final trace–ultimately making the final trace more interpretable. However, this process can also be subjective (e.g. Figure 9) and highly dependent on the person processing the data.\n\n\n\n\n\n\nFigure 9: Example on how different interpretations of the same seismic data can lead to different results (Gray, Cox, and Calvert 2023)\n\n\n\nArtefacts can also remain on seismic trace after processing (Figure 10). Acoustic blanking, for instance, describes when the signal is attenuated or masked by, for example, the presence of natural gas or steep-side channels (buried or otherwise). “Seabed multiples” are also a common sight in processed seismic traces, caused by the reflected signal bouncing off the water surface and then again off the seabed.\n\n\n\n\n\n\nFigure 10: Artefacts on a seismic trace from Hollandse Kust West (offshorewind.rvo.nl)\n\n\n\nSeismostratigraphic units are one of the main outputs of the geophysical campaign, and describe geological units that have a distinct seismic expression or are bounded by a distinct layer boundary (i.e. a “reflector”) or horizon above and/or below the formation. These are often identified based on a combination of SBP and UHR data,\n    \n\nFigure: Some UHR seismic traces and identified boundaries from Hollandse Kust West, performed by Fugro (click on figure to maximise; from: offshorewind.rvo.nl\n\n\n\n\n\n\n\nSide note: what about other onshore geophysical techqniues?\n\n\n\n\n\nSome techniques become that we often onshore, are less used offshore–particularly those using receivers directly on the ground surface, such as techniques like resistivity surveys or Multichannel Analysis of Surface Waves (MASW). Nevertheless, this is still an area of continuing research (e.g. Long et al. (2020)) and dependent on the local site conditions and budget.",
+    "crumbs": [
+      "📚 Course notes",
+      "Site investigation",
+      "Geophysical investigation"
+    ]
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "Lecture notes and some recommended resources are also included on Brightspace directly.\n## Other resources\n\nPython packages\n\nI’ve created a Github library called CPyT which includes several\n\n\n\nWebsites\n\n\nBooks\n\nRandolph\nDean\nGouvernec dashboard\nBruno Stuyts\n4c offshore",
+    "crumbs": [
+      "ℹ️ Course info",
+      "Resources"
     ]
   }
 ]
