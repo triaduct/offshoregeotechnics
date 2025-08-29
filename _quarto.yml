@@ -8,6 +8,9 @@ project:
 website:
   title: "CIEM 2301: Offshore Geotechnics"
   site-url: https://triaduct.github.io/offshoregeotechnics
+  announcement: 
+    content: "29th August: Course notes on [marine geology](notes/2_marine-geology.ipynb) and [site investigation](notes/3-1_site-investigation.ipynb) have been added." 
+    position: below-navbar 
   comments:
     giscus: 
       repo: triaduct/offshoregeotechnics
@@ -17,6 +20,7 @@ website:
     style: "docked"
     search: true
     reader-mode: true
+    collapse-level: 1
     contents:
       - text: "🏠 Home"
         href: index.qmd
@@ -26,10 +30,10 @@ website:
         contents:
           - text: "Learning objectives"
             href: learning-objectives.qmd
-          - text: "Schedule"
-            href: schedule.qmd
           - text: "Resources"
             href: resources.qmd
+          - text: "Schedule"
+            href: schedule.qmd
           - text: "User guide"
             href: guide.qmd
             
@@ -61,13 +65,13 @@ website:
             contents:
               - href: notes/shallow-foundations.ipynb
               # - href: playground/interaction-diagram.qmd   # The Shiny app
-       
 
-  # navbar:
-  #   background: primary
-  # page-footer:
-  #   background: light
-  #   left: "Copyright 2025, MY INSTITUTION"
+  page-footer:
+    left: |
+      CIEM 2301: Offshore Geotechnics, Delft University of Technology
+    right: |
+      ![Creative Commons License](https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png) [CC BY-N-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/)
+    # left: "Copyright 2025, MY INSTITUTION"
 
 biliography: bibliography.bib
 
@@ -79,6 +83,8 @@ format:
     date: today
     date-modified: last-modified
     date-format: "DD MMMM YYYY"
+    page-metadata:
+      - modified
 
     email-obfuscation: javascript
     link-external-newwindow: true
@@ -94,12 +100,6 @@ format:
     warning: false
     lightbox: true
     reader-mode: true
-    
-    body-footer:
-      left: |
-        Offshore Geotechnics by Kevin Duffy
-      right: |
-        ![Creative Commons License](https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png) [CC BY-N-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/)
     
 execute:
   freeze: auto   # Ensures Python scripts are only executed locally and not by github pages

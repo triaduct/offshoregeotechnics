@@ -3,18 +3,19 @@ title: "Resources"
 format: html
 ---
 
-Lecture notes and some recommended resources are also included on Brightspace directly.  
-## Other resources
+::: {.callout-note}
+Lecture slides and recommended papers (especially .pdfs) are only included on Brightspace and will not be added here.
+:::
 
-### Python packages
+## Books
+* Dean, E. T. R. 2010. *Offshore Geotechnical Engineering: Principles and Practice*. London, United Kingdom: Thomas Telford. https://doi.org/10.1680/oge.36413.
+* Randolph, M. F., and Susan Gouvernec. 2011. *Offshore Geotechnical Engineering*. Oxford, United Kingdom: Spon Press. https://doi.org/10.1201/9781315272474.
 
-### Websites
+## Python packages
+* [CPyT](https://github.com/triaduct/cpyt): I've created a repository with several useful geotechnical scripts, particularly for CPT correlations and pile design. This is not available on PyPi yet so you can't use `pip install cpyt`. Instead you'll have to fork or download a copy onto your PC, and import the library from there
+* [Groundhog](https://github.com/snakesonabrain/groundhog): Developed by Bruno Stuyts at the University of Ghent and available on PyPi. Also contains several different useful functions.
 
-### Books
-- Randolph
-- Dean
-
-
-* Gouvernec dashboard
-* Bruno Stuyts
-* 4c offshore
+## Websites
+* [offshorewind.rvo.nl](https://offshorewind.rvo.nl/): For site investigation data across the Dutch North Sea sector, including in-situ and geophysical data as well as ecological, archaeological and morphodynamic reports).
+* [4C Offshore](https://map.4coffshore.com/offshorewind/): Worldwide map of offshore wind farms, including those that have been constructed as well as those at just conceptual phase.
+* [Web Apps for Engineers](https://www.webappsforengineers.com/): A set of web apps for foundation design. Great for getting more of an understanding of how different factors affect the ultimate design.

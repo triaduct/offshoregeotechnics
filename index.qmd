@@ -4,21 +4,12 @@ author: "Kevin Duffy, Delft University of Technology"
 comments: false
 ---
 
-::: {.callout-important title="New release: Monday 25th August"}
-Courses notes on site investigation has been added
-:::
+This collection of Jupyter notebooks are intended as a set of learning materials for the course **CIEM2301 Offshore Geotechnics at Delft University of Technology**. The aim is to provide an interactive and accessible way of engaging with the course material, essentially acting as a virtual laboratory. 
 
-This collection of Jupyter notebooks are intended as a set of learning materials for the course CIEM2301 Offshore Geotechnics at Delft University of Technology. The aim is to provide an interactive and accessible way of engaging with the course material, essentially acting as a virtual laboratory. 
+It helps to have some programming experience to engage with all the material on this website, but it's absolutely not essential. For more information, make sure to check out the [user guide](guide.qmd).
 
-CIEM2301 is aimed at geotechnical engineer **[...]**
-
-It helps to have some programming experience for using this website, but it's not essential.
-A small amount programming experience is recommended for interacting with some of the learning materials here, but also not mandatory. For useful Python packages, students are welcome to check out the in-house repository CPyT or else Groundhog, developed by Bruno Stuyts at Ghent University. 
-
-For any questions, please get in touch with me (Kevin Duffy), k.duffy@tudelft.nl). 
+For any questions, please get in touch with me (Kevin) at [k.duffy@tudelft.nl](k.duffy@tudelft.nl). If you have any suggestions or questions regarding the material on the website, you're welcome to include a comment in the comment box at the bottom of each page.
 
 
-## Creative Commons License Information
-![Creative Commons License](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png) <nbsp>
-
+### Creative Commons License Information
 *CIEM 2301: Offshore Geotechnics* by [Kevin Duffy (Delft University of Technology)](https://www.tudelft.nl/staff/k.duffy/) is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).

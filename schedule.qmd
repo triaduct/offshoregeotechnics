@@ -6,20 +6,20 @@ comments: false
 
 | Date                    | Time        | Topic                         | Lecturer    |
 |-------------------------|-------------|-------------------------------|-------------|
-| Tuesday 2nd September   | 14:45-16:45 | Introduction & Marine Geology | Kevin Duffy |
-| Thursday 9th September  | 14:45-16:45 | Site investigation            | Kevin Duffy |
-| Tuesday 9th September   | 14:45-16:45 | Axially loaded piles in sand  | Kevin Duffy |
-| Thursday 11th September | 14:45-16:45 | Axially loaded piles in sand  | Kevin Duffy |
-| Tuesday 16th September  | 14:45-16:45 | Axially loaded piles in clay  | Kevin Duffy |
-| Thursday 18th September | 14:45-16:45 | Axially loaded piles in clay  | Kevin Duffy |
-| Tuesday 23rd September  | 14:45-16:45 | Laterally loaded piles        | Ken Gavin |
-| Thursday 25th September | 14:45-16:45 | Cyclic loading                | Ken Gavin |
-| Tuesday 30th September  | 14:45-16:45 | Seismic design                | Ozan Alver |
-| Thursday 2nd October    | 14:45-16:45 | Pile installation             | Kevin Duffy |
-| Tuesday 7th October     | 14:45-16:45 | Shallow foundations           | Kevin Duffy |
-| Thursday 9th October    | 14:45-16:45 | Suction-assisted installation | Kevin Duffy |
-| Tuesday 14th October    | 14:45-16:45 | Floating structures & anchors | Kevin Duffy |
-| Thursday 16th October   | 14:45-16:45 | Challenging soil conditions   | Kevin Duffy |
+| Tuesday 2nd September   | 13:45-15:45 | Introduction & marine geology | Kevin Duffy |
+| Thursday 9th September  | 13:45-15:45 | Site investigation            | Kevin Duffy |
+| Tuesday 9th September   | 13:45-15:45 | Axially loaded piles in sand  | Kevin Duffy |
+| Thursday 11th September | 13:45-15:45 | Axially loaded piles in sand  | Kevin Duffy |
+| Tuesday 16th September  | 13:45-15:45 | Axially loaded piles in clay  | Kevin Duffy |
+| Thursday 18th September | 13:45-15:45 | Axially loaded piles in clay  | Kevin Duffy |
+| Tuesday 23rd September  | 13:45-15:45 | Laterally loaded piles        | Ken Gavin |
+| Thursday 25th September | 13:45-15:45 | Cyclic loading                | Ken Gavin |
+| Tuesday 30th September  | 13:45-15:45 | Seismic design                | Ozan Alver |
+| Thursday 2nd October    | 13:45-15:45 | Pile installation             | Kevin Duffy |
+| Tuesday 7th October     | **10:45-12:45** | Shallow foundations           | Kevin Duffy |
+| Thursday 9th October    | 13:45-15:45 | Suction-assisted installation | Kevin Duffy |
+| Tuesday 14th October    | 13:45-15:45 | Floating structures & anchors | Kevin Duffy |
+| Thursday 16th October   | 13:45-15:45 | Challenging soil conditions   | Kevin Duffy |
 
-
-*Oral exams will be on the week beginning 27th of October.* 
+* *Tuesdays: CEG Room 3.98; Thursdays: Applied Sciences Classroom 4 (except 16/10: CEG 3.02)*
+* *Oral exams will be on the week beginning 27th of October.* 

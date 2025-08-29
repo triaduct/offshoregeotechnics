@@ -3,11 +3,20 @@ title: "Learning Objectives"
 format: html
 ---
 
-# Learning objectives
+A number of countries have ambitious targets to develop offshore renewables projects. There are many technical challenges to be solved. From a geotechnical engineering perspective these include:
+
+* Characterising unusual soils
+* Considering the impact of irregular loading, including earthquakes, typhoons, impacts etc. 
+* Developing frameworks to understand the response of soils to cyclic loading
+* Updating design models developed from the oil and gas sector to the foundation systems deployed in renewables projects
+* The consideration of installation risks.
+
 After this course, students are expected to:
 
-- Describe the geotechnical challenges unique to offshore environments.
-- Design a suitable foundation system for an offshore wind turbine according to the latest axial and lateral pile capacity models
-- Critically assess the reliability of different site investigation techniques in offshore settings.
-- Evaluate the suitability of a foundation concept for a given offshore wind farm
-- Develop a risk mitigation strategy for offshore geohazards
+* Describe the geotechnical challenges unique to offshore environments.
+* Design a suitable foundation system for an offshore wind turbine according to the latest axial and lateral pile capacity models
+* Critically assess the reliability of different site investigation techniques in offshore settings.
+* Evaluate the suitability of a foundation concept for a given offshore wind farm
+* Develop a risk mitigation strategy for offshore geohazards
+
+These will be done through a series of interactive lectures and workshops, supplemented by the notes provided on this website. 
