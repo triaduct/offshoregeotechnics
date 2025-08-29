@@ -63,9 +63,9 @@ div.csl-indent {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5d2e30ad26079c1dae90a1fd11eba2b9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-17ec3ec944a89e5b13befdc0ab757289.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-5d2e30ad26079c1dae90a1fd11eba2b9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-0508618caa1d256af916c83e0797e277.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-4eb2127619e2a60f5b503ea1729e5210.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-0508618caa1d256af916c83e0797e277.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -309,6 +309,9 @@ window.Quarto = {
       </button>
     </div>
   </nav>
+  <div id="quarto-announcement" data-announcement-id="b7b84f19443c0065541889a84fb5ccbc" class="alert alert-primary hidden"><div class="quarto-announcement-content">
+<p>29th August: Course notes on <a href="notes/2_marine-geology.ipynb">marine geology</a> and <a href="notes/3-1_site-investigation.ipynb">site investigation</a> have been added.</p>
+</div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
@@ -337,13 +340,13 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">ℹ️ Course info</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../learning-objectives.html" class="sidebar-item-text sidebar-link">
@@ -352,14 +355,14 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../schedule.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Schedule</span></a>
+  <a href="../resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../resources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Resources</span></a>
+  <a href="../schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -488,7 +491,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#data-processing-interpretation" id="toc-data-processing-interpretation" class="nav-link" data-scroll-target="#data-processing-interpretation">Data processing &amp; interpretation</a></li>
   </ul></li>
-  <li><a href="#getting-geotechnical-properties-from-geophysical-models" id="toc-getting-geotechnical-properties-from-geophysical-models" class="nav-link" data-scroll-target="#getting-geotechnical-properties-from-geophysical-models">Getting geotechnical properties from geophysical models</a></li>
+  <li><a href="#getting-geotechnical-properties-from-geophysical-tests" id="toc-getting-geotechnical-properties-from-geophysical-tests" class="nav-link" data-scroll-target="#getting-geotechnical-properties-from-geophysical-tests">Getting geotechnical properties from geophysical tests</a></li>
   </ul>
 </nav>
     </div>
@@ -522,7 +525,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">28 August 2025</p>
+      <p class="date-modified">29 August 2025</p>
     </div>
   </div>
     
@@ -533,9 +536,10 @@ window.Quarto = {
 </header>
 
 
-<p>A geophysical survey is a non-intrusive site investigation method. Processing the geophysical data usually not the job of geotechnical engineers and instead, each project will usually have a team of dedicated geophysicists. Nevertheless understanding the results, particularly in terms of ground modelling and paramaterisation, is an important step that geotechnical engineers need to perform, along with parameterisation.</p>
+<p>A geophysical survey is a non-intrusive site investigation method. Processing the geophysical data is (usually!) not the job of a geotechnical engineers. Instead, each project will usually have a team of dedicated geophysicists for processing and interpreting the data</p>
+<p>Nevertheless to develop ground models and derive geotechnical parameters, it’s still important to have a cursory understanding of how geophysical data is collected and processed.</p>
 <p>There are a range of geophysical methods, each serving different purposes (<a href="#tbl-geophys-tech" class="quarto-xref">Table&nbsp;1</a>).</p>
-<div id="tbl-geophys-tech" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[25,25,25,25]">
+<div id="tbl-geophys-tech" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[25,30,15,15,15]">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-geophys-tech-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;1: Some types of geophysical techniques commonly encountered offshore. Note that both the penetration depth and vertical resolution values are only indicative, since both are highly dependent on the local stratigraphy
@@ -543,18 +547,18 @@ Table&nbsp;1: Some types of geophysical techniques commonly encountered offshore
 <div aria-describedby="tbl-geophys-tech-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
+<col style="width: 25%">
+<col style="width: 30%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
 </colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Method</th>
 <th style="text-align: left;">Function</th>
 <th style="text-align: center;">Frequency [kHz]</th>
-<th style="text-align: center;">Penetration into ground [m]</th>
+<th style="text-align: center;">Penetration [m]</th>
 <th style="text-align: center;">Vertical resolution [m]</th>
 </tr>
 </thead>
@@ -589,24 +593,24 @@ Table&nbsp;1: Some types of geophysical techniques commonly encountered offshore
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Sub-bottom profiler (SBP)</td>
-<td style="text-align: left;">Soil stratification at shallow depths</td>
-<td style="text-align: center;">10-100</td>
-<td style="text-align: center;">10-100</td>
+<td style="text-align: left;">Stratification at shallow depths</td>
+<td style="text-align: center;">10-20</td>
+<td style="text-align: center;">10–50</td>
 <td style="text-align: center;">&lt; 0.5</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Ultra-high-resolution seismic (UHR)</td>
-<td style="text-align: left;">Soil stratification at shallow to intermediate depths</td>
-<td style="text-align: center;">0.25-0.8</td>
-<td style="text-align: center;">50-500</td>
-<td style="text-align: center;">0.5-2</td>
+<td style="text-align: left;">Stratification at shallow to intermediate depths</td>
+<td style="text-align: center;">0.2–0.8</td>
+<td style="text-align: center;">50–200</td>
+<td style="text-align: center;">0.5–2</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">High-resolution seismic (HR)</td>
-<td style="text-align: left;">Soil stratification at shallow to intermediate depths</td>
+<td style="text-align: left;">Stratification at shallow to deep depths</td>
 <td style="text-align: center;">0.08-0.3</td>
 <td style="text-align: center;">100-1000</td>
-<td style="text-align: center;">1-7</td>
+<td style="text-align: center;">1–7</td>
 </tr>
 </tbody>
 </table>
@@ -632,7 +636,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>High frequency signals give high resolution but low penetration, but low frequencies give lower resolutions and greater penetrations.</p>
+<p>High frequency signals give high resolution but low penetration. Low frequencies give lower resolutions and greater penetrations.</p>
 </div>
 </div>
 <div id="fig-seismic-waves" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -650,7 +654,8 @@ Figure&nbsp;1: Different types of seismic waves
 <h1>Seafloor mapping techniques</h1>
 <section id="echo-sounder" class="level2">
 <h2 class="anchored" data-anchor-id="echo-sounder">Echo sounder</h2>
-<p>An echo sounder is typically used get bathymetry data, thus giving important information into the seabed elevation and slope at a given location, as well as potential (or past) slope failures, seabed obstructions and other geohazards. There are two main types of echo sounders: singlebeam echo sounders (SBES) and multibeam echo sounders (MBES). MBES systems generally give more detailed seafloor maps, particularly in deepwater (&gt;25m), whereas SBES systems are generally cheaper and more easier to process, and are thus found on all ocean going vessels.</p>
+<p>An echo sounder is used to get bathymetry data, thus giving important information into the seabed elevation and slope at a given location, as well as potential (or past) slope failures, seabed obstructions and other geohazards.</p>
+<p>There are two main types of echo sounders: <strong>singlebeam echo sounders (SBES) and multibeam echo sounders (MBES)</strong>. MBES systems generally give more detailed seafloor maps, particularly in deepwater (&gt;25m). In contrast, SBES systems are usually cheaper and easier to process, and are therefound found on all ocean-going vessels.</p>
 <p>It’s also becoming more common to analyse the backscatter from echo soundings. This can give a very high resolution bathymetry, although samples from seafloor are required to understand the correlation between the soil type and the acoustic wave backscatter.</p>
 <div id="fig-mbes" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -665,7 +670,8 @@ Figure&nbsp;2: Multibeam echo sounder (MBES),
 </section>
 <section id="side-scan-sonar-sss" class="level2">
 <h2 class="anchored" data-anchor-id="side-scan-sonar-sss">Side scan sonar (SSS)</h2>
-<p>Side-scan sonar is a method of underwater imaging using pulses of acoustic energy transmitted out the side of a “towfish” (or equivalent such as an ROV) and across the seafloor. The reflected energy is then used to assess seabed features (such as shipwrecks or pockmarks) in more detail compared to an echo sounder. While direct bathymetry data can be somewhat inferred from side-scan sonar, it becomes challenging due to the changing altitude of the towfish and length of the seismic shadow cast by seabed obstructions and the towfish itself.</p>
+<p>Side-scan sonar is a method of underwater imaging using pulses of acoustic energy transmitted out the side of a “towfish” (or equivalent such as an ROV) and across the seafloor. The reflected energy is then used to assess seabed features (such as shipwrecks or pockmarks) in more detail compared to an echo sounder.</p>
+<p>While direct bathymetry data can be somewhat inferred from side-scan sonar, it becomes challenging due to the changing altitude of the towfish and length of the seismic shadow cast by seabed obstructions and the towfish itself.</p>
 <div id="fig-side-scan-sonar" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-side-scan-sonar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -790,7 +796,8 @@ Side note: single-channel vs multi-channel seismic
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Below the 1 kHz range, data can also be classified as single-channel seismic (SCS) or multi-channel seismic (MCS). These don’t refer to the array of geophones, but instead, it describes the way in which data at each hydrophone is collected and processed. Generally, SCS systems are easier to deploy and analyse, although MCS systems are more effective in reducing the signal-to-noise ratio</p>
+<p>Below the 1 kHz range, data can also be classified as single-channel seismic (SCS) or multi-channel seismic (MCS). These don’t refer to the array of geophones, but instead, it describes the way in which data at each hydrophone is collected and processed.</p>
+<p>Generally, SCS systems are easier to deploy and analyse, whereas MCS systems are more effective in reducing the signal-to-noise ratio—thus getting a sharper picture of the subsurface.</p>
 </div>
 </div>
 </div>
@@ -817,27 +824,27 @@ Table&nbsp;2: Different types of sound sources for sub-bottom profiling. The pen
 <tr class="odd">
 <td style="text-align: left;">Pinger</td>
 <td style="text-align: center;">Up to 50m in soft soils, typically 5-10m</td>
-<td style="text-align: center;">0.3-0.6</td>
+<td style="text-align: center;">0.3–0.6</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Chirp</td>
 <td style="text-align: center;">Up to 50m in soft soils, typically 5-10m</td>
-<td style="text-align: center;">0.3-0.6</td>
+<td style="text-align: center;">0.3–0.6</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Boomer</td>
 <td style="text-align: center;">Up to 60m, typically 30m</td>
-<td style="text-align: center;">0.6-1</td>
+<td style="text-align: center;">0.6–1</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Sparker</td>
 <td style="text-align: center;">Up to 100m, typically 50m; If multichannel: up to 300m</td>
-<td style="text-align: center;">0.6-1</td>
+<td style="text-align: center;">0.6–1</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Airgun</td>
 <td style="text-align: center;">20-500m</td>
-<td style="text-align: center;">&lt;0.3</td>
+<td style="text-align: center;">&lt; 0.3</td>
 </tr>
 </tbody>
 </table>
@@ -846,8 +853,14 @@ Table&nbsp;2: Different types of sound sources for sub-bottom profiling. The pen
 </div>
 <section id="data-processing-interpretation" class="level2">
 <h2 class="anchored" data-anchor-id="data-processing-interpretation">Data processing &amp; interpretation</h2>
-<p>Seismic profiling involves receiving and processing a huge volumes of data, consisting of acoustic waves of various different frequencies, arriving at various different times to receivers at various different distances from one another.</p>
-<p>To convert this to a seimsmic profile, the data needs be processed, converted from time-to-depth along with <a href="https://wiki.aapg.org/Seismic_processing_basics">many different processing steps</a> that can help to sequence the data, improve the signal-to-noise ratio (i.e.&nbsp;the data clarity) and remove errors and artefacts from the final trace–ultimately making the final trace more interpretable. However, this process can also be subjective (e.g. <a href="#fig-geophys-interpretation" class="quarto-xref">Figure&nbsp;9</a>) and highly dependent on the person processing the data.</p>
+<p>Seismic profiling involves receiving and processing a huge volumes of data: there’s acoustic waves arriving at the receiver at various different times and frequencies, all with different amplitudes and coming from different directions.</p>
+<p>To convert this to a seismic profile, the data needs be processed. There are <a href="https://wiki.aapg.org/Seismic_processing_basics">many different processing steps</a>, including:</p>
+<ul>
+<li>Time-to-depth conversion</li>
+<li>Improve the signal-to-noise ratio (i.e.&nbsp;the data clarity) using e.g.&nbsp;antialias filters, deconvolution</li>
+<li>Remove errors and artefacts from the final trace</li>
+</ul>
+<p>Ultimately, all these step make the final profile more interpretable, reducing uncertainty in identifying layer boundaries and variation. However, this process can also be subjective (e.g. <a href="#fig-geophys-interpretation" class="quarto-xref">Figure&nbsp;9</a>) and highly dependent on the person processing the data.</p>
 <div id="fig-geophys-interpretation" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-geophys-interpretation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -858,7 +871,7 @@ Figure&nbsp;9: Example on how different interpretations of the same seismic data
 </figcaption>
 </figure>
 </div>
-<p>Artefacts can also remain on seismic trace after processing (<a href="#fig-artefacts" class="quarto-xref">Figure&nbsp;10</a>). Acoustic blanking, for instance, describes when the signal is attenuated or masked by, for example, the presence of natural gas or steep-side channels (buried or otherwise). “Seabed multiples” are also a common sight in processed seismic traces, caused by the reflected signal bouncing off the water surface and then again off the seabed.</p>
+<p>Artefacts can also remain on seismic trace after processing (<a href="#fig-artefacts" class="quarto-xref">Figure&nbsp;10</a>). <strong>Acoustic blanking</strong>, for instance, describes when the signal is attenuated or masked by, for example, the presence of natural gas or steep-side channels (buried or otherwise). <strong>Seabed multiples</strong> are also a common sight in processed seismic traces: caused by the reflected signal bouncing off the water surface and then again off the seabed.</p>
 <div id="fig-artefacts" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-artefacts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -892,8 +905,8 @@ Side note: what about other onshore geophysical techqniues?
 </div>
 </section>
 </section>
-<section id="getting-geotechnical-properties-from-geophysical-models" class="level1">
-<h1>Getting geotechnical properties from geophysical models</h1>
+<section id="getting-geotechnical-properties-from-geophysical-tests" class="level1">
+<h1>Getting geotechnical properties from geophysical tests</h1>
 <p>Geophysical tests are mainly qualitative in nature, that is, they give us an idea of the number of soil layers and the changes in layer boundaries. Of course for geotechnics, obtaining quantitative properties is desirable. These quantitative parameters can include things like soil density, effective stress and porosity, but also especially small-strain parameters like the inital shear stiffness <span class="math inline">\(G_0\)</span>—where traditional large-deformation intrusive tests (like the CPT) are not ideal.</p>
 <p>Maybe from previous courses, you have learned that deriving <span class="math inline">\(G_0\)</span> or other small-strain properties is possible with geophysics—like through MASW tests which use a source and receivers (geophones) placed directly on the ground surface. However, geophysics in a marine environment is dealt with differently to onshore, focussing primarily on P-waves which can travel through water and back to the receiver (unlike S-waves). As we’ve seen throughout this chapter, P-waves can broadly distinguish between granular and cohseive materials, but more detailed lihological information as well as soil behaviour can only be reliabily derived using the S-wave response <span class="citation" data-cites="vardyStateoftheartRemoteCharacterization2017">(<a href="#ref-vardyStateoftheartRemoteCharacterization2017" role="doc-biblioref">Vardy et al. 2017</a>)</span>.</p>
 <p>Nevertheless, improving quantitative, geotechnical derivations from geophysical data is still an ongoing area of research both in terms of the equipment and data processing that is applied (e.g. <span class="citation" data-cites="vardyStateoftheartRemoteCharacterization2017">Vardy et al. (<a href="#ref-vardyStateoftheartRemoteCharacterization2017" role="doc-biblioref">2017</a>)</span>, <span class="citation" data-cites="longMultichannelAnalysisSurface2020">Long et al. (<a href="#ref-longMultichannelAnalysisSurface2020" role="doc-biblioref">2020</a>)</span>) as well as synthetic, AI-based ground models (e.g. <span class="citation" data-cites="carpentierAIBasedGmaxPrediction2024">Carpentier et al. (<a href="#ref-carpentierAIBasedGmaxPrediction2024" role="doc-biblioref">2024</a>)</span>) which we will explore a little more later.</p>
@@ -1366,6 +1379,19 @@ Vardy, Mark E., Maarten Vanneste, Timothy J. Henstock, Michael A. Clare, Carl Fr
   loadGiscus();
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>CIEM 2301: Offshore Geotechnics, Delft University of Technology</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p><img src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" class="img-fluid" alt="Creative Commons License"> <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-N-SA 4.0</a></p>
+</div>
+  </div>
+</footer>
 <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;
