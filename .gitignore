@@ -1,14 +1,14 @@
-# Personal stuff
-quarto-examples/
-00_ss/
 
-# Quarto build output (Github actions takes care of notes/)
-notes/
+# Publishing
+/.quarto/
+/.github/
+.github/workflows
+styles.css
+
+# Quarto build output
 _extensions/
 _output/
 _site/
-
-
 
 # Quarto cache
 .cache/
@@ -23,5 +23,18 @@ Thumbs.db
 __pycache__/
 .ipynb_checkpoints/
 
+# Personal stuff
+quarto-examples/
+00_ss/
+playground/
+bibliography.bib
 
-/.quarto/
+# Notes in draft
+/notes/4_mechanisms-sand.ipynb
+/notes/5_axial-design-sand.ipynb
+/notes/6_mechanisms-clay.ipynb
+/notes/8-1_pile-driveability.ipynb
+/notes/8-2_challenging-soils.ipynb
+/notes/shallow-foundations.ipynb
+
+
