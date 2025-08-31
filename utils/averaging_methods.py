@@ -17,7 +17,7 @@ NOTE:
     -ve implies downwards direction
 """
 #%%
-def koppejan(cpt, pile_dia, target_depth, plot_min_path = False):
+def koppejan(cpt, pile_dia, target_depth):
     """
     4D/8D method according to Koppejan
     """
@@ -62,50 +62,10 @@ def koppejan(cpt, pile_dia, target_depth, plot_min_path = False):
             qc3_min_path = np.array([cpt3.z,cpt3.min_path])
             endpoint_final = endpoint
             
-    print(f"qc1 = {qc1_min:.2f}")
-    print(f"qc2 = {qc2_min:.2f}")
-    print(f"qc3 = {qc3_min:.2f}")
-    print(f"Endpoint = {endpoint_final:.2f}")
-    
-    ## Plot the minimum path
-    if plot_min_path == True:
-        
-        fig = plt.figure()
-        ax = fig.gca()
-        ax.plot(cpt.qc, cpt.z)
-        ax.plot(qc2_min_path[1], qc2_min_path[0], c='r',label="Minimum path",alpha=0.7)
-        ax.plot(qc3_min_path[1], qc3_min_path[0], c='r',alpha=0.7)
-        ax.axhline(target_depth,linewidth=0.5, c='black')
-        ax.hlines([target_depth - 4*pile_dia,target_depth - 0.7*pile_dia,target_depth + 8*pile_dia],-1,70, 
-                  linewidth=0.5,linestyle="dashed",color="darkgray")
-
-        # ax.text(0.5, 0.5, 'text', fontsize=30, va='center', ha='center', backgroundcolor='w')
-        # ax.text(0.5, 0.5, 'text', fontsize=30, va='center', ha='center', backgroundcolor='w')
-        
-
-        xlim = cpt[(cpt.z <= target_depth+8*pile_dia) & (cpt.z >= target_depth - 4*pile_dia)].qc.max() # Max qc in region of pile head (for plotting)
-        xlim = np.round(xlim/10)*10+10
-        ax.set_xlim(0, xlim)
-        ax.set_ylim(np.round(target_depth - 6*pile_dia,0), np.round(target_depth + 10*pile_dia,0))
-        ax.set_xlabel(r"Cone resistance $q_c$ [MPa]")
-        ax.set_ylabel("Depth [mNAP]")
-        
-        ax.text(xlim+0.5, target_depth, 'Pile tip', fontsize=7, va='center', ha='left', color="black")
-        ax.text(xlim+0.5, target_depth - 4*pile_dia, '-4D', fontsize=7, va='center', ha='left', color="darkgray")
-        ax.text(xlim+0.5, target_depth - 0.7*pile_dia, '-0.7D', fontsize=7, va='center', ha='left', color="darkgray")
-        ax.text(xlim+0.5, target_depth + 8*pile_dia, '+8D', fontsize=7, va='center', ha='left', color="darkgray")
-        
-        ax.legend()
-        plt.show()
-
-    print(f"Using the Koppejan 4D/8D method, qc_avg at {target_depth:.2f}m is {qc_avg:.2f} MPa") 
     return qc_avg
 
 
 def lcpc(cpt, pile_dia, target_depth):
-    """
-    
-    """
 
     D15 = cpt[(cpt.z >= target_depth - 1.5*pile_dia) & (cpt.z <= target_depth + 1.5*pile_dia)]   # Region across which the averaging will be applied
     qc_avg = D15.qc.mean()
@@ -113,7 +73,29 @@ def lcpc(cpt, pile_dia, target_depth):
     D15.loc[D15.qc <= 0.7*qc_avg,"qc"] = 0.7*qc_avg        # Truncate qc values
     qc_avg = D15.qc.mean()
     
-    print(f"Using the LCPC method, qc_avg at {target_depth:.2f}m is {qc_avg:.2f} MPa") 
+    return qc_avg
+
+
+def de_boorder(cpt, pile_dia, target_depth):
+    HD_a = 8.3              # Distance over which the cosine function is applied above the pile
+    HD_b = 15.5             # "..." below the pile
+    f = 13.5                # Damping factor
+    s = 0.9                 # Reshapes the weight related to the stiffness ratio
+    
+    cpt = cpt.loc[(cpt.z <= target_depth + HD_a*pile_dia) & (cpt.z >= target_depth - HD_b*pile_dia)]
+    cpt["HD"] = np.nan
+    cpt.loc[cpt.z >= target_depth,"HD"] = HD_a
+    cpt.loc[cpt.z <= target_depth, "HD"] = HD_b
+    cpt["x"] = abs((target_depth-cpt.z)/(pile_dia*cpt.HD))
+    cpt["w1"] = np.exp(-f*cpt.x)*np.cos(0.5*np.pi*cpt.x)   # First weight relating to the cosine dampening function and distance to pile tip
+    near_z_ix = cpt.z.sub(target_depth).abs().idxmin()       # Index of row with depth closest to pile depth
+    qc_tip = cpt.loc[near_z_ix, "qc"]
+    cpt["w2"] = (qc_tip/cpt.qc)**s                        # Wegiht of one point related to stiffness ratio
+    cpt["w3"] = cpt.w1*cpt.w2                              # Total weight of qc at one point
+    
+    qc_w = cpt.qc*cpt.w3/(cpt.w3.sum())
+    qc_avg = qc_w.sum()
+    
     return qc_avg
 
 
@@ -155,6 +137,5 @@ def boulanger_dejong(cpt, pile_dia, target_depth):
     qc_w = (cpt.qc*cpt.wc)/(cpt.wc.sum()) 
     qc_avg = qc_w.sum()
     
-    print(f"Using the Boulanger method, qc_avg at {target_depth:.2f}m is {qc_avg:.2f} MPa") 
     return qc_avg
     

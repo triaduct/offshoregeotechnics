@@ -23,13 +23,19 @@ What is Colab? Colab is a super easy way of editing the notes yourself on your b
 
 You do not need a Google account to interact with the notebooks. However if you would like to save your changes, you first need to save a copy to a Google Drive. Then you can edit and save changes to your own version.
 
-
 ### Github
 Furthermore, all of these files are available at <https://github.com/triaduct/offshoregeotechnics> and you can copy them to your own computer. Github is based on a version control system called Git, making it easier to collaborate with others and track changes effectively. Therefore when copying these notes, you have a couple of choices:
 
 * You can **fork** the repository: this is recommended if you want to propose changes (always welcome!) or compare your fork with new updates to the notes.
 * You can **download** a zip file of the code. If you've got limited experience with Python and just want to make some small changes to the code, I'd recommended this. 
 
+I've also include a few helper scripts in the `utils` directory. To run the code for the first time, this needs to be installed on the computer by:
+
+```
+!pip install git+https://github.com/triaduct/offshoregeotechnics
+```
+
+I've also included this in code blocks throughout the notes a small reminder.
 
 ### Quarto
 These notes have been developed using [Quarto](https://quarto.org/). Quarto provides a really efficient way of making notes, webpages, presentations (to name but a few), all from the same set of notebooks. When I get a chance, I'll add a short guide to rendering the notes yourself into a custom .pdf or .html (website). But in the meantime, feel free to ask me any questions about it.
