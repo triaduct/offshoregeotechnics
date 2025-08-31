@@ -9,7 +9,7 @@ website:
   title: "CIEM 2301: Offshore Geotechnics"
   site-url: https://triaduct.github.io/offshoregeotechnics
   announcement: 
-    content: "29th August: Course notes on [marine geology](notes/2_marine-geology.ipynb) and [site investigation](notes/3-1_site-investigation.ipynb) have been added." 
+    content: "Update 29th August: Course notes on [marine geology](notes/2_marine-geology.ipynb) and [site investigation](notes/3-1_site-investigation.ipynb) have been added." 
     position: below-navbar 
   comments:
     giscus: 
