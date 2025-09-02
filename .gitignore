@@ -1,3 +1,4 @@
+.gitignore
 
 # Publishing
 /.quarto/
@@ -9,6 +10,7 @@ styles.css
 _extensions/
 _output/
 _site/
+_freeze/
 
 # Quarto cache
 .cache/
@@ -30,6 +32,7 @@ playground/
 bibliography.bib
 
 # Notes in draft
+/notes/shiny-apps
 /notes/4_mechanisms-sand.ipynb
 /notes/5_axial-design-sand.ipynb
 /notes/6_mechanisms-clay.ipynb
