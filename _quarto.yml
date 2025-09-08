@@ -9,7 +9,7 @@ website:
   title: "CIEM 2301: Offshore Geotechnics"
   site-url: https://triaduct.github.io/offshoregeotechnics
   announcement: 
-    content: "Update 29th August: Course notes on [marine geology](notes/2_marine-geology.ipynb) and [site investigation](notes/3-1_site-investigation.ipynb) have been added." 
+    content: "Update 8th September: Course notes on axial capacity of piles in sand have been added." 
     position: below-navbar 
   comments:
     giscus: 
@@ -51,8 +51,9 @@ website:
                 href: notes/3-3_geotechnical-investigation.ipynb
           - section: "Axial response of piles in sand"
             contents:
-              - href: notes/4_mechanisms-sand.ipynb
-              - href: notes/5_axial-design-sand.ipynb
+              - href: notes/4-1_piles-overview.ipynb
+              - href: notes/4-2_mechanisms-sand.ipynb
+              - href: notes/4-3_axial-design-sand.ipynb
           - section: "Axial response of piles in clay"
             contents:
               - href: notes/6_mechanisms-clay.ipynb
@@ -97,9 +98,10 @@ format:
     toc: true
     code-fold: true
     code-summary: "Show the code"
-    warning: false
+    warning: false  
     lightbox: true
     reader-mode: true
     
 execute:
   freeze: auto   # Ensures Python scripts are only executed locally and not by github pages
+  warning: false   # Don't show any code warnings

@@ -75,67 +75,28 @@ def lcpc(cpt, pile_dia, target_depth):
     
     return qc_avg
 
+def de_boorder(cpt: pd.DataFrame, pile_dia: float, target_depth: float) -> float:
+    HD_a = 6.5    # Distance over which the cosine function is applied above the pile
+    HD_b = 10.5   # Distance over which the cosine function is applied below the pile
+    f = 13.5      # Damping factor
+    s_a = 0.56    # Reshapes the weight related to the stiffness ratio
+    s_b = 0.79    # Reshapes the weight related to the stiffness ratio
 
-def de_boorder(cpt, pile_dia, target_depth):
-    HD_a = 8.3              # Distance over which the cosine function is applied above the pile
-    HD_b = 15.5             # "..." below the pile
-    f = 13.5                # Damping factor
-    s = 0.9                 # Reshapes the weight related to the stiffness ratio
-    
-    cpt = cpt.loc[(cpt.z <= target_depth + HD_a*pile_dia) & (cpt.z >= target_depth - HD_b*pile_dia)]
-    cpt["HD"] = np.nan
-    cpt.loc[cpt.z >= target_depth,"HD"] = HD_a
-    cpt.loc[cpt.z <= target_depth, "HD"] = HD_b
-    cpt["x"] = abs((target_depth-cpt.z)/(pile_dia*cpt.HD))
-    cpt["w1"] = np.exp(-f*cpt.x)*np.cos(0.5*np.pi*cpt.x)   # First weight relating to the cosine dampening function and distance to pile tip
-    near_z_ix = cpt.z.sub(target_depth).abs().idxmin()       # Index of row with depth closest to pile depth
-    qc_tip = cpt.loc[near_z_ix, "qc"]
-    cpt["w2"] = (qc_tip/cpt.qc)**s                        # Wegiht of one point related to stiffness ratio
-    cpt["w3"] = cpt.w1*cpt.w2                              # Total weight of qc at one point
-    
-    qc_w = cpt.qc*cpt.w3/(cpt.w3.sum())
+    cpt = cpt.loc[
+        (cpt["z"] <= target_depth + HD_a * pile_dia) &
+        (cpt["z"] >= target_depth - HD_b * pile_dia)
+    ].copy()
+  
+    cpt.loc[:, "HD"] = np.where(cpt["z"] >= target_depth, HD_a, HD_b)       # HD: above vs below pile tip
+    cpt.loc[:, "x"] = np.abs((target_depth - cpt["z"]) / (pile_dia * cpt["HD"]))    # Distance factor
+    cpt.loc[:, "w1"] = np.exp(-f * cpt["x"]) * np.cos(0.5 * np.pi * cpt["x"])   # cosine damping
+    near_z_ix = cpt["z"].sub(target_depth).abs().idxmin()
+    qc_tip = cpt.loc[near_z_ix, "qc"]                                           # qc at depth closest to pile tip
+    cpt.loc[:, "s"] = np.where(cpt["z"] >= target_depth, s_a, s_b)
+    cpt.loc[:, "w2"] = (qc_tip / cpt["qc"]) ** cpt["s"]         # Stiffness ratio weighting
+    cpt.loc[:, "w3"] = cpt["w1"] * cpt["w2"]                    # Total weightingghting
+
+    qc_w = cpt["qc"] * cpt["w3"] / cpt["w3"].sum()
     qc_avg = qc_w.sum()
-    
+
     return qc_avg
-
-
-def boulanger_dejong(cpt, pile_dia, target_depth):
-    """
-    Method prescribed in Boulanger & DeJong (2018). Recommend averaging method
-    in the Unified pile design method (Lehane et al., 2022)
-    
-    :dia:           Diameter of penetrometer.
-                    NOTE: The Boulanger & DeJong method was not explicitly formulated for 
-                    piles (namely scale effects). This was the further research of de 
-                    Lange (2017), de Boorder (2021) and so on.
-    :target_depth:  depth for calcualtion, with respect to cpt.z (-ve => downwards)       
-
-    """
-    z50_ref=4.0
-    mz=3.0
-    m50=0.5
-    mq=2
-            
-    qt_tip = cpt.qc.iloc[(cpt.z-target_depth).abs().argsort()[:2]]      # Cone resistance at :target_depth:
-    cpt[["C1","C2","z50","w1","w2","w1w2","wc"]] = np.nan
-    cpt["z_norm"] = -1*(cpt.z-target_depth)/pile_dia    # Normalised depth. -ve values are above the pile tip, +ve are below
-    
-    # Equation 6
-    cpt.C1.loc[cpt.z_norm >= 0] = 1
-    cpt.C1.loc[(cpt.z_norm >= -4) & (cpt.z_norm < 0)] = 1 + cpt.z_norm/8
-    cpt.C1.loc[cpt.z_norm < -4] = 0.5
-    
-    cpt.C2.loc[cpt.z_norm >= 0] = 1         # Equal to unity below the pile tip (+ve numbers imply downwards)
-    cpt.C2.loc[cpt.z_norm <= 0] = 0.8       # Equal to 0.8 above the pile tip
-
-    cpt.z50 = 1+2*(cpt.C2*z50_ref - 1)*(1-(1/(1+(qt_tip/cpt.qc)**m50)))     # Equation 7
-    
-    cpt.w1 = cpt.C1/(1+(cpt.z_norm/z50_ref)**mz)        # Equation 5
-    cpt.w2 = np.sqrt(2/(1+(cpt.qc/qt_tip)**mq))         # Equation 8
-    cpt.w1w2 = cpt.w1 * cpt.w2                          
-    cpt.wc = (cpt.w1*cpt.w2)/cpt.w1w2.sum()             # Equation 3
-    qc_w = (cpt.qc*cpt.wc)/(cpt.wc.sum()) 
-    qc_avg = qc_w.sum()
-    
-    return qc_avg
-    
