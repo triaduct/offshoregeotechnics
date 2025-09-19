@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Kevin Duffy">
-<meta name="dcterms.date" content="2025-09-08">
+<meta name="dcterms.date" content="2025-09-19">
 
 <title>Design methods – CIEM 2301: Offshore Geotechnics</title>
 <style>
@@ -309,8 +309,8 @@ window.Quarto = {
       </button>
     </div>
   </nav>
-  <div id="quarto-announcement" data-announcement-id="09b66ac5790e94b92e4f2702aa30e582" class="alert alert-primary hidden"><div class="quarto-announcement-content">
-<p>Update 8th September: Course notes on axial capacity of piles in sand have been added.</p>
+  <div id="quarto-announcement" data-announcement-id="7a25247fe4e5c58a3ad53fcf8911844a" class="alert alert-primary hidden"><div class="quarto-announcement-content">
+<p>Update 19th September: Course notes on axial capacity of piles in clay have been added.</p>
 </div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
 </header>
 <!-- content -->
@@ -461,28 +461,18 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
- <span class="menu-text">Pile installation</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
- <span class="menu-text">Shallow foundations</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/5-1_mechanisms-clay.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Basic mechanisms</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/5-2_axial-design-clay.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Design methods</span></a>
+  </div>
+</li>
       </ul>
   </li>
       </ul>
@@ -537,14 +527,14 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">08 September 2025</p>
+      <p class="date">19 September 2025</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">08 September 2025</p>
+      <p class="date-modified">19 September 2025</p>
     </div>
   </div>
     
@@ -800,7 +790,7 @@ Table&nbsp;2: Unified pile design method in sand <span class="citation" data-cit
 <td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\Delta \sigma'_{rd} = (\frac{q_c}{10}) (\frac{q_c}{\sigma'_v}^{-0.33}) (\frac{d_{CPT}}{D})\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\Delta \sigma'_{rd} = (\frac{q_c}{10}) ((\frac{q_c}{\sigma'_v})^{-0.33}) (\frac{d_{CPT}}{D})\)</span></td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
@@ -860,7 +850,7 @@ Figure&nbsp;6: Variation of shaft tension capacity with age for 340 to 508mm OD 
 </div>
 <p>There a several potential mechanisms that cause pile ageing:</p>
 <ul>
-<li><p><strong>Corrosion and physio-chemical reaction</strong> around the pile shaft, resulting in the interface changing from a soil-pile interface to a soil-soil interface. Several field observations (e.g.&nbsp;Figure <a href="#fig-aging-crust" class="quarto-xref">Figure&nbsp;7</a>)</p></li>
+<li><p><strong>Corrosion and physio-chemical reaction</strong> around the pile shaft, resulting in the interface changing from a soil-pile interface to a soil-soil interface (e.g.&nbsp;Figure <a href="#fig-aging-crust" class="quarto-xref">Figure&nbsp;7</a>).</p></li>
 <li><p><strong>Creep-induced breakdown of hoop stresses</strong> (or arching around the pile) which first developed during pile installation, increasing the stationary radial stresses on the pile itself.</p></li>
 <li><p><strong>Microstructural rearrangements and increased grain interlocking</strong> causing an increase in constrained dilation (<span class="math inline">\(\Delta \sigma'_{rd}\)</span>) over time.</p></li>
 </ul>

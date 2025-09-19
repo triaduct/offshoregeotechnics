@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Kevin Duffy">
-<meta name="dcterms.date" content="2025-09-08">
+<meta name="dcterms.date" content="2025-09-19">
 
 <title>Basic mechanisms – CIEM 2301: Offshore Geotechnics</title>
 <style>
@@ -344,8 +344,8 @@ window.Quarto = {
       </button>
     </div>
   </nav>
-  <div id="quarto-announcement" data-announcement-id="09b66ac5790e94b92e4f2702aa30e582" class="alert alert-primary hidden"><div class="quarto-announcement-content">
-<p>Update 8th September: Course notes on axial capacity of piles in sand have been added.</p>
+  <div id="quarto-announcement" data-announcement-id="7a25247fe4e5c58a3ad53fcf8911844a" class="alert alert-primary hidden"><div class="quarto-announcement-content">
+<p>Update 19th September: Course notes on axial capacity of piles in clay have been added.</p>
 </div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
 </header>
 <!-- content -->
@@ -496,28 +496,18 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
- <span class="menu-text">Pile installation</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
- <span class="menu-text">Shallow foundations</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/5-1_mechanisms-clay.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Basic mechanisms</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/5-2_axial-design-clay.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Design methods</span></a>
+  </div>
+</li>
       </ul>
   </li>
       </ul>
@@ -582,14 +572,14 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">08 September 2025</p>
+      <p class="date">19 September 2025</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">08 September 2025</p>
+      <p class="date-modified">10 September 2025</p>
     </div>
   </div>
     
@@ -752,7 +742,7 @@ Figure&nbsp;5: Calibration chamber set-up by <span class="citation" data-cites="
 <p>You can also check this with the code below. It also includes a hypothetical scenario of a penetrometer with a diameter of <code>5*d_cpt</code>, whilst also assuming that the filter method by <span class="citation" data-cites="deBoorderSW22">de Boorder, de Lange, and Gavin (<a href="#ref-deBoorderSW22" role="doc-biblioref">2022</a>)</span> is the ground truth.</p>
 <p>Since this hypothetical penetrometer is much larger than the original CPT, it can barely detect the individual contribution of each weak layer. Instead it virtually spatially averages the whole unit, sensing a cone resistance of just under 1 MPa.</p>
 <p>As an aside: since the stress conditions in a calibration chamber are much different to real-life conditions, the measured cone resistance are also not “typical” cone resistances.</p>
-<div id="b0e2f8a1-69b1-484e-93c6-840f4f954e3f" class="cell" data-tags="[]" data-execution_count="2">
+<div id="b0e2f8a1-69b1-484e-93c6-840f4f954e3f" class="cell" data-tags="[]" data-execution_count="3">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd, numpy <span class="im">as</span> np</span>
@@ -768,37 +758,38 @@ Figure&nbsp;5: Calibration chamber set-up by <span class="citation" data-cites="
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.gca()</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Measurements from calibration chamber as well as existing calcs (to reduce computational time) are stored in calib-chamber.csv</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>cpt <span class="op">=</span> pd.read_csv(<span class="st">"data/calib-chamber.csv"</span>)</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>d_cpt <span class="op">=</span> <span class="fl">36E-3</span> <span class="co"># Original diameter of the CPT cone = 36mm</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>ax.plot(cpt.qc,cpt.z<span class="op">*-</span><span class="dv">1</span>,label<span class="op">=</span><span class="st">"True $q_c$"</span>,lw<span class="op">=</span><span class="fl">0.75</span>,c<span class="op">=</span><span class="st">"gray"</span>,ls<span class="op">=</span><span class="st">":"</span>)       <span class="co"># True qc value if layer was infinitely thick</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>ax.plot(cpt.qc_meas,cpt.z_meas<span class="op">*-</span><span class="dv">1</span>,label<span class="op">=</span><span class="st">"Measured $q_c$"</span>,c<span class="op">=</span><span class="st">"k"</span>,ls<span class="op">=</span><span class="st">"--"</span>)   <span class="co"># Measured by a CPT with diameter D_cpt</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>ax.plot(cpt.qc_koppejan,cpt.z_koppejan<span class="op">*-</span><span class="dv">1</span>,label<span class="op">=</span><span class="st">"Koppejan ($D=D_</span><span class="sc">{cpt}</span><span class="st">$)"</span>,c<span class="op">=</span><span class="st">"#C21301"</span>)  <span class="co"># Koppejan method (D = D_cpt)</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>ax.plot(cpt.qc_filter,cpt.z_filter<span class="op">*-</span><span class="dv">1</span>,label<span class="op">=</span><span class="st">"Filter method ($D=D_</span><span class="sc">{cpt}</span><span class="st">$)"</span>,c<span class="op">=</span><span class="st">"#00A6D6"</span>) <span class="co"># Filter method by De Boorder, 2022 (D = D_cpt)</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co"># ===============================</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Consider a hypothetical scenario, with a pile diameter X times the original CPT diameter</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> <span class="dv">5</span>  <span class="co"># Hypothetical diameter = X*d_cpt</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co"># ===============================</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Arrays for storing data</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>qc_avg_deb <span class="op">=</span> []</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>z_lst <span class="op">=</span> []</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> end_depth <span class="kw">in</span> np.arange(<span class="op">-</span><span class="fl">1.5</span>,<span class="dv">0</span>,<span class="fl">0.01</span>):    <span class="co"># Performing calculation at these depths</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    <span class="co"># qc_avg_deb.append(averaging_methods.lcpc(cpt, X*d_cpt, end_depth))   # Alternatively: feel free to consider the LCPC 1.5D method!</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    qc_avg_deb.append(averaging_methods.de_boorder(cpt, X<span class="op">*</span>d_cpt, end_depth))</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    z_lst.append(end_depth)</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>ax.plot(qc_avg_deb,np.array(z_lst)<span class="op">*</span>(<span class="op">-</span><span class="dv">1</span>),label<span class="op">=</span><span class="ss">f"Hypothetical ($D=$"</span> <span class="op">+</span>  <span class="bu">str</span>(X) <span class="op">+</span> <span class="st">"$D_</span><span class="sc">{cpt}</span><span class="st">$)"</span>,c<span class="op">=</span><span class="st">"green"</span>,lw<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Other plot settings</span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"Cone resistance, $q_c$ (MPa)"</span>)</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"Depth (m)"</span>)</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>ax.legend(fontsize<span class="op">=</span><span class="dv">9</span>,ncol<span class="op">=</span><span class="dv">3</span>,loc<span class="op">=</span><span class="st">"center left"</span>,bbox_to_anchor<span class="op">=</span>(<span class="op">-</span><span class="fl">0.1</span>,<span class="op">-</span><span class="fl">0.15</span>))</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="dv">0</span>,<span class="fl">2.5</span>)</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="dv">0</span>,<span class="dv">1</span>)</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>ax.tick_params(labelbottom<span class="op">=</span><span class="va">False</span>,labeltop<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>ax.xaxis.set_label_position(<span class="st">'top'</span>)</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>ax.xaxis.set_ticks_position(<span class="st">'top'</span>)</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>ax.invert_yaxis()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>csv_url <span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/triaduct/offshoregeotechnics/main/notes/data/calib-chamber.csv"</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>cpt <span class="op">=</span> pd.read_csv(csv_url)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>d_cpt <span class="op">=</span> <span class="fl">36E-3</span> <span class="co"># Original diameter of the CPT cone = 36mm</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>ax.plot(cpt.qc,cpt.z<span class="op">*-</span><span class="dv">1</span>,label<span class="op">=</span><span class="st">"True $q_c$"</span>,lw<span class="op">=</span><span class="fl">0.75</span>,c<span class="op">=</span><span class="st">"gray"</span>,ls<span class="op">=</span><span class="st">":"</span>)       <span class="co"># True qc value if layer was infinitely thick</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>ax.plot(cpt.qc_meas,cpt.z_meas<span class="op">*-</span><span class="dv">1</span>,label<span class="op">=</span><span class="st">"Measured $q_c$"</span>,c<span class="op">=</span><span class="st">"k"</span>,ls<span class="op">=</span><span class="st">"--"</span>)   <span class="co"># Measured by a CPT with diameter D_cpt</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>ax.plot(cpt.qc_koppejan,cpt.z_koppejan<span class="op">*-</span><span class="dv">1</span>,label<span class="op">=</span><span class="st">"Koppejan ($D=D_</span><span class="sc">{cpt}</span><span class="st">$)"</span>,c<span class="op">=</span><span class="st">"#C21301"</span>)  <span class="co"># Koppejan method (D = D_cpt)</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>ax.plot(cpt.qc_filter,cpt.z_filter<span class="op">*-</span><span class="dv">1</span>,label<span class="op">=</span><span class="st">"Filter method ($D=D_</span><span class="sc">{cpt}</span><span class="st">$)"</span>,c<span class="op">=</span><span class="st">"#00A6D6"</span>) <span class="co"># Filter method by De Boorder, 2022 (D = D_cpt)</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co"># ===============================</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Consider a hypothetical scenario, with a pile diameter X times the original CPT diameter</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> <span class="dv">5</span>  <span class="co"># Hypothetical diameter = X*d_cpt</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co"># ===============================</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Arrays for storing data</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>qc_avg_deb <span class="op">=</span> []</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>z_lst <span class="op">=</span> []</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> end_depth <span class="kw">in</span> np.arange(<span class="op">-</span><span class="fl">1.5</span>,<span class="dv">0</span>,<span class="fl">0.01</span>):    <span class="co"># Performing calculation at these depths</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    <span class="co"># qc_avg_deb.append(averaging_methods.lcpc(cpt, X*d_cpt, end_depth))   # Alternatively: feel free to consider the LCPC 1.5D method!</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    qc_avg_deb.append(averaging_methods.de_boorder(cpt, X<span class="op">*</span>d_cpt, end_depth))</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    z_lst.append(end_depth)</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>ax.plot(qc_avg_deb,np.array(z_lst)<span class="op">*</span>(<span class="op">-</span><span class="dv">1</span>),label<span class="op">=</span><span class="ss">f"Hypothetical ($D=$"</span> <span class="op">+</span>  <span class="bu">str</span>(X) <span class="op">+</span> <span class="st">"$D_</span><span class="sc">{cpt}</span><span class="st">$)"</span>,c<span class="op">=</span><span class="st">"green"</span>,lw<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="co"># Other plot settings</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"Cone resistance, $q_c$ (MPa)"</span>)</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"Depth (m)"</span>)</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>ax.legend(fontsize<span class="op">=</span><span class="dv">9</span>,ncol<span class="op">=</span><span class="dv">3</span>,loc<span class="op">=</span><span class="st">"center left"</span>,bbox_to_anchor<span class="op">=</span>(<span class="op">-</span><span class="fl">0.1</span>,<span class="op">-</span><span class="fl">0.15</span>))</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="dv">0</span>,<span class="fl">2.5</span>)</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="dv">0</span>,<span class="dv">1</span>)</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>ax.tick_params(labelbottom<span class="op">=</span><span class="va">False</span>,labeltop<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>ax.xaxis.set_label_position(<span class="st">'top'</span>)</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>ax.xaxis.set_ticks_position(<span class="st">'top'</span>)</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>ax.invert_yaxis()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>
@@ -1285,11 +1276,11 @@ Lehane, Barry M. 1992. <span>“Experimental Investigations of Pile Behaviour Us
 <div id="ref-lehaneBaseResistanceJacked2001" class="csl-entry" role="listitem">
 Lehane, Barry M., and Kenneth G. Gavin. 2001. <span>“Base Resistance of Jacked Pipe Piles in Sand.”</span> <em>Journal of Geotechnical and Geoenvironmental Engineering</em> 127 (6): 473–80. <a href="https://doi.org/10.1061/(ASCE)1090-0241(2001)127:6(473)">https://doi.org/10.1061/(ASCE)1090-0241(2001)127:6(473)</a>.
 </div>
-<div id="ref-lehaneMechanismsShaftFriction1993" class="csl-entry" role="listitem">
-Lehane, Barry M., R. J. Jardine, A. J. Bond, and R. Frank. 1993. <span>“Mechanisms of Shaft Friction in Sand from Instrumented Pile Tests.”</span> <em>Journal of Geotechnical Engineering</em> 119 (1): 19–35. <a href="https://doi.org/10.1061/(ASCE)0733-9410(1993)119:1(19)">https://doi.org/10.1061/(ASCE)0733-9410(1993)119:1(19)</a>.
-</div>
 <div id="ref-lehaneShaftCapacityDriven1994" class="csl-entry" role="listitem">
 Lehane, Barry M., and Richard J. Jardine. 1994. <span>“Shaft Capacity of Driven Piles in Sand: A New Design Method:”</span> In <em>Proceedings of the 7th <span>International Conference</span> on the <span>Behaviour</span> of <span>Offshore Structures</span>, <span>BOSS</span>’94</em>, 3:23–26. Boston, USA: Pergamon.
+</div>
+<div id="ref-lehaneMechanismsShaftFriction1993" class="csl-entry" role="listitem">
+Lehane, Barry M., Richard J. Jardine, Andrew J. Bond, and R. Frank. 1993. <span>“Mechanisms of Shaft Friction in Sand from Instrumented Pile Tests.”</span> <em>Journal of Geotechnical Engineering</em> 119 (1): 19–35. <a href="https://doi.org/10.1061/(ASCE)0733-9410(1993)119:1(19)">https://doi.org/10.1061/(ASCE)0733-9410(1993)119:1(19)</a>.
 </div>
 <div id="ref-liAnalysisPluggingEffect2021" class="csl-entry" role="listitem">
 Li, Lichen, Wenbing Wu, Hao Liu, and Barry Lehane. 2021. <span>“<span>DEM</span> Analysis of the Plugging Effect of Open-Ended Pile During the Installation Process.”</span> <em>Ocean Engineering</em> 220 (January): 108375. <a href="https://doi.org/10.1016/j.oceaneng.2020.108375">https://doi.org/10.1016/j.oceaneng.2020.108375</a>.

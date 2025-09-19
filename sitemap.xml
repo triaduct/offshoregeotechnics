@@ -2,55 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://triaduct.github.io/offshoregeotechnics/schedule.html</loc>
-    <lastmod>2025-09-05T06:59:20.780Z</lastmod>
+    <lastmod>2025-09-19T08:25:42.562Z</lastmod>
   </url>
   <url>
     <loc>https://triaduct.github.io/offshoregeotechnics/readme.html</loc>
     <lastmod>2025-08-29T18:15:23.139Z</lastmod>
   </url>
   <url>
-    <loc>https://triaduct.github.io/offshoregeotechnics/notes/4-2_mechanisms-sand.html</loc>
-    <lastmod>2025-09-08T18:00:47.339Z</lastmod>
+    <loc>https://triaduct.github.io/offshoregeotechnics/playground/interaction-diagram.html</loc>
+    <lastmod>2025-09-11T21:05:38.122Z</lastmod>
   </url>
   <url>
-    <loc>https://triaduct.github.io/offshoregeotechnics/notes/3-3_geotechnical-investigation.html</loc>
-    <lastmod>2025-08-29T13:28:39.110Z</lastmod>
+    <loc>https://triaduct.github.io/offshoregeotechnics/notes/5-2_axial-design-clay.html</loc>
+    <lastmod>2025-09-19T14:01:27.435Z</lastmod>
   </url>
   <url>
-    <loc>https://triaduct.github.io/offshoregeotechnics/notes/3-1_site-investigation.html</loc>
-    <lastmod>2025-09-08T17:53:41.634Z</lastmod>
+    <loc>https://triaduct.github.io/offshoregeotechnics/notes/4-3_axial-design-sand.html</loc>
+    <lastmod>2025-09-19T10:14:04.764Z</lastmod>
   </url>
   <url>
-    <loc>https://triaduct.github.io/offshoregeotechnics/notes/1_intro.html</loc>
-    <lastmod>2025-08-28T07:39:43.916Z</lastmod>
-  </url>
-  <url>
-    <loc>https://triaduct.github.io/offshoregeotechnics/index.html</loc>
-    <lastmod>2025-08-29T13:58:14.431Z</lastmod>
-  </url>
-  <url>
-    <loc>https://triaduct.github.io/offshoregeotechnics/guide.html</loc>
-    <lastmod>2025-08-31T15:17:20.617Z</lastmod>
-  </url>
-  <url>
-    <loc>https://triaduct.github.io/offshoregeotechnics/learning-objectives.html</loc>
-    <lastmod>2025-08-29T13:34:30.404Z</lastmod>
-  </url>
-  <url>
-    <loc>https://triaduct.github.io/offshoregeotechnics/notes/2_marine-geology.html</loc>
-    <lastmod>2025-08-29T11:40:23.069Z</lastmod>
+    <loc>https://triaduct.github.io/offshoregeotechnics/notes/4-1_piles-overview.html</loc>
+    <lastmod>2025-09-08T18:48:06.014Z</lastmod>
   </url>
   <url>
     <loc>https://triaduct.github.io/offshoregeotechnics/notes/3-2_geophysical-investigation.html</loc>
     <lastmod>2025-08-29T12:25:50.164Z</lastmod>
   </url>
   <url>
-    <loc>https://triaduct.github.io/offshoregeotechnics/notes/4-1_piles-overview.html</loc>
-    <lastmod>2025-09-08T17:46:50.408Z</lastmod>
+    <loc>https://triaduct.github.io/offshoregeotechnics/notes/2_marine-geology.html</loc>
+    <lastmod>2025-08-29T11:40:23.069Z</lastmod>
   </url>
   <url>
-    <loc>https://triaduct.github.io/offshoregeotechnics/notes/4-3_axial-design-sand.html</loc>
-    <lastmod>2025-09-08T17:47:47.984Z</lastmod>
+    <loc>https://triaduct.github.io/offshoregeotechnics/learning-objectives.html</loc>
+    <lastmod>2025-08-29T13:34:30.404Z</lastmod>
+  </url>
+  <url>
+    <loc>https://triaduct.github.io/offshoregeotechnics/guide.html</loc>
+    <lastmod>2025-08-31T15:17:20.617Z</lastmod>
+  </url>
+  <url>
+    <loc>https://triaduct.github.io/offshoregeotechnics/index.html</loc>
+    <lastmod>2025-08-29T13:58:14.431Z</lastmod>
+  </url>
+  <url>
+    <loc>https://triaduct.github.io/offshoregeotechnics/notes/1_intro.html</loc>
+    <lastmod>2025-08-28T07:39:43.916Z</lastmod>
+  </url>
+  <url>
+    <loc>https://triaduct.github.io/offshoregeotechnics/notes/3-1_site-investigation.html</loc>
+    <lastmod>2025-09-08T17:53:41.634Z</lastmod>
+  </url>
+  <url>
+    <loc>https://triaduct.github.io/offshoregeotechnics/notes/3-3_geotechnical-investigation.html</loc>
+    <lastmod>2025-08-29T13:28:39.110Z</lastmod>
+  </url>
+  <url>
+    <loc>https://triaduct.github.io/offshoregeotechnics/notes/4-2_mechanisms-sand.html</loc>
+    <lastmod>2025-09-10T09:57:49.483Z</lastmod>
+  </url>
+  <url>
+    <loc>https://triaduct.github.io/offshoregeotechnics/notes/5-1_mechanisms-clay.html</loc>
+    <lastmod>2025-09-19T14:02:56.668Z</lastmod>
   </url>
   <url>
     <loc>https://triaduct.github.io/offshoregeotechnics/resources.html</loc>
