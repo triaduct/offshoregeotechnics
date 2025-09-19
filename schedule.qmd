@@ -8,15 +8,15 @@ comments: false
 |-------------------------|-------------|-------------------------------|-------------|
 | ~~Tuesday 2nd September~~   | ~~13:45-15:30~~ | ~~Introduction & marine geology~~ | ~~Kevin Duffy~~ |
 | ~~Thursday 9th September~~  | ~~13:45-15:30~~ | ~~Site investigation~~            | ~~Kevin Duffy~~ |
-| Tuesday 9th September   | 13:45-15:30 | Axially loaded piles in sand  | Kevin Duffy |
-| Thursday 11th September | 13:45-15:30 | Axially loaded piles in sand  | Kevin Duffy |
-| Tuesday 16th September  | 13:45-15:30 | Axially loaded piles in clay  | Kevin Duffy |
-| Thursday 18th September | 13:45-15:30 | Axially loaded piles in clay  | Kevin Duffy |
+| ~~Tuesday 9th September~~   | ~~13:45-15:30~~ | ~~Axially loaded piles in sand~~  | ~~Kevin Duffy~~ |
+| ~~Thursday 11th September~~ | ~~13:45-15:30~~ | ~~Axially loaded piles in sand~~  | ~~Kevin Duffy~~ |
+| ~~Tuesday 16th September~~  | ~~13:45-15:30~~ | ~~Workshop review & pile ageing in sand~~   | ~~Kevin Duffy~~ |
+| ~~Thursday 18th September~~ | ~~13:45-15:30~~ | ~~Axially loaded piles in clay~~  | ~~Kevin Duffy~~ |
 | Tuesday 23rd September  | 13:45-15:30 | Laterally loaded piles        | Ken Gavin |
-| Thursday 25th September | 13:45-15:30 | Cyclic loading                | Ken Gavin |
-| Tuesday 30th September  | 13:45-15:30 | Seismic design                | Ozan Alver |
+| Thursday 25th September | 13:45-15:30 | Seismic design                | Ozan Alver |
+| Tuesday 30th September  | 13:45-15:30 | Cyclic loading                | Ken Gavin |
 | Thursday 2nd October    | 13:45-15:30 | Pile installation             | Kevin Duffy |
-| Tuesday 7th October     | **10:45-12:30** | Shallow foundations           | Kevin Duffy |
+| Tuesday 7th October     | **10:45-12:30** | Shallow foundations       | Kevin Duffy |
 | Thursday 9th October    | 13:45-15:30 | Suction-assisted installation | Kevin Duffy |
 | Tuesday 14th October    | 13:45-15:30 | Floating structures & anchors | Kevin Duffy |
 | Thursday 16th October   | 13:45-15:30 | Challenging soil conditions   | Kevin Duffy |

@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dissipation Widget</title>
+</head>
+<body>
+
+
+<!-- Load require.js. Delete this if your page already loads require.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js" crossorigin="anonymous"></script>
+
+<script type="application/vnd.jupyter.widget-state+json">
+{
+  "version_major": 2,
+  "version_minor": 0,
+  "state": {
+    "5c899709820c43c99c0f9ab521e50f06": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "964d1ec04e884ead9dca93dbbb2425f7": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "ae1b1afa0c804794aba74de47506219b": {
+      "model_name": "IntTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "a",
+        "layout": "IPY_MODEL_5c899709820c43c99c0f9ab521e50f06",
+        "style": "IPY_MODEL_964d1ec04e884ead9dca93dbbb2425f7"
+      }
+    },
+    "a7b6442f12d749dbbb2335c265d292dd": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "bba989bf91a64071bc17614c11ac20dd": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "236185a66aaf4120ade2d757eedeef22": {
+      "model_name": "IntTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "b",
+        "layout": "IPY_MODEL_a7b6442f12d749dbbb2335c265d292dd",
+        "style": "IPY_MODEL_bba989bf91a64071bc17614c11ac20dd"
+      }
+    },
+    "8c7413b15f20462f93b33a72d29272bd": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "47e99a93bea245ffad060223048b10a0": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "940dde67f1d44cd7a1c48b29363e4f80": {
+      "model_name": "IntTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "c",
+        "layout": "IPY_MODEL_8c7413b15f20462f93b33a72d29272bd",
+        "style": "IPY_MODEL_47e99a93bea245ffad060223048b10a0"
+      }
+    },
+    "ca77599790784505ad369119dfc26ece": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "51f1aaa1d2a146978ea42177293bc892": {
+      "model_name": "OutputModel",
+      "model_module": "@jupyter-widgets/output",
+      "model_module_version": "1.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_ca77599790784505ad369119dfc26ece",
+        "outputs": []
+      }
+    },
+    "d932f9ca3d8e4e1c8a05abcb369126e0": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "2b899cb01bde437c85eafa1c075c2b61": {
+      "model_name": "ButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "612c41a804b74711890b20ca7053a924": {
+      "model_name": "ButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Run",
+        "layout": "IPY_MODEL_d932f9ca3d8e4e1c8a05abcb369126e0",
+        "style": "IPY_MODEL_2b899cb01bde437c85eafa1c075c2b61"
+      }
+    },
+    "a029d583fbe346aab9ac524eed320f46": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "c57621f11a2842a8ab7edcb6fd18e406": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "cfd928d226b34d3f9098f1ce062622ad": {
+      "model_name": "IntTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Coefficient of consolidation $c_h$ (m2/day)",
+        "layout": "IPY_MODEL_a029d583fbe346aab9ac524eed320f46",
+        "style": "IPY_MODEL_c57621f11a2842a8ab7edcb6fd18e406"
+      }
+    },
+    "8bfc521a1eeb490caf5f5784f0a91e11": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "058f9d24b5304150b7e152220d0d2a20": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "1520c8a2bd894fef98c2f2385e8761c3": {
+      "model_name": "IntTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Outer diameter (m)",
+        "layout": "IPY_MODEL_8bfc521a1eeb490caf5f5784f0a91e11",
+        "style": "IPY_MODEL_058f9d24b5304150b7e152220d0d2a20"
+      }
+    },
+    "1d51815bfee24341a24131f2207bb32d": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "8aa20990c65b4bb1832e3632439a83e2": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "7c65f38d980641d8868d0dac4cee957a": {
+      "model_name": "IntTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Wall thicknes (mm)",
+        "layout": "IPY_MODEL_1d51815bfee24341a24131f2207bb32d",
+        "style": "IPY_MODEL_8aa20990c65b4bb1832e3632439a83e2"
+      }
+    },
+    "5e0f5d6501ab48ec8388b5b55ee7d829": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "582382088d564d608824fce5b082bd31": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "0830f5e7e5b94b21a81f52e0efa7dbce": {
+      "model_name": "IntTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Plug Length Ratio, PLR (-)",
+        "layout": "IPY_MODEL_5e0f5d6501ab48ec8388b5b55ee7d829",
+        "style": "IPY_MODEL_582382088d564d608824fce5b082bd31"
+      }
+    },
+    "740e0db7bfc54ce59b00f51ad48d94fa": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "7e4f592967c7427bad9d34d25e6210b2": {
+      "model_name": "OutputModel",
+      "model_module": "@jupyter-widgets/output",
+      "model_module_version": "1.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_740e0db7bfc54ce59b00f51ad48d94fa",
+        "outputs": []
+      }
+    },
+    "904388e8194d4406adf09504aa10b273": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "ec9efd555ddb43b8840d1ea3b041346c": {
+      "model_name": "ButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "9144f924fddb41f1a34f415f75178a3d": {
+      "model_name": "ButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Run",
+        "layout": "IPY_MODEL_904388e8194d4406adf09504aa10b273",
+        "style": "IPY_MODEL_ec9efd555ddb43b8840d1ea3b041346c"
+      }
+    },
+    "127256ef8d13426f8fad98cc967c1d8a": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "90158137e7b34334a5efd4334d17fa45": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "f1b70fe36c4b4f3a8b9eefd97da2911e": {
+      "model_name": "IntTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Coefficient of consolidation $c_h$ (m2/day)",
+        "layout": "IPY_MODEL_127256ef8d13426f8fad98cc967c1d8a",
+        "style": "IPY_MODEL_90158137e7b34334a5efd4334d17fa45"
+      }
+    },
+    "f7ccaafa783440d1ab8fb4398b468a61": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "1a5ec94ed9df474aa58a81b9fc2b2d55": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "f3c47862bf7d4e50873b0484957bd56b": {
+      "model_name": "IntTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Outer diameter (m)",
+        "layout": "IPY_MODEL_f7ccaafa783440d1ab8fb4398b468a61",
+        "style": "IPY_MODEL_1a5ec94ed9df474aa58a81b9fc2b2d55"
+      }
+    },
+    "94875f1475de42358683ea2985eb2607": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "a30d9e9c399a43dea79a20de06f198b3": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "a71f82e275514936a042796c6831f2f7": {
+      "model_name": "IntTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Wall thicknes (mm)",
+        "layout": "IPY_MODEL_94875f1475de42358683ea2985eb2607",
+        "style": "IPY_MODEL_a30d9e9c399a43dea79a20de06f198b3"
+      }
+    },
+    "9e1142f7d70247a1ab0c19ab6f6e28bd": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "bf1405a5d7214b21a2baa5f675f59725": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "d3d690791fe24f5fb5d9b1008b688b62": {
+      "model_name": "IntTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Plug Length Ratio, PLR (-)",
+        "layout": "IPY_MODEL_9e1142f7d70247a1ab0c19ab6f6e28bd",
+        "style": "IPY_MODEL_bf1405a5d7214b21a2baa5f675f59725"
+      }
+    },
+    "ac9402381a1a4b9693bb45a85180460e": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "5b07e533977c4476a44aaf580772dfd4": {
+      "model_name": "OutputModel",
+      "model_module": "@jupyter-widgets/output",
+      "model_module_version": "1.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_ac9402381a1a4b9693bb45a85180460e",
+        "outputs": [
+          {
+            "traceback": [
+              "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+              "\u001b[1;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+              "Cell \u001b[1;32mIn[3], line 33\u001b[0m, in \u001b[0;36mrun\u001b[1;34m(_)\u001b[0m\n\u001b[0;32m     31\u001b[0m \u001b[38;5;28;01mwith\u001b[39;00m out:\n\u001b[0;32m     32\u001b[0m     out\u001b[38;5;241m.\u001b[39mclear_output()\n\u001b[1;32m---> 33\u001b[0m     output \u001b[38;5;241m=\u001b[39m dissipation(D_outer\u001b[38;5;241m.\u001b[39mvalue, t\u001b[38;5;241m.\u001b[39mvalue, PLR\u001b[38;5;241m.\u001b[39mvalue, ch\u001b[38;5;241m.\u001b[39mvalue)\n\u001b[0;32m     34\u001b[0m     \u001b[38;5;28mprint\u001b[39m()\n\u001b[0;32m     35\u001b[0m     \u001b[38;5;28mprint\u001b[39m(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m\"\u001b[39m\u001b[38;5;132;01m{\u001b[39;00moutput\u001b[38;5;132;01m:\u001b[39;00m\u001b[38;5;124m.0f\u001b[39m\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m days to reach 80% consolidation\u001b[39m\u001b[38;5;124m\"\u001b[39m)\n",
+              "\u001b[1;31mTypeError\u001b[0m: dissipation() takes 3 positional arguments but 4 were given"
+            ],
+            "ename": "TypeError",
+            "evalue": "dissipation() takes 3 positional arguments but 4 were given",
+            "output_type": "error"
+          }
+        ]
+      }
+    },
+    "f68bea17b81f4710a7d3401e018efaa6": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "86b7bb81148349a8ae63233f616a8dd6": {
+      "model_name": "ButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "da19e7264cfb4dcd865b15d89b31a29c": {
+      "model_name": "ButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Run",
+        "layout": "IPY_MODEL_f68bea17b81f4710a7d3401e018efaa6",
+        "style": "IPY_MODEL_86b7bb81148349a8ae63233f616a8dd6"
+      }
+    },
+    "f2a0a7de3c7d4d819df5a66ce02d65a9": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "d3fed66145c04748b1e4300b24097ceb": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "eade2abe44b04eb7b50cdf045bc22dd1": {
+      "model_name": "IntTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Coefficient of consolidation $c_h$ (m2/day)",
+        "layout": "IPY_MODEL_f2a0a7de3c7d4d819df5a66ce02d65a9",
+        "style": "IPY_MODEL_d3fed66145c04748b1e4300b24097ceb"
+      }
+    },
+    "ec85d89ca1114f2f85d8f0111ee57bb1": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "a16016e2385b4d2789498dd3ae10756e": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "2b58fbe070f64a749a72249394741b71": {
+      "model_name": "IntTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Outer diameter (m)",
+        "layout": "IPY_MODEL_ec85d89ca1114f2f85d8f0111ee57bb1",
+        "style": "IPY_MODEL_a16016e2385b4d2789498dd3ae10756e"
+      }
+    },
+    "90c61ecedf05407bbac6e6f4ae744773": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "d29a373a6cf54478900cdd544225cb19": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "572219f5b3cf435fbf486b4288752af0": {
+      "model_name": "IntTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Wall thicknes (mm)",
+        "layout": "IPY_MODEL_90c61ecedf05407bbac6e6f4ae744773",
+        "style": "IPY_MODEL_d29a373a6cf54478900cdd544225cb19"
+      }
+    },
+    "5f3e3c8fc73d4eb6bbab2e9c9ee3111d": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "a1e936a46d974e7881344bbb08e5d76c": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "84f466be83644fc9a54e56da41a9ab56": {
+      "model_name": "IntTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Plug Length Ratio, PLR (-)",
+        "layout": "IPY_MODEL_5f3e3c8fc73d4eb6bbab2e9c9ee3111d",
+        "style": "IPY_MODEL_a1e936a46d974e7881344bbb08e5d76c"
+      }
+    },
+    "8e161fcebd294fd2906b1e08c3126f8d": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "0687a9d812eb4bd7a354afefdc8632d6": {
+      "model_name": "OutputModel",
+      "model_module": "@jupyter-widgets/output",
+      "model_module_version": "1.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_8e161fcebd294fd2906b1e08c3126f8d",
+        "outputs": [
+          {
+            "traceback": [
+              "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+              "\u001b[1;31mZeroDivisionError\u001b[0m                         Traceback (most recent call last)",
+              "Cell \u001b[1;32mIn[4], line 33\u001b[0m, in \u001b[0;36mrun\u001b[1;34m(_)\u001b[0m\n\u001b[0;32m     31\u001b[0m \u001b[38;5;28;01mwith\u001b[39;00m out:\n\u001b[0;32m     32\u001b[0m     out\u001b[38;5;241m.\u001b[39mclear_output()\n\u001b[1;32m---> 33\u001b[0m     output \u001b[38;5;241m=\u001b[39m dissipation(D_outer\u001b[38;5;241m.\u001b[39mvalue, t\u001b[38;5;241m.\u001b[39mvalue, PLR\u001b[38;5;241m.\u001b[39mvalue, ch\u001b[38;5;241m.\u001b[39mvalue)\n\u001b[0;32m     34\u001b[0m     \u001b[38;5;28mprint\u001b[39m()\n\u001b[0;32m     35\u001b[0m     \u001b[38;5;28mprint\u001b[39m(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m\"\u001b[39m\u001b[38;5;132;01m{\u001b[39;00moutput\u001b[38;5;132;01m:\u001b[39;00m\u001b[38;5;124m.0f\u001b[39m\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m days to reach 80% consolidation\u001b[39m\u001b[38;5;124m\"\u001b[39m)\n",
+              "Cell \u001b[1;32mIn[4], line 23\u001b[0m, in \u001b[0;36mdissipation\u001b[1;34m(Do, t, PLR, ch)\u001b[0m\n\u001b[0;32m     12\u001b[0m \u001b[38;5;250m\u001b[39m\u001b[38;5;124;03m\"\"\"\u001b[39;00m\n\u001b[0;32m     13\u001b[0m \u001b[38;5;124;03mBased on Teh and Houlsby 1991\u001b[39;00m\n\u001b[0;32m     14\u001b[0m \u001b[38;5;124;03m\u001b[39;00m\n\u001b[1;32m   (...)\u001b[0m\n\u001b[0;32m     20\u001b[0m \u001b[38;5;124;03mReturns days taken to reach 80% consolidation\u001b[39;00m\n\u001b[0;32m     21\u001b[0m \u001b[38;5;124;03m\"\"\"\u001b[39;00m\n\u001b[0;32m     22\u001b[0m Di \u001b[38;5;241m=\u001b[39m Do\u001b[38;5;241m-\u001b[39mt\u001b[38;5;241m*\u001b[39m\u001b[38;5;241m2\u001b[39m\u001b[38;5;241m*\u001b[39m\u001b[38;5;241m1E-3\u001b[39m \u001b[38;5;66;03m# Inner diameter\u001b[39;00m\n\u001b[1;32m---> 23\u001b[0m Are \u001b[38;5;241m=\u001b[39m \u001b[38;5;241m1\u001b[39m\u001b[38;5;241m-\u001b[39mPLR\u001b[38;5;241m*\u001b[39m(Di\u001b[38;5;241m/\u001b[39mDo)\u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39m\u001b[38;5;241m2\u001b[39m \u001b[38;5;66;03m# Effective area ratio\u001b[39;00m\n\u001b[0;32m     24\u001b[0m Deq \u001b[38;5;241m=\u001b[39m np\u001b[38;5;241m.\u001b[39msqrt(Are)\u001b[38;5;241m*\u001b[39mDo \u001b[38;5;66;03m# Equivalent diameter\u001b[39;00m\n\u001b[0;32m     25\u001b[0m Req \u001b[38;5;241m=\u001b[39m Deq\u001b[38;5;241m/\u001b[39m\u001b[38;5;241m2\u001b[39m\n",
+              "\u001b[1;31mZeroDivisionError\u001b[0m: float division by zero"
+            ],
+            "ename": "ZeroDivisionError",
+            "evalue": "float division by zero",
+            "output_type": "error"
+          }
+        ]
+      }
+    },
+    "fffaa64790d1477f9341d8dbd62dcce8": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "9669dd95642148fbaeeb866c1072528e": {
+      "model_name": "ButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "f79bef8502f742db87ecb35e12c7a8f1": {
+      "model_name": "ButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Run",
+        "layout": "IPY_MODEL_fffaa64790d1477f9341d8dbd62dcce8",
+        "style": "IPY_MODEL_9669dd95642148fbaeeb866c1072528e"
+      }
+    },
+    "25540fc89f3041a090fc4d494105594f": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "8f947866b44f4545bebb6f385c8b8ce0": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "8e8ba0d7352641a5aeb27430d284e28f": {
+      "model_name": "IntTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Coefficient of consolidation $c_h$ (m2/day)",
+        "layout": "IPY_MODEL_25540fc89f3041a090fc4d494105594f",
+        "style": "IPY_MODEL_8f947866b44f4545bebb6f385c8b8ce0"
+      }
+    },
+    "baf160a322af4f888efcc4cd1b6b2500": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "3310644dd6634198aaa0f97e88c21c1b": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "fb8e6926b6b64cb2be92251f8d59d62e": {
+      "model_name": "IntTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Outer diameter (m)",
+        "layout": "IPY_MODEL_baf160a322af4f888efcc4cd1b6b2500",
+        "style": "IPY_MODEL_3310644dd6634198aaa0f97e88c21c1b",
+        "value": 2
+      }
+    },
+    "86421999b5db4de192b7f4fbda5896b3": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "44e092e82b424af389d680890dc017fa": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "fa1f97b20e5f4148a757a2741de4d9cd": {
+      "model_name": "IntTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Wall thicknes (mm)",
+        "layout": "IPY_MODEL_86421999b5db4de192b7f4fbda5896b3",
+        "style": "IPY_MODEL_44e092e82b424af389d680890dc017fa",
+        "value": 5
+      }
+    },
+    "d0c3bd7487194f79a5d5e345096d48c8": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "fb885dcf335147ffbcfc06b953de36f6": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "2664a0c630e04d329a6f28a8971a0527": {
+      "model_name": "IntTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Plug Length Ratio, PLR (-)",
+        "layout": "IPY_MODEL_d0c3bd7487194f79a5d5e345096d48c8",
+        "style": "IPY_MODEL_fb885dcf335147ffbcfc06b953de36f6",
+        "value": 1
+      }
+    },
+    "54c8b68aee35436e83a38e6383ec8ceb": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "ed4cc3f2dd1342748f180dc730933d2d": {
+      "model_name": "OutputModel",
+      "model_module": "@jupyter-widgets/output",
+      "model_module_version": "1.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_54c8b68aee35436e83a38e6383ec8ceb",
+        "outputs": [
+          {
+            "traceback": [
+              "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+              "\u001b[1;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+              "Cell \u001b[1;32mIn[5], line 33\u001b[0m, in \u001b[0;36mrun\u001b[1;34m(_)\u001b[0m\n\u001b[0;32m     31\u001b[0m \u001b[38;5;28;01mwith\u001b[39;00m out:\n\u001b[0;32m     32\u001b[0m     out\u001b[38;5;241m.\u001b[39mclear_output()\n\u001b[1;32m---> 33\u001b[0m     output \u001b[38;5;241m=\u001b[39m dissipation(D_outer\u001b[38;5;241m.\u001b[39mvalue, t\u001b[38;5;241m.\u001b[39mvalue, PLR\u001b[38;5;241m.\u001b[39mvalue, ch\u001b[38;5;241m.\u001b[39mvalue)\n\u001b[0;32m     34\u001b[0m     \u001b[38;5;28mprint\u001b[39m()\n\u001b[0;32m     35\u001b[0m     \u001b[38;5;28mprint\u001b[39m(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m\"\u001b[39m\u001b[38;5;132;01m{\u001b[39;00moutput\u001b[38;5;132;01m:\u001b[39;00m\u001b[38;5;124m.0f\u001b[39m\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m days to reach 80% consolidation\u001b[39m\u001b[38;5;124m\"\u001b[39m)\n",
+              "Cell \u001b[1;32mIn[5], line 24\u001b[0m, in \u001b[0;36mdissipation\u001b[1;34m(Do, t, PLR, ch)\u001b[0m\n\u001b[0;32m     22\u001b[0m Di \u001b[38;5;241m=\u001b[39m Do\u001b[38;5;241m-\u001b[39mt\u001b[38;5;241m*\u001b[39m\u001b[38;5;241m2\u001b[39m\u001b[38;5;241m*\u001b[39m\u001b[38;5;241m1E-3\u001b[39m \u001b[38;5;66;03m# Inner diameter\u001b[39;00m\n\u001b[0;32m     23\u001b[0m Are \u001b[38;5;241m=\u001b[39m \u001b[38;5;241m1\u001b[39m\u001b[38;5;241m-\u001b[39mPLR\u001b[38;5;241m*\u001b[39m(Di\u001b[38;5;241m/\u001b[39mDo)\u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39m\u001b[38;5;241m2\u001b[39m \u001b[38;5;66;03m# Effective area ratio\u001b[39;00m\n\u001b[1;32m---> 24\u001b[0m Deq \u001b[38;5;241m=\u001b[39m np\u001b[38;5;241m.\u001b[39msqrt(Are)\u001b[38;5;241m*\u001b[39mDo \u001b[38;5;66;03m# Equivalent diameter\u001b[39;00m\n\u001b[0;32m     25\u001b[0m Req \u001b[38;5;241m=\u001b[39m Deq\u001b[38;5;241m/\u001b[39m\u001b[38;5;241m2\u001b[39m\n\u001b[0;32m     26\u001b[0m t80 \u001b[38;5;241m=\u001b[39m (\u001b[38;5;241m52\u001b[39m\u001b[38;5;241m*\u001b[39mReq\u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39m\u001b[38;5;241m2\u001b[39m)\u001b[38;5;241m/\u001b[39mch \u001b[38;5;66;03m# days taken to reach 80% consolidation\u001b[39;00m\n",
+              "\u001b[1;31mNameError\u001b[0m: name 'np' is not defined"
+            ],
+            "ename": "NameError",
+            "evalue": "name 'np' is not defined",
+            "output_type": "error"
+          }
+        ]
+      }
+    },
+    "ce0e0f360a3843b4a79cea4f353755cc": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "06621b3fdd3542c8800756730905d830": {
+      "model_name": "ButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "c16e2e63ddb147f79e45bdeccd6664c5": {
+      "model_name": "ButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Run",
+        "layout": "IPY_MODEL_ce0e0f360a3843b4a79cea4f353755cc",
+        "style": "IPY_MODEL_06621b3fdd3542c8800756730905d830"
+      }
+    },
+    "79c27df37e744705847c3c23a9fdf48a": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "6f1ec4d1867f40af89fa2bd0328a8bb3": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "517725e7c8c94db18159dff68ff4eff1": {
+      "model_name": "IntTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Coefficient of consolidation $c_h$ (m2/day)",
+        "layout": "IPY_MODEL_79c27df37e744705847c3c23a9fdf48a",
+        "style": "IPY_MODEL_6f1ec4d1867f40af89fa2bd0328a8bb3"
+      }
+    },
+    "d2d7539c66bb43e0bcbde7fad403f0d8": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "6f9e5c18d1064b988072363d636396d3": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "90a84ec1b17f44ffa5b6a40d0036535a": {
+      "model_name": "IntTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Outer diameter (m)",
+        "layout": "IPY_MODEL_d2d7539c66bb43e0bcbde7fad403f0d8",
+        "style": "IPY_MODEL_6f9e5c18d1064b988072363d636396d3",
+        "value": 2
+      }
+    },
+    "d4ebb14aa7ec4145bf42976ba44c64df": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "54bc5ef871744296b14e3a84dac476cb": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "99afb9a3de384e0e9939b3ff9d6abb24": {
+      "model_name": "IntTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Wall thicknes (mm)",
+        "layout": "IPY_MODEL_d4ebb14aa7ec4145bf42976ba44c64df",
+        "style": "IPY_MODEL_54bc5ef871744296b14e3a84dac476cb",
+        "value": 5
+      }
+    },
+    "3d8cdc531e354588b6d8824cb8ddd5ca": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "3f0d3e573b0e441eb10bdd5e8815e10a": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "f163880fb3164c899e99f25a2b9e906e": {
+      "model_name": "IntTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Plug Length Ratio, PLR (-)",
+        "layout": "IPY_MODEL_3d8cdc531e354588b6d8824cb8ddd5ca",
+        "style": "IPY_MODEL_3f0d3e573b0e441eb10bdd5e8815e10a",
+        "value": 1
+      }
+    },
+    "867cf639fa7746bba1d22b9ffe6bc22a": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "5ade702ab77640a18b975e4ff6fcb2ec": {
+      "model_name": "OutputModel",
+      "model_module": "@jupyter-widgets/output",
+      "model_module_version": "1.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_867cf639fa7746bba1d22b9ffe6bc22a",
+        "outputs": [
+          {
+            "name": "stdout",
+            "text": "\ninf days to reach 80% consolidation\n",
+            "output_type": "stream"
+          },
+          {
+            "name": "stderr",
+            "text": "C:\\Users\\kduffy\\AppData\\Local\\Temp\\ipykernel_15740\\1091736601.py:27: RuntimeWarning: divide by zero encountered in scalar divide\n  t80 = (52*Req**2)/ch # days taken to reach 80% consolidation\n",
+            "output_type": "stream"
+          }
+        ]
+      }
+    },
+    "934dead02f2349708e1d7f6f2dcf7cb3": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "35d83fdb41f74fb7b3d3f792080bce68": {
+      "model_name": "ButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "0280316be4324445806ef84c43b0ff28": {
+      "model_name": "ButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Run",
+        "layout": "IPY_MODEL_934dead02f2349708e1d7f6f2dcf7cb3",
+        "style": "IPY_MODEL_35d83fdb41f74fb7b3d3f792080bce68"
+      }
+    },
+    "bbc283a3dff0454cb4d6a01f32d34341": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "b6ad14537bd04994bc7eb1b250466bb2": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "c69b24d421ee419286da4e8940920c39": {
+      "model_name": "IntTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Coefficient of consolidation $c_h$ (m2/day)",
+        "layout": "IPY_MODEL_bbc283a3dff0454cb4d6a01f32d34341",
+        "step": 0,
+        "style": "IPY_MODEL_b6ad14537bd04994bc7eb1b250466bb2"
+      }
+    },
+    "de89d0cd6d264dd18120fcfeb0a177c4": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "9355a44ce56943f79b50477a64bc7ed4": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "b42a45b6bf7749d59bb54c5cf717f89c": {
+      "model_name": "IntTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Outer diameter (m)",
+        "layout": "IPY_MODEL_de89d0cd6d264dd18120fcfeb0a177c4",
+        "style": "IPY_MODEL_9355a44ce56943f79b50477a64bc7ed4",
+        "value": 2
+      }
+    },
+    "4e3f3349564c476abdf2033ab046fae8": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "378e3edf71df4ae1a481436611a01432": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "e58b3625efce4573b94c86d84667dc9b": {
+      "model_name": "IntTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Wall thicknes (mm)",
+        "layout": "IPY_MODEL_4e3f3349564c476abdf2033ab046fae8",
+        "style": "IPY_MODEL_378e3edf71df4ae1a481436611a01432",
+        "value": 5
+      }
+    },
+    "7a951d5a6f184436938e68213033dfe2": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "bb13cbd7ee764b5eabec820786dc7f9a": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "7d503e0786604b83a4c1baa0d33f74fc": {
+      "model_name": "IntTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Plug Length Ratio, PLR (-)",
+        "layout": "IPY_MODEL_7a951d5a6f184436938e68213033dfe2",
+        "style": "IPY_MODEL_bb13cbd7ee764b5eabec820786dc7f9a",
+        "value": 1
+      }
+    },
+    "20e45cbcb94c43918ab675c536eb4da5": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "ce169681b49b4f57a4ab240eb0fadc97": {
+      "model_name": "OutputModel",
+      "model_module": "@jupyter-widgets/output",
+      "model_module_version": "1.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_20e45cbcb94c43918ab675c536eb4da5",
+        "outputs": []
+      }
+    },
+    "39ee7b6cda764c348346a4f45f3ec14d": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "aafc1cb225d248879f2a19aec36bceee": {
+      "model_name": "ButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "94946d2c9f91443db80b0cccae3eb105": {
+      "model_name": "ButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Run",
+        "layout": "IPY_MODEL_39ee7b6cda764c348346a4f45f3ec14d",
+        "style": "IPY_MODEL_aafc1cb225d248879f2a19aec36bceee"
+      }
+    },
+    "19c94663bb324ad09cffcd3ac438e1ce": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "deb0e7f9a0184ffc840d79ac4b2118ae": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "a1928dae66514a18bc21fb866a1be301": {
+      "model_name": "FloatTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Coefficient of consolidation $c_h$ (m2/day)",
+        "layout": "IPY_MODEL_19c94663bb324ad09cffcd3ac438e1ce",
+        "step": 0.01,
+        "style": "IPY_MODEL_deb0e7f9a0184ffc840d79ac4b2118ae",
+        "value": 0.05
+      }
+    },
+    "8547f1dc989c489e816b78464f47363a": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "8fc40c56a17b49d19d0190cbe37c5d71": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "bf8e1d9178254b51b082df1a92d440e4": {
+      "model_name": "FloatTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Outer diameter (m)",
+        "layout": "IPY_MODEL_8547f1dc989c489e816b78464f47363a",
+        "style": "IPY_MODEL_8fc40c56a17b49d19d0190cbe37c5d71",
+        "value": 2.0
+      }
+    },
+    "8b16a030011a49079cef0eff550a90d2": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "c6eeef839d854413ad404173ab8f740d": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "81f7bf10d2964b04b4f812791201ddca": {
+      "model_name": "FloatTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Wall thicknes (mm)",
+        "layout": "IPY_MODEL_8b16a030011a49079cef0eff550a90d2",
+        "style": "IPY_MODEL_c6eeef839d854413ad404173ab8f740d",
+        "value": 5.0
+      }
+    },
+    "9d62ab9c15b84646abfe33ad72d93331": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "90f39059216842e388174586352ee88e": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "0a7f3491e2d24717b1d81319630b8003": {
+      "model_name": "FloatTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Plug Length Ratio, PLR (-)",
+        "layout": "IPY_MODEL_9d62ab9c15b84646abfe33ad72d93331",
+        "style": "IPY_MODEL_90f39059216842e388174586352ee88e",
+        "value": 1.0
+      }
+    },
+    "118a4bd9091940eab389503542f43cac": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "753b2649a7cc4f9798d7c92d0e8e8315": {
+      "model_name": "OutputModel",
+      "model_module": "@jupyter-widgets/output",
+      "model_module_version": "1.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_118a4bd9091940eab389503542f43cac",
+        "outputs": [
+          {
+            "name": "stdout",
+            "text": "\n10 days to reach 80% consolidation\n",
+            "output_type": "stream"
+          }
+        ]
+      }
+    },
+    "ab2936798302499484d2decefb2b56f5": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "95ed2431884347f09f42a3ef9f8b26f0": {
+      "model_name": "ButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "b8c10135d25c4e2b93e2b51b7af00ec2": {
+      "model_name": "ButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Run",
+        "layout": "IPY_MODEL_ab2936798302499484d2decefb2b56f5",
+        "style": "IPY_MODEL_95ed2431884347f09f42a3ef9f8b26f0"
+      }
+    },
+    "9fc84f1b4ced41d2acb7d5a6c01dd7b8": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "023c73292fef4266896a51f489581249": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "a6fd119e8d1341ef907908c669ad1eae": {
+      "model_name": "FloatTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Coefficient of consolidation $c_h$ (m2/day)",
+        "layout": "IPY_MODEL_9fc84f1b4ced41d2acb7d5a6c01dd7b8",
+        "step": 0.01,
+        "style": "IPY_MODEL_023c73292fef4266896a51f489581249",
+        "value": 0.05
+      }
+    },
+    "d7c72423387e4473808d45c799ee3cec": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "89a09e89be814ef0811955797c05d4bb": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "a6a06f9beb75450e91d1a5adf20f35f7": {
+      "model_name": "FloatTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Outer diameter (m)",
+        "layout": "IPY_MODEL_d7c72423387e4473808d45c799ee3cec",
+        "style": "IPY_MODEL_89a09e89be814ef0811955797c05d4bb",
+        "value": 2.0
+      }
+    },
+    "6f522211a9ec44129346fa139857c006": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "7a219df150e94f6eb5118dac29e5de20": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "1528d0ec1ac740c3825f4df1b80ef4a8": {
+      "model_name": "FloatTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Wall thicknes (mm)",
+        "layout": "IPY_MODEL_6f522211a9ec44129346fa139857c006",
+        "style": "IPY_MODEL_7a219df150e94f6eb5118dac29e5de20",
+        "value": 5.0
+      }
+    },
+    "c726738f2e5140f990e543264ffe9265": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "26c3800a7e3446d784fd6bfaa891da64": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "79b5d0f6693743bbb052b51972a586dd": {
+      "model_name": "FloatTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Plug Length Ratio, PLR (-)",
+        "layout": "IPY_MODEL_c726738f2e5140f990e543264ffe9265",
+        "style": "IPY_MODEL_26c3800a7e3446d784fd6bfaa891da64",
+        "value": 1.0
+      }
+    },
+    "a8c1855e61974782a65a0411fb68c029": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "1dc44e7004674401b40bdd49a6b9532c": {
+      "model_name": "OutputModel",
+      "model_module": "@jupyter-widgets/output",
+      "model_module_version": "1.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_a8c1855e61974782a65a0411fb68c029",
+        "outputs": []
+      }
+    },
+    "8a833840a1ae45998ced23163448ccd4": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "8fba95004c1b41ed897b368c321c9297": {
+      "model_name": "ButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "9d4bf8d8e0ff4feeb06cf6343221b8db": {
+      "model_name": "ButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Run",
+        "layout": "IPY_MODEL_8a833840a1ae45998ced23163448ccd4",
+        "style": "IPY_MODEL_8fba95004c1b41ed897b368c321c9297"
+      }
+    },
+    "b4f96913e0fa4e12aaafee8d44c5a93a": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "4dcab729f4d9455f93fd561f594a3beb": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "96bfb1d0a067420db338410710342afe": {
+      "model_name": "FloatTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Coefficient of consolidation $c_h$ (m2/day)",
+        "layout": "IPY_MODEL_b4f96913e0fa4e12aaafee8d44c5a93a",
+        "step": 0.01,
+        "style": "IPY_MODEL_4dcab729f4d9455f93fd561f594a3beb",
+        "value": 0.05
+      }
+    },
+    "a0583d1d8ce24185ab58678935ec748a": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "22d9b2d1fbed4752b03d0ab377fa6925": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "4535b403b2de409bb3785e7ed7a2efc7": {
+      "model_name": "FloatTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Outer diameter (m)",
+        "layout": "IPY_MODEL_a0583d1d8ce24185ab58678935ec748a",
+        "style": "IPY_MODEL_22d9b2d1fbed4752b03d0ab377fa6925",
+        "value": 2.0
+      }
+    },
+    "0ae60f720bcc42f392dd65dffab4fd49": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "c9576227f2a34981b48033e2c7af316a": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "2a0132f827cf4638a2c69aa3dba01b81": {
+      "model_name": "FloatTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Wall thicknes (mm)",
+        "layout": "IPY_MODEL_0ae60f720bcc42f392dd65dffab4fd49",
+        "style": "IPY_MODEL_c9576227f2a34981b48033e2c7af316a",
+        "value": 5.0
+      }
+    },
+    "0ca685d2d86a463493a845c4d40da31e": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "fe53f87b9a484073acebd5f75f6f1ba6": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "dbf3587fdfa7412b98ae6361ec8ccf21": {
+      "model_name": "FloatTextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Plug Length Ratio, PLR (-)",
+        "layout": "IPY_MODEL_0ca685d2d86a463493a845c4d40da31e",
+        "style": "IPY_MODEL_fe53f87b9a484073acebd5f75f6f1ba6",
+        "value": 1.0
+      }
+    },
+    "4d35cae948b1483c9d720c3a926ea662": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "47f9b5ff4d9c407fac71feee440a2f0c": {
+      "model_name": "OutputModel",
+      "model_module": "@jupyter-widgets/output",
+      "model_module_version": "1.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_4d35cae948b1483c9d720c3a926ea662",
+        "outputs": []
+      }
+    },
+    "e76a59916a0e411ea896e00668b75e2e": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "9a8d33984951417595fa0163ff771648": {
+      "model_name": "ButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "40adc0d32d7749068348551902849a7f": {
+      "model_name": "ButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Run",
+        "layout": "IPY_MODEL_e76a59916a0e411ea896e00668b75e2e",
+        "style": "IPY_MODEL_9a8d33984951417595fa0163ff771648"
+      }
+    },
+    "889a76a5cc30489285f3bc6b73129b5e": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "c966649eb4f542de840e3cc20c281a4b": {
+      "model_name": "VBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "children": [
+          "IPY_MODEL_96bfb1d0a067420db338410710342afe",
+          "IPY_MODEL_4535b403b2de409bb3785e7ed7a2efc7",
+          "IPY_MODEL_2a0132f827cf4638a2c69aa3dba01b81",
+          "IPY_MODEL_dbf3587fdfa7412b98ae6361ec8ccf21",
+          "IPY_MODEL_40adc0d32d7749068348551902849a7f",
+          "IPY_MODEL_47f9b5ff4d9c407fac71feee440a2f0c"
+        ],
+        "layout": "IPY_MODEL_889a76a5cc30489285f3bc6b73129b5e"
+      }
+    }
+  }
+}
+</script>
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "c966649eb4f542de840e3cc20c281a4b"}
+</script>
+
+</body>
+</html>

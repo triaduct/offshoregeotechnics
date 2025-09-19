@@ -9,7 +9,7 @@ website:
   title: "CIEM 2301: Offshore Geotechnics"
   site-url: https://triaduct.github.io/offshoregeotechnics
   announcement: 
-    content: "Update 8th September: Course notes on axial capacity of piles in sand have been added." 
+    content: "Update 19th September: Course notes on axial capacity of piles in clay have been added." 
     position: below-navbar 
   comments:
     giscus: 
@@ -56,16 +56,30 @@ website:
               - href: notes/4-3_axial-design-sand.ipynb
           - section: "Axial response of piles in clay"
             contents:
-              - href: notes/6_mechanisms-clay.ipynb
-              - href: notes/7_axial-design-clay.ipynb
-          - section: "Pile installation"
-            contents:
-              - href: notes/8-1_pile-driveability.ipynb
-              - href: notes/8-2_challenging-soils.ipynb
-          - section: "Shallow foundations"
-            contents:
-              - href: notes/shallow-foundations.ipynb
+              - href: notes/5-1_mechanisms-clay.ipynb
+              - href: notes/5-2_axial-design-clay.ipynb
+          # - section: "Lateral response of piles" 
+          #   contents:
+          #     - text: "Basic mechanisms"
+          # - section: "Cyclic and seismic loading" 
+          #   contents:
+          #     - text: "Basic mechanisms"
+          # - section: "Pile installation"
+          #   contents:
+          #     - href: notes/8-1_pile-driveability.ipynb
+          #     - href: notes/8-2_challenging-soils.ipynb
+          # - section: "Shallow foundations"
+          #   contents:
+          #     - text: "Basic mechanisms"
+          #       href: notes/shallow-foundations.ipynb
+          #     - text: "Design methods"
+          #     - text: "App: Interaction Diagram"
+          #       href: playground/interaction-diagram.qmd
               # - href: playground/interaction-diagram.qmd   # The Shiny app
+          # - section: "Suction-assisted installation"
+          # - section: "Floating wind and anchors"
+          #   contents:
+          #     - text: "Basic mechanisms"
 
   page-footer:
     left: |
