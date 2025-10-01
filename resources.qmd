@@ -17,5 +17,7 @@ Lecture slides and recommended papers (especially .pdfs) are only included on Br
 
 ## Websites
 * [offshorewind.rvo.nl](https://offshorewind.rvo.nl/): For site investigation data across the Dutch North Sea sector, including in-situ and geophysical data as well as ecological, archaeological and morphodynamic reports).
-* [4C Offshore](https://map.4coffshore.com/offshorewind/): Worldwide map of offshore wind farms, including those that have been constructed as well as those at just conceptual phase.
+* [Guide to an offshore wind farm](https://guidetoanoffshorewindfarm.com/): A more general overview of offshore wind farms.
 * [Web Apps for Engineers](https://www.webappsforengineers.com/): A set of web apps for foundation design. Great for getting more of an understanding of how different factors affect the ultimate design.
+* [4C Offshore](https://map.4coffshore.com/offshorewind/): Worldwide map of offshore wind farms, including those that have been constructed as well as those at just conceptual phase.
+

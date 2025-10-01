@@ -19,7 +19,6 @@ class SoilLayer:
     def contains(self, z):
         return self.bottom <= z < self.top
 
-
 class SoilProfile:
     def __init__(self, layers):
         self.layers = layers  # List of SoilLayer objects
@@ -29,6 +28,7 @@ class SoilProfile:
             if layer.contains(z):
                 return layer
         return SoilLayer(top=1e6, bottom=-1e6, Qs_max=0.0, damping=0.0, shaft_quake=1e-6)  # No soil present (e.g. above ground surface)
+
 
 class SpringDashpot:
     def __init__(self, damping, max_force, quake):

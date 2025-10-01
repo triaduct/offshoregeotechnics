@@ -64,10 +64,14 @@ website:
           # - section: "Cyclic and seismic loading" 
           #   contents:
           #     - text: "Basic mechanisms"
-          # - section: "Pile installation"
-          #   contents:
-          #     - href: notes/8-1_pile-driveability.ipynb
-          #     - href: notes/8-2_challenging-soils.ipynb
+          - section: "Pile installation"
+            contents:
+              - text: "Overview"
+                href: notes/8-1_pile-installation-overview.ipynb
+              - text: "Modelling pile driving"
+                href: notes/8-2_modelling-pile-driving.ipynb
+              - text: "Pile driveability in Python"
+                href: notes/driveability-in-python.ipynb
           # - section: "Shallow foundations"
           #   contents:
           #     - text: "Basic mechanisms"
