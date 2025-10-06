@@ -9,7 +9,7 @@
 <meta name="author" content="Kevin Duffy">
 <meta name="dcterms.date" content="2025-10-06">
 
-<title>Design methods – CIEM 2301: Offshore Geotechnics</title>
+<title>Offshore pile installation – CIEM 2301: Offshore Geotechnics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -301,7 +301,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../notes/1_intro.html">📚 Course notes</a></li><li class="breadcrumb-item"><a href="../notes/5-1_mechanisms-clay.html">Axial response of piles in clay</a></li><li class="breadcrumb-item"><a href="../notes/5-2_axial-design-clay.html">Design methods</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../notes/1_intro.html">📚 Course notes</a></li><li class="breadcrumb-item"><a href="../notes/8-1_pile-installation-overview.html">Pile installation</a></li><li class="breadcrumb-item"><a href="../notes/8-1_pile-installation-overview.html">Overview</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -454,13 +454,13 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
  <span class="menu-text">Axial response of piles in clay</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../notes/5-1_mechanisms-clay.html" class="sidebar-item-text sidebar-link">
@@ -469,7 +469,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/5-2_axial-design-clay.html" class="sidebar-item-text sidebar-link active">
+  <a href="../notes/5-2_axial-design-clay.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Design methods</span></a>
   </div>
 </li>
@@ -483,16 +483,16 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
  <span class="menu-text">Pile installation</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/8-1_pile-installation-overview.html" class="sidebar-item-text sidebar-link">
+  <a href="../notes/8-1_pile-installation-overview.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
@@ -516,15 +516,20 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#total-stress-alpha-method" id="toc-total-stress-alpha-method" class="nav-link active" data-scroll-target="#total-stress-alpha-method">Total stress (alpha) method</a>
+  <li><a href="#general-procedure" id="toc-general-procedure" class="nav-link active" data-scroll-target="#general-procedure">General procedure</a>
   <ul class="collapse">
-  <li><a href="#shaft-capacity" id="toc-shaft-capacity" class="nav-link" data-scroll-target="#shaft-capacity">Shaft capacity</a></li>
-  <li><a href="#base-capacity" id="toc-base-capacity" class="nav-link" data-scroll-target="#base-capacity">Base capacity</a></li>
+  <li><a href="#foundation-handling" id="toc-foundation-handling" class="nav-link" data-scroll-target="#foundation-handling">Foundation handling</a></li>
   </ul></li>
-  <li><a href="#unified-method" id="toc-unified-method" class="nav-link" data-scroll-target="#unified-method">Unified method</a>
+  <li><a href="#installation-risks" id="toc-installation-risks" class="nav-link" data-scroll-target="#installation-risks">Installation risks</a></li>
+  <li><a href="#noise-ecology" id="toc-noise-ecology" class="nav-link" data-scroll-target="#noise-ecology">Noise &amp; Ecology</a>
   <ul class="collapse">
-  <li><a href="#shaft-capacity-1" id="toc-shaft-capacity-1" class="nav-link" data-scroll-target="#shaft-capacity-1">Shaft capacity</a></li>
-  <li><a href="#base-capacity-1" id="toc-base-capacity-1" class="nav-link" data-scroll-target="#base-capacity-1">Base capacity</a></li>
+  <li><a href="#mitigation-measures" id="toc-mitigation-measures" class="nav-link" data-scroll-target="#mitigation-measures">Mitigation measures</a></li>
+  </ul></li>
+  <li><a href="#installation-methods" id="toc-installation-methods" class="nav-link" data-scroll-target="#installation-methods">Installation methods</a>
+  <ul class="collapse">
+  <li><a href="#pile-driving" id="toc-pile-driving" class="nav-link" data-scroll-target="#pile-driving">Pile driving</a></li>
+  <li><a href="#vibratory-installation-vibrodriving" id="toc-vibratory-installation-vibrodriving" class="nav-link" data-scroll-target="#vibratory-installation-vibrodriving">Vibratory installation (vibrodriving)</a></li>
+  <li><a href="#novel-installation-techniques" id="toc-novel-installation-techniques" class="nav-link" data-scroll-target="#novel-installation-techniques">Novel installation techniques</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -533,9 +538,10 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../notes/1_intro.html">📚 Course notes</a></li><li class="breadcrumb-item"><a href="../notes/5-1_mechanisms-clay.html">Axial response of piles in clay</a></li><li class="breadcrumb-item"><a href="../notes/5-2_axial-design-clay.html">Design methods</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../notes/1_intro.html">📚 Course notes</a></li><li class="breadcrumb-item"><a href="../notes/8-1_pile-installation-overview.html">Pile installation</a></li><li class="breadcrumb-item"><a href="../notes/8-1_pile-installation-overview.html">Overview</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Design methods</h1>
+<h1 class="title">Offshore pile installation</h1>
+<p class="subtitle lead">How do we get a pile to its target depth?</p>
 </div>
 
 
@@ -559,7 +565,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">19 September 2025</p>
+      <p class="date-modified">06 October 2025</p>
     </div>
   </div>
     
@@ -570,29 +576,134 @@ window.Quarto = {
 </header>
 
 
-<p>The concepts underlying design methods in clay are just like that in sand. Importantly: these design methods define the capacity as when the displacement reaches a base displacement of 10% of the pile diameter.</p>
-<p>While there are many design methods available (e.g <a href="#tbl-clay-methods" class="quarto-xref">Table&nbsp;1</a>), this section just presents two methods: the traditional total stress method in API RP-2A, and the Unified method—which was essentially a recent amalgamation of the ICP-05, NGI-05, Fugro-10 and UWA-13 methods.</p>
-<div id="tbl-clay-methods" class="quarto-float quarto-figure quarto-figure-center anchored" data-captionabove="true">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-clay-methods-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Predictive performance of different design methods in clay compared to the Unified database <span class="citation" data-cites="lehaneCPTbasedAxialCapacity2022">(<a href="#ref-lehaneCPTbasedAxialCapacity2022" role="doc-biblioref">Lehane et al. 2022</a>)</span>. <span class="math inline">\(Q_m\)</span> is the measured capacity and <span class="math inline">\(Q_c\)</span> is the calculated (or predicted) capacity
-</figcaption>
-<div aria-describedby="tbl-clay-methods-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="pics/axial/lehane22-clay-methods.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Table&nbsp;1: Predictive performance of different design methods in clay compared to the Unified database [@lehaneCPTbasedAxialCapacity2022]. Q_m is the measured capacity and Q_c is the calculated (or predicted) capacity"><img src="pics/axial/lehane22-clay-methods.png" class="img-fluid figure-img" data-captionabove="true"></a>
+<p>A driveability study is performed once the initial design is complete. At this stage, engineers are faced with questions like:</p>
+<ul>
+<li>Is it feasible to reach the target depth?</li>
+<li>What is the optimum installation method and pile/hammer combination?</li>
+<li>How long will pile installation take?</li>
+</ul>
+<p>Driveability assessments are especially important offshore. Generally only one or two shipping vessels are used during pile installation, delivering the piles often tens of kilometres away (if not hundreds of kilometres) from the nearest port and manufacturing plant. Therefore it’s essential that installation goes as smooth as possible since driving delays can result in significant financial overspends due to vessel downtime.</p>
+<p>Premature refusal or structural damage to the piles can also threaten the feasibility of an offshore project. Therefore, a comprehensive driveability analysis should be undertaken that considers the entire driving system: including the hammer performance, pile geometry and soil conditions.</p>
+<p>This section first explores conventional driven pile installation, later expanding on more novel techniques like vibratory installation or hammer blow prolongation.</p>
+<section id="general-procedure" class="level2">
+<h2 class="anchored" data-anchor-id="general-procedure">General procedure</h2>
+<p><a href="#fig-installation-procedure" class="quarto-xref">Figure&nbsp;1</a> shows an example of a monopile installation, which can also be summed up into three general steps:</p>
+<ol type="1">
+<li>Upending</li>
+<li>Stabbing</li>
+<li>Hammering</li>
+</ol>
+<p>Usually, the pile must be installed within 0.25° of vertical, with installation typically lasting around one to two days per monopile—accounting for mobilisation, demobilisation and typical weather delays.</p>
+<div id="fig-installation-procedure" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-installation-procedure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/installation/procedure.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Typical installation procedure offshore"><img src="pics/installation/procedure.png" class="img-fluid figure-img" style="width:100.0%"></a>
 </div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-installation-procedure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Typical installation procedure offshore
+</figcaption>
 </figure>
 </div>
-<section id="total-stress-alpha-method" class="level2">
-<h2 class="anchored" data-anchor-id="total-stress-alpha-method">Total stress (alpha) method</h2>
-<section id="shaft-capacity" class="level3">
-<h3 class="anchored" data-anchor-id="shaft-capacity">Shaft capacity</h3>
-<p>API RP-2A provides a total stress approach to predicting pile capacity in clay (as opposed to effective stress for sands). It correlates the shaft resistance <span class="math inline">\(q_s\)</span> to the undrained shear strength <span class="math inline">\(s_u\)</span> by:</p>
-<p><span class="math display">\[
-q_s = \alpha s_u
-\]</span></p>
-<p>The method also distinguishes between soft normally consolidated clays and stiff overconsolidated clays since their volumetric response will also affect stress development. Therefore <span class="math inline">\(\alpha\)</span> is determined as follows:</p>
-<p>For soft (NC) clays where <span class="math inline">\(s_u &lt; \sigma'_{v0}\)</span>: <span class="math display">\[\alpha = 0.5(\frac{s_u}{\sigma'_{v0}})^{-0.5}\]</span></p>
-<p>For stiff (OC) clays where <span class="math inline">\(s_u &gt; \sigma'_{v0}\)</span>: <span class="math display">\[\alpha = 0.5(\frac{s_u}{\sigma'_{v0}})^{-0.25}\]</span></p>
+<div id="fig-veja-mate-video" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-veja-mate-video-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/A-FJI-U2chA?si=T-F4-xB1WuYEEk5P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-veja-mate-video-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Construction of Veja Mate offshore wind farm, constructed in 2017.
+</figcaption>
+</figure>
+</div>
+<section id="foundation-handling" class="level3">
+<h3 class="anchored" data-anchor-id="foundation-handling">Foundation handling</h3>
+<p>Monopiles are transported in the horizontal position and therefore must be “upended” before placing on the seabed.</p>
+<p>This is often done using an internal lifting tool (e.g. <a href="#fig-lifting-tool" class="quarto-xref">Figure&nbsp;3</a>). These tools provide a single lifting point for pile upending, which helps to reduce any localised stresses towards the top of the monopile.</p>
+<div id="fig-lifting-tool" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lifting-tool-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/installation/lifting-tool.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;3: An example of an internal lifting tool (source)"><img src="pics/installation/lifting-tool.jpg" class="img-fluid figure-img" style="width:80.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lifting-tool-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: An example of an internal lifting tool <a href="https://iqip.com/products/lifting-equipment/internal-lifting-tool/">(source)</a>
+</figcaption>
+</figure>
+</div>
+<p>The lifting tool then moves the monopile into a position for pile driving. A pile guide frame (or template) as well as a “gripper” is used to position the monopile accurately and ensure verticality. This can be done from both a fixed platform, like a jack-up, or a floating vessel with special motion compensated grippers used.</p>
+<div id="fig-pile-guide-systems" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pile-guide-systems-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-pile-guide-systems" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-pile-guide-frame" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-pile-guide-frame-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/installation/pile-guide-frame.jpg" class="lightbox" data-gallery="fig-pile-guide-systems" title="Figure&nbsp;4&nbsp;(a): An unlatched pile guide frame. Note the four mudmats at the base—something relevant for shallow foundation design (source)"><img src="pics/installation/pile-guide-frame.jpg" class="img-fluid figure-img" style="width:90.0%" data-ref-parent="fig-pile-guide-systems"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-pile-guide-frame-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) An unlatched pile guide frame. Note the four mudmats at the base—something relevant for shallow foundation design <a href="https://iqip.com/products/subsea-pile-guiding/fast-frame/">(source)</a>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-pile-guide-systems" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-monopile-gripper" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-monopile-gripper-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/installation/monopile-gripper.jpg" class="lightbox" data-gallery="fig-pile-guide-systems" title="Figure&nbsp;4&nbsp;(b): Motion-compensated monopile gripper on a floating installation vessel (source)"><img src="pics/installation/monopile-gripper.jpg" class="img-fluid figure-img" data-ref-parent="fig-pile-guide-systems"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-monopile-gripper-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Motion-compensated monopile gripper on a floating installation vessel <a href="https://twd.nl/projects/monopile-installation-spread-moray-west/">(source)</a>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pile-guide-systems-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Pile guide systems
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="installation-risks" class="level2">
+<h2 class="anchored" data-anchor-id="installation-risks">Installation risks</h2>
+<p>As part of a driveability study, the likelihood of certain risks occurring needs to be evaluated. This include risks such as:</p>
+<ul>
+<li><strong>Pile damage</strong>: cracks, deformation, or buckling of the pile can occur if the driving energy is too high or when driving through dense sands and gravels, which can render the pile unusable.</li>
+<li><strong>Pile run</strong>: this is a phenomenon where the pile accelerates unexpectedly due to the weight of the pile-hammer system exceeding the soil resistance, potentially causing rapid penetration and inducing shock loads on the crane rigging.<br>
+</li>
+<li><strong>Premature refusal</strong>: inefficient pile driving or unforeseen soil profiles can result in a pile not reaching its required depth or capacity, potentially compromising the foundation’s integrity.</li>
+<li><strong>Inefficient equipment</strong>: using driving equipment that is not suited for the soil conditions or project requirements can lead to inefficient installation and increased risk of damage.</li>
+<li><strong>Impact on marine life</strong>: offshore pile driving can negatively affect marine mammals and other wildlife through noise and vibrations.</li>
+<li><strong>Vibration damage</strong>: driving piles creates vibrations that can damage nearby structures or interconnector cables.</li>
+</ul>
+</section>
+<section id="noise-ecology" class="level2">
+<h2 class="anchored" data-anchor-id="noise-ecology">Noise &amp; Ecology</h2>
+<p>Pile installation results in the generation of sound waves, waves that can propagate through both the water column and through the ground (<a href="#fig-noise-propagation" class="quarto-xref">Figure&nbsp;5</a>).</p>
+<div id="fig-noise-propagation" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-noise-propagation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/installation/noise-propagation.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;5: Different noise propagation paths from pile driving [@caltransTechnicalGuidanceAssessment2020]"><img src="pics/installation/noise-propagation.png" class="img-fluid figure-img" style="width:80.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-noise-propagation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Different noise propagation paths from pile driving <span class="citation" data-cites="caltransTechnicalGuidanceAssessment2020">(<a href="#ref-caltransTechnicalGuidanceAssessment2020" role="doc-biblioref">Caltrans 2020</a>)</span>
+</figcaption>
+</figure>
+</div>
+<p>With this in mind are many different ways of characterising the loudness of a sound wave (e.g. <a href="#fig-sound-wave" class="quarto-xref">Figure&nbsp;6</a>). Sound pressure essentially indicates the intensity or loudness of a sound wave. While sound pressure itself is reported in Pascals (Pa), often the sound pressure level (in dB) is used.</p>
+<div id="fig-sound-wave" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sound-wave-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/installation/sound-wave.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;6: A simple sound wave and three simple methods to characterise the loudness of a sound signal (source)"><img src="pics/installation/sound-wave.jpg" class="img-fluid figure-img" style="width:80.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sound-wave-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: A simple sound wave and three simple methods to characterise the loudness of a sound signal <a href="https://dosits.org/science/advanced-topics/sound-pressure-levels-and-sound-exposure-levels/">(source)</a>
+</figcaption>
+</figure>
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -603,93 +714,242 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Note that this is a different method entirely to NEN 9997-1 design method which relates the shaft capacity to the cone tip resistance using <span class="math inline">\(\alpha_s\)</span> (or <span class="math inline">\(\alpha_p\)</span> for the base capacity).</p>
+<p>Sound intensity (in decibels, dB) is relative measurement, meaning a reference intensity is used for whatever medium is being considered. As a result, sound intensity measurements in water are not comparable to intensity measurements in air.</p>
+<p>Moreover, it’s important note that the decimal system is also on a logarithmic scale.</p>
 </div>
 </div>
-</section>
-<section id="base-capacity" class="level3">
-<h3 class="anchored" data-anchor-id="base-capacity">Base capacity</h3>
-<p>The base capacity is then determined by relating <span class="math inline">\(s_u\)</span> to <span class="math inline">\(q_b\)</span> with the bearing capacity factor <span class="math inline">\(N_c\)</span>:</p>
-<p><span class="math display">\[
-q_{b,0.1} = N_c s_u
-\]</span></p>
-<p>where <span class="math inline">\(N_c\)</span> is typically taken as 9.</p>
-<p>To account for plugging behaviour, the API RP-2A method considers just two plugging scenarios: a fully plugged pile (<span class="math inline">\(IFR=0\)</span>) and a fully coring pile (<span class="math inline">\(IFR=1\)</span>). Assuming <span class="math inline">\(q_{s,external} = q_{s,internal} = q_{plug}\)</span>:</p>
+<p>The noise from installing offshore foundations can significantly affect animal behaviour as well as lead to substantial hearing damage, or even death. Impact driving is particularly damaging as it creates short yet high peak sound pressures known as impulsive sound.</p>
+<p>With the highly time-dependent nature of sound wave propagation in mind, there are several ways of recording or portraying sound pressure measurements. A couple of common measurements in the offshore industry include:</p>
 <ul>
-<li>If <span class="math inline">\(q_{plug} &gt; q_{b,0.1}\)</span>: assume <span class="math inline">\(Q_b\)</span> acts over the whole base area (i.e.&nbsp;fully plugged)</li>
-<li>If <span class="math inline">\(q_{plug} &lt; q_{b,0.1}\)</span>: assume <span class="math inline">\(Q_b\)</span> acts over the pile annulus (i.e.&nbsp;fully coring)</li>
+<li><strong>Peak sound pressure level <span class="math inline">\(L_{p,pk}\)</span></strong>, which is the same as the zero-to-peak sound pressure shown in <a href="#fig-sound-wave" class="quarto-xref">Figure&nbsp;6</a>.</li>
+<li><strong>Sound equivalent level (SEL)</strong> corresponds to the continuous sound pressure level, normalising it to a duration of one second and with the same acoustic energy as the impulse. This is generally the best measurement of pile driving, since it captures the full energy received from the acoustic source.</li>
 </ul>
-<div class="callout callout-style-default callout-note callout-titled" title="A pitfall of alpha methods">
+<p>An example of some acoustic measurements is shown in <a href="#fig-bellmann-measurements" class="quarto-xref">Figure&nbsp;7</a>. Clearly, pile diameter has a strong effect on the sound pressures generated—particularly at small pile diameters. Nevertheless, there’s also other effects that will affect noise propagation that may also create the variation shown in <a href="#fig-bellmann-measurements" class="quarto-xref">Figure&nbsp;7</a>, like water depth or the soil conditions themselves.</p>
+<p>As an example of some regulatory limits, Germany has quite strict regulations in this regard, where <span class="math inline">\(L_{p,pk}\)</span> may not exceed 190 dB and SEL may not exceed 160 dB. Given that most pile installations exceed these limits (<a href="#fig-bellmann-measurements" class="quarto-xref">Figure&nbsp;7</a>), the need for noise mitigation measures is almost guaranteed on most projects in Germany.</p>
+<div id="fig-bellmann-measurements" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bellmann-measurements-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/installation/bellmann-measurements.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;7: Sound pressure measurements made 750m away from different pile installations in the North Sea and Baltic Sea, without noise mitigation measures in place [@bellmannUnderwaterNoisePercussive2020]"><img src="pics/installation/bellmann-measurements.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bellmann-measurements-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Sound pressure measurements made 750m away from different pile installations in the North Sea and Baltic Sea, without noise mitigation measures in place <span class="citation" data-cites="bellmannUnderwaterNoisePercussive2020">(<a href="#ref-bellmannUnderwaterNoisePercussive2020" role="doc-biblioref">Bellmann et al. 2020</a>)</span>
+</figcaption>
+</figure>
+</div>
+<section id="mitigation-measures" class="level3">
+<h3 class="anchored" data-anchor-id="mitigation-measures">Mitigation measures</h3>
+<p>Avoiding pile installation altogether is of course the best measure, especially at ecologically important time periods (birthing, breeding and migration) and important areas (nurseries, breeding grounds or feeding grounds).</p>
+<p>If works cannot be avoided, then there are also several mitigation measures which could help reduce (but not entirely remove) the level of noise generated. These can be classified as either primary or secondary measures:</p>
+<ul>
+<li><p><strong>Primary measures</strong> reduce the noise emission at the source. This can be achieved through modifications of the piling process (e.g.&nbsp;adjusting the piling energy, use of alternative hammer technologies) or by using a different foundation system such as a shallow foundation or an anchored, floating turbine.</p></li>
+<li><p><strong>Secondary measures</strong> reduce the noise that has propagated through the water column. This may be achieved by “noise abatement systems”. These systems often don’t require any geotechnical design, although there some exceptions include large screens or casings.</p></li>
+</ul>
+<p>Lastly, another class of systems include acoustic deterrence systems, which emit an acoustic wave of a particular frequency to deter specific species away from the site.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Examples of some secondary mitigation measures">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-A pitfall of alpha methods
+Examples of some secondary mitigation measures
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Pile installation modifies the <span class="math inline">\(s_u\)</span> profile adjacent to the pile shaft, generally creating a weaker, remoulded interface zone where the operational <span class="math inline">\(\delta_f\)</span> values bear no resemblance to the intact soil’s <span class="math inline">\(s_u\)</span> or <span class="math inline">\(s_u / \sigma'_{v0}\)</span> values. Therefore in practice, the true <span class="math inline">\(\alpha\)</span> (<span class="math inline">\(= q_s/s_u\)</span>) value may vary considerably with soil type and position along the pile shaft and so the method generally shows a low reliability <span class="citation" data-cites="lehaneCPTbasedAxialCapacity2022">(jardineICPDesignMethods2005, <a href="#ref-lehaneCPTbasedAxialCapacity2022" role="doc-biblioref">Lehane et al. 2022</a>)</span> in spite of its common use in practice.</p>
+<p><strong>Bubble curtains</strong> are the most common noise abatement system in the industry. Bubble curtains are formed by placing a weighted nozzle pipe on the seafloor, at a certain distance away from the pile installation (<a href="#fig-bubble-curtain" class="quarto-xref">Figure&nbsp;8</a>). By pumping air through the pipe, bubbles propagate through the water which creates an impedance mismatch and making it harder for acoustic waves to pass through. The efficacy of the system is inevitably dependent on the water depth, since much larger air pressures are required to develop a sufficient curtain at deeper depths.</p>
+<div id="fig-bubble-curtain" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bubble-curtain-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/installation/bubble-curtain.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;8: Two bubble curtains in operation (source)"><img src="pics/installation/bubble-curtain.jpg" class="img-fluid figure-img" style="width:80.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bubble-curtain-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: Two bubble curtains in operation <a href="https://acteon.com/insights/blog/how-bubble-curtains-and-mnru-protect-marine-life">(source)</a>
+</figcaption>
+</figure>
+</div>
+<div id="fig-youtube-bubble-curtains" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-youtube-bubble-curtains-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2nX7Y8ZwShg?si=PARr8UwSnkAZh4uk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-youtube-bubble-curtains-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: Informal, explanatory video on bubble curtains
+</figcaption>
+</figure>
+</div>
+<hr>
+<p><strong>Casings or noise mitigation screens</strong> perform dual functions: acting both as a pile guide frame whilst shielding the surrounding area from installation noise. Just like bubble curtains, casings are also dependent on water depth, as well as requiring a substantial amount of storage space on deck.</p>
+<p>Geotechnically speaking, the stability of the casing on the seabed is an important factor to account for, and so a stability check is needed to ensure any differential settlement does not render the casing unusable for installation (i.e.&nbsp;because of excessive inclination).</p>
+<div id="fig-noise-mitigation-screen" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-noise-mitigation-screen-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="pics/installation/nms1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="(source)"><img src="pics/installation/nms1.jpg" class="img-fluid figure-img"></a></p>
+<figcaption><a href="https://iqip.com/products/pile-driving-equipment/integrated-monopile-installer/">(source)</a></figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><a href="pics/installation/nms2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figure&nbsp;10: Deck-guided noise mitigation screen (NMS) by IQIP"><img src="pics/installation/nms2.jpg" class="img-fluid figure-img"></a></p>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-noise-mitigation-screen-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10: Deck-guided noise mitigation screen (NMS) by IQIP
+</figcaption>
+</figure>
+</div>
+<hr>
+<p><strong>Resonators and dampers</strong> focus on scattering and absorbing acoustic waves with resonators and reflectors. These are generally much more lightweight compared to casings and often resemble nets that stretch down around the pile. They are generally designed specifically to dampen certain frequencies that are more harmful compared to marine life compared to other frequencies.</p>
+<div id="fig-youtube-resonator" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-youtube-resonator-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/f8GsS2EyOS4?si=a4VPqJ5a8jGtgSWT&amp;start=48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-youtube-resonator-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11: Deployment of a resonator in the Dutch North Sea Sector
+</figcaption>
+</figure>
+</div>
 </div>
 </div>
 </div>
 </section>
 </section>
-<section id="unified-method" class="level2">
-<h2 class="anchored" data-anchor-id="unified-method">Unified method</h2>
-<p>Just like in sand, a Unified method was developed <span class="citation" data-cites="lehaneCPTbasedAxialCapacity2022">(<a href="#ref-lehaneCPTbasedAxialCapacity2022" role="doc-biblioref">Lehane et al. 2022</a>)</span> for CPT-based prediction of pile capacity in clay.</p>
-<p>As there were less well-instrumented records in clay, the formulation is somewhat simplified compared to the Unified method in sand. As an example, while <span class="math inline">\(A_{re}\)</span> was used to give an indication of plugging behaviour in sand, <span class="math inline">\(D^*\)</span> is used in clay, providing a simplified means of reflect the lower level of displacement induced during installation of a pipe pile:</p>
-<p><span class="math display">\[
-D^* = (D^2 - D^2_i)^{0.5} \quad \text{for an open-ended pile}
-\]</span></p>
-<p><span class="math display">\[
-D^* = D \quad \text{for a closed-ended pile}
-\]</span></p>
-<section id="shaft-capacity-1" class="level3">
-<h3 class="anchored" data-anchor-id="shaft-capacity-1">Shaft capacity</h3>
-<p>Based on the calibration procedure employed by <span class="citation" data-cites="lehaneCPTbasedAxialCapacity2022">Lehane et al. (<a href="#ref-lehaneCPTbasedAxialCapacity2022" role="doc-biblioref">2022</a>)</span>, the following provided the best estimate of the shaft capacity:</p>
-<p><span class="math display">\[
-q_s = 0.07 F_{st} q_t \max[1,(h/D^*)]^{-0.25}
-\]</span></p>
-<p>where <span class="math inline">\(F_{st} = 1\)</span> for clays in Zones 2, 3 and 4 in the normalised soil behaviour type chart (<span class="citation" data-cites="robertsonSoilBehaviourType2010">Robertson (<a href="#ref-robertsonSoilBehaviourType2010" role="doc-biblioref">2010</a>)</span>) and <span class="math inline">\(F_{st} = 0.5 \pm 0.2\)</span> for Zone 1 (sensitive) clays.</p>
-<p>This provides a means of estimating the shaft resistance when the <strong>degree of excess pore pressure dissipation after driving is more than 80%</strong> (i.e.&nbsp;the average in the Unified database).</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<section id="installation-methods" class="level2">
+<h2 class="anchored" data-anchor-id="installation-methods">Installation methods</h2>
+<section id="pile-driving" class="level3">
+<h3 class="anchored" data-anchor-id="pile-driving">Pile driving</h3>
+<p>Driven piles are by far the most common installation method offshore, thanks to their relative ease-of-installation and given that it’s much easier to transport large precast piles by sea than by road.</p>
+<p>At a basic level, a hammer consists of a large steel block known as a ram. The ram is hoisted up to a certain height and then dropped onto a steel cap known as an anvil. This anvil then distributes the kinetic energy over the entire pile head, ideally avoid any excessive localised stresses in the pile.</p>
+<p>An energy source is needed to lift this ram. While both hydraulic and diesel-powered hammers are often seen onshore—generally only hydraulic hammers are used offshore. These hammers can also be used underwater, which can be particularly useful for installing jacket piles deep below the sea surface.</p>
+<p>Hydraulic hammers work by using a hydraulic piston to lift the ram a set distance above the pile. At the highest point, the return valves are opened and the ram falls under its own weight by gravitaional accelaration. Additional force may also be provided by the compressed gas, allowing for some hammers to reach ram accelerations of <span class="math inline">\(2g\)</span>.</p>
+<p>More details on modelling pile driving are given <a href="#8-2_modelling-pile-driving.ipynb">in the following section</a>.</p>
+<div id="fig-iqip-hammer-video" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-iqip-hammer-video-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kGs9qCPIFbc?si=pYEc2AOWDgl1l43g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
 </div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The Unified method does not explicitly account for tensile loading (unlike sand where <span class="math inline">\(f_t / f_c = 0.7\)</span>). Tests up until now have not shown a clear dependency of shaft capacity in clay on the load direction, so it’s simply assumed that the tensile capacity in clay is the same as the compressive capacity.</p>
-</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-iqip-hammer-video-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12: Inner workings of a hydraulic hammer
+</figcaption>
+</figure>
 </div>
 </section>
-<section id="base-capacity-1" class="level3">
-<h3 class="anchored" data-anchor-id="base-capacity-1">Base capacity</h3>
-<p>For the base capacity, two simple formulations were given:</p>
-<p>For closed-ended piles: <span class="math display">\[q_{b,0.1} = 0.8 q_t \]</span> For open-ended piles: <span class="math display">\[q_{b,0.1} = 0.4 q_t \]</span></p>
-<p>However for large diameter offshore piles, the following is suggested:</p>
-<p><span class="math display">\[
-q_{b,0.1} = (0.2 + 0.6A_{re})q_t
-\]</span></p>
-<p>where <span class="math inline">\(q_t\)</span> is the average corrected cone resistance value in the zone extending from the pile tip to a depth of <span class="math inline">\(20t\)</span> below the pile tip (<span class="math inline">\(t\)</span> = pile wall thickness). Both <span class="math inline">\(A_{re}\)</span> and <span class="math inline">\(PLR\)</span> are calculated in the same way as sandy soils.</p>
+<section id="vibratory-installation-vibrodriving" class="level3">
+<h3 class="anchored" data-anchor-id="vibratory-installation-vibrodriving">Vibratory installation (vibrodriving)</h3>
+<p>Vibrating hammers work by rotating one or more eccentric masses (<a href="#fig-vibratory-hammer" class="quarto-xref">Figure&nbsp;13</a>), where the centre-of-gravity of each mass is offset from its geometrical entre. The rotation of these masses generates a vibration with an adjustable amplitude and frequency.</p>
+<div id="fig-vibratory-hammer" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-vibratory-hammer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/installation/vibratory-hammer.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Figure&nbsp;13: Working principle of a vibratory hammer (source)"><img src="pics/installation/vibratory-hammer.jpg" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-vibratory-hammer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13: Working principle of a vibratory hammer <a href="https://www.diesekogroup.com/vibratory-hammers/">(source)</a>
+</figcaption>
+</figure>
+</div>
+<p>With the growing availability of higher capacity vibratory hammers and sophisticated upending tools, the use of vibratory hammers in the offshore industry is increasing. They offer some potential advantages when compared to driven piles:</p>
+<ul>
+<li>Reduction in noise emissions</li>
+<li>Streamlined lifting process since piles can be stabbed with the vibratory hammer itself</li>
+<li>Always clamped in crane, mitigating the likelihood of pile run</li>
+<li>Reduction of steel fatigue during installation due to lower stress concentrations</li>
+</ul>
+<p>However, vibrated piles frequently run the risk of reaching premature refusal in dense or hard soils, abetted by the uncertainty regarding what driveability model to use for vibratory piles. Nevertheless, as the usage of offshore vibratory installation continues to grow, so too will the experience with the installation and operational response of vibrated-in-place piles.</p>
+<p>The risk of premature refusal is partly alleivated by vibrating the pile for some of the installation, then reaching the final penetration using hammering—like at Borkum Riffgat (<a href="#fig-vibratory-installations" class="quarto-xref">Figure&nbsp;14</a>). However, this will also increase the complexity and time of installation and so needs to be evaluated on a case-by-case basis.</p>
+<div id="fig-vibratory-installations" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-vibratory-installations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/installation/vibratory-installations.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Figure&nbsp;14: Examples of two recent vibratory installations offshore"><img src="pics/installation/vibratory-installations.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-vibratory-installations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14: Examples of two recent vibratory installations offshore
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="novel-installation-techniques" class="level3">
+<h3 class="anchored" data-anchor-id="novel-installation-techniques">Novel installation techniques</h3>
+<section id="drill-drive-drill" class="level4">
+<h4 class="anchored" data-anchor-id="drill-drive-drill">Drill-Drive-Drill</h4>
+<p>Drill-drive-drill (also known as relief drilling) alleviates the risk of premature refusal during driving by drilling out the soil beneath the pile (<a href="#fig-drill-drive-drill-procedure" class="quarto-xref">Figure&nbsp;15</a>). In doing so, the diameter of the borehole is slightly smaller than that of the monopile, ensuring that a sufficient pile-soil interface is developed following subsequent driving.</p>
+<p>There has been some commercial experience with drill-drive-drill, having been involved in the construction of Barrow and Gwynt y Môr offshore wind farms in the Irish Sea.</p>
+<div id="fig-drill-drive-drill-procedure" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-drill-drive-drill-procedure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/installation/drill-drive-drill-procedure.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Figure&nbsp;15: Examples of two recent vibratory installations offshore (source)"><img src="pics/installation/drill-drive-drill-procedure.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-drill-drive-drill-procedure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15: Examples of two recent vibratory installations offshore <a href="https://acteon.com/sites/default/files/2025-08/Acteon-Drive-Drill-Drive-3D-Brochure.pdf">(source)</a>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="prolonged-impact" class="level4">
+<h4 class="anchored" data-anchor-id="prolonged-impact">Prolonged impact</h4>
+<p>By prolonging the contact duration between the hammer and the pile, the effiency can be improved, requiring less hammer blows and reducing the total amount of noise produced from installation.</p>
+<p>The IQIP EQ Piling hammer is an example of one technology currently under development (<a href="#fig-eq-piling" class="quarto-xref">Figure&nbsp;16</a>). Instead of a steel ram, the EQ Piling hammer uses a large tank of seawater as the ram. The tank is dropped onto a series of buffer cyclinders, acting as a cushion and prolonging the blow duration. When dropped on the pile,</p>
+<div id="fig-eq-piling" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-eq-piling-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<a href="pics/installation/blue-piling.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Figure&nbsp;16: Blow prolongation using the EQ Piling hammer"><img src="pics/installation/blue-piling.jpg" class="img-fluid figure-img"></a>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-eq-piling-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;16: Blow prolongation using the EQ Piling hammer
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="rotary-torque" class="level4">
+<h4 class="anchored" data-anchor-id="rotary-torque">Rotary torque</h4>
+<p>Rotary torque during either pile jacking or vibrating provides may provide means of reducing the soil resistance during installation, particularly in terms of potential plug formation and arching around the pile <span class="citation" data-cites="cerfontaineStudyParticleScale2023">(<a href="#ref-cerfontaineStudyParticleScale2023" role="doc-biblioref">Cerfontaine et al. 2023</a>)</span>.</p>
+<p>An example of one technology in developemental phase is the Gentle Driving of Piles (GDP) technology developed at TU Delft (<span class="citation" data-cites="tsetasGentleDrivingPiles2024">Tsetas et al. (<a href="#ref-tsetasGentleDrivingPiles2024" role="doc-biblioref">2024</a>)</span>). GDP aims to to reduce noise emissions by combining the benefits of low frequency axial vibrations with high frequency torsional vibrations. The torsional vibrations also do not induce radial pile expansion during installation, which is also a key physical mechanisms which affects the amount of noise generated from installation</p>
+</section>
+<section id="water-jetting" class="level4">
+<h4 class="anchored" data-anchor-id="water-jetting">Water jetting</h4>
+<p>To reduce the risk of premature refusal during pile driving or vibratory installation, water jetting reduce the resistance underneath the pile base and prevent plug formation. <a href="#fig-gbmworks" class="quarto-xref">Figure&nbsp;17</a> gives an example of this from the company GBMWorks, which is planning a full-scale demonstrator project at Hollandse Kust West in 2026.</p>
+<p>The first full-scale demonstrator project is also planned at Hollandse Kust West in 2026.</p>
+<div id="fig-gbmworks" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-gbmworks-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/installation/gbmworks.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Figure&nbsp;17: GBMWorks VIBROJET®"><img src="pics/installation/gbmworks.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gbmworks-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17: GBMWorks VIBROJET®
+</figcaption>
+</figure>
+</div>
 
 
 
+</section>
 </section>
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-lehaneCPTbasedAxialCapacity2022" class="csl-entry" role="listitem">
-Lehane, Barry M., Zhongqiang Liu, Eduardo J. Bittar, Farrokh Nadim, Suzanne Lacasse, Nezam Bozorgzadeh, Richard Jardine, et al. 2022. <span>“<span class="nocase">CPT-based</span> Axial Capacity Design Method for Driven Piles in Clay.”</span> <em>Journal of Geotechnical and Geoenvironmental Engineering</em> 148 (9): 04022069. <a href="https://doi.org/10.1061/(ASCE)GT.1943-5606.0002847">https://doi.org/10.1061/(ASCE)GT.1943-5606.0002847</a>.
+<div id="ref-bellmannUnderwaterNoisePercussive2020" class="csl-entry" role="listitem">
+Bellmann, M., A. May, T. Wendt, S. Gerlach, P. Remmers, and J. Brinkmann. 2020. <span>“Underwater Noise During Percussive Pile Driving: <span>Influencing</span> Factors on Pile-Driving Noise and Technical Possibilities to Comply with Noise Mitigation Values.”</span> Oldenburg, Germany: <span>Institute of Technical and Applied Physics (itap)</span>.
 </div>
-<div id="ref-robertsonSoilBehaviourType2010" class="csl-entry" role="listitem">
-Robertson, Peter K. J. 2010. <span>“Soil Behaviour Type from the <span>CPT</span>: An Update.”</span> In <em>2nd <span>International Symposium</span> on <span>Cone Penetration Testing</span></em>. Vol. 2 &amp; 3. Huntington Beach, CA, USA.
+<div id="ref-caltransTechnicalGuidanceAssessment2020" class="csl-entry" role="listitem">
+Caltrans. 2020. <span>“Technical Guidance for the Assessment of Hydroacoustic Effects of Pile Driving on Fish.”</span> CTHWANP-RT-20-365.01.04. Sacramento, USA: California Department of Transportation.
+</div>
+<div id="ref-cerfontaineStudyParticleScale2023" class="csl-entry" role="listitem">
+Cerfontaine, B., M. O. Ciantia, M. J. Brown, D. J. White, and Y. U. Sharif. 2023. <span>“<span>DEM</span> Study of Particle Scale Effect on Plain and Rotary Jacked Pile Behaviour in Granular Materials.”</span> <em>Computers and Geotechnics</em> 161 (September): 105559. <a href="https://doi.org/10.1016/j.compgeo.2023.105559">https://doi.org/10.1016/j.compgeo.2023.105559</a>.
+</div>
+<div id="ref-tsetasGentleDrivingPiles2024" class="csl-entry" role="listitem">
+Tsetas, A., E. Kementzetzidis, S. S. Gómez, T. Molenkamp, A. S. K. Elkadi, F. Pisanò, A. Tsouvalas, and A. V. Metrikine. 2024. <span>“Gentle <span>Driving</span> of <span>Piles</span>: Field Observations, Quantitative Analysis and Further Development.”</span> In <em>Offshore <span>Technology Conference</span></em>. OnePetro. <a href="https://doi.org/10.4043/35156-MS">https://doi.org/10.4043/35156-MS</a>.
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Kevin Duffy">
+<meta name="dcterms.date" content="2025-10-06">
+
+<title>Modelling pile driveability – CIEM 2301: Offshore Geotechnics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-2fef5ea3f8957b3e4ecc936fc74692ca.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-0508618caa1d256af916c83e0797e277.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-4eb2127619e2a60f5b503ea1729e5210.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-0508618caa1d256af916c83e0797e277.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../notes/1_intro.html">📚 Course notes</a></li><li class="breadcrumb-item"><a href="../notes/8-1_pile-installation-overview.html">Pile installation</a></li><li class="breadcrumb-item"><a href="../notes/8-2_modelling-pile-driving.html">Modelling pile driving</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+  <div id="quarto-announcement" data-announcement-id="da35f68cf761539cc4f737a3de2fba19" class="alert alert-primary hidden"><div class="quarto-announcement-content">
+<p>Update 6th October: Course notes on pile installation have been added, including in-class examples.</p>
+</div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">CIEM 2301: Offshore Geotechnics</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">🏠 Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">ℹ️ Course info</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../learning-objectives.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Learning objectives</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">User guide</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">📚 Course notes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/1_intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/2_marine-geology.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Marine geology</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Site investigation</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/3-1_site-investigation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/3-2_geophysical-investigation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Geophysical investigation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/3-3_geotechnical-investigation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Intrusive investigation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Axial response of piles in sand</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/4-1_piles-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/4-2_mechanisms-sand.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Basic mechanisms</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/4-3_axial-design-sand.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Design methods</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Axial response of piles in clay</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/5-1_mechanisms-clay.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Basic mechanisms</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/5-2_axial-design-clay.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Design methods</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/5-3_srd-clay.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Example calculation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Pile installation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/8-1_pile-installation-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/8-2_modelling-pile-driving.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Modelling pile driving</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#pile-hammer" id="toc-pile-hammer" class="nav-link active" data-scroll-target="#pile-hammer">Pile hammer</a></li>
+  <li><a href="#energy-transfer-from-hammer-to-pile" id="toc-energy-transfer-from-hammer-to-pile" class="nav-link" data-scroll-target="#energy-transfer-from-hammer-to-pile">Energy transfer from hammer to pile</a></li>
+  <li><a href="#wave-propagation-through-pile" id="toc-wave-propagation-through-pile" class="nav-link" data-scroll-target="#wave-propagation-through-pile">Wave propagation through pile</a></li>
+  <li><a href="#lumped-mass-model" id="toc-lumped-mass-model" class="nav-link" data-scroll-target="#lumped-mass-model">Lumped mass model</a>
+  <ul class="collapse">
+  <li><a href="#pile-soil-interaction" id="toc-pile-soil-interaction" class="nav-link" data-scroll-target="#pile-soil-interaction">Pile-soil interaction</a></li>
+  <li><a href="#static-resistance-r_s" id="toc-static-resistance-r_s" class="nav-link" data-scroll-target="#static-resistance-r_s">Static resistance <span class="math inline">\(R_s\)</span></a></li>
+  <li><a href="#dynamic-resistance-r_d" id="toc-dynamic-resistance-r_d" class="nav-link" data-scroll-target="#dynamic-resistance-r_d">Dynamic resistance <span class="math inline">\(R_d\)</span></a></li>
+  </ul></li>
+  <li><a href="#signal-matching" id="toc-signal-matching" class="nav-link" data-scroll-target="#signal-matching">Signal matching</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../notes/1_intro.html">📚 Course notes</a></li><li class="breadcrumb-item"><a href="../notes/8-1_pile-installation-overview.html">Pile installation</a></li><li class="breadcrumb-item"><a href="../notes/8-2_modelling-pile-driving.html">Modelling pile driving</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Modelling pile driveability</h1>
+<p class="subtitle lead">What’s actually happening to the pile and soil during installation?</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Kevin Duffy </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">06 October 2025</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">06 October 2025</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><a href="https://colab.research.google.com/github/triaduct/offshoregeotechnics/blob/main/notes/8-2_modelling-pile-driving.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Open In Colab"></a> <nbsp></nbsp></p>
+<p>Determining the optimum pile geometry is an iterative process, where the trade-off between the higher capacities achieved using larger piles is offset by the increased difficulty and risk associated with driving these piles to the desired penetration.</p>
+<p>An overview of the driveability analysis is given in <a href="#fig-driveability-procedure" class="quarto-xref">Figure&nbsp;1</a>, particularly with regards to the inputs and outputs of the wave equation analysis. These components are explored a little further in this section.</p>
+<div id="fig-driveability-procedure" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-driveability-procedure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/installation/driveability-procedure.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Driveability procedure"><img src="pics/installation/driveability-procedure.png" class="img-fluid figure-img" style="width:80.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-driveability-procedure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Driveability procedure
+</figcaption>
+</figure>
+</div>
+<section id="pile-hammer" class="level2">
+<h2 class="anchored" data-anchor-id="pile-hammer">Pile hammer</h2>
+<p>We can use the principle of energy conservation to model the hammer impact. Once the ram falls, the energy gets transferred from potential to kinetic energy. This potential energy can be modelled as:</p>
+<p><span class="math display">\[
+E_{potential} = m_{ram}gh_e
+\]</span></p>
+<p>where <span class="math inline">\(h_e\)</span> is the effective (or equivalent) hammer stroke based on the additional acceleration provided by the hydraulic pistons. The maximum potential energy of the pile is also referred to as the <strong>rated energy</strong> of the hammer.</p>
+<p>If no energy losses were to occur in the system during hammer freefall, the kinetic energy at impact would be equal to the potential energy, giving a hammer velocity of <span class="math inline">\(v_{impact} = \sqrt{2gh}\)</span>.</p>
+<p>However, losses invariably occur due to friction, ram misalignment or loss of pressure in the hydraulic system. These losses are quantified by the <strong>hammer efficiency</strong> <span class="math inline">\(\eta\)</span> whereby:</p>
+<p><span id="eq-hammer-efficiency"><span class="math display">\[
+\eta_{hammer} = \frac{E_{impact}}{E_{potential}}
+\tag{1}\]</span></span></p>
+<p>Typical values of <span class="math inline">\(\eta = 0.5–0.8\)</span> are assumed for diesel hammers, whereas for hydraulic hammers <span class="math inline">\(\eta = 0.95-1.0\)</span>.</p>
+</section>
+<section id="energy-transfer-from-hammer-to-pile" class="level2">
+<h2 class="anchored" data-anchor-id="energy-transfer-from-hammer-to-pile">Energy transfer from hammer to pile</h2>
+<p>When the hammer strikes the pile, kinetic energy from the falling ram is transferred to the pile–hammer system, generating a series of stress waves which propagate down the pile. This energy transfer is expressed as a function of time <span class="math inline">\(t\)</span>:</p>
+<p><span class="math display">\[
+E(t) = \int F(t)V(t)\,dt
+\]</span></p>
+<p>where <span class="math inline">\(F\)</span> is the force and <span class="math inline">\(V\)</span> is the velocity.</p>
+<p>An example of some force measurements at the pile head under one hammer blow is given in <a href="#fig-pda-reading" class="quarto-xref">Figure&nbsp;2</a>. This figure shows a short period of five milliseconds where the ram is briefly contacts the pile head (via the anvil) before the rebounding back upwards. Reflection of waves back up the pile means that more compressive strains are also measured, as shown by the fluctuations after 25 milliseconds.</p>
+<p>The maximum energy generated in the pile during this time period is known as <strong>EMX</strong>.</p>
+<div id="fig-pda-reading" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pda-reading-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/installation/buckley20-fig6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: Example of the force measured at opposing sides (F_1 and F_2) of a tubular pile [@buckleyOptimizationImpactPile2020]"><img src="pics/installation/buckley20-fig6.png" class="img-fluid figure-img" style="width:60.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pda-reading-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Example of the force measured at opposing sides (<span class="math inline">\(F_1\)</span> and <span class="math inline">\(F_2\)</span>) of a tubular pile <span class="citation" data-cites="buckleyOptimizationImpactPile2020">(<a href="#ref-buckleyOptimizationImpactPile2020" role="doc-biblioref">Buckley et al. 2020</a>)</span>
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Measuring the transferred energy with a pile driving analyser (PDA)">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Measuring the transferred energy with a pile driving analyser (PDA)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>A <strong>pile driving analyser</strong> measures the actual force imparted on the pile. It consists of two measurement devices that are affixed just underneath the pile head:</p>
+<ol type="1">
+<li>Accelerometer: for measuring the change in pile velocity.</li>
+<li>Strain gauge: for measuring change in strain in the pile, which can then be converted to a normal force (<span class="math inline">\(F = EA\varepsilon\)</span>).</li>
+</ol>
+<p>Using these measurements, PDAs can then be used to both verify the driveability predictions, as well as being used in a signal matching analysis (e.g.&nbsp;through the software CAPWAP or IMPACT) to give an <em>approximate</em> estimate of the pile base and shaft capaciites.</p>
+<div id="fig-pda" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pda-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="pics/installation/pda1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Sensors used in a PDA (source)"><img src="pics/installation/pda1.jpg" class="img-fluid figure-img"></a></p>
+<figcaption>Sensors used in a PDA <a href="https://www.g-octopus.com/equipment/pile-driving-analyzer-pda-system/">(source)</a></figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="pics/installation/pda2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="PDAs being used offshore (source)"><img src="pics/installation/pda2.jpg" class="img-fluid figure-img" style="width:60.0%"></a></p>
+<figcaption>PDAs being used offshore <a href="https://allnamics.com/en/allnamics-offshore-services/">(source)</a></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pda-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Pile driving analyser
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<!-- #End of Quarto callout -->
+<p>Just like we how we use <span class="math inline">\(\eta\)</span> to quantify the energy loss <em>within</em> the hammer itself (<a href="#eq-hammer-efficiency" class="quarto-xref">Equation&nbsp;1</a>), there is also an energy loss when the hammer hits the anvil. This can be expressed as:</p>
+<p><span class="math display">\[
+\alpha_{rated} = \frac{EMX}{E_{rated}}
+\]</span></p>
+<p>or as <span class="citation" data-cites="flynnDrivenCastinsituPiles2019">Flynn and McCabe (<a href="#ref-flynnDrivenCastinsituPiles2019" role="doc-biblioref">2019</a>)</span> suggested, as a function of the actual impact energy:</p>
+<p><span class="math display">\[
+\beta = \frac{EMX}{E_{impact}}
+\]</span></p>
+<p>The true energy transfer ratio falls below unity due to noise and heat generated at impact.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Example: Maximum force applied on the pile head">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Example: Maximum force applied on the pile head
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>By equating the potential energy to the kinetic energy, we can derive the initial velocity of the pile after the hammer blow as well as the force applied on the pile.</p>
+<p>The calculator below gives an example of this, applying Timoshenko’s one-dimensional beam theory whereby:</p>
+<p><span class="math display">\[
+v_{max} = \sqrt{2gh}
+\]</span> where <span class="math inline">\(g\)</span> is the gravitational acceleration (9.81 m/s<sup>2</sup>) and <span class="math inline">\(h\)</span> is the fall height of the ram. From here, the compressive stress applied can be obtained with:</p>
+<p><span class="math display">\[
+\sigma_{max} = \frac{v_{max}E}{c}
+\]</span> where <span class="math inline">\(E\)</span> is the Young’s Modulus and <span class="math inline">\(c\)</span> is the wave speed in the pile material (e.g.&nbsp;<span class="math inline">\(c = 5125\)</span> m/s in steel).</p>
+<p><a href="https://colab.research.google.com/github/triaduct/offshoregeotechnics/blob/main/notes/8-2_modelling-pile-driving.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Open In Colab"></a> <nbsp></nbsp></p>
+<div id="0fa891ce-f85a-42a7-8e40-352288dcd1d4" class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># NB: The script behind the calculator is in JavaScript, although here is the Python equivalent</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> force_imparted_by_hammer(Do, t, fall_height):</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    Simple example based on Timoshenko's 1D beam theory. </span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    Do: Outer diameter [m]</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">    t:  Wall thickness [mm]</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">    fall_height: Fall height of the ram [-]</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns maximum impact force on the pile, assuming 100% efficiency</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Constants</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    c_steel <span class="op">=</span> <span class="dv">5125</span> <span class="co"># Wave speed in steel [m/s]</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    E_steel <span class="op">=</span> <span class="dv">210</span> <span class="co"># Youngs modulus GPa</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Supporting calculations</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    D_inner <span class="op">=</span> D_outer <span class="op">-</span> wall_thickness<span class="op">*</span><span class="fl">1e-3</span><span class="op">*</span><span class="dv">2</span>   <span class="co"># Inner pile diameter [m]</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    A_annulus <span class="op">=</span> np.pi<span class="op">*</span>(D_outer<span class="op">/</span><span class="dv">2</span>)<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> np.pi<span class="op">*</span>(D_inner<span class="op">/</span><span class="dv">2</span>)<span class="op">**</span><span class="dv">2</span>   <span class="co"># Area of the annulus [m2]</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Main calculations</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    v <span class="op">=</span> np.sqrt(<span class="dv">2</span><span class="op">*</span><span class="fl">9.81</span><span class="op">*</span>fall_height) <span class="co"># velocity [m/s]</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    Fmax <span class="op">=</span> (v<span class="op">*</span>E_steel<span class="op">*</span><span class="fl">1e6</span><span class="op">*</span>A_annulus)<span class="op">/</span>c_steel <span class="co"># Fmax [kN]</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Max. compressive force is </span><span class="sc">{</span>Fmax<span class="sc">:.0f}</span><span class="ss">kN"</span>)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> Fmax  <span class="co"># [kN]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div style="max-width: 320px; margin: 15px auto; font-family: sans-serif; border: 1px solid #ccc; padding: 15px; border-radius: 8px; background-color: #f9f9f9; font-size: 14px;">
+<h4 style="text-align: center; margin-bottom: 15px;" class="anchored">
+Maximum impact force on a tubular pile
+</h4>
+<p><label style="display: block; margin-bottom: 8px;"> Outer diameter (m) <input type="number" id="D_outer" step="0.05" min="0.05" style="width: 100%; padding: 4px; margin-top: 3px;"> </label></p>
+<p><label style="display: block; margin-bottom: 8px;"> Wall thickness (mm) <input type="number" id="t" step="1" min="1" style="width: 100%; padding: 4px; margin-top: 3px;"> </label></p>
+<p><label style="display: block; margin-bottom: 12px;"> Fall height (m) <input type="number" id="fallHeight" step="0.1" min="0.1" style="width: 100%; padding: 4px; margin-top: 3px;"> </label></p>
+<p><button id="runBtn" style="width: 100%; padding: 8px; font-size: 14px; border-radius: 5px; background-color: #007acc; color: white; border: none; cursor: pointer;"> Run </button></p>
+<p style="margin-top: 12px; font-weight: bold;">
+Result: <span id="result">—</span>
+</p>
+</div>
+<script>
+function forceImpartedByHammer(Do, t, fallHeight) {
+    const cSteel = 5125;      // wave speed in steel [m/s]
+    const E = 210e9;          // Young’s modulus [Pa]
+
+    // inner pile diameter [m]
+    const Di = Do - t * 1e-3 * 2;
+
+    // cross-sectional area of annulus [m2]
+    const A = Math.PI * Math.pow(Do / 2, 2) - Math.PI * Math.pow(Di / 2, 2);
+
+    // velocity from fall height [m/s]
+    const v = Math.sqrt(2 * 9.81 * fallHeight);
+
+    // max impact force [kN]
+    const Fmax = (v * E * A) / cSteel / 1000;
+
+    return Fmax; 
+}
+
+document.getElementById("runBtn").addEventListener("click", function() {
+    const Do = parseFloat(document.getElementById("D_outer").value);
+    const t = parseFloat(document.getElementById("t").value);
+    const fallHeight = parseFloat(document.getElementById("fallHeight").value);
+
+    if (isNaN(Do) || isNaN(t) || isNaN(fallHeight)) {
+        document.getElementById("result").textContent = "Please fill in all fields.";
+        return;
+    }
+
+    const result = forceImpartedByHammer(Do, t, fallHeight);
+    document.getElementById("result").textContent = result.toFixed(0) + " kN";
+});
+</script>
+<p>As a simple example, the PDA readings by Buckley et al.&nbsp;(<a href="#fig-pda-reading" class="quarto-xref">Figure&nbsp;2</a>) are considered. The pile had an outer diameter of 508 mm with a wall thickness of 20.6 mm. The pile was then driven using a Junttan SHK100-3 4T hammer.</p>
+<p>Judging by the <a href="https://junttan.com/wp-content/uploads/2015/11/16284_SHK100-3_Datasheet.pdf">specification sheet online</a>, the hammer has a maximum drop height of 1.2m. Using this, we can figure out the maximum possible energy and force that the hammer can impart on the pile—<strong>giving an answer of 6271 kN</strong>.</p>
+<p>This answer is three times higher than the maximum force from the PDA results in <span class="citation" data-cites="buckleyOptimizationImpactPile2020">Buckley et al. (<a href="#ref-buckleyOptimizationImpactPile2020" role="doc-biblioref">2020</a>)</span>. Although this is unsurprising: PDA results represent the true force that has been transferred to the hammer, whereas the example we just did does not reflect the impact efficiency. Furthermore, <span class="citation" data-cites="buckleyOptimizationImpactPile2020">Buckley et al. (<a href="#ref-buckleyOptimizationImpactPile2020" role="doc-biblioref">2020</a>)</span> does not specify what the actual drop height was for the blow provided, and it’s likely that this was smaller than the absolute limit of the hammer.</p>
+<p>Nevertheless, the simple example can be used a preliminary check for assessing if enough force can be mobilised from the hammer in order to overcome the soil resistance acting in the opposite direction.</p>
+</div>
+</div>
+</div>
+<!-- #End of Quarto callout -->
+</section>
+<section id="wave-propagation-through-pile" class="level2">
+<h2 class="anchored" data-anchor-id="wave-propagation-through-pile">Wave propagation through pile</h2>
+<p>The hammer impact propagates a stress wave through the pile, travelling at a speed <span class="math inline">\(c\)</span> (<a href="#fig-wave-propagation" class="quarto-xref">Figure&nbsp;4</a>). The pile also has a resistance to this wave propagation, referred to as the pile impedance <span class="math inline">\(Z\)</span>:</p>
+<p><span class="math display">\[
+Z = EA/c
+\]</span></p>
+<p>where <span class="math inline">\(E\)</span> is the Young’s modulus and <span class="math inline">\(c\)</span> is the wave speed through the pile (<span class="math inline">\(c = \sqrt{E/\rho}\)</span>).</p>
+<p>Any time there’s a change in impedance—like between the pile and the soil—waves are reflected in the opposite direction (<a href="#fig-wave-propagation" class="quarto-xref">Figure&nbsp;4</a>). This mean there upward and downward waves travelling through the pile at the same time, rapidly losing energy as they do so.</p>
+<div id="fig-wave-propagation" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-wave-propagation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/installation/stress-wave-propagation.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;4: Wave propagation down a pile"><img src="pics/installation/stress-wave-propagation.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-wave-propagation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Wave propagation down a pile
+</figcaption>
+</figure>
+</div>
+<p>To model this energy transfer, Newton’s Law can be used, containing both a parameter for mass and acceleration:</p>
+<p><span class="math display">\[
+\rho \left(\frac{\delta^2 w}{\delta t^2}\right) = E \left(\frac{\delta^2 w}{\delta z^2}\right) \tag{15}
+\]</span></p>
+<p>which can be rewritten as:</p>
+<p><span class="math display">\[
+\left(\frac{\delta^2 w}{\delta t^2}\right) = c^2 \left(\frac{\delta^2 w}{\delta z^2}\right) \tag{16}
+\]</span></p>
+<p>where: <span class="math inline">\(w\)</span> is the displacement, <span class="math inline">\(z\)</span> is the downward coordinate, <span class="math inline">\(t\)</span> is time, <span class="math inline">\(\rho\)</span> is the mass density.</p>
+<p>There are a couple of ways to solve these equations (<a href="#fig-wave-equation-models" class="quarto-xref">Figure&nbsp;5</a>):</p>
+<ol type="1">
+<li>Lumped mass model (GRLWEAP)</li>
+<li>Method of characteristics (AllWave, formerly known as TNOWAVE)</li>
+</ol>
+<p>The lumped mass model simulates the pile as a series of masses and springs. The main disadvantage of the lumped mass model (compared to the method of characteristics) is that it’s an approximate method as the force is calculated at the spring location whereas the velocity is at the mass location (half a segment length difference).</p>
+<p>By contrast, the method of characteristics treats the pile as a continuous medium through which the stress wave can propagate. In this approach, the pile is divided into segments of uniform size, with the soil resistance represented as a concentrated load acting between the segments. The stress wave is assumed to travel unchanged through each individual segment and its amplitude is modified only at the junctions where soil resistance is mobilised or where changes in pile section occur.</p>
+<p>A key advantage of the method of characteristics is that both force and velocity are calculated at the same location in the pile, which makes the method particularly well-suited for wave matching. It also produces twice as many data points along the pile compared to the Smith lumped-mass model for the same time interval, leading to a finer temporal resolution of the pile response.</p>
+<p>However, the limitation of the method is that the length of the elements must be chosen as integer multiples of the product of the time step and the wave propagation velocity. This restriction makes the method less convenient for simulating hammer and cushion behavior, since those components are better represented by springs and dashpots rather than fictitious material segments constrained by wave speed requirements. For these reasons, while the MoC provides a mathematically elegant description of wave propagation in piles, practical applications often prefer lumped-mass wave equation models for handling hammer–cushion–soil interactions.</p>
+<div id="fig-wave-equation-models" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-wave-equation-models-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/installation/wave-equation-models.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;5: Types of wave equation models [@middendorp30YearsExperience2012]"><img src="pics/installation/wave-equation-models.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-wave-equation-models-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Types of wave equation models <span class="citation" data-cites="middendorp30YearsExperience2012">(<a href="#ref-middendorp30YearsExperience2012" role="doc-biblioref">Middendorp and Verbeek 2012</a>)</span>
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Commerical software is typically used for pile driveability analyses. The most popular software are:</p>
+<ol type="1">
+<li>GRLWEAP, based on the lumped mass model</li>
+<li>AllWave, based on the method of characteristics</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="lumped-mass-model" class="level2">
+<h2 class="anchored" data-anchor-id="lumped-mass-model">Lumped mass model</h2>
+<p>To delve a little deeper into the inner workings of a wave equation analysis, the lumped mass model is taken as an illustrative example.</p>
+<p>With this method, the pile is modelled as a discretised set of lumped masses, connected by springs. Each pile segment has a weight (<span class="math inline">\(w_1\)</span> to <span class="math inline">\(w_n\)</span>) and are connected by springs (<span class="math inline">\(k_1\)</span> until <span class="math inline">\(k_n−1\)</span>). Time is also discretised into smaller time intervals and the action of each element and spring is calculated for each and every time interval.</p>
+<div id="fig-lumped-mass-model" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lumped-mass-model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/installation/lumped-mass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;6: Lumped mass model [@smithPiledrivingAnalysisWave1960]"><img src="pics/installation/lumped-mass.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lumped-mass-model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Lumped mass model <span class="citation" data-cites="smithPiledrivingAnalysisWave1960">(<a href="#ref-smithPiledrivingAnalysisWave1960" role="doc-biblioref">Smith 1960</a>)</span>
+</figcaption>
+</figure>
+</div>
+<section id="pile-soil-interaction" class="level3">
+<h3 class="anchored" data-anchor-id="pile-soil-interaction">Pile-soil interaction</h3>
+<p>To “complete” our analytical model, we need to define how the pile interacts with the soil. This is often done using what’s called a <strong>spring-dashpot</strong> (or spring-damper) model.</p>
+<p>The core of most driveability assessments and software is based on the rheological framework proposed by <span class="citation" data-cites="smithPiledrivingAnalysisWave1960">Smith (<a href="#ref-smithPiledrivingAnalysisWave1960" role="doc-biblioref">1960</a>)</span>. <span class="citation" data-cites="smithPiledrivingAnalysisWave1960">Smith (<a href="#ref-smithPiledrivingAnalysisWave1960" role="doc-biblioref">1960</a>)</span> proposed that the pile displacement <span class="math inline">\(w\)</span> and velocity <span class="math inline">\(v\)</span> as a function of a spring, dashpot and plastic slider (<a href="#fig-spring-dashpot" class="quarto-xref">Figure&nbsp;7</a>) where the total resistance is given by:</p>
+<p><span class="math display">\[
+R_t = R_s + R_d
+\]</span></p>
+<p>where <span class="math inline">\(R_s\)</span> is the static resistance and <span class="math inline">\(R_d\)</span> is the dynamic (or damping) resistance.</p>
+<div id="fig-spring-dashpot" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-spring-dashpot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/installation/spring-dashpot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;7: Simulation of soil resistance in both the lumped mass model and method of characteristics"><img src="pics/installation/spring-dashpot.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-spring-dashpot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Simulation of soil resistance in both the lumped mass model and method of characteristics
+</figcaption>
+</figure>
+</div>
+<div id="fig-spring-dashpot-video" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-spring-dashpot-video-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vLaFAKnaRJU?si=oHztbbyP3tPm0Jmg&amp;start=366" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-spring-dashpot-video-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: Visualisation of the spring-dashpot model
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="static-resistance-r_s" class="level3">
+<h3 class="anchored" data-anchor-id="static-resistance-r_s">Static resistance <span class="math inline">\(R_s\)</span></h3>
+<p>The static resistance is a function of the displacement of the pile with respect to the soil, and is therefore present during both static and dynamic loading.</p>
+<p>To define the spring model, two main inputs are provided (<a href="#fig-spring-model" class="quarto-xref">Figure&nbsp;9</a>): the maximum static resistance given by a static resistance to driving (SRD) model and the quake, which is the displacement are which the spring exhibits plastic behaviour.</p>
+<div id="fig-spring-model" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-spring-model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/installation/spring.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;9: Spring model for determining the static resistance"><img src="pics/installation/spring.png" class="img-fluid figure-img" style="width:80.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-spring-model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: Spring model for determining the static resistance
+</figcaption>
+</figure>
+</div>
+<section id="static-resistance-to-driving-srd-model" class="level4">
+<h4 class="anchored" data-anchor-id="static-resistance-to-driving-srd-model">Static resistance to driving (SRD) model</h4>
+<p>To define the maximum static resistance <span class="math inline">\(R_{s,max}\)</span>, a <strong>static resistance to driving model</strong> is used. An SRD model gives a profile of the shaft and base resistance developed during pile installation. While they are quite similar to the axial capacity methods we looked at earlier, there are some key differences:</p>
+<ul>
+<li>Static capacity methods include some degree of aging, whereas SRD methods give the instanteous capacity at the end of driving</li>
+<li>Influence of the soil plug is very different under dynamic loading compared to static loading because of the plug’s intertia</li>
+<li>SRD methods generally use best or upper-bound estimates of resistance, instead of lower bound estimates. This is to ensure that the chosen hammer can be used for all piles at a given site, reducing the likelihood of having to return onshore to get another hammer</li>
+<li>Pore pressure development under high strains</li>
+</ul>
+<p>There are also many different SRD methods recommended in public literature (e.g. <span class="citation" data-cites="toolanGeotechnicalPlanningPiled1977">Toolan and Fox (<a href="#ref-toolanGeotechnicalPlanningPiled1977" role="doc-biblioref">1977</a>)</span>, <span class="citation" data-cites="stevensEvaluatingDrivabilityHard1982">Stevens, Wiltsie, and Turton (<a href="#ref-stevensEvaluatingDrivabilityHard1982" role="doc-biblioref">1982</a>)</span>, <span class="citation" data-cites="almSoilModelPile2001">Alm and Hamre (<a href="#ref-almSoilModelPile2001" role="doc-biblioref">2001</a>)</span>, <span class="citation" data-cites="jonesCPTbasedSoilResistance2020">Jones, Rattley, and Manceau (<a href="#ref-jonesCPTbasedSoilResistance2020" role="doc-biblioref">2020</a>)</span>), including recent research by <span class="citation" data-cites="lehaneApplicationUnifiedCPT2022">Lehane et al. (<a href="#ref-lehaneApplicationUnifiedCPT2022" role="doc-biblioref">2022</a>)</span> into the application of the Unified pile design method for SRD models.</p>
+<p>These methods are generally calibrated based on pile test database, so the efficacy of each method is highly dependent on the database upon which its calibrated, as well as the selection of inputs to the driveability model.</p>
+</section>
+<section id="quake" class="level4">
+<h4 class="anchored" data-anchor-id="quake">Quake</h4>
+<p>The soil quake is the maximum elastic deformation after which further displacement causes slippage between pile and soil. It also encapsulates the rebound of the pile after being subjected to the hammer push.</p>
+<p>Shaft quakes vary relatively little, with a quake of 2.5 mm generally considered reasonable for most soils. However, toe quakes can vary widely, as the value is highly dependent on the soil stiffness around the pile base—which is in turn dependent on the installation procedure and the soil type.</p>
+</section>
+</section>
+<section id="dynamic-resistance-r_d" class="level3">
+<h3 class="anchored" data-anchor-id="dynamic-resistance-r_d">Dynamic resistance <span class="math inline">\(R_d\)</span></h3>
+<p>Pile driving is a dynamic process, and so energy itself is transferred from pile-to-soil which is turned dampened (i.e.&nbsp;energy is lost) by molecular interactions in the soil itself. The dynamic resistance is modelled as a linear function of the velocity of the pile, whereby:</p>
+<p><span id="eq-smith-damping-factor"><span class="math display">\[
+R_d =  R_s J_s v
+\tag{2}\]</span></span></p>
+<p>where <span class="math inline">\(J_s\)</span> is the Smith damping factor [s/m]. This essentially changes the static resistance profile to something similar to <a href="#fig-smith-soil-model" class="quarto-xref">Figure&nbsp;10</a>.</p>
+<p>Although the Smith model was developed over half a century ago, the same basic factors for damping along the shaft, i.e., 0.15 s/m for sands and 0.65 s/m for clays are still recommended. Different values are used where measurements are made or in mixed soils. Only the base damping recommendation changed to 0.5 s/m for all soil types</p>
+<div id="fig-smith-soil-model" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-smith-soil-model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/installation/smith-soil-model.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figure&nbsp;10: Influence of adding in the dynamic component to the total resistance [@smithPiledrivingAnalysisWave1960]"><img src="pics/installation/smith-soil-model.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-smith-soil-model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10: Influence of adding in the dynamic component to the total resistance <span class="citation" data-cites="smithPiledrivingAnalysisWave1960">(<a href="#ref-smithPiledrivingAnalysisWave1960" role="doc-biblioref">Smith 1960</a>)</span>
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="#eq-smith-damping-factor" class="quarto-xref">Equation&nbsp;2</a> is just one way of quantifying the dynamic resistance, although this is arguably an overly empirical method. Therefore, several other formulations also exist and are implemented in commercial software, such as Case Damping, Coyle-Gibson Damping or Rausche Damping.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="signal-matching" class="level2">
+<h2 class="anchored" data-anchor-id="signal-matching">Signal matching</h2>
+<p>Pile driveability analyses focus on efficiency, since they act as a predictive tool that is used before installation. The primary outputs from this model are the simulated driving stresses, blow counts, load profiles and energy transfer.</p>
+<p>However, signal matching software focus on a more detailed assessment of wave propagation by comparing these predictions to the measurements from a PDA. Using the method of characteristics, smaller time intervals are considered in the analysis and generally focussing on data collected from just a small number of blows. Through this comparison and analysis of the inputs to the wave equation, signal matching allows for a rough estimate of the pile base and shaft capacities.</p>
+<p>Therefore, signal matching software (e.g.&nbsp;CAPWAP, IMPACT) are primarily <em>interpretative</em> tools whereas driveability software (GRLWEAP, AllWave) are <em>predictive</em> tools.</p>
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-almSoilModelPile2001" class="csl-entry" role="listitem">
+Alm, T., and L. Hamre. 2001. <span>“Soil Model for Pile Driveability Predictions Based on <span>CPT</span> Interpretations.”</span> In <em>Proceedings of the 15th <span>International Conference</span> on <span>Soil Mechanics</span> and <span>Geotechnical Engineering</span></em>, 1297–1302. Istanbul, Turkey: A. A. Balkema.
+</div>
+<div id="ref-buckleyOptimizationImpactPile2020" class="csl-entry" role="listitem">
+Buckley, Róisín M., Ross A. McAdam, Byron W. Byrne, James P. Doherty, Richard J. Jardine, Stavroula Kontoe, and Mark F. Randolph. 2020. <span>“Optimization of Impact Pile Driving Using Optical <span>Fiber Bragg-Grating</span> Measurements.”</span> <em>Journal of Geotechnical and Geoenvironmental Engineering</em> 146 (9): 04020082. <a href="https://doi.org/10.1061/(ASCE)GT.1943-5606.0002293">https://doi.org/10.1061/(ASCE)GT.1943-5606.0002293</a>.
+</div>
+<div id="ref-flynnDrivenCastinsituPiles2019" class="csl-entry" role="listitem">
+Flynn, Kevin N., and Bryan A. McCabe. 2019. <span>“Driven Cast-in-Situ Piles Installed Using Hydraulic Hammers: <span>Installation</span> Energy Transfer and Driveability Assessment.”</span> <em>Soils and Foundations</em> 59 (6): 1946–59. <a href="https://doi.org/10.1016/j.sandf.2019.09.003">https://doi.org/10.1016/j.sandf.2019.09.003</a>.
+</div>
+<div id="ref-jonesCPTbasedSoilResistance2020" class="csl-entry" role="listitem">
+Jones, L., Mike Rattley, and S. Manceau. 2020. <span>“A <span class="nocase">CPT-based</span> Soil Resistance to Driving (<span>SRD</span>) Method for Offshore Pile Driveability Analyses.”</span> In <em>Piling 2020: <span>Proceedings</span> of the <span>Piling</span> 2020 <span>Conference</span></em>. London, United Kingdom: ICE Publishing.
+</div>
+<div id="ref-lehaneApplicationUnifiedCPT2022" class="csl-entry" role="listitem">
+Lehane, Barry M., David John Paul Igoe, Kenneth G. Gavin, and Eduardo J. Bittar. 2022. <span>“Application of the <span>Unified CPT</span> Method to Assess the Driving Resistance of Pipe Piles in Sand.”</span> In <em>Proceedings of the 11th <span>International Conference</span> on <span>Stress Wave Theory</span> and <span>Design</span> and <span>Testing Methods</span> for <span>Deep Foundations</span> (<span>SW2022</span>)</em>. Rotterdam, The Netherlands: Zenodo. <a href="https://doi.org/10.5281/zenodo.7148653">https://doi.org/10.5281/zenodo.7148653</a>.
+</div>
+<div id="ref-middendorp30YearsExperience2012" class="csl-entry" role="listitem">
+Middendorp, P., and G. E. H. Verbeek. 2012. <span>“30 <span>Years</span> of Experience with the Wave Equation Solution Based on the Method of Characteristics.”</span> In <em><span>GeoCongress</span> 2006: <span>Geotechnical Engineering</span> in the <span>Information Technology Age</span></em>. Atlanta, Georgia: American Society of Civil Engineers. <a href="https://doi.org/10.1061/40803(187)172">https://doi.org/10.1061/40803(187)172</a>.
+</div>
+<div id="ref-smithPiledrivingAnalysisWave1960" class="csl-entry" role="listitem">
+Smith, E. A. L. 1960. <span>“Pile-Driving Analysis by the Wave Equation.”</span> <em>Journal of the Soil Mechanics and Foundations Division</em> 86 (4): 35–61. <a href="https://doi.org/10.1061/JSFEAQ.0000281">https://doi.org/10.1061/JSFEAQ.0000281</a>.
+</div>
+<div id="ref-stevensEvaluatingDrivabilityHard1982" class="csl-entry" role="listitem">
+Stevens, Robert S., Edward A. Wiltsie, and Thomas H. Turton. 1982. <span>“Evaluating Drivability for Hard Clay, Very Dense Sand, and Rock.”</span> In <em>Proc. 14th <span>Offshore Technology Conference</span></em>, 465–83. Houston, USA: OnePetro. <a href="https://doi.org/10.4043/4205-MS">https://doi.org/10.4043/4205-MS</a>.
+</div>
+<div id="ref-toolanGeotechnicalPlanningPiled1977" class="csl-entry" role="listitem">
+Toolan, F. E., and D. A. Fox. 1977. <span>“Geotechnical Planning of Piled Foundations for Offshore Platforms.”</span> <em>Proceedings of the Institution of Civil Engineers</em> 62 (2): 221–44. <a href="https://doi.org/10.1680/iicep.1977.3224">https://doi.org/10.1680/iicep.1977.3224</a>.
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("^(?:http:|https:)\/\/(?:lse-dsi\.github\.io\/|localhost)");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      if (authorPrefersDark) {
+          [baseTheme, altTheme] = [altTheme, baseTheme];
+      }
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "triaduct/offshoregeotechnics";
+    script.dataset.repoId = "R_kgDOPlCh8A";
+    script.dataset.category = "General";
+    script.dataset.categoryId = "DIC_kwDOPlCh8M4CuqJo";
+    script.dataset.mapping = "title";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>CIEM 2301: Offshore Geotechnics, Delft University of Technology</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p><img src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" class="img-fluid" alt="Creative Commons License"> <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-N-SA 4.0</a></p>
+</div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>
