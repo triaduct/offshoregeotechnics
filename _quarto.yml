@@ -9,7 +9,7 @@ website:
   title: "CIEM 2301: Offshore Geotechnics"
   site-url: https://triaduct.github.io/offshoregeotechnics
   announcement: 
-    content: "Update 19th September: Course notes on axial capacity of piles in clay have been added." 
+    content: "Update 6th October: Course notes on pile installation have been added, including in-class examples." 
     position: below-navbar 
   comments:
     giscus: 
@@ -58,6 +58,8 @@ website:
             contents:
               - href: notes/5-1_mechanisms-clay.ipynb
               - href: notes/5-2_axial-design-clay.ipynb
+              - text: "Example calculation"
+                href: notes/5-3_srd-clay.ipynb
           # - section: "Lateral response of piles" 
           #   contents:
           #     - text: "Basic mechanisms"
@@ -70,8 +72,7 @@ website:
                 href: notes/8-1_pile-installation-overview.ipynb
               - text: "Modelling pile driving"
                 href: notes/8-2_modelling-pile-driving.ipynb
-              - text: "Pile driveability in Python"
-                href: notes/driveability-in-python.ipynb
+
           # - section: "Shallow foundations"
           #   contents:
           #     - text: "Basic mechanisms"
