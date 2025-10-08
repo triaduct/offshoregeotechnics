@@ -1,5 +1,5 @@
 ---
-title: "CIEM 2301: Offshore Geotechnics"
+title: "CIEM2301: Offshore Geotechnics"
 author: "Kevin Duffy, Delft University of Technology"
 comments: false
 ---
@@ -12,4 +12,4 @@ For any questions, please get in touch with me (Kevin) at [k.duffy@tudelft.nl](k
 
 
 ### Creative Commons License Information
-*CIEM 2301: Offshore Geotechnics* by [Kevin Duffy (Delft University of Technology)](https://www.tudelft.nl/staff/k.duffy/) is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+*CIEM2301: Offshore Geotechnics* by [Kevin Duffy (Delft University of Technology)](https://www.tudelft.nl/staff/k.duffy/) is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).

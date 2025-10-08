@@ -16,7 +16,7 @@ comments: false
 | ~~Thursday 25th September~~ | ~~13:45-15:30~~ | ~~Seismic design~~                | ~~Ozan Alver~~ |
 | ~~Tuesday 30th September~~  | ~~13:45-15:30~~ | ~~Cyclic loading~~                | ~~Ken Gavin~~ |
 | ~~Thursday 2nd October~~    | ~~13:45-15:30~~ | ~~Pile installation~~             | ~~Kevin Duffy~~ |
-| Tuesday 7th October     | **10:45-12:30** | Shallow foundations       | Kevin Duffy |
+| ~~Tuesday 7th October~~     | ~~10:45-12:30~~ | ~~Shallow foundations~~           | ~~Kevin Duffy~~ |
 | Thursday 9th October    | 13:45-15:30 | Suction-assisted installation | Kevin Duffy |
 | Tuesday 14th October    | 13:45-15:30 | Floating structures & anchors | Kevin Duffy |
 | Thursday 16th October   | 13:45-15:30 | Challenging soil conditions   | Kevin Duffy |

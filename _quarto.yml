@@ -6,10 +6,10 @@ project:
     port: 4200
   
 website:
-  title: "CIEM 2301: Offshore Geotechnics"
+  title: "CIEM2301: Offshore Geotechnics"
   site-url: https://triaduct.github.io/offshoregeotechnics
   announcement: 
-    content: "Update 6th October: Course notes on pile installation have been added, including in-class examples." 
+    content: "Update 8th October: Shallow foundation example added." 
     position: below-navbar 
   comments:
     giscus: 
@@ -72,14 +72,15 @@ website:
                 href: notes/8-1_pile-installation-overview.ipynb
               - text: "Modelling pile driving"
                 href: notes/8-2_modelling-pile-driving.ipynb
+          - section: "Shallow foundations"
+            contents:
+              - text: "Example: Thornton Bank"
+                href: notes/9-1_thornton-bank-example.ipynb
+              # - text: "Basic mechanisms"
+              #   href: notes/shallow-foundations.ipynb
 
-          # - section: "Shallow foundations"
-          #   contents:
-          #     - text: "Basic mechanisms"
-          #       href: notes/shallow-foundations.ipynb
-          #     - text: "Design methods"
-          #     - text: "App: Interaction Diagram"
-          #       href: playground/interaction-diagram.qmd
+              # - text: "App: Interaction Diagram"
+              #   href: playground/interaction-diagram.qmd
               # - href: playground/interaction-diagram.qmd   # The Shiny app
           # - section: "Suction-assisted installation"
           # - section: "Floating wind and anchors"
@@ -88,7 +89,7 @@ website:
 
   page-footer:
     left: |
-      CIEM 2301: Offshore Geotechnics, Delft University of Technology
+      CIEM2301: Offshore Geotechnics, Delft University of Technology
     right: |
       ![Creative Commons License](https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png) [CC BY-N-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/)
     # left: "Copyright 2025, MY INSTITUTION"
