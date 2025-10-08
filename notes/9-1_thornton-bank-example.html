@@ -9,7 +9,7 @@
 <meta name="author" content="Kevin Duffy">
 <meta name="dcterms.date" content="2025-10-08">
 
-<title>Design methods – CIEM2301: Offshore Geotechnics</title>
+<title>Worked example: Thornton Bank – CIEM2301: Offshore Geotechnics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 /* CSS for citations */
 div.csl-bib-body { }
@@ -301,7 +336,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../notes/1_intro.html">📚 Course notes</a></li><li class="breadcrumb-item"><a href="../notes/4-1_piles-overview.html">Axial response of piles in sand</a></li><li class="breadcrumb-item"><a href="../notes/4-3_axial-design-sand.html">Design methods</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../notes/1_intro.html">📚 Course notes</a></li><li class="breadcrumb-item"><a href="../notes/9-1_thornton-bank-example.html">Shallow foundations</a></li><li class="breadcrumb-item"><a href="../notes/9-1_thornton-bank-example.html">Example: Thornton Bank</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -425,13 +460,13 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
  <span class="menu-text">Axial response of piles in sand</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../notes/4-1_piles-overview.html" class="sidebar-item-text sidebar-link">
@@ -446,7 +481,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/4-3_axial-design-sand.html" class="sidebar-item-text sidebar-link active">
+  <a href="../notes/4-3_axial-design-sand.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Design methods</span></a>
   </div>
 </li>
@@ -506,16 +541,16 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
  <span class="menu-text">Shallow foundations</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/9-1_thornton-bank-example.html" class="sidebar-item-text sidebar-link">
+  <a href="../notes/9-1_thornton-bank-example.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Example: Thornton Bank</span></a>
   </div>
 </li>
@@ -533,19 +568,15 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#defining-pile-capacity" id="toc-defining-pile-capacity" class="nav-link active" data-scroll-target="#defining-pile-capacity">Defining pile capacity</a></li>
-  <li><a href="#design-methods" id="toc-design-methods" class="nav-link" data-scroll-target="#design-methods">Design methods</a>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
+  <li><a href="#brief" id="toc-brief" class="nav-link" data-scroll-target="#brief">Brief</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a>
   <ul class="collapse">
-  <li><a href="#effective-stress-design" id="toc-effective-stress-design" class="nav-link" data-scroll-target="#effective-stress-design">Effective stress design</a></li>
-  <li><a href="#cpt-based-design-methods" id="toc-cpt-based-design-methods" class="nav-link" data-scroll-target="#cpt-based-design-methods">CPT-based design methods</a></li>
+  <li><a href="#vhm-contributions" id="toc-vhm-contributions" class="nav-link" data-scroll-target="#vhm-contributions">1. VHM contributions</a></li>
+  <li><a href="#vertical-stability" id="toc-vertical-stability" class="nav-link" data-scroll-target="#vertical-stability">2. Vertical stability</a></li>
+  <li><a href="#resistance-for-sliding" id="toc-resistance-for-sliding" class="nav-link" data-scroll-target="#resistance-for-sliding">3. Resistance for sliding</a></li>
+  <li><a href="#improvements-to-the-design" id="toc-improvements-to-the-design" class="nav-link" data-scroll-target="#improvements-to-the-design">4. Improvements to the design</a></li>
   </ul></li>
-  <li><a href="#recent-research-into-cpt-based-pile-design" id="toc-recent-research-into-cpt-based-pile-design" class="nav-link" data-scroll-target="#recent-research-into-cpt-based-pile-design">Recent research into CPT-based pile design</a>
-  <ul class="collapse">
-  <li><a href="#database-assessments" id="toc-database-assessments" class="nav-link" data-scroll-target="#database-assessments">Database assessments</a></li>
-  <li><a href="#final-filling-ratio-ffr" id="toc-final-filling-ratio-ffr" class="nav-link" data-scroll-target="#final-filling-ratio-ffr">Final filling ratio (FFR)</a></li>
-  <li><a href="#unified-method" id="toc-unified-method" class="nav-link" data-scroll-target="#unified-method">Unified method</a></li>
-  </ul></li>
-  <li><a href="#pile-ageing" id="toc-pile-ageing" class="nav-link" data-scroll-target="#pile-ageing">Pile ageing</a></li>
   </ul>
 </nav>
     </div>
@@ -553,10 +584,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../notes/1_intro.html">📚 Course notes</a></li><li class="breadcrumb-item"><a href="../notes/4-1_piles-overview.html">Axial response of piles in sand</a></li><li class="breadcrumb-item"><a href="../notes/4-3_axial-design-sand.html">Design methods</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../notes/1_intro.html">📚 Course notes</a></li><li class="breadcrumb-item"><a href="../notes/9-1_thornton-bank-example.html">Shallow foundations</a></li><li class="breadcrumb-item"><a href="../notes/9-1_thornton-bank-example.html">Example: Thornton Bank</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Design methods</h1>
-<p class="subtitle lead">What happens to a pile after installation?</p>
+<h1 class="title">Worked example: Thornton Bank</h1>
 </div>
 
 
@@ -580,7 +610,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">19 September 2025</p>
+      <p class="date-modified">08 October 2025</p>
     </div>
   </div>
     
@@ -591,153 +621,7 @@ window.Quarto = {
 </header>
 
 
-<section id="defining-pile-capacity" class="level2">
-<h2 class="anchored" data-anchor-id="defining-pile-capacity">Defining pile capacity</h2>
-<p>Pinpointing exactly where pile failure occurred on a load-displacement curve can be a point-of-contention, especially when the load-displacement response suggests either a very “ductile” failure mechanism or a strain-hardening response. Ductile failure mechanisms are very common for bored/replacement piles, since the stresses imposed by installation on the surrounding soil was quite low—meaning it takes a lot of displacement to engage all the soil around the pile.</p>
-<p>Therefore design codes can often differ in how they define failure, particularly onshore codes where bored piles are used more often. Most design codes (particularly offshore) determine failure as when <strong>the <em>base</em> displacement reaches 10% of the pile diameter</strong> (<span class="math inline">\(s_{b,0.1D}\)</span>). Driven piles generally exhibit plunging failure at <span class="math inline">\(s_{b,0.1D}\)</span>, and by using the base displacement rather than the head displacement, influence of elastic shortening is removed from what should be a geotechnical calculation, providing a quantifiable and relevant parameter for geotechnical (and structural) design.</p>
-<div class="callout callout-style-default callout-tip callout-titled" title="**Side note:** Measuring a pile's axial capacity">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<strong>Side note:</strong> Measuring a pile’s axial capacity
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>To measure a pile’s actual axial capacity, there are several different ways to go about it. <strong>Static load tests</strong> are generally considered the most accurate way of going about it, loading the pile incrementally using, for example, a load test frame with concrete blocks (kentledge) as a reaction force.</p>
-<p>Yet static load tests last at least several hours, if not an entire day, which can often be prohibitive in terms of time (and thus costs) it adds to a project. <strong>Dynamic load tests</strong> are therefore an attractive alternative for getting an indication of the pile capacity. These can come in the form of “re-strike” tests, where the pile is equipped with a Pile Driving Analyser (PDA; essentially accelerometers and a strain gauge placed at the pile head) and one final hammer blow is applied. This gives an indication of the load-displacement response at the pile head, and then a wave mathcing program (such as <a href="https://www.pile.com/products/capwap/">CAPWAP</a>) is used to match and analytical model of the pile to the results.</p>
-<p><strong>Rapid load tests</strong> are very similar to dynamic load tests in that they apply an accelerating force onto the pile. However, a cushion/damper on top of the pile prolongs the duration of the blow, ensuring enough time for strain sensors along the pile to pick up the respone and reducing the more dynamic effects on the pile capacity.</p>
-<div id="fig-test-frame" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-test-frame-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="pics/axial/test-frame.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Static load test with a kentledge test frame"><img src="pics/axial/test-frame.jpg" class="img-fluid figure-img" style="width:60.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-test-frame-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Static load test with a kentledge test frame
-</figcaption>
-</figure>
-</div>
-<div id="fig-rapid-load-testing" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-rapid-load-testing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<iframe width="540" height="304" src="https://www.youtube.com/embed/fh078n7dQcE" title="StatRapid HamburgTests" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
-</iframe>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rapid-load-testing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Rapid load testing
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="design-methods" class="level2">
-<h2 class="anchored" data-anchor-id="design-methods">Design methods</h2>
-<section id="effective-stress-design" class="level3">
-<h3 class="anchored" data-anchor-id="effective-stress-design">Effective stress design</h3>
-<p>Modelling the series of stress changes that take place from installation to operational loading is often too complex for routine design. Therefore, design methods usually correlate the pile base and shaft capacities to in-situ soil properties, assessed prior to installation.</p>
-<p>The methods in API RP-2D reflect this. The code considers a “total stress method” for soils that behave mainly undrained (also known as the “alpha” method) and an “effective stress method” for soils that behave drained. Therefore, for drained sandy soils we take the effective stress method, where for the shaft friction:</p>
-<p><span id="eq-api-qb"><span class="math display">\[
-q_s = \beta_s \sigma'_v = K \tan{\delta}  \sigma'_v
-\tag{1}\]</span></span></p>
-<p>where <span class="math inline">\(\beta_s\)</span> is a shaft friction factor given in <a href="#tbl-api-rp2d" class="quarto-xref">Table&nbsp;1</a>, <span class="math inline">\(K\)</span> is the lateral earth pressure coefficient and <span class="math inline">\(\sigma'_v\)</span> is the in-situ vertical effective stress.</p>
-<p>For the base resistance:</p>
-<p><span id="eq-api-qs"><span class="math display">\[
-q_b = N_q \sigma'_v
-\tag{2}\]</span></span></p>
-<p>where <span class="math inline">\(N_q\)</span> is an end-bearing factor given in <a href="#tbl-api-rp2d" class="quarto-xref">Table&nbsp;1</a>.</p>
-<p>There are also some other prescriptions by the API design method:</p>
-<ul>
-<li><a href="#tbl-api-rp2d" class="quarto-xref">Table&nbsp;1</a> also includes “limiting resistances”, describing the maximum base and shaft capacity that can be used for designing a pile.</li>
-<li>The <span class="math inline">\(\beta\)</span> coefficients cited in <a href="#tbl-api-rp2d" class="quarto-xref">Table&nbsp;1</a> are for open-ended piles. To account for the increase in soil displacement, <span class="math inline">\(\beta\)</span> is increased by 25% for closed-ended piles. <span class="math inline">\(N_q\)</span> remains unchanged.</li>
-<li>The internal shaft resistance of an open-ended pile is assumed to be equal to the external shaft resistance</li>
-</ul>
-<div id="tbl-api-rp2d" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-api-rp2d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: API RP-2D design approach for open-ended piles. For closed-ended piles, the <span class="math inline">\(\beta\)</span> values are increased by 25%
-</figcaption>
-<div aria-describedby="tbl-api-rp2d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;"></th>
-<th style="text-align: center;">Shaft friction factor <span class="math inline">\(\beta\)</span> (-)</th>
-<th style="text-align: center;">Limiting shaft resistance <span class="math inline">\(q_{s,lim}\)</span> (kPa)</th>
-<th style="text-align: center;">End bearing factor <span class="math inline">\(N_q\)</span> (-)</th>
-<th style="text-align: center;">Limiting base resistance <span class="math inline">\(q_{b,lim}\)</span> (MPa)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Medium dense</td>
-<td style="text-align: center;">0.29</td>
-<td style="text-align: center;">67</td>
-<td style="text-align: center;">12</td>
-<td style="text-align: center;">3</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Medium dense to dense</td>
-<td style="text-align: center;">0.37</td>
-<td style="text-align: center;">81</td>
-<td style="text-align: center;">20</td>
-<td style="text-align: center;">5</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Dense to very dense</td>
-<td style="text-align: center;">0.46</td>
-<td style="text-align: center;">96</td>
-<td style="text-align: center;">40</td>
-<td style="text-align: center;">10</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Very dense</td>
-<td style="text-align: center;">0.56</td>
-<td style="text-align: center;">115</td>
-<td style="text-align: center;">50</td>
-<td style="text-align: center;">12</td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-<div id="fig-api-method" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-api-method-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="pics/axial/api.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;3: Visual representation of the API RP-2D design methods"><img src="pics/axial/api.jpg" class="img-fluid figure-img" style="width:80.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-api-method-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Visual representation of the API RP-2D design methods
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="cpt-based-design-methods" class="level3">
-<h3 class="anchored" data-anchor-id="cpt-based-design-methods">CPT-based design methods</h3>
-<p>Nevertheless, total stress and effective stress methods are generally rudimentary in nature, and give poor correlation with load test data compared to CPT-based methods. CPT-based have certain advantages over traditional stress-based approaches since (1) the mechanisms affecting a CPT and a pile are broadly comparable and (2) the CPT provides a reliable estimate of the <em>in-situ</em> soil conditions, particularly for soils where it’s difficult to collect clean, undisturbed borehole samples.</p>
-<section id="dutch-method-nen-9997-1" class="level4">
-<h4 class="anchored" data-anchor-id="dutch-method-nen-9997-1">Dutch method (NEN 9997-1)</h4>
-<p>While not an offshore design code per se, the CPT-based method in NEN 9997-1 underlies the basic principles of CPT-based design whereby:</p>
-<p><span id="eq-nen-qb"><span class="math display">\[
-q_b = \alpha_p q_{c,avg}
-\tag{3}\]</span></span></p>
-<p><span id="eq-nen-qs"><span class="math display">\[
-q_s = \alpha_s q_c
-\tag{4}\]</span></span></p>
-<p>where <span class="math inline">\(\alpha_p\)</span> and <span class="math inline">\(\alpha_s\)</span> are correlation coefficients which depend on the method of installation, and <span class="math inline">\(q_{c,avg}\)</span> is determined using the Koppejan 4D/8D method. For driven closed-ended piles, <span class="math inline">\(\alpha_p = 0.70\)</span> and <span class="math inline">\(\alpha_s = 0.010\)</span>.</p>
-<p>Just like the API method, NEN 9997-1 also includes limiting resistances on the base (15 MPa) and shaft (CPT <span class="math inline">\(q_c\)</span> profile limited to 12-15 MPa) respectively.</p>
+<p><a href="https://colab.research.google.com/github/triaduct/offshoregeotechnics/blob/main/notes/9-1_thornton-bank-example.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Open In Colab"></a> <nbsp></nbsp></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -748,216 +632,474 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Open tubular piles are treated separately to other pile types in the 2025 update to NEN 9997-1, aligning with the guidance document <em>CUR 2001-8: Bearing capacity of steel pipe piles</em>.</p>
-<p>The CUR 2001-8 method won’t be covered here, there is also an impending update to the method which will align the method more with the Unified pile design method.</p>
+<p>This is a worked example based on the geometries and loads provided by <span class="citation" data-cites="peireGravityBaseFoundations2009">Peire, Nonneman, and Bosschem (<a href="#ref-peireGravityBaseFoundations2009" role="doc-biblioref">2009</a>)</span>. Soil properties typical of sand have been assumed.</p>
 </div>
 </div>
-</section>
-</section>
-</section>
-<section id="recent-research-into-cpt-based-pile-design" class="level2">
-<h2 class="anchored" data-anchor-id="recent-research-into-cpt-based-pile-design">Recent research into CPT-based pile design</h2>
-<section id="database-assessments" class="level3">
-<h3 class="anchored" data-anchor-id="database-assessments">Database assessments</h3>
-<p>While a penetrating pile mobilises base resistances (or annular resistances) comparable to the cone tip resistance (i.e.&nbsp;<span class="math inline">\(q_b / q_c = 1\)</span>), <a href="#fig-qb-qc" class="quarto-xref">Figure&nbsp;4</a> shows that <span class="math inline">\(q_{b,0.1} / q_{c,filter} = 0.5\)</span> (also referred to as <span class="math inline">\(\alpha_p\)</span>, <a href="#eq-nen-qb" class="quarto-xref">Equation&nbsp;3</a>).</p>
-<p>There’s a couple of reasons for this. Importantly, residual loads aren’t included in this comparison nad therefore <span class="math inline">\(q_{b,0.1}\)</span> desn’t necessarily represent the true base resistances mobilised. Moreover, it’s also plausible that had several of the piles had been loaded further beyond <span class="math inline">\(s_b = 0.1D\)</span>, they would have mobilised more resistance—in-line with installation observations.</p>
-<p>Furthermore, the results from load tests in very dense sands at the Maasvlakte <span class="citation" data-cites="duffyInfluenceInstallationMethod2024">(<a href="#ref-duffyInfluenceInstallationMethod2024" role="doc-biblioref">Duffy et al. 2024</a>)</span> also show the conservatism in using limiting resistances: with the API effective stress method and NEN underestimating the resistance of these piles by up to 50%.</p>
-<div id="fig-qb-qc" class="quarto-float quarto-figure quarto-figure-center anchored">
+<section id="background" class="level1">
+<h1>Background</h1>
+<p>Thornton Bank is a wind farm 30km off the Belgian coast, in water depths of up to 30m. The first phase of construction was completed in 2009, comprising six 5 MW turbines all founded on gravity base foundations.</p>
+<div id="fig-thornton-bank" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-qb-qc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="pics/axial/qb-qc.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;4: Measured base resistances (q_{b,0.1D}) from closed-ended piles in the ISO/API database [@lehaneCharacteristicsUnifiedDatabases2017], Dutch database (CUR) and tests from the Port of Rotterdam (Amaliahaven and Waalhaven). q_{c,filter} was determined using the method by @deBoorderSW22"><img src="pics/axial/qb-qc.png" class="img-fluid figure-img" style="width:50.0%"></a>
+<div aria-describedby="fig-thornton-bank-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="pics/shfo/thornton-bank.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="(source)"><img src="pics/shfo/thornton-bank.png" class="img-fluid figure-img"></a></p>
+<figcaption><a href="https://www.maritimejournal.com/concrete-gravity-foundations-the-future-for-windfarms/508526.article">(source)</a></figcaption>
+</figure>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-qb-qc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Measured base resistances (<span class="math inline">\(q_{b,0.1D}\)</span>) from closed-ended piles in the ISO/API database <span class="citation" data-cites="lehaneCharacteristicsUnifiedDatabases2017">(<a href="#ref-lehaneCharacteristicsUnifiedDatabases2017" role="doc-biblioref">Lehane et al. 2017</a>)</span>, Dutch database (CUR) and tests from the Port of Rotterdam (Amaliahaven and Waalhaven). <span class="math inline">\(q_{c,filter}\)</span> was determined using the method by <span class="citation" data-cites="deBoorderSW22">de Boorder, de Lange, and Gavin (<a href="#ref-deBoorderSW22" role="doc-biblioref">2022</a>)</span>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><a href="pics/shfo/thornton-bank-location.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;1: Thornton Bank"><img src="pics/shfo/thornton-bank-location.png" class="img-fluid figure-img"></a></p>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-thornton-bank-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Thornton Bank
+</figcaption>
+</figure>
+</div>
+<p>The first soil layer consisted of ten metres of medium dense coarse sand. This was followed by ten-metre-thick layer of stiff clay and a thirteen-metre-thick layer of dense to very dense sand. A monopile design was considered for the site, although driveability and cost concerns meant that a gravity base foundation was chosen.</p>
+<p>An example of one of the foundations is given in <a href="#fig-thornton-bank-structure" class="quarto-xref">Figure&nbsp;2</a>.</p>
+<div id="fig-thornton-bank-structure" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-thornton-bank-structure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/shfo/thornton-bank-structure.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;2: Design of the gravity base foundation at Thornton Bank"><img src="pics/shfo/thornton-bank-structure.png" class="img-fluid figure-img" style="width:50.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-thornton-bank-structure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Design of the gravity base foundation at Thornton Bank
 </figcaption>
 </figure>
 </div>
 </section>
-<section id="final-filling-ratio-ffr" class="level3">
-<h3 class="anchored" data-anchor-id="final-filling-ratio-ffr">Final filling ratio (FFR)</h3>
-<p>In the previous section, we were introduced to the Plug Length Ratio (PLR) and how a plugged pile affects the radial stress regime around the pile itself. It should be noted that the PLR is a reflection of the entire installation process itself. Yet when we look at the operational capacity of a pile, its base resistance will invariably be affected by what happened as the pile approach its final depth during installation (<a href="#fig-plugging-ffr" class="quarto-xref">Figure&nbsp;5</a>).</p>
-<p>The <strong>final filling ratio (FFR)</strong> is therefore used when determining the pile capacity. The FFR is taken as the average IFR over the final three pile diameters of installation.</p>
-<p>Given the similarity between a closed-ended pile and a plugged open-ended pile, the effective area ratio <span class="math inline">\(A_{re}\)</span> is often used to quantify the behaviour of an open-ended pile based on the ratio of displaced soil to the gross pile volume (i.e.&nbsp;a fully plugged pile):</p>
-<p><span class="math display">\[
-A_{re} = 1 - FFR \frac{D_i^2}{D_o^2}
-\]</span></p>
-<p>Typical offshore piles have a wall thickness <span class="math inline">\(D/t \approx 40\)</span>, for which <span class="math inline">\(A_{re} \approx 0.1\)</span> during unplugged penetration. As <a href="#fig-plugging-ffr" class="quarto-xref">Figure&nbsp;5</a> shows, <span class="math inline">\(\alpha_p\)</span> varies from 0.5 (i.e.&nbsp;a closed-ended pile), down to around 0.15—essentially the same base resistance as a bored pile. In essence, this all shows the influence of prestressing on the pile base capacity.</p>
-<div id="fig-plugging-ffr" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-plugging-ffr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="pics/axial/plugging-qb.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;5: Influence of plugging over the final 2–3 pile diameters on the mobilised based resistance"><img src="pics/axial/plugging-qb.png" class="img-fluid figure-img" style="width:100.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-plugging-ffr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: Influence of plugging over the final 2–3 pile diameters on the mobilised based resistance
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="unified-method" class="level3">
-<h3 class="anchored" data-anchor-id="unified-method">Unified method</h3>
-<p>Up until 2020, four different CPT-based design methods were prescribed in API RP-2A:</p>
+<section id="brief" class="level1">
+<h1>Brief</h1>
+<p>You’ve been asked to calculate the stability of the foundation in <a href="#fig-thornton-bank-structure" class="quarto-xref">Figure&nbsp;2</a> as per ISO 19901-4:2016. Consider the foundation stability under ambient loading conditions:</p>
 <ol type="1">
-<li>Fugro-05</li>
-<li>ICP-05</li>
-<li>NGI-05</li>
-<li>UWA-05</li>
+<li>Calculate the (V, H, M) contributions</li>
+<li>Calculate the vertical stability of the existing design, including eccentric loading</li>
+<li>Calculate the resistance to sliding</li>
+<li>Are these results satisfactory? What refinements could you make to improve the design?</li>
 </ol>
-<p>These were an improvement on rudimentary formulations such as <a href="#eq-api-qb" class="quarto-xref">Equation&nbsp;1</a> or <a href="#eq-nen-qb" class="quarto-xref">Equation&nbsp;3</a> and explicitly accounted for phenomenae such as dilatant behaviour under loading or friction fatigue. However, there was a lack of agreement between the industry and researchers between the precise formulations for each phenomena, as well as the calibration of the methods themselves.</p>
-<p>Therefore, as part of a joint industry effort to harmonise design procedures, a so-called “Unified” pile design method was recently developed (<span class="citation" data-cites="lehaneNewUnifiedCPTbased2020">Lehane et al. (<a href="#ref-lehaneNewUnifiedCPTbased2020" role="doc-biblioref">2020</a>)</span>) and incorporated into the ISO 19901-4 and API RP 2A standards. This method was calibrated based on a high quality database of instrumented pile load tests, presented in <span class="citation" data-cites="lehaneCharacteristicsUnifiedDatabases2017">Lehane et al. (<a href="#ref-lehaneCharacteristicsUnifiedDatabases2017" role="doc-biblioref">2017</a>)</span>.</p>
-<p>The method is outlined in full in <a href="#tbl-unified-method-sand" class="quarto-xref">Table&nbsp;2</a> below.</p>
-<div id="tbl-unified-method-sand" class="quarto-float quarto-figure quarto-figure-center anchored">
+<p>In doing so, use the following assumptions:</p>
+<ul>
+<li>The foundation is directly on the seabed, with no embedment or scour protection</li>
+<li>Wind and waves act in the same direction and are considered as representative point loads.</li>
+</ul>
+<p>Some relevant properties are given in the table below:</p>
+<div id="tbl-parameters" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-unified-method-sand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2: Unified pile design method in sand <span class="citation" data-cites="lehaneNewUnifiedCPTbased2020">(<a href="#ref-lehaneNewUnifiedCPTbased2020" role="doc-biblioref">Lehane et al. 2020</a>)</span>
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-parameters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Relevant parameters
 </figcaption>
-<div aria-describedby="tbl-unified-method-sand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="tbl-parameters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 88%">
+<col style="width: 31%">
 <col style="width: 12%">
+<col style="width: 3%">
+<col style="width: 35%">
+<col style="width: 17%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;"><strong>Shaft resistance</strong></th>
-<th style="text-align: left;"></th>
+<th><strong>Superstructure</strong></th>
+<th></th>
+<th></th>
+<th><strong>Soil properties</strong></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(Q_s = \pi D \int_0^L q_s \, dz\)</span></td>
-<td style="text-align: left;"></td>
+<td>Rotor diameter</td>
+<td>126 m</td>
+<td></td>
+<td>Friction angle <span class="math inline">\(\phi'\)</span></td>
+<td>32°</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">\(q_s = \left(\frac{f_t}{f_c}\right) (\sigma'_{rc} + \Delta \sigma'_{rd}) \tan(29^\circ)\)</span></td>
-<td style="text-align: left;"></td>
+<td>Nacelle height above sealevel</td>
+<td>90 m</td>
+<td></td>
+<td>Saturated unit weight <span class="math inline">\(\gamma\)</span></td>
+<td>20 kN/m<sup>3</sup></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(\sigma'_{rc} = \frac{q_c}{44} A_{re}^{0.3} [\max\left(1,\frac{h}{D}\right)]^{-0.4}\)</span></td>
-<td style="text-align: left;"></td>
+<td>Nacelle-rotor weight</td>
+<td>4.1 MN</td>
+<td></td>
+<td>Sliding coefficient <span class="math inline">\(\delta\)</span></td>
+<td>29°</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\Delta \sigma'_{rd} = (\frac{q_c}{10}) ((\frac{q_c}{\sigma'_v})^{-0.33}) (\frac{d_{CPT}}{D})\)</span></td>
-<td style="text-align: left;"></td>
+<td>Tower weight</td>
+<td>3 MN</td>
+<td></td>
+<td>Material factor <span class="math inline">\(\gamma_m\)</span></td>
+<td>1.25</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(\frac{f_t}{f_c} = \begin{cases} 1.0 &amp; \text{(compression)} \\ 0.75 &amp; \text{(tension)} \end{cases}\)</span></td>
-<td style="text-align: left;"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">\(A_{re} = 1 - \text{PLR} \frac{D_i}{D}^2\)</span></td>
-<td style="text-align: left;"></td>
+<td><strong>Substructure</strong></td>
+<td></td>
+<td></td>
+<td><strong><em>To make your life easier</em></strong></td>
+<td></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><strong>Base resistance</strong></td>
-<td style="text-align: left;"></td>
+<td>Base diameter</td>
+<td>23.5m</td>
+<td></td>
+<td><span class="math inline">\(s\)</span></td>
+<td>77.3</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">\(Q_b = q_{b,0.1} \left(\frac{\pi D^2}{4}\right)\)</span></td>
-<td style="text-align: left;"></td>
+<td>Concrete weight</td>
+<td>30 MN</td>
+<td></td>
+<td><span class="math inline">\(K_{\gamma}\)</span></td>
+<td>0.7</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(q_{b,0.1} = (0.12 + 0.38 A_{re}) q_{c,avg}\)</span></td>
-<td style="text-align: left;"></td>
+<td>Ballast weight</td>
+<td>38 MN</td>
+<td></td>
+<td><span class="math inline">\(K_q\)</span></td>
+<td>1.3</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">\(A_{re} = 1 - \text{FFR} \left(\frac{D_i}{D}\right)^2 \approx 1 - \text{PLR} \left(\frac{D_i}{D}\right)^2\)</span></td>
-<td style="text-align: left;"></td>
+<td>Buoyant volume</td>
+<td>2965 m<sup>3</sup></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Ambient loads</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Wind thrust</td>
+<td>2.03 MN</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Wind arm lever</td>
+<td>120 m</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Sea thrust</td>
+<td>8.07 MN</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Sea arm lever</td>
+<td>5 m</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
 </div>
 </figure>
 </div>
-<p>Some other remarks:</p>
-<ul>
-<li>There isn’t one particular averaging method that is recommended for determining <span class="math inline">\(q_{c,avg}\)</span>. For homogeneous sands, the LCPC 1.5D method can be used. For more variable strata, the Koppejan 4D/8D method can be used, where <span class="math inline">\(q_{c,avg} = 1.2*q_{c,4D/8D}\)</span>. Otherwise, the filter method by <span class="citation" data-cites="boulangerInverseFilteringProcedure2018">Boulanger and DeJong (<a href="#ref-boulangerInverseFilteringProcedure2018" role="doc-biblioref">2018</a>)</span> can be used.</li>
-<li>To account for the soil plug, <span class="math inline">\(q_{c,avg}\)</span> is determined using the diameter of an equivalent pile, whose area is equal to the effective area ratio <span class="math inline">\(A_{re}\)</span></li>
-<li>For piles under tension, the resistance is factored down by <span class="math inline">\(f_t / f_c = 0.75\)</span>. This is a result of a reverse Poisson’s ratio effect as the pile extends under tension loading, thus also reversing the loads from compressive pile driving.</li>
-<li>Where plug measurements are not available, the Unified method also recommends a formulation for predicting the plug response:</li>
-</ul>
+<div class="callout callout-style-default callout-important callout-titled" title="Note: 8th October 2025">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note: 8th October 2025
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In the example in class, I gave <span class="math inline">\(s = 130\)</span>. As you can see in the following calculations, this value for <span class="math inline">\(s\)</span> was incorrect.</p>
+<p>If I put 130 into the calculation instead of what’s given below, the result for the vertical capacity is 101 MN.</p>
+<p>Apologies!</p>
+</div>
+</div>
+</section>
+<section id="results" class="level1">
+<h1>Results</h1>
+<section id="vhm-contributions" class="level2">
+<h2 class="anchored" data-anchor-id="vhm-contributions">1. VHM contributions</h2>
+<p>To get the vertical contribution, let’s say <span class="math inline">\(V_{demand}\)</span>, it’s simply the sum of the weights of the nacelle, tower, concrete and the ballast.</p>
+<p>However, there is also a buoyant weight acting on the volume of displaced water. This also needs to be included so that we have the <em>effective weight</em> of the structure. Therefore:</p>
+<div id="cd7b9372-5cfc-4548-8838-737beccc988d" class="cell" data-tags="[]" data-execution_count="141">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>buoyant_contribution <span class="op">=</span> (<span class="dv">2965</span><span class="op">*</span><span class="dv">10</span>)<span class="op">/</span><span class="dv">1000</span>  <span class="co"># [MN]</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>V_demand <span class="op">=</span> (<span class="fl">4.1</span><span class="op">+</span><span class="dv">3</span><span class="op">+</span><span class="dv">30</span><span class="op">+</span><span class="dv">38</span>)<span class="op">-</span>buoyant_contribution</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The effective vertical load is </span><span class="sc">{</span>V_demand<span class="sc">:.0f}</span><span class="ss"> MN, including the buoyancy contribution of </span><span class="sc">{</span>buoyant_contribution<span class="sc">:.0f}</span><span class="ss"> MN"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>The effective vertical load is 45 MN, including the buoyancy contribution of 30 MN</code></pre>
+</div>
+</div>
+<p>The horizontal component is simply just the sum of the loads imposed by both the wind and sea. These are normally distributed loads, although they have been converted into a representative point load at a certain point on the foundation/turbine.</p>
+<div id="701cdc07-de9b-4639-86ed-32bf8d482bde" class="cell" data-tags="[]" data-execution_count="142">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>H_demand <span class="op">=</span> <span class="fl">2.03</span><span class="op">+</span><span class="fl">8.07</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The horizontal load is </span><span class="sc">{</span>H_demand<span class="sc">:.0f}</span><span class="ss"> MN"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>The horizontal load is 10 MN</code></pre>
+</div>
+</div>
+<p>The moment load is simply these horizontal loads, multiplied by the distance away from the foundation base (i.e.&nbsp;the lever arm). For this exercise, we assume they’re just acting in the same direction, representing the worst possible case.</p>
+<div id="068b48dc-4783-44ec-99a7-8bbee094e13e" class="cell" data-tags="[]" data-execution_count="143">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>M_demand <span class="op">=</span> <span class="fl">2.03</span><span class="op">*</span><span class="dv">120</span> <span class="op">+</span> <span class="fl">8.07</span><span class="op">*</span><span class="dv">5</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The moment load is </span><span class="sc">{</span>M_demand<span class="sc">:.0f}</span><span class="ss"> MNm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>The moment load is 284 MNm</code></pre>
+</div>
+</div>
+</section>
+<section id="vertical-stability" class="level2">
+<h2 class="anchored" data-anchor-id="vertical-stability">2. Vertical stability</h2>
+<p>Since the foundation is directly on sand, our focus is on an effective stress analysis (assuming drained conditions). Therefore the following formula is applicable:</p>
+<p><span id="eq-qlim"><span class="math display">\[
+q_{lim} = \frac{1}{2} \gamma' B_r N_\gamma K_\gamma + \sigma'_{v0}(N_q-1)K_q + c N_c s_c i_c d_c
+\tag{1}\]</span></span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Importantly, <strong>there is no surcharge load</strong> since the foundation is founded directly on the seabed. Therefore <span class="math inline">\(\sigma'_{v0}=0\)</span>, and likewise for the second term of the equation).</p>
+<p>Furthermore there is <strong>no cohesion in sand</strong> (or at least very, very little). Therefore <span class="math inline">\(c=0\)</span>, and likewise for the third term of the equation.</p>
+</div>
+</div>
+<p>We’ve a circular foundation, so the first step then is to determine the effective width <span class="math inline">\(B'\)</span>. This describes the reduced foundation area under combined horizontal/moment and vertical loading. For a circular foundation, the reduced area is semi-elliptical in-shape so for simplicity, ISO 19901-4 converts this shape to a rectangle with an equivalent area.</p>
+<p>We’ve already been provided with <span class="math inline">\(s\)</span> in <a href="#tbl-parameters" class="quarto-xref">Table&nbsp;1</a> although I’ll include my calculation of it here anyway.</p>
+<div id="1665b92f-2fd4-4ac2-815a-1426fd24eab9" class="cell" data-tags="[]" data-execution_count="144">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Geometrical parameters</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="fl">23.5</span><span class="op">/</span><span class="dv">2</span> <span class="co"># [m] Radius of the foundation</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> np.pi<span class="op">*</span>R<span class="op">**</span><span class="dv">2</span> <span class="co"># [m2]</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>e <span class="op">=</span> M_demand<span class="op">/</span>V_demand <span class="co"># Load eccentricity</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> (np.pi<span class="op">*</span>R<span class="op">**</span><span class="dv">2</span>)<span class="op">/</span><span class="dv">2</span> <span class="op">-</span> (e<span class="op">*</span>np.sqrt(R<span class="op">**</span><span class="dv">2</span><span class="op">-</span>e<span class="op">**</span><span class="dv">2</span>) <span class="op">+</span> R<span class="op">**</span><span class="dv">2</span> <span class="op">*</span> np.arcsin(e<span class="op">/</span>R))</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>L_eff <span class="op">=</span> np.sqrt(<span class="dv">2</span><span class="op">*</span>s<span class="op">*</span>np.sqrt((R<span class="op">+</span>e)<span class="op">/</span>(R<span class="op">-</span>e)))</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>B_eff <span class="op">=</span> L_eff <span class="op">*</span> np.sqrt((R<span class="op">-</span>e)<span class="op">/</span>(R<span class="op">+</span>e))</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>A_eff <span class="op">=</span> B_eff<span class="op">*</span>L_eff</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The effective area is </span><span class="sc">{</span>A_eff<span class="sc">:.0f}</span><span class="ss"> m2 (true area = </span><span class="sc">{</span>A<span class="sc">:.0f}</span><span class="ss">m2)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>The effective area is 155 m2 (true area = 434m2)</code></pre>
+</div>
+</div>
+<p>This is quite a large reduction in the soil/foundation contact zone! This is unsurprising to some extent: wind turbines are designed to catch as much horizontal load (wind) after all. But if we were to go beyond this simple example, this potential conservatism may warrant further investigation into the prevailing wind and current patterns and into more complex numerical or physical models.</p>
+<p>Next up are the bearing capacity factors <span class="math inline">\(N_q\)</span> and <span class="math inline">\(N_\gamma\)</span>. The bearing capacity correction factors <span class="math inline">\(K_q\)</span>, <span class="math inline">\(K_\gamma\)</span> have already been included in <a href="#tbl-parameters" class="quarto-xref">Table&nbsp;1</a>, although but the calculation is included below.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Don’t forget to include the model factor <span class="math inline">\(\gamma_m\)</span> any time a soil parameter is used! This accounts for any uncertainties we have in the soil properties, be it measurement uncertainty or inherent soil variability.</p>
+</div>
+</div>
+<div id="42742d27-4932-4424-bf39-d765dede7c29" class="cell" data-tags="[]" data-execution_count="145">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Soil parameters</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>friction_angle <span class="op">=</span> np.radians(<span class="dv">32</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>model_factor <span class="op">=</span> <span class="fl">1.25</span> <span class="co"># gamma_m, to be applied to any soil properties</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>unit_weight <span class="op">=</span> <span class="dv">20</span> <span class="co"># Saturated unit weight [kN/m3]</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>unit_weight_eff <span class="op">=</span> <span class="dv">20</span><span class="op">-</span><span class="dv">10</span> <span class="co"># Effective unit weight [kN/m3]</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>delta <span class="op">=</span> np.radians (<span class="dv">29</span>) <span class="co"># Interface friction angle</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Bearing capacity factors</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>Ngamma <span class="op">=</span> (<span class="dv">3</span><span class="op">/</span><span class="dv">2</span>)<span class="op">*</span>(Nq<span class="op">-</span><span class="dv">1</span>)<span class="op">*</span>(np.tan(friction_angle)<span class="op">/</span>model_factor)</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Ngamma = </span><span class="sc">{</span>Ngamma<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Bearing capacity correction factors (Already provided in table)</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>igamma <span class="op">=</span> <span class="dv">1</span><span class="op">-</span><span class="fl">0.7</span><span class="op">*</span>(H_demand<span class="op">/</span>V_demand)<span class="op">**</span><span class="dv">5</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>sgamma <span class="op">=</span> <span class="dv">1</span><span class="op">-</span><span class="fl">0.4</span><span class="op">*</span>i_gamma<span class="op">*</span>(B_eff<span class="op">/</span>L_eff)</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>dgamma <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>Kgamma <span class="op">=</span> sgamma<span class="op">*</span>dgamma<span class="op">*</span>igamma</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Kgamma = </span><span class="sc">{</span>Kgamma<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Ngamma = 8.34
+Kgamma = 0.78</code></pre>
+</div>
+</div>
+<p>Finally, we put this all into <a href="#eq-qlim" class="quarto-xref">Equation&nbsp;1</a>. Since <span class="math inline">\(q_{lim}\)</span> is not overly useful by itself, so we’ll convert it to a force in kN. This is still done using the effective area.</p>
+<div id="8a2ef891-c17f-4d6c-94bb-085d4266617b" class="cell" data-tags="[]" data-execution_count="146">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>qlim <span class="op">=</span> <span class="fl">0.5</span><span class="op">*</span>unit_weight_eff<span class="op">*</span>B_eff<span class="op">*</span>Ngamma<span class="op">*</span>Kgamma <span class="co"># kPa</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>V_capacity <span class="op">=</span> (qlim<span class="op">*</span>A_eff)<span class="op">/</span><span class="dv">1000</span> <span class="co"># MN</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The vertical capacity is </span><span class="sc">{</span>V_capacity<span class="sc">:.0f}</span><span class="ss"> MN"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>The vertical capacity is 46 MN</code></pre>
+</div>
+</div>
+</section>
+<section id="resistance-for-sliding" class="level2">
+<h2 class="anchored" data-anchor-id="resistance-for-sliding">3. Resistance for sliding</h2>
+<p>The resistance to sliding is relatively straightforward to determine for a foundation with no embedment. To do this for sand, we take an effective stress analysis whereby:</p>
 <p><span class="math display">\[
-PLR \approx \tanh\left(0.3 \left(\frac{D_i}{d_{CPT}}\right)^{0.5}\right)
+H_{ult} = A_r (V' \tan{\delta})
 \]</span></p>
-</section>
-</section>
-<section id="pile-ageing" class="level2">
-<h2 class="anchored" data-anchor-id="pile-ageing">Pile ageing</h2>
-<p>The Unified pile design method is far from a “final” design method. Plenty of uncertainties still remain, especially with time-dependent increases in shaft capacity.</p>
-<p>Notably observations (e.g. <span class="citation" data-cites="axelssonLongtermSetupDriven2000">Axelsson (<a href="#ref-axelssonLongtermSetupDriven2000" role="doc-biblioref">2000</a>)</span>, <span class="citation" data-cites="limCharacterisationEffectsTime2014">Lim and Lehane (<a href="#ref-limCharacterisationEffectsTime2014" role="doc-biblioref">2014</a>)</span>, <span class="citation" data-cites="gavinEffectsPileAgeing2015">Gavin et al. (<a href="#ref-gavinEffectsPileAgeing2015" role="doc-biblioref">2015</a>)</span>, <span class="citation" data-cites="jardine6thISSMGEMcClelland2023">Jardine (<a href="#ref-jardine6thISSMGEMcClelland2023" role="doc-biblioref">2023</a>)</span>) show that there’s a time dependent increase in capacity. This is referred to pile ageing or set-up.</p>
-<div id="fig-rimoy-aging-curve" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-rimoy-aging-curve-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="pics/axial/rimoy15-iac.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;6: Variation of shaft tension capacity with age for 340 to 508mm OD steel piles driven at three sand sites, normalised by ICP-05 predictions, with intact ageing characteristic (IAC) [@rimoyFieldModelInvestigations2015]"><img src="pics/axial/rimoy15-iac.jpg" class="img-fluid figure-img" style="width:60.0%"></a>
+<div id="ca4eb68f-2666-4c18-82e6-5f7f7003d74d" class="cell" data-tags="[]" data-execution_count="135">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>H_capacity <span class="op">=</span> A_eff<span class="op">*</span>(V_demand <span class="op">*</span> np.tan(delta))</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The horizontal capacity is </span><span class="sc">{</span>H_capacity<span class="sc">:.0f}</span><span class="ss"> MN"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>The horizontal capacity is 3895 MN</code></pre>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rimoy-aging-curve-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6: Variation of shaft tension capacity with age for 340 to 508mm OD steel piles driven at three sand sites, normalised by ICP-05 predictions, with intact ageing characteristic (IAC) <span class="citation" data-cites="rimoyFieldModelInvestigations2015">(<a href="#ref-rimoyFieldModelInvestigations2015" role="doc-biblioref">Rimoy et al. 2015</a>)</span>
-</figcaption>
-</figure>
 </div>
-<p>There a several potential mechanisms that cause pile ageing:</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Bonus: Moment check">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Bonus: Moment check
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This wasn’t requested in the initial brief, but as a quick check of the moments, we can compare the overturning moments (by wind and waves) to the restoring moments (self-weight of the structure) by:</p>
+<p><span class="math display">\[
+F h = V' D
+\]</span> where <span class="math inline">\(h\)</span> is the distance from the pile base to the point upon which the force <span class="math inline">\(F\)</span> acts.</p>
+<p>Therefore:</p>
+<div id="f443930d-e11a-4d1a-9dee-282c97e2a12d" class="cell" data-tags="[]" data-execution_count="136">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>restoring_moment <span class="op">=</span> V_demand <span class="op">*</span> R</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>overturning_moments <span class="op">=</span> <span class="fl">2.03</span><span class="op">*</span><span class="dv">120</span> <span class="op">+</span> <span class="fl">8.07</span><span class="op">*</span><span class="dv">5</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Restoring moment = </span><span class="sc">{</span>restoring_moment<span class="sc">:.0f}</span><span class="ss"> MNm"</span>)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Overturning moment = </span><span class="sc">{</span>overturning_moments<span class="sc">:.0f}</span><span class="ss"> MNm"</span>)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>      </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Restoring moment = 534 MNm
+Overturning moment = 284 MNm</code></pre>
+</div>
+</div>
+<p>The restoring moment is greater than the overturning moment, so we’re ok!</p>
+</div>
+</div>
+</div>
+<!-- #End of Quarto callout -->
+</section>
+<section id="improvements-to-the-design" class="level2">
+<h2 class="anchored" data-anchor-id="improvements-to-the-design">4. Improvements to the design</h2>
+<p>Let’s look at our unity checks:</p>
+<div id="b3b4d3e2-b7cd-4140-a5bf-391650e53f03" class="cell" data-tags="[]" data-execution_count="137">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"V_demand/V_capacity = </span><span class="sc">{</span>V_demand<span class="op">/</span>V_capacity<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"H_demand/H_capacity = </span><span class="sc">{</span>H_demand<span class="op">/</span>H_capacity<span class="sc">:.3f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>V_demand/V_capacity = 0.98
+H_demand/H_capacity = 0.003</code></pre>
+</div>
+</div>
+<p>Clearly, we have zero issues here with the horizontal capacity. Generally, drained conditions in sand don’t pose an issue to horizontal stability. However, the horizontal capacity begins to become more critical in undrained scenarios. Of course, this will include foundation capacity in clay, however, undrained scenarios can even occur in sands under the short duration of a single wave load. Therefore both drained and undrained checks are recommended when performing a full foundation calculation.</p>
+<p>Even more importantly, the vertical capacity is <em>reallllllyyyy</em> close to the final design load. If we also take into account cyclic loading and corresponding degradation, we could well be approaching ULS failure. Surely this can’t be the case?</p>
+<p>Well there’s a couple of things we’re missing:</p>
 <ul>
-<li><p><strong>Corrosion and physio-chemical reaction</strong> around the pile shaft, resulting in the interface changing from a soil-pile interface to a soil-soil interface (e.g.&nbsp;Figure <a href="#fig-aging-crust" class="quarto-xref">Figure&nbsp;7</a>).</p></li>
-<li><p><strong>Creep-induced breakdown of hoop stresses</strong> (or arching around the pile) which first developed during pile installation, increasing the stationary radial stresses on the pile itself.</p></li>
-<li><p><strong>Microstructural rearrangements and increased grain interlocking</strong> causing an increase in constrained dilation (<span class="math inline">\(\Delta \sigma'_{rd}\)</span>) over time.</p></li>
+<li>We don’t have the full details of the loads provided. Have these been factored? Are they absolutely the worst-case scenario?</li>
+<li>We’ve also just assumed that the foundation rests on the seabed yet in reality, there the foundation is embedded underneath 3.5m of fill.</li>
 </ul>
-<div id="fig-aging-crust" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-aging-crust-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="pics/axial/gavin21-fig15.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;7: Photographs of cemented sand crust adhered to an steel tubular pile following extraction: (a) cemented sand crust on pile with distinct layers; (b) difficulty removing layer 1 [@gavinFieldInvestigationMechanisms2021]"><img src="pics/axial/gavin21-fig15.png" class="img-fluid figure-img" style="width:60.0%"></a>
+<p>If we want to improve the design, some foundation embedment may be required. And in reality, this is exactly what was done at Thornton Bank: the foundation was indeed embedded under both a fill and scour protection layer (<a href="#fig-thornton-bank-structure" class="quarto-xref">Figure&nbsp;2</a>).</p>
+<p>If we include embedment into our calculation, the effective stress is therefore no longer zero at the base of the foundation. This means the second (surcharge) term of <a href="#eq-qlim" class="quarto-xref">Equation&nbsp;1</a> comes in to play. The first term remains the same.</p>
+<div id="724ed772-4ec5-4622-ac14-38119173b447" class="cell" data-tags="[]" data-execution_count="128">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>embedment <span class="op">=</span> <span class="fl">3.5</span> <span class="co"># [m]</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>water_depth <span class="op">=</span> <span class="dv">30</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>sig_eff <span class="op">=</span> unit_weight_eff<span class="op">*</span>embedment</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Effective stress at foundation base = </span><span class="sc">{</span>sig_eff<span class="sc">:.0f}</span><span class="ss">kPa"</span>)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Bearing capacity factor</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>Nq <span class="op">=</span> (np.tan(np.pi<span class="op">/</span><span class="dv">4</span> <span class="op">+</span> <span class="fl">0.5</span><span class="op">*</span>np.arctan(np.tan(friction_angle<span class="op">/</span>model_factor)))<span class="op">**</span><span class="dv">2</span>) <span class="op">*</span> np.exp(np.pi<span class="op">*</span>(np.tan(friction_angle)<span class="op">/</span>model_factor))</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Nq = </span><span class="sc">{</span>Nq<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>iq <span class="op">=</span> <span class="dv">1</span><span class="op">-</span><span class="fl">0.5</span><span class="op">*</span>(H_demand<span class="op">/</span>V_demand)<span class="op">**</span><span class="dv">5</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>sq <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> iq<span class="op">*</span>(B_eff<span class="op">/</span>L_eff) <span class="op">*</span> np.sin(np.arctan(np.tan(friction_angle)<span class="op">/</span>model_factor))</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>dq <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> <span class="fl">1.2</span><span class="op">*</span>(R<span class="op">*</span><span class="dv">2</span><span class="op">/</span>B_eff) <span class="op">*</span> (np.tan(friction_angle)<span class="op">/</span>model_factor) <span class="op">*</span> (<span class="dv">1</span><span class="op">-</span>np.sin(np.arctan(np.tan(model_factor)<span class="op">/</span>model_factor)))<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>Kq <span class="op">=</span> sq<span class="op">*</span>dq<span class="op">*</span>iq</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Kq = </span><span class="sc">{</span>Kq<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>qlim <span class="op">=</span> <span class="fl">0.5</span><span class="op">*</span>unit_weight_eff<span class="op">*</span>B_eff<span class="op">*</span>Ngamma<span class="op">*</span>Kgamma <span class="op">+</span> sig_eff<span class="op">*</span>(Nq<span class="op">-</span><span class="dv">1</span>)<span class="op">*</span>Kq <span class="co"># kPa</span></span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>V_capacity_embedded <span class="op">=</span> (qlim<span class="op">*</span>A_eff)<span class="op">/</span><span class="dv">1000</span> <span class="co"># MN</span></span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The vertical capacity after embedment is </span><span class="sc">{</span>V_capacity_embedded<span class="sc">:.0f}</span><span class="ss"> MN"</span>)</span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"V_demand/V_capacity = </span><span class="sc">{</span>V_demand<span class="op">/</span>V_capacity_embedded<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Effective stress at foundation base = 35kPa
+Nq = 12.13
+Kq = 1.26
+
+The vertical capacity after embedment is 122 MN
+V_demand/V_capacity = 0.37</code></pre>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-aging-crust-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;7: Photographs of cemented sand crust adhered to an steel tubular pile following extraction: (a) cemented sand crust on pile with distinct layers; (b) difficulty removing layer 1 <span class="citation" data-cites="gavinFieldInvestigationMechanisms2021">(<a href="#ref-gavinFieldInvestigationMechanisms2021" role="doc-biblioref">Gavin and Igoe 2021</a>)</span>
-</figcaption>
-</figure>
 </div>
-<p>While these mechanisms offer some explanation for pile ageing, this is still an area of research that is very much ongoing. This particularly focussing on the influence of factors such as the installation method, steel type, loading history and pile geometry on the degree of pile ageing <span class="citation" data-cites="anusicEvaluationInstallationEffects2019 carrollFieldExperimentsThree2019 bittarExperimentalStudyFactors2025">(<a href="#ref-anusicEvaluationInstallationEffects2019" role="doc-biblioref">Anusic et al. 2019</a>; <a href="#ref-carrollFieldExperimentsThree2019" role="doc-biblioref">Carroll et al. 2019</a>; <a href="#ref-bittarExperimentalStudyFactors2025" role="doc-biblioref">Bittar and Lehane 2025</a>)</span>.</p>
+<p>This is much better! This also gives “reserve capacity” when we start looking at long-term capacity, particularly under cyclic loading.</p>
 
 
 
+</section>
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-anusicEvaluationInstallationEffects2019" class="csl-entry" role="listitem">
-Anusic, Ivana, Barry M. Lehane, Gudmund R. Eiksund, and Morten A. Liingaard. 2019. <span>“Evaluation of Installation Effects on Set-up of Field Displacement Piles in Sand.”</span> <em>Canadian Geotechnical Journal</em> 56 (4): 461–72. <a href="https://doi.org/10.1139/cgj-2017-0730">https://doi.org/10.1139/cgj-2017-0730</a>.
-</div>
-<div id="ref-axelssonLongtermSetupDriven2000" class="csl-entry" role="listitem">
-Axelsson, G. 2000. <span>“Long-Term Set-up of Driven Piles in Sand.”</span> PhD thesis, Stockholm, Sweden: Royal Institute of Technology.
-</div>
-<div id="ref-bittarExperimentalStudyFactors2025" class="csl-entry" role="listitem">
-Bittar, Eduardo M., and Barry M. Lehane. 2025. <span>“An Experimental Study on Factors Affecting the Ageing of Shaft Friction on Steel Displacement Piles in Sand.”</span> <em>G<span>é</span>otechnique</em> 75 (3): 348–61. <a href="https://doi.org/10.1680/jgeot.23.00047">https://doi.org/10.1680/jgeot.23.00047</a>.
-</div>
-<div id="ref-boulangerInverseFilteringProcedure2018" class="csl-entry" role="listitem">
-Boulanger, R. W., and J. T. DeJong. 2018. <span>“Inverse Filtering Procedure to Correct Cone Penetration Data for Thin-Layer and Transition Effects.”</span> In <em>Proceedings of the 4th <span>International Symposium</span> on <span>Cone Penetration Testing</span> (<span>CPT</span>’18)</em>, 24–44. CRC Press.
-</div>
-<div id="ref-carrollFieldExperimentsThree2019" class="csl-entry" role="listitem">
-Carroll, R., P. Carotenuto, C. Dano, I. Salama, M. Silva, S. Rimoy, Kenneth G. Gavin, and R. Jardine. 2019. <span>“Field Experiments at Three Sites to Investigate the Effects of Age on Steel Piles Driven in Sand.”</span> <em>G<span>é</span>otechnique</em> 70 (6): 469–89. <a href="https://doi.org/10.1680/jgeot.17.P.185">https://doi.org/10.1680/jgeot.17.P.185</a>.
-</div>
-<div id="ref-deBoorderSW22" class="csl-entry" role="listitem">
-de Boorder, M., Dirk A. de Lange, and Kenneth G. Gavin. 2022. <span>“An Alternative <span>CPT</span> Averaging Procedure to Estimate Pile Base Capacity.”</span> In <em>Proceedings from the 11th <span>International Conference</span> on <span>Stress Wave Theory</span> and <span>Design</span> and <span>Testing Methods</span> for <span>Deep Foundations</span></em>. Rotterdam, The Netherlands. <a href="https://doi.org/10.5281/zenodo.7142197">https://doi.org/10.5281/zenodo.7142197</a>.
-</div>
-<div id="ref-duffyInfluenceInstallationMethod2024" class="csl-entry" role="listitem">
-Duffy, Kevin J., Kenneth G. Gavin, Mandy Korff, Dirk A. de Lange, and Alfred A. Roubos. 2024. <span>“Influence of Installation Method on the Axial Capacity of Piles in Very Dense Sand.”</span> <em>Journal of Geotechnical and Geoenvironmental Engineering</em> 150 (6). <a href="https://doi.org/10.1061/JGGEFK/GTENG-12026">https://doi.org/10.1061/JGGEFK/GTENG-12026</a>.
-</div>
-<div id="ref-gavinFieldInvestigationMechanisms2021" class="csl-entry" role="listitem">
-Gavin, Kenneth G., and David Igoe. 2021. <span>“A Field Investigation into the Mechanisms of Pile Ageing in Sand.”</span> <em>G<span>é</span>otechnique</em> 71 (2): 120–31. <a href="https://doi.org/10.1680/jgeot.18.P.235">https://doi.org/10.1680/jgeot.18.P.235</a>.
-</div>
-<div id="ref-gavinEffectsPileAgeing2015" class="csl-entry" role="listitem">
-Gavin, Kenneth G., Richard J. Jardine, K. Karlsud, and Barry M. Lehane. 2015. <span>“The Effects of Pile Ageing on the Shaft Capacity of Offshore Piles in Sand.”</span> In <em>Proceedings of the 3rd <span>International Symposium</span> on <span>Frontiers</span> in <span>Offshore Geotechnics</span></em>, 1:129–51. Leiden, The Netherlands: Taylor &amp; Francis.
-</div>
-<div id="ref-jardine6thISSMGEMcClelland2023" class="csl-entry" role="listitem">
-Jardine, R. J. 2023. <span>“The 6th <span>ISSMGE McClelland Lecture</span>: <span class="nocase">Time-dependent</span> Vertical Bearing Behaviour of Shallow Foundations and Driven Piles.”</span> In <em>Offshore <span>Site Investigation Geotechnics</span> 9th <span>International Conference Proceedings</span></em>, 25–78. London, United Kingdom: Society for Underwater Technology. <a href="https://doi.org/10.3723/GIRI9226">https://doi.org/10.3723/GIRI9226</a>.
-</div>
-<div id="ref-lehaneCharacteristicsUnifiedDatabases2017" class="csl-entry" role="listitem">
-Lehane, Barry M., Jit Kheng Lim, Pasquale Carotenuto, Farrokh Nadim, Suzanne Lacasse, Richard J. Jardine, and Bas van Dijk. 2017. <span>“Characteristics of Unified Databases for Driven Piles.”</span> In <em>Offshore <span>Site Investigation Geotechnics</span> 8th <span>International Conference Proceedings</span></em>, 1:162–94. London, United Kingdom: Society for Underwater Technology. <a href="https://doi.org/10.3723/OSIG17.162">https://doi.org/10.3723/OSIG17.162</a>.
-</div>
-<div id="ref-lehaneNewUnifiedCPTbased2020" class="csl-entry" role="listitem">
-Lehane, Barry M., Zhongqiang Liu, Eduardo J. Bittar, Farrokh Nadim, Suzanne Lacasse, Richard J. Jardine, Pasquale Carotenuto, et al. 2020. <span>“A New ’Unified’ <span class="nocase">CPT-based</span> Axial Pile Capacity Design Method for Driven Piles in Sand.”</span> In <em>Proceedings of the 4th <span>International Symposium</span> on <span>Frontiers</span> in <span>Offshore Geotechnics</span></em>, 462–77. Austin, Texas, USA: Deep Foundations Institute.
-</div>
-<div id="ref-limCharacterisationEffectsTime2014" class="csl-entry" role="listitem">
-Lim, J. K., and Barry M. Lehane. 2014. <span>“Characterisation of the Effects of Time on the Shaft Friction of Displacement Piles in Sand.”</span> <em>G<span>é</span>otechnique</em> 64 (6): 476–85. <a href="https://doi.org/10.1680/geot.13.P.220">https://doi.org/10.1680/geot.13.P.220</a>.
-</div>
-<div id="ref-rimoyFieldModelInvestigations2015" class="csl-entry" role="listitem">
-Rimoy, S., M. Silva, R. Jardine, Z. X. Yang, B. T. Zhu, and C. H. C. Tsuha. 2015. <span>“Field and Model Investigations into the Influence of Age on Axial Capacity of Displacement Piles in Silica Sands.”</span> <em>G<span>é</span>otechnique</em> 65 (7): 576–89. <a href="https://doi.org/10.1680/geot.14.P.112">https://doi.org/10.1680/geot.14.P.112</a>.
+<div id="ref-peireGravityBaseFoundations2009" class="csl-entry" role="listitem">
+Peire, Kenneth, Hendrik Nonneman, and Eric Bosschem. 2009. <span>“Gravity Base Foundations for the <span>Thornton Bank</span> Offshore Wind Farm.”</span> <em>Terre Et Aqua</em>, no. 115: 19–29.
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
