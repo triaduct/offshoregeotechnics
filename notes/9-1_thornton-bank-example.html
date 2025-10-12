@@ -1078,7 +1078,7 @@ H_demand/H_capacity = 0.501</code></pre>
 </ul>
 <p>If we want to improve the design, some foundation embedment may be required. And in reality, this is exactly what was done at Thornton Bank: the foundation was indeed embedded under both a fill and scour protection layer (<a href="#fig-thornton-bank-structure" class="quarto-xref">Figure&nbsp;2</a>).</p>
 <p>If we include embedment into our calculation, the effective stress is therefore no longer zero at the base of the foundation. This means the second (surcharge) term of <a href="#eq-qlim" class="quarto-xref">Equation&nbsp;1</a> comes in to play. The first term remains the same.</p>
-<div id="724ed772-4ec5-4622-ac14-38119173b447" class="cell" data-tags="[]" data-execution_count="24">
+<div id="724ed772-4ec5-4622-ac14-38119173b447" class="cell" data-tags="[]" data-execution_count="43">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>embedment <span class="op">=</span> <span class="fl">3.5</span> <span class="co"># [m]</span></span>
@@ -1087,12 +1087,12 @@ H_demand/H_capacity = 0.501</code></pre>
 <span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Effective stress at foundation base = </span><span class="sc">{</span>sig_eff<span class="sc">:.0f}</span><span class="ss">kPa"</span>)</span>
 <span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Bearing capacity factor</span></span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>Nq <span class="op">=</span> (np.tan(np.pi<span class="op">/</span><span class="dv">4</span> <span class="op">+</span> <span class="fl">0.5</span><span class="op">*</span>np.arctan(np.tan(friction_angle<span class="op">/</span>model_factor)))<span class="op">**</span><span class="dv">2</span>) <span class="op">*</span> np.exp(np.pi<span class="op">*</span>(np.tan(friction_angle)<span class="op">/</span>model_factor))</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>Nq <span class="op">=</span> (np.tan(np.pi<span class="op">/</span><span class="dv">4</span> <span class="op">+</span> <span class="fl">0.5</span><span class="op">*</span>np.arctan(np.tan(friction_angle)<span class="op">/</span>model_factor))<span class="op">**</span><span class="dv">2</span>) <span class="op">*</span> np.exp(np.pi<span class="op">*</span>(np.tan(friction_angle)<span class="op">/</span>model_factor))</span>
 <span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Nq = </span><span class="sc">{</span>Nq<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
 <span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>iq <span class="op">=</span> <span class="dv">1</span><span class="op">-</span><span class="fl">0.5</span><span class="op">*</span>(H_demand<span class="op">/</span>V_demand)<span class="op">**</span><span class="dv">5</span></span>
 <span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>sq <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> iq<span class="op">*</span>(B_eff<span class="op">/</span>L_eff) <span class="op">*</span> np.sin(np.arctan(np.tan(friction_angle)<span class="op">/</span>model_factor))</span>
-<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>dq <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> <span class="fl">1.2</span><span class="op">*</span>(R<span class="op">*</span><span class="dv">2</span><span class="op">/</span>B_eff) <span class="op">*</span> (np.tan(friction_angle)<span class="op">/</span>model_factor) <span class="op">*</span> (<span class="dv">1</span><span class="op">-</span>np.sin(np.arctan(np.tan(model_factor)<span class="op">/</span>model_factor)))<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>dq <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> <span class="fl">1.2</span><span class="op">*</span>(R<span class="op">*</span><span class="dv">2</span><span class="op">/</span>B_eff) <span class="op">*</span> (np.tan(friction_angle)<span class="op">/</span>model_factor) <span class="op">*</span> (<span class="dv">1</span><span class="op">-</span>np.sin(np.arctan(np.tan(friction_angle)<span class="op">/</span>model_factor)))<span class="op">**</span><span class="dv">2</span></span>
 <span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>Kq <span class="op">=</span> sq<span class="op">*</span>dq<span class="op">*</span>iq</span>
 <span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Kq = </span><span class="sc">{</span>Kq<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
 <span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a></span>
@@ -1104,11 +1104,11 @@ H_demand/H_capacity = 0.501</code></pre>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Effective stress at foundation base = 35kPa
-Nq = 12.13
-Kq = 1.26
+Nq = 12.59
+Kq = 1.83
 
-The vertical capacity after embedment is 124 MN
-V_demand/V_capacity = 0.37</code></pre>
+The vertical capacity after embedment is 163 MN
+V_demand/V_capacity = 0.28</code></pre>
 </div>
 </div>
 <p>This is much better! This also gives “reserve capacity” when we start looking at long-term capacity, particularly under cyclic loading.</p>
