@@ -9,7 +9,7 @@ website:
   title: "CIEM2301: Offshore Geotechnics"
   site-url: https://triaduct.github.io/offshoregeotechnics
   announcement: 
-    content: "Update 8th October: Shallow foundation example added." 
+    content: "Update 12th October: Correction to shallow foundation example." 
     position: below-navbar 
   comments:
     giscus: 
