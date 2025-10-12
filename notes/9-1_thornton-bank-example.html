@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Kevin Duffy">
-<meta name="dcterms.date" content="2025-10-08">
+<meta name="dcterms.date" content="2025-10-12">
 
 <title>Worked example: Thornton Bank – CIEM2301: Offshore Geotechnics</title>
 <style>
@@ -344,8 +344,8 @@ window.Quarto = {
       </button>
     </div>
   </nav>
-  <div id="quarto-announcement" data-announcement-id="760ce6e44ac682bdc2a51032b4a7ea13" class="alert alert-primary hidden"><div class="quarto-announcement-content">
-<p>Update 8th October: Shallow foundation example added.</p>
+  <div id="quarto-announcement" data-announcement-id="794e4541881a93c29730c76d99d33341" class="alert alert-primary hidden"><div class="quarto-announcement-content">
+<p>Update 12th October: Correction to shallow foundation example.</p>
 </div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
 </header>
 <!-- content -->
@@ -603,14 +603,14 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">08 October 2025</p>
+      <p class="date">12 October 2025</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">08 October 2025</p>
+      <p class="date-modified">12 October 2025</p>
     </div>
   </div>
     
@@ -851,7 +851,7 @@ Note: 8th October 2025
 <h2 class="anchored" data-anchor-id="vhm-contributions">1. VHM contributions</h2>
 <p>To get the vertical contribution, let’s say <span class="math inline">\(V_{demand}\)</span>, it’s simply the sum of the weights of the nacelle, tower, concrete and the ballast.</p>
 <p>However, there is also a buoyant weight acting on the volume of displaced water. This also needs to be included so that we have the <em>effective weight</em> of the structure. Therefore:</p>
-<div id="cd7b9372-5cfc-4548-8838-737beccc988d" class="cell" data-tags="[]" data-execution_count="141">
+<div id="cd7b9372-5cfc-4548-8838-737beccc988d" class="cell" data-tags="[]" data-execution_count="1">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>buoyant_contribution <span class="op">=</span> (<span class="dv">2965</span><span class="op">*</span><span class="dv">10</span>)<span class="op">/</span><span class="dv">1000</span>  <span class="co"># [MN]</span></span>
@@ -863,7 +863,7 @@ Note: 8th October 2025
 </div>
 </div>
 <p>The horizontal component is simply just the sum of the loads imposed by both the wind and sea. These are normally distributed loads, although they have been converted into a representative point load at a certain point on the foundation/turbine.</p>
-<div id="701cdc07-de9b-4639-86ed-32bf8d482bde" class="cell" data-tags="[]" data-execution_count="142">
+<div id="701cdc07-de9b-4639-86ed-32bf8d482bde" class="cell" data-tags="[]" data-execution_count="2">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>H_demand <span class="op">=</span> <span class="fl">2.03</span><span class="op">+</span><span class="fl">8.07</span></span>
@@ -874,7 +874,7 @@ Note: 8th October 2025
 </div>
 </div>
 <p>The moment load is simply these horizontal loads, multiplied by the distance away from the foundation base (i.e.&nbsp;the lever arm). For this exercise, we assume they’re just acting in the same direction, representing the worst possible case.</p>
-<div id="068b48dc-4783-44ec-99a7-8bbee094e13e" class="cell" data-tags="[]" data-execution_count="143">
+<div id="068b48dc-4783-44ec-99a7-8bbee094e13e" class="cell" data-tags="[]" data-execution_count="3">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>M_demand <span class="op">=</span> <span class="fl">2.03</span><span class="op">*</span><span class="dv">120</span> <span class="op">+</span> <span class="fl">8.07</span><span class="op">*</span><span class="dv">5</span></span>
@@ -907,7 +907,7 @@ Note
 </div>
 <p>We’ve a circular foundation, so the first step then is to determine the effective width <span class="math inline">\(B'\)</span>. This describes the reduced foundation area under combined horizontal/moment and vertical loading. For a circular foundation, the reduced area is semi-elliptical in-shape so for simplicity, ISO 19901-4 converts this shape to a rectangle with an equivalent area.</p>
 <p>We’ve already been provided with <span class="math inline">\(s\)</span> in <a href="#tbl-parameters" class="quarto-xref">Table&nbsp;1</a> although I’ll include my calculation of it here anyway.</p>
-<div id="1665b92f-2fd4-4ac2-815a-1426fd24eab9" class="cell" data-tags="[]" data-execution_count="144">
+<div id="1665b92f-2fd4-4ac2-815a-1426fd24eab9" class="cell" data-tags="[]" data-execution_count="4">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -942,7 +942,7 @@ Important
 <p>Don’t forget to include the model factor <span class="math inline">\(\gamma_m\)</span> any time a soil parameter is used! This accounts for any uncertainties we have in the soil properties, be it measurement uncertainty or inherent soil variability.</p>
 </div>
 </div>
-<div id="42742d27-4932-4424-bf39-d765dede7c29" class="cell" data-tags="[]" data-execution_count="145">
+<div id="42742d27-4932-4424-bf39-d765dede7c29" class="cell" data-tags="[]" data-execution_count="25">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Soil parameters</span></span>
@@ -950,26 +950,30 @@ Important
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>model_factor <span class="op">=</span> <span class="fl">1.25</span> <span class="co"># gamma_m, to be applied to any soil properties</span></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>unit_weight <span class="op">=</span> <span class="dv">20</span> <span class="co"># Saturated unit weight [kN/m3]</span></span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>unit_weight_eff <span class="op">=</span> <span class="dv">20</span><span class="op">-</span><span class="dv">10</span> <span class="co"># Effective unit weight [kN/m3]</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>delta <span class="op">=</span> np.radians (<span class="dv">29</span>) <span class="co"># Interface friction angle</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>delta <span class="op">=</span> np.radians(<span class="dv">29</span>) <span class="co"># Interface friction angle</span></span>
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Bearing capacity factors</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>Ngamma <span class="op">=</span> (<span class="dv">3</span><span class="op">/</span><span class="dv">2</span>)<span class="op">*</span>(Nq<span class="op">-</span><span class="dv">1</span>)<span class="op">*</span>(np.tan(friction_angle)<span class="op">/</span>model_factor)</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Ngamma = </span><span class="sc">{</span>Ngamma<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>Nq <span class="op">=</span> (np.tan(np.pi<span class="op">/</span><span class="dv">4</span> <span class="op">+</span> <span class="fl">0.5</span><span class="op">*</span>np.arctan(np.tan(friction_angle)<span class="op">/</span>model_factor))<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>(np.exp(np.pi<span class="op">*</span>(np.tan(friction_angle)<span class="op">/</span>model_factor)))</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Nq = </span><span class="sc">{</span>Nq<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
 <span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Bearing capacity correction factors (Already provided in table)</span></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>igamma <span class="op">=</span> <span class="dv">1</span><span class="op">-</span><span class="fl">0.7</span><span class="op">*</span>(H_demand<span class="op">/</span>V_demand)<span class="op">**</span><span class="dv">5</span></span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>sgamma <span class="op">=</span> <span class="dv">1</span><span class="op">-</span><span class="fl">0.4</span><span class="op">*</span>i_gamma<span class="op">*</span>(B_eff<span class="op">/</span>L_eff)</span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>dgamma <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>Kgamma <span class="op">=</span> sgamma<span class="op">*</span>dgamma<span class="op">*</span>igamma</span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Kgamma = </span><span class="sc">{</span>Kgamma<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>Ngamma <span class="op">=</span> (<span class="dv">3</span><span class="op">/</span><span class="dv">2</span>)<span class="op">*</span>(Nq<span class="op">-</span><span class="dv">1</span>)<span class="op">*</span>(np.tan(friction_angle)<span class="op">/</span>model_factor)</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Ngamma = </span><span class="sc">{</span>Ngamma<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Bearing capacity correction factors (Already provided in table)</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>igamma <span class="op">=</span> <span class="dv">1</span><span class="op">-</span><span class="fl">0.7</span><span class="op">*</span>(H_demand<span class="op">/</span>V_demand)<span class="op">**</span><span class="dv">5</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>sgamma <span class="op">=</span> <span class="dv">1</span><span class="op">-</span><span class="fl">0.4</span><span class="op">*</span>igamma<span class="op">*</span>(B_eff<span class="op">/</span>L_eff)</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>dgamma <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>Kgamma <span class="op">=</span> sgamma<span class="op">*</span>dgamma<span class="op">*</span>igamma</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Kgamma = </span><span class="sc">{</span>Kgamma<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>Ngamma = 8.34
+<pre><code>Nq = 12.59
+Ngamma = 8.69
 Kgamma = 0.78</code></pre>
 </div>
 </div>
 <p>Finally, we put this all into <a href="#eq-qlim" class="quarto-xref">Equation&nbsp;1</a>. Since <span class="math inline">\(q_{lim}\)</span> is not overly useful by itself, so we’ll convert it to a force in kN. This is still done using the effective area.</p>
-<div id="8a2ef891-c17f-4d6c-94bb-085d4266617b" class="cell" data-tags="[]" data-execution_count="146">
+<div id="8a2ef891-c17f-4d6c-94bb-085d4266617b" class="cell" data-tags="[]" data-execution_count="27">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>qlim <span class="op">=</span> <span class="fl">0.5</span><span class="op">*</span>unit_weight_eff<span class="op">*</span>B_eff<span class="op">*</span>Ngamma<span class="op">*</span>Kgamma <span class="co"># kPa</span></span>
@@ -977,7 +981,7 @@ Kgamma = 0.78</code></pre>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The vertical capacity is </span><span class="sc">{</span>V_capacity<span class="sc">:.0f}</span><span class="ss"> MN"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>The vertical capacity is 46 MN</code></pre>
+<pre><code>The vertical capacity is 48 MN</code></pre>
 </div>
 </div>
 </section>
@@ -985,20 +989,37 @@ Kgamma = 0.78</code></pre>
 <h2 class="anchored" data-anchor-id="resistance-for-sliding">3. Resistance for sliding</h2>
 <p>The resistance to sliding is relatively straightforward to determine for a foundation with no embedment. To do this for sand, we take an effective stress analysis whereby:</p>
 <p><span class="math display">\[
+H_{ult} = V' \frac{\tan{\delta}}{\gamma_m}
+\]</span></p>
+<div class="callout callout-style-default callout-important callout-titled" title="Correction 12/10/25">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Correction 12/10/25
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I incorrectly stated in the lecture notes that:</p>
+<p><span class="math display">\[
 H_{ult} = A_r (V' \tan{\delta})
 \]</span></p>
-<div id="ca4eb68f-2666-4c18-82e6-5f7f7003d74d" class="cell" data-tags="[]" data-execution_count="135">
+<p>This has now been corrected in this example, resulting in a much lower (but still safe) horizontal capacity.</p>
+</div>
+</div>
+<div id="ca4eb68f-2666-4c18-82e6-5f7f7003d74d" class="cell" data-tags="[]" data-execution_count="35">
 <details class="code-fold">
 <summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>H_capacity <span class="op">=</span> A_eff<span class="op">*</span>(V_demand <span class="op">*</span> np.tan(delta))</span>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>H_capacity <span class="op">=</span> (V_demand <span class="op">*</span> np.tan(delta)<span class="op">/</span>model_factor)</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The horizontal capacity is </span><span class="sc">{</span>H_capacity<span class="sc">:.0f}</span><span class="ss"> MN"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>The horizontal capacity is 3895 MN</code></pre>
+<pre><code>The horizontal capacity is 20 MN</code></pre>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Bonus: Moment check">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1007,14 +1028,14 @@ Bonus: Moment check
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>This wasn’t requested in the initial brief, but as a quick check of the moments, we can compare the overturning moments (by wind and waves) to the restoring moments (self-weight of the structure) by:</p>
 <p><span class="math display">\[
 F h = V' D
 \]</span> where <span class="math inline">\(h\)</span> is the distance from the pile base to the point upon which the force <span class="math inline">\(F\)</span> acts.</p>
 <p>Therefore:</p>
-<div id="f443930d-e11a-4d1a-9dee-282c97e2a12d" class="cell" data-tags="[]" data-execution_count="136">
+<div id="f443930d-e11a-4d1a-9dee-282c97e2a12d" class="cell" data-tags="[]" data-execution_count="36">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>restoring_moment <span class="op">=</span> V_demand <span class="op">*</span> R</span>
@@ -1037,15 +1058,15 @@ Overturning moment = 284 MNm</code></pre>
 <section id="improvements-to-the-design" class="level2">
 <h2 class="anchored" data-anchor-id="improvements-to-the-design">4. Improvements to the design</h2>
 <p>Let’s look at our unity checks:</p>
-<div id="b3b4d3e2-b7cd-4140-a5bf-391650e53f03" class="cell" data-tags="[]" data-execution_count="137">
+<div id="b3b4d3e2-b7cd-4140-a5bf-391650e53f03" class="cell" data-tags="[]" data-execution_count="37">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"V_demand/V_capacity = </span><span class="sc">{</span>V_demand<span class="op">/</span>V_capacity<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"H_demand/H_capacity = </span><span class="sc">{</span>H_demand<span class="op">/</span>H_capacity<span class="sc">:.3f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>V_demand/V_capacity = 0.98
-H_demand/H_capacity = 0.003</code></pre>
+<pre><code>V_demand/V_capacity = 0.94
+H_demand/H_capacity = 0.501</code></pre>
 </div>
 </div>
 <p>Clearly, we have zero issues here with the horizontal capacity. Generally, drained conditions in sand don’t pose an issue to horizontal stability. However, the horizontal capacity begins to become more critical in undrained scenarios. Of course, this will include foundation capacity in clay, however, undrained scenarios can even occur in sands under the short duration of a single wave load. Therefore both drained and undrained checks are recommended when performing a full foundation calculation.</p>
@@ -1057,7 +1078,7 @@ H_demand/H_capacity = 0.003</code></pre>
 </ul>
 <p>If we want to improve the design, some foundation embedment may be required. And in reality, this is exactly what was done at Thornton Bank: the foundation was indeed embedded under both a fill and scour protection layer (<a href="#fig-thornton-bank-structure" class="quarto-xref">Figure&nbsp;2</a>).</p>
 <p>If we include embedment into our calculation, the effective stress is therefore no longer zero at the base of the foundation. This means the second (surcharge) term of <a href="#eq-qlim" class="quarto-xref">Equation&nbsp;1</a> comes in to play. The first term remains the same.</p>
-<div id="724ed772-4ec5-4622-ac14-38119173b447" class="cell" data-tags="[]" data-execution_count="128">
+<div id="724ed772-4ec5-4622-ac14-38119173b447" class="cell" data-tags="[]" data-execution_count="24">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>embedment <span class="op">=</span> <span class="fl">3.5</span> <span class="co"># [m]</span></span>
@@ -1086,7 +1107,7 @@ H_demand/H_capacity = 0.003</code></pre>
 Nq = 12.13
 Kq = 1.26
 
-The vertical capacity after embedment is 122 MN
+The vertical capacity after embedment is 124 MN
 V_demand/V_capacity = 0.37</code></pre>
 </div>
 </div>
