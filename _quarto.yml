@@ -72,6 +72,8 @@ website:
                 href: notes/8-1_pile-installation-overview.ipynb
               - text: "Modelling pile driving"
                 href: notes/8-2_modelling-pile-driving.ipynb
+              - text: "Suction-assisted"
+                href: notes/8-3_suction-assisted.ipynb
           - section: "Shallow foundations"
             contents:
               - text: "Example: Thornton Bank"
