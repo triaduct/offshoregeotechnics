@@ -9,7 +9,7 @@ website:
   title: "CIEM2301: Offshore Geotechnics"
   site-url: https://triaduct.github.io/offshoregeotechnics
   announcement: 
-    content: "Update 12th October: Correction to shallow foundation example." 
+    content: "Update 20th October: Notes on suction caissons added." 
     position: below-navbar 
   comments:
     giscus: 
@@ -72,8 +72,10 @@ website:
                 href: notes/8-1_pile-installation-overview.ipynb
               - text: "Modelling pile driving"
                 href: notes/8-2_modelling-pile-driving.ipynb
+              # - text: "Pile run"
+              #   href: notes/8-3_pile-run.ipynb
               - text: "Suction-assisted"
-                href: notes/8-3_suction-assisted.ipynb
+                href: notes/8-4_suction-assisted.ipynb
           - section: "Shallow foundations"
             contents:
               - text: "Example: Thornton Bank"
