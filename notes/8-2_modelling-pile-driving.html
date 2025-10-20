@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Kevin Duffy">
-<meta name="dcterms.date" content="2025-10-12">
+<meta name="dcterms.date" content="2025-10-20">
 
 <title>Modelling pile driveability – CIEM2301: Offshore Geotechnics</title>
 <style>
@@ -344,8 +344,8 @@ window.Quarto = {
       </button>
     </div>
   </nav>
-  <div id="quarto-announcement" data-announcement-id="794e4541881a93c29730c76d99d33341" class="alert alert-primary hidden"><div class="quarto-announcement-content">
-<p>Update 12th October: Correction to shallow foundation example.</p>
+  <div id="quarto-announcement" data-announcement-id="e645d9eea7b6273d9241e72d3eea62d3" class="alert alert-primary hidden"><div class="quarto-announcement-content">
+<p>Update 20th October: Notes on suction caissons added.</p>
 </div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
 </header>
 <!-- content -->
@@ -537,6 +537,12 @@ window.Quarto = {
  <span class="menu-text">Modelling pile driving</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/8-4_suction-assisted.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suction-assisted</span></a>
+  </div>
+</li>
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
@@ -605,14 +611,14 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">12 October 2025</p>
+      <p class="date">20 October 2025</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">06 October 2025</p>
+      <p class="date-modified">16 October 2025</p>
     </div>
   </div>
     
@@ -754,7 +760,7 @@ v_{max} = \sqrt{2gh}
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np </span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># NB: The script behind the calculator is in JavaScript, although here is the Python equivalent</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> force_imparted_by_hammer(Do, t, fall_height):</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> force_imparted_by_hammer(D_outer, wall_thickness, fall_height):</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    Simple example based on Timoshenko's 1D beam theory. </span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>

@@ -9,7 +9,7 @@
 <meta name="author" content="Kevin Duffy">
 <meta name="dcterms.date" content="2025-10-20">
 
-<title>Worked example: Thornton Bank – CIEM2301: Offshore Geotechnics</title>
+<title>Suction assisted installation – CIEM2301: Offshore Geotechnics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,41 +21,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 /* CSS for citations */
 div.csl-bib-body { }
@@ -336,7 +301,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../notes/1_intro.html">📚 Course notes</a></li><li class="breadcrumb-item"><a href="../notes/9-1_thornton-bank-example.html">Shallow foundations</a></li><li class="breadcrumb-item"><a href="../notes/9-1_thornton-bank-example.html">Example: Thornton Bank</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../notes/1_intro.html">📚 Course notes</a></li><li class="breadcrumb-item"><a href="../notes/8-1_pile-installation-overview.html">Pile installation</a></li><li class="breadcrumb-item"><a href="../notes/8-4_suction-assisted.html">Suction-assisted</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -518,13 +483,13 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
  <span class="menu-text">Pile installation</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../notes/8-1_pile-installation-overview.html" class="sidebar-item-text sidebar-link">
@@ -539,7 +504,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/8-4_suction-assisted.html" class="sidebar-item-text sidebar-link">
+  <a href="../notes/8-4_suction-assisted.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Suction-assisted</span></a>
   </div>
 </li>
@@ -547,16 +512,16 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
  <span class="menu-text">Shallow foundations</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/9-1_thornton-bank-example.html" class="sidebar-item-text sidebar-link active">
+  <a href="../notes/9-1_thornton-bank-example.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Example: Thornton Bank</span></a>
   </div>
 </li>
@@ -574,14 +539,21 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
-  <li><a href="#brief" id="toc-brief" class="nav-link" data-scroll-target="#brief">Brief</a></li>
-  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a>
+  <li><a href="#types-of-suction-foundations" id="toc-types-of-suction-foundations" class="nav-link active" data-scroll-target="#types-of-suction-foundations">Types of suction foundations</a></li>
+  <li><a href="#self-weight-penetration" id="toc-self-weight-penetration" class="nav-link" data-scroll-target="#self-weight-penetration">Self-weight penetration</a></li>
+  <li><a href="#clay" id="toc-clay" class="nav-link" data-scroll-target="#clay">Clay</a></li>
+  <li><a href="#sand" id="toc-sand" class="nav-link" data-scroll-target="#sand">Sand</a></li>
+  <li><a href="#layered-soils" id="toc-layered-soils" class="nav-link" data-scroll-target="#layered-soils">Layered soils</a>
   <ul class="collapse">
-  <li><a href="#vhm-contributions" id="toc-vhm-contributions" class="nav-link" data-scroll-target="#vhm-contributions">1. VHM contributions</a></li>
-  <li><a href="#vertical-stability" id="toc-vertical-stability" class="nav-link" data-scroll-target="#vertical-stability">2. Vertical stability</a></li>
-  <li><a href="#resistance-for-sliding" id="toc-resistance-for-sliding" class="nav-link" data-scroll-target="#resistance-for-sliding">3. Resistance for sliding</a></li>
-  <li><a href="#improvements-to-the-design" id="toc-improvements-to-the-design" class="nav-link" data-scroll-target="#improvements-to-the-design">4. Improvements to the design</a></li>
+  <li><a href="#clay-overlying-sand" id="toc-clay-overlying-sand" class="nav-link" data-scroll-target="#clay-overlying-sand">Clay overlying sand</a></li>
+  <li><a href="#sand-overlying-clay" id="toc-sand-overlying-clay" class="nav-link" data-scroll-target="#sand-overlying-clay">Sand overlying clay</a></li>
+  </ul></li>
+  <li><a href="#cpt-based-design" id="toc-cpt-based-design" class="nav-link" data-scroll-target="#cpt-based-design">CPT-based design</a></li>
+  <li><a href="#limitations-to-suction-installation" id="toc-limitations-to-suction-installation" class="nav-link" data-scroll-target="#limitations-to-suction-installation">Limitations to suction installation</a>
+  <ul class="collapse">
+  <li><a href="#cavitation" id="toc-cavitation" class="nav-link" data-scroll-target="#cavitation">Cavitation</a></li>
+  <li><a href="#piping" id="toc-piping" class="nav-link" data-scroll-target="#piping">Piping</a></li>
+  <li><a href="#structural-failure" id="toc-structural-failure" class="nav-link" data-scroll-target="#structural-failure">Structural failure</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -590,9 +562,10 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../notes/1_intro.html">📚 Course notes</a></li><li class="breadcrumb-item"><a href="../notes/9-1_thornton-bank-example.html">Shallow foundations</a></li><li class="breadcrumb-item"><a href="../notes/9-1_thornton-bank-example.html">Example: Thornton Bank</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../notes/1_intro.html">📚 Course notes</a></li><li class="breadcrumb-item"><a href="../notes/8-1_pile-installation-overview.html">Pile installation</a></li><li class="breadcrumb-item"><a href="../notes/8-4_suction-assisted.html">Suction-assisted</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Worked example: Thornton Bank</h1>
+<h1 class="title">Suction assisted installation</h1>
+<p class="subtitle lead">How do suction pressures affect installation resistance?</p>
 </div>
 
 
@@ -616,7 +589,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">12 October 2025</p>
+      <p class="date-modified">20 October 2025</p>
     </div>
   </div>
     
@@ -627,497 +600,487 @@ window.Quarto = {
 </header>
 
 
-<p><a href="https://colab.research.google.com/github/triaduct/offshoregeotechnics/blob/main/notes/9-1_thornton-bank-example.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Open In Colab"></a> <nbsp></nbsp></p>
-<div class="callout callout-style-default callout-note callout-titled">
+<p>Suction caissons are installed by evacuating water from under a steel, tubular foundation with a sealed top (<a href="#fig-installation-process" class="quarto-xref">Figure&nbsp;1</a>). Pumping lowers the water pressure inside the unit, creating a pressure differential that pushes the unit into the seabed. Seepage flow may also change the effective stresses inside and outside the caisson, depending on the permeability of the soil.</p>
+<div id="fig-installation-process" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-installation-process-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/suction/suction-installation.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Installation procedure for a suction caisson"><img src="pics/suction/suction-installation.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-installation-process-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Installation procedure for a suction caisson
+</figcaption>
+</figure>
+</div>
+<p>As mentioned in the <a href="https://triaduct.github.io/offshoregeotechnics/notes/1_intro.html">introductory notes</a>, foundations can be loosely categorised based on their slenderness (<span class="math inline">\(L/D\)</span>), such as bucket foundations, caissons or piles. For consistency, this chapter will solely refer to the foundations as “suction caissons”.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Note on standardisation">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+Note on standardisation
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This is a worked example based on the geometries and loads provided by <span class="citation" data-cites="peireGravityBaseFoundations2009">Peire, Nonneman, and Bosschem (<a href="#ref-peireGravityBaseFoundations2009" role="doc-biblioref">2009</a>)</span>. Soil properties typical of sand have been assumed.</p>
+<p>Suction-assisted installation is not covered in the ISO standards. As an alternative, there are two guidance documents that are often used:</p>
+<ul>
+<li>Carbon Trust Offshore Wind Accelerator: Suction Installed Caisson Foundations for Offshore Wind: Design Guidelines 2019 <a href="www.carbontrust.com/sites/default/files/documents/resource/public/owa-suction-caisson-design-guidelines-report.pdf">(link)</a></li>
+<li>DNV-RP-E303: Geotechnical design and installation of suction anchors in clay <a href="https://www.dnv.com/energy/standards-guidelines/dnv-rp-e303-geotechnical-design-and-installation-of-suction-anchors-in-clay/">(link)</a></li>
+</ul>
 </div>
 </div>
-<section id="background" class="level1">
-<h1>Background</h1>
-<p>Thornton Bank is a wind farm 30km off the Belgian coast, in water depths of up to 30m. The first phase of construction was completed in 2009, comprising six 5 MW turbines all founded on gravity base foundations.</p>
-<div id="fig-thornton-bank" class="quarto-layout-panel">
+<section id="types-of-suction-foundations" class="level2">
+<h2 class="anchored" data-anchor-id="types-of-suction-foundations">Types of suction foundations</h2>
+<p>Suction caissons can be integrated within the superstructure itself (<a href="#fig-borkum-riffgrund" class="quarto-xref">Figure&nbsp;2 (a)</a>). This greatly simplifies the construction process, since less lifts are needed compared to an equivalent piled jacket. Jacket inclination can also be controlled during installation by adjusting the suction pressures at each leg.</p>
+<div id="fig-integrated-suction-caissons" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-thornton-bank-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-integrated-suction-caissons-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="pics/shfo/thornton-bank.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="(source)"><img src="pics/shfo/thornton-bank.png" class="img-fluid figure-img"></a></p>
-<figcaption><a href="https://www.maritimejournal.com/concrete-gravity-foundations-the-future-for-windfarms/508526.article">(source)</a></figcaption>
-</figure>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-integrated-suction-caissons" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-borkum-riffgrund" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-borkum-riffgrund-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/suction/borkum-riffgrund.jpg" class="lightbox" data-gallery="fig-integrated-suction-caissons" title="Figure&nbsp;2&nbsp;(a): Installation of jacket foundations at Borkum Riffgrund (source)"><img src="pics/suction/borkum-riffgrund.jpg" class="img-fluid figure-img" data-ref-parent="fig-integrated-suction-caissons"></a>
 </div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><a href="pics/shfo/thornton-bank-location.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;1: Thornton Bank"><img src="pics/shfo/thornton-bank-location.png" class="img-fluid figure-img"></a></p>
-</div>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-thornton-bank-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Thornton Bank
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-borkum-riffgrund-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Installation of jacket foundations at Borkum Riffgrund <a href="https://www.sptoffshore.com/wind-turbine-generator-wtg-foundations/">(source)</a>
 </figcaption>
 </figure>
 </div>
-<p>The first soil layer consisted of ten metres of medium dense coarse sand. This was followed by ten-metre-thick layer of stiff clay and a thirteen-metre-thick layer of dense to very dense sand. A monopile design was considered for the site, although driveability and cost concerns meant that a gravity base foundation was chosen.</p>
-<p>An example of one of the foundations is given in <a href="#fig-thornton-bank-structure" class="quarto-xref">Figure&nbsp;2</a>.</p>
-<div id="fig-thornton-bank-structure" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-thornton-bank-structure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="pics/shfo/thornton-bank-structure.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;2: Design of the gravity base foundation at Thornton Bank"><img src="pics/shfo/thornton-bank-structure.png" class="img-fluid figure-img" style="width:50.0%"></a>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-thornton-bank-structure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Design of the gravity base foundation at Thornton Bank
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-integrated-suction-caissons" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-monobuckets" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-monobuckets-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/suction/monobucket.jpg" class="lightbox" data-gallery="fig-integrated-suction-caissons" title="Figure&nbsp;2&nbsp;(b): Monobucket foundations (source)"><img src="pics/suction/monobucket.jpg" class="img-fluid figure-img" data-ref-parent="fig-integrated-suction-caissons"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-monobuckets-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Monobucket foundations <a href="https://www.windpowermonthly.com/article/1361921/gallery-installing-removing-universal-foundations-mono-buckets">(source)</a>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-integrated-suction-caissons-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Examples of suction caissons integrated with the superstructure itself
+</figcaption>
+</figure>
+</div>
+<p>Suction caissons are also often used for temporary infrastructure, like pile guide frames (<a href="#fig-pile-guide-frame" class="quarto-xref">Figure&nbsp;3</a>), mooring anchors or seabed infrastructure for oil and gas infrastructure. Not only can the caissons be easily installed into the shallow seabed, they can also be extracted easily by applying a backpressure (i.e.&nbsp;the opposite of suction pressure). This backpressure lifts the caisson out of the ground, allowing it to be reused at the next location.</p>
+<div id="fig-pile-guide-frame" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pile-guide-frame-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/suction/pile-guide-frame.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;3: Lifting of a pile guide frame for Taiwanese project"><img src="pics/suction/pile-guide-frame.jpg" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pile-guide-frame-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Lifting of a pile guide frame for Taiwanese project
 </figcaption>
 </figure>
 </div>
 </section>
-<section id="brief" class="level1">
-<h1>Brief</h1>
-<p>You’ve been asked to calculate the stability of the foundation in <a href="#fig-thornton-bank-structure" class="quarto-xref">Figure&nbsp;2</a> as per ISO 19901-4:2016. Consider the foundation stability under ambient loading conditions:</p>
-<ol type="1">
-<li>Calculate the (V, H, M) contributions</li>
-<li>Calculate the vertical stability of the existing design, including eccentric loading</li>
-<li>Calculate the resistance to sliding</li>
-<li>Are these results satisfactory? What refinements could you make to improve the design?</li>
-</ol>
-<p>In doing so, use the following assumptions:</p>
-<ul>
-<li>The foundation is directly on the seabed, with no embedment or scour protection</li>
-<li>Wind and waves act in the same direction and are considered as representative point loads.</li>
-</ul>
-<p>Some relevant properties are given in the table below:</p>
-<div id="tbl-parameters" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-parameters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Relevant parameters
+<section id="self-weight-penetration" class="level2">
+<h2 class="anchored" data-anchor-id="self-weight-penetration">Self-weight penetration</h2>
+<p>Predicting self-weight penetration is especially important for suction-assisted installation as it also tells us what kind of pump capacity we need, as well as anticipating the potential pore pressure field once suction is applied (particularly with respect to the influence of layering).</p>
+<p>At a basic level, self-weight penetration can be accounted for by equating the downward forces (such as effective weight of the caisson) to the static resistance to driving (<a href="#fig-theoretical-example" class="quarto-xref">Figure&nbsp;4</a>). This is somewhat of a simplification since the extent of the penetration is dependent on the caisson’s speed and momentum—but nevertheless provides a decent first estimate.</p>
+<p>Just like pile driveability studies, a best estimate and high estimate prediction is made to ensure sufficient pump capacity is available.</p>
+<div id="fig-theoretical-example" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-theoretical-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/suction/theoretical-example.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;4: Theoretical example of suction caisson installation"><img src="pics/suction/theoretical-example.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-theoretical-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Theoretical example of suction caisson installation
 </figcaption>
-<div aria-describedby="tbl-parameters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+</figure>
+</div>
+</section>
+<section id="clay" class="level2">
+<h2 class="anchored" data-anchor-id="clay">Clay</h2>
+<p>To consider how a suction pressure <span class="math inline">\(s\)</span> affects the penetration of the caisson in <a href="#fig-caisson-suction-clay" class="quarto-xref">Figure&nbsp;5</a>, let’s look at the balance between upward and downward forces. We can do this using the total stress method for piles:</p>
+<p><span id="eq-total-stress-method"><span class="math display">\[
+V' = \underbrace{h\alpha_0s_{u1}(\pi D_o)}_{\text{Outer shaft friction}} + \underbrace{h \alpha_i s_{ui} (\pi D_i)}_{\text{Inner shaft friction}} + \underbrace{(\gamma' h N_q + s_{u2} N_c)(\pi D t)}_{\text{End-bearing on annulus}}
+\tag{1}\]</span></span></p>
+<p>where <span class="math inline">\(s_{u1}\)</span> is the average undrained shear strength across the depth <span class="math inline">\(h\)</span>, <span class="math inline">\(s_{u2}\)</span> is the undrained shear strength at the bottom of the caisson, <span class="math inline">\(N_q\)</span> is an overburden factor (=1 for undrained conditions), <span class="math inline">\(N_c\)</span> is a cohesion capacity factor (≈9) and <span class="math inline">\(\alpha\)</span> is an adhesion factor (=<span class="math inline">\(1/S_t\)</span> where <span class="math inline">\(S_t\)</span> is the soil sensitivity.</p>
+<div id="fig-caisson-suction-clay" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-caisson-suction-clay-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/suction/caisson-suction-clay.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;5: Caisson schematic"><img src="pics/suction/caisson-suction-clay.png" class="img-fluid figure-img" style="width:70.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-caisson-suction-clay-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Caisson schematic
+</figcaption>
+</figure>
+</div>
+<p>Between the top of the caisson and the mudline, a hydrostatic pressure is acting on all sides of the caisson. By sucking the water out from between the caisson and the mudline, a pressure differential is created between the outside and inside of the caisson, creating a net downward force acting in the same direction as the caisson’s effective weight:</p>
+<p><span id="eq-suction-clay"><span class="math display">\[
+V' \textcolor{red}{+ s(\frac{\pi D_i^2}{4})} = h \alpha_0 s_{u1} (\pi D_o) + h \alpha_i s_{ui} (\pi D_i) + (\gamma' h N_q \textcolor{red}{-s} + s_{u2} N_c)(\pi D t)
+\tag{2}\]</span></span></p>
+<p>Since the lower pressure also reduces the overburden pressure, the surcharge term is also reduced. Most importantly, it is assumed that no seepage flow occurs in clay given its high impermeability.</p>
+</section>
+<section id="sand" class="level2">
+<h2 class="anchored" data-anchor-id="sand">Sand</h2>
+<p>Suction installation in sand creates a seepage flow from outside the caisson, around the caisson tip and up the inside of the caisson (<a href="#fig-caisson-suction-sand" class="quarto-xref">Figure&nbsp;8</a>). Therefore, the conditions are a little different compared to clay.</p>
+<p>The seepage flow changes the effectives stress in the soil. Seepage flow leads to a decrease in the effective stress inside the caisson and an increase in the effective stress outside the caisson. However the most important mechanisms is how it reduces the resistance acting on the caisson tip because of the lower overburden stress contribution provided by soil plug (<a href="#fig-caisson-suction-sand" class="quarto-xref">Figure&nbsp;8</a>).</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Why do the effective stress change inside and outside the caisson?">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Why do the effective stress change inside and outside the caisson?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<section id="downward-flow" class="level3">
+<h3 class="anchored" data-anchor-id="downward-flow">Downward flow</h3>
+<p>Consider the stresses in <a href="#fig-downward-flow" class="quarto-xref">Figure&nbsp;6</a>, where water flowing into the top of the tank and falling by gravity through Layer 1 and Layer 2.</p>
+<div id="fig-downward-flow" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-downward-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/suction/downward-flow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;6: Downward flow"><img src="pics/suction/downward-flow.png" class="img-fluid figure-img" style="width:60.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-downward-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Downward flow
+</figcaption>
+</figure>
+</div>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 31%">
-<col style="width: 12%">
-<col style="width: 3%">
-<col style="width: 35%">
-<col style="width: 17%">
+<col style="width: 23%">
+<col style="width: 29%">
+<col style="width: 23%">
+<col style="width: 23%">
 </colgroup>
 <thead>
 <tr class="header">
-<th><strong>Superstructure</strong></th>
 <th></th>
-<th></th>
-<th><strong>Soil properties</strong></th>
-<th></th>
+<th>Point A (Beginning)</th>
+<th>Point B (Middle)</th>
+<th>Point C (End)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Rotor diameter</td>
-<td>126 m</td>
-<td></td>
-<td>Friction angle <span class="math inline">\(\phi'\)</span></td>
-<td>32°</td>
+<td>Total stress <span class="math inline">\(\sigma\)</span></td>
+<td><span class="math inline">\(\gamma_w H_w\)</span></td>
+<td><span class="math inline">\(\gamma_w H_w + \gamma_{sat,1} H_1\)</span></td>
+<td><span class="math inline">\(\gamma_w H_w + \gamma_{sat,2} H_1 + \gamma_{sat,1} H_2\)</span></td>
 </tr>
 <tr class="even">
-<td>Nacelle height above sealevel</td>
-<td>90 m</td>
-<td></td>
-<td>Saturated unit weight <span class="math inline">\(\gamma\)</span></td>
-<td>20 kN/m<sup>3</sup></td>
+<td>Pore pressure <span class="math inline">\(u\)</span></td>
+<td><span class="math inline">\(\gamma_w H_w\)</span></td>
+<td><span class="math inline">\(\gamma_w H_{w1}\)</span></td>
+<td>0</td>
 </tr>
 <tr class="odd">
-<td>Nacelle-rotor weight</td>
-<td>4.1 MN</td>
-<td></td>
-<td>Sliding coefficient <span class="math inline">\(\delta\)</span></td>
-<td>29°</td>
-</tr>
-<tr class="even">
-<td>Tower weight</td>
-<td>3 MN</td>
-<td></td>
-<td>Material factor <span class="math inline">\(\gamma_m\)</span></td>
-<td>1.25</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td><strong>Substructure</strong></td>
-<td></td>
-<td></td>
-<td><strong><em>To make your life easier</em></strong></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Base diameter</td>
-<td>23.5m</td>
-<td></td>
-<td><span class="math inline">\(s\)</span></td>
-<td>77.3</td>
-</tr>
-<tr class="even">
-<td>Concrete weight</td>
-<td>30 MN</td>
-<td></td>
-<td><span class="math inline">\(K_{\gamma}\)</span></td>
-<td>0.7</td>
-</tr>
-<tr class="odd">
-<td>Ballast weight</td>
-<td>38 MN</td>
-<td></td>
-<td><span class="math inline">\(K_q\)</span></td>
-<td>1.3</td>
-</tr>
-<tr class="even">
-<td>Buoyant volume</td>
-<td>2965 m<sup>3</sup></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td><strong>Ambient loads</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Wind thrust</td>
-<td>2.03 MN</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Wind arm lever</td>
-<td>120 m</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Sea thrust</td>
-<td>8.07 MN</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Sea arm lever</td>
-<td>5 m</td>
-<td></td>
-<td></td>
-<td></td>
+<td>Effective stress <span class="math inline">\(\sigma'\)</span></td>
+<td>0</td>
+<td><span class="math inline">\(\sigma'_B &gt; \sigma'_A\)</span></td>
+<td><span class="math inline">\(\color{red}{\sigma'_C &gt; \sigma'_B &gt; \sigma'_A}\)</span></td>
 </tr>
 </tbody>
 </table>
+<p>The end-result at Point C implies that <strong>we get an increase in effective stress along downward flow paths</strong>.</p>
+<hr>
+</section>
+<section id="upward-flow" class="level3">
+<h3 class="anchored" data-anchor-id="upward-flow">Upward flow</h3>
+<p>Now consider the opposite scenario, where the setup in <a href="#fig-upward-flow" class="quarto-xref">Figure&nbsp;7</a> allows us to consider the stress along an upward flow path.</p>
+<div id="fig-upward-flow" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-upward-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/suction/upward-flow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;7: Upward flow"><img src="pics/suction/upward-flow.png" class="img-fluid figure-img" style="width:60.0%"></a>
 </div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-upward-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Upward flow
+</figcaption>
 </figure>
 </div>
-<div class="callout callout-style-default callout-important callout-titled" title="Note: 8th October 2025">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note: 8th October 2025
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>In the example in class, I gave <span class="math inline">\(s = 130\)</span>. As you can see in the following calculations, this value for <span class="math inline">\(s\)</span> was incorrect.</p>
-<p>If I put 130 into the calculation instead of what’s given below, the result for the vertical capacity is 101 MN.</p>
-<p>Apologies!</p>
-</div>
-</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 29%">
+<col style="width: 23%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Point C (Beginning)</th>
+<th>Point B (Middle)</th>
+<th>Point A (End)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Total stress <span class="math inline">\(\sigma\)</span></td>
+<td><span class="math inline">\(\gamma_w H_w + \gamma_{sat,1} H_1 + \gamma_{sat,2} H_2\)</span></td>
+<td><span class="math inline">\(\gamma_w H_w + \gamma_{sat,1} H_1\)</span></td>
+<td><span class="math inline">\(\gamma_w H_w\)</span></td>
+</tr>
+<tr class="even">
+<td>Pore pressure <span class="math inline">\(u\)</span></td>
+<td><span class="math inline">\(\gamma_w H_w2\)</span></td>
+<td><span class="math inline">\(\gamma_w H_{w1}\)</span></td>
+<td><span class="math inline">\(\gamma_w H_w\)</span></td>
+</tr>
+<tr class="odd">
+<td>Effective stress <span class="math inline">\(\sigma'\)</span></td>
+<td><span class="math inline">\(\color{red}{\sigma'_C &gt; \sigma'_B &gt; \sigma'_A}\)</span>}</td>
+<td><span class="math inline">\(\sigma'_B &gt; \sigma'_A\)</span></td>
+<td><span class="math inline">\(\sigma'_A = 0\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Now we have the opposite effect compared to the downward flow scenario: <strong>there is a decrease in effective stress along the upward flow path</strong>.</p>
 </section>
-<section id="results" class="level1">
-<h1>Results</h1>
-<section id="vhm-contributions" class="level2">
-<h2 class="anchored" data-anchor-id="vhm-contributions">1. VHM contributions</h2>
-<p>To get the vertical contribution, let’s say <span class="math inline">\(V_{demand}\)</span>, it’s simply the sum of the weights of the nacelle, tower, concrete and the ballast.</p>
-<p>However, there is also a buoyant weight acting on the volume of displaced water. This also needs to be included so that we have the <em>effective weight</em> of the structure. Therefore:</p>
-<div id="cd7b9372-5cfc-4548-8838-737beccc988d" class="cell" data-tags="[]" data-execution_count="1">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>buoyant_contribution <span class="op">=</span> (<span class="dv">2965</span><span class="op">*</span><span class="dv">10</span>)<span class="op">/</span><span class="dv">1000</span>  <span class="co"># [MN]</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>V_demand <span class="op">=</span> (<span class="fl">4.1</span><span class="op">+</span><span class="dv">3</span><span class="op">+</span><span class="dv">30</span><span class="op">+</span><span class="dv">38</span>)<span class="op">-</span>buoyant_contribution</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The effective vertical load is </span><span class="sc">{</span>V_demand<span class="sc">:.0f}</span><span class="ss"> MN, including the buoyancy contribution of </span><span class="sc">{</span>buoyant_contribution<span class="sc">:.0f}</span><span class="ss"> MN"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>The effective vertical load is 45 MN, including the buoyancy contribution of 30 MN</code></pre>
 </div>
 </div>
-<p>The horizontal component is simply just the sum of the loads imposed by both the wind and sea. These are normally distributed loads, although they have been converted into a representative point load at a certain point on the foundation/turbine.</p>
-<div id="701cdc07-de9b-4639-86ed-32bf8d482bde" class="cell" data-tags="[]" data-execution_count="2">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>H_demand <span class="op">=</span> <span class="fl">2.03</span><span class="op">+</span><span class="fl">8.07</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The horizontal load is </span><span class="sc">{</span>H_demand<span class="sc">:.0f}</span><span class="ss"> MN"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>The horizontal load is 10 MN</code></pre>
 </div>
+<div id="fig-caisson-suction-sand" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-caisson-suction-sand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/suction/caisson-suction-sand.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;8: Schematic of suction-assisted installation in sand"><img src="pics/suction/caisson-suction-sand.png" class="img-fluid figure-img" style="width:70.0%"></a>
 </div>
-<p>The moment load is simply these horizontal loads, multiplied by the distance away from the foundation base (i.e.&nbsp;the lever arm). For this exercise, we assume they’re just acting in the same direction, representing the worst possible case.</p>
-<div id="068b48dc-4783-44ec-99a7-8bbee094e13e" class="cell" data-tags="[]" data-execution_count="3">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>M_demand <span class="op">=</span> <span class="fl">2.03</span><span class="op">*</span><span class="dv">120</span> <span class="op">+</span> <span class="fl">8.07</span><span class="op">*</span><span class="dv">5</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The moment load is </span><span class="sc">{</span>M_demand<span class="sc">:.0f}</span><span class="ss"> MNm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>The moment load is 284 MNm</code></pre>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-caisson-suction-sand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: Schematic of suction-assisted installation in sand
+</figcaption>
+</figure>
 </div>
+<div id="fig-cofs-suction" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cofs-suction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RNaMLbshYw4?si=Ni-QzFV9mCx-h6RX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
 </div>
-</section>
-<section id="vertical-stability" class="level2">
-<h2 class="anchored" data-anchor-id="vertical-stability">2. Vertical stability</h2>
-<p>Since the foundation is directly on sand, our focus is on an effective stress analysis (assuming drained conditions). Therefore the following formula is applicable:</p>
-<p><span id="eq-qlim"><span class="math display">\[
-q_{lim} = \frac{1}{2} \gamma' B_r N_\gamma K_\gamma + \sigma'_{v0}(N_q-1)K_q + c N_c s_c i_c d_c
-\tag{1}\]</span></span></p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cofs-suction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: Lab test on a suction caisson. Check out the heave of the soil plug and the partial fluidisation of sand grains inside the caisson itself due to the low effective stress
+</figcaption>
+</figure>
 </div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Importantly, <strong>there is no surcharge load</strong> since the foundation is founded directly on the seabed. Therefore <span class="math inline">\(\sigma'_{v0}=0\)</span>, and likewise for the second term of the equation).</p>
-<p>Furthermore there is <strong>no cohesion in sand</strong> (or at least very, very little). Therefore <span class="math inline">\(c=0\)</span>, and likewise for the third term of the equation.</p>
-</div>
-</div>
-<p>We’ve a circular foundation, so the first step then is to determine the effective width <span class="math inline">\(B'\)</span>. This describes the reduced foundation area under combined horizontal/moment and vertical loading. For a circular foundation, the reduced area is semi-elliptical in-shape so for simplicity, ISO 19901-4 converts this shape to a rectangle with an equivalent area.</p>
-<p>We’ve already been provided with <span class="math inline">\(s\)</span> in <a href="#tbl-parameters" class="quarto-xref">Table&nbsp;1</a> although I’ll include my calculation of it here anyway.</p>
-<div id="1665b92f-2fd4-4ac2-815a-1426fd24eab9" class="cell" data-tags="[]" data-execution_count="4">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Geometrical parameters</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="fl">23.5</span><span class="op">/</span><span class="dv">2</span> <span class="co"># [m] Radius of the foundation</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> np.pi<span class="op">*</span>R<span class="op">**</span><span class="dv">2</span> <span class="co"># [m2]</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>e <span class="op">=</span> M_demand<span class="op">/</span>V_demand <span class="co"># Load eccentricity</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> (np.pi<span class="op">*</span>R<span class="op">**</span><span class="dv">2</span>)<span class="op">/</span><span class="dv">2</span> <span class="op">-</span> (e<span class="op">*</span>np.sqrt(R<span class="op">**</span><span class="dv">2</span><span class="op">-</span>e<span class="op">**</span><span class="dv">2</span>) <span class="op">+</span> R<span class="op">**</span><span class="dv">2</span> <span class="op">*</span> np.arcsin(e<span class="op">/</span>R))</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>L_eff <span class="op">=</span> np.sqrt(<span class="dv">2</span><span class="op">*</span>s<span class="op">*</span>np.sqrt((R<span class="op">+</span>e)<span class="op">/</span>(R<span class="op">-</span>e)))</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>B_eff <span class="op">=</span> L_eff <span class="op">*</span> np.sqrt((R<span class="op">-</span>e)<span class="op">/</span>(R<span class="op">+</span>e))</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>A_eff <span class="op">=</span> B_eff<span class="op">*</span>L_eff</span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The effective area is </span><span class="sc">{</span>A_eff<span class="sc">:.0f}</span><span class="ss"> m2 (true area = </span><span class="sc">{</span>A<span class="sc">:.0f}</span><span class="ss">m2)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>The effective area is 155 m2 (true area = 434m2)</code></pre>
-</div>
-</div>
-<p>This is quite a large reduction in the soil/foundation contact zone! This is unsurprising to some extent: wind turbines are designed to catch as much horizontal load (wind) after all. But if we were to go beyond this simple example, this potential conservatism may warrant further investigation into the prevailing wind and current patterns and into more complex numerical or physical models.</p>
-<p>Next up are the bearing capacity factors <span class="math inline">\(N_q\)</span> and <span class="math inline">\(N_\gamma\)</span>. The bearing capacity correction factors <span class="math inline">\(K_q\)</span>, <span class="math inline">\(K_\gamma\)</span> have already been included in <a href="#tbl-parameters" class="quarto-xref">Table&nbsp;1</a>, although but the calculation is included below.</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Don’t forget to include the model factor <span class="math inline">\(\gamma_m\)</span> any time a soil parameter is used! This accounts for any uncertainties we have in the soil properties, be it measurement uncertainty or inherent soil variability.</p>
-</div>
-</div>
-<div id="42742d27-4932-4424-bf39-d765dede7c29" class="cell" data-tags="[]" data-execution_count="25">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Soil parameters</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>friction_angle <span class="op">=</span> np.radians(<span class="dv">32</span>)</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>model_factor <span class="op">=</span> <span class="fl">1.25</span> <span class="co"># gamma_m, to be applied to any soil properties</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>unit_weight <span class="op">=</span> <span class="dv">20</span> <span class="co"># Saturated unit weight [kN/m3]</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>unit_weight_eff <span class="op">=</span> <span class="dv">20</span><span class="op">-</span><span class="dv">10</span> <span class="co"># Effective unit weight [kN/m3]</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>delta <span class="op">=</span> np.radians(<span class="dv">29</span>) <span class="co"># Interface friction angle</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Bearing capacity factors</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>Nq <span class="op">=</span> (np.tan(np.pi<span class="op">/</span><span class="dv">4</span> <span class="op">+</span> <span class="fl">0.5</span><span class="op">*</span>np.arctan(np.tan(friction_angle)<span class="op">/</span>model_factor))<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>(np.exp(np.pi<span class="op">*</span>(np.tan(friction_angle)<span class="op">/</span>model_factor)))</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Nq = </span><span class="sc">{</span>Nq<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>Ngamma <span class="op">=</span> (<span class="dv">3</span><span class="op">/</span><span class="dv">2</span>)<span class="op">*</span>(Nq<span class="op">-</span><span class="dv">1</span>)<span class="op">*</span>(np.tan(friction_angle)<span class="op">/</span>model_factor)</span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Ngamma = </span><span class="sc">{</span>Ngamma<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Bearing capacity correction factors (Already provided in table)</span></span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>igamma <span class="op">=</span> <span class="dv">1</span><span class="op">-</span><span class="fl">0.7</span><span class="op">*</span>(H_demand<span class="op">/</span>V_demand)<span class="op">**</span><span class="dv">5</span></span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>sgamma <span class="op">=</span> <span class="dv">1</span><span class="op">-</span><span class="fl">0.4</span><span class="op">*</span>igamma<span class="op">*</span>(B_eff<span class="op">/</span>L_eff)</span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>dgamma <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>Kgamma <span class="op">=</span> sgamma<span class="op">*</span>dgamma<span class="op">*</span>igamma</span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Kgamma = </span><span class="sc">{</span>Kgamma<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>Nq = 12.59
-Ngamma = 8.69
-Kgamma = 0.78</code></pre>
-</div>
-</div>
-<p>Finally, we put this all into <a href="#eq-qlim" class="quarto-xref">Equation&nbsp;1</a>. Since <span class="math inline">\(q_{lim}\)</span> is not overly useful by itself, so we’ll convert it to a force in kN. This is still done using the effective area.</p>
-<div id="8a2ef891-c17f-4d6c-94bb-085d4266617b" class="cell" data-tags="[]" data-execution_count="27">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>qlim <span class="op">=</span> <span class="fl">0.5</span><span class="op">*</span>unit_weight_eff<span class="op">*</span>B_eff<span class="op">*</span>Ngamma<span class="op">*</span>Kgamma <span class="co"># kPa</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>V_capacity <span class="op">=</span> (qlim<span class="op">*</span>A_eff)<span class="op">/</span><span class="dv">1000</span> <span class="co"># MN</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The vertical capacity is </span><span class="sc">{</span>V_capacity<span class="sc">:.0f}</span><span class="ss"> MN"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>The vertical capacity is 48 MN</code></pre>
-</div>
-</div>
-</section>
-<section id="resistance-for-sliding" class="level2">
-<h2 class="anchored" data-anchor-id="resistance-for-sliding">3. Resistance for sliding</h2>
-<p>The resistance to sliding is relatively straightforward to determine for a foundation with no embedment. To do this for sand, we take an effective stress analysis whereby:</p>
+<p>Delving into the mechanisms of suction-assisted installation a bit further, any time we have flow through a medium, we also have a loss of energy. As stated by Darcy’s Law:</p>
 <p><span class="math display">\[
-H_{ult} = V' \frac{\tan{\delta}}{\gamma_m}
+v = k \frac{\Delta h}{L} = ki
 \]</span></p>
-<div class="callout callout-style-default callout-important callout-titled" title="Correction 12/10/25">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Correction 12/10/25
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>I incorrectly stated in the lecture notes that:</p>
+<p>where <span class="math inline">\(k\)</span> is the permeability, <span class="math inline">\(\Delta h\)</span> is the change in hydraulic head, <span class="math inline">\(L\)</span> is the length of the flow path and <span class="math inline">\(i\)</span> is the hydraulic gradient.</p>
+<p>Ideally, we would model the seepage path as a function of the permeability <span class="math inline">\(k\)</span>, but there’s a couple of problems in doing so when modelling a penetrating caisson:</p>
+<ol type="1">
+<li>The density of the soil changes both inside and outside the caisson—and therefore also the permeability</li>
+<li>The penetrating caisson also affects the seepage path length</li>
+</ol>
+<p>As one solution to this problem, <span class="citation" data-cites="houlsbyDesignProceduresInstallation2005">Houlsby and Byrne (<a href="#ref-houlsbyDesignProceduresInstallation2005" role="doc-biblioref">2005</a>)</span> proposed taking the absolute pressure at the caisson tip as:</p>
 <p><span class="math display">\[
-H_{ult} = A_r (V' \tan{\delta})
+p_{tip} = p_a + \gamma_w(h_w + h) - \textcolor{red}{a}s
 \]</span></p>
-<p>This has now been corrected in this example, resulting in a much lower (but still safe) horizontal capacity.</p>
-</div>
-</div>
-<div id="ca4eb68f-2666-4c18-82e6-5f7f7003d74d" class="cell" data-tags="[]" data-execution_count="35">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>H_capacity <span class="op">=</span> (V_demand <span class="op">*</span> np.tan(delta)<span class="op">/</span>model_factor)</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The horizontal capacity is </span><span class="sc">{</span>H_capacity<span class="sc">:.0f}</span><span class="ss"> MN"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>The horizontal capacity is 20 MN</code></pre>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Bonus: Moment check">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<p>where <span class="math inline">\(a\)</span> is a factor that describes the reduction in suction pressure between the top and bottom of the caisson. This means that the upward hydraulic gradient <span class="math inline">\(i\)</span> inside the caisson is <span class="math inline">\((1-a)s/\gamma_w h\)</span> and the downward hydraulic gradient is <span class="math inline">\(as/\gamma_w h\)</span>.</p>
+<p>If <span class="math inline">\(a=0.50\)</span>, then the hydraulic gradient both inside and outside the caisson is the same—and likewise so is the change in effective stress.</p>
+<p>However, flow within the caisson is much more constrained compared to outside the caisson and so <span class="math inline">\(a\)</span> is often less than 0.50. This means that there’s a higher hydraulic gradient inside the caisson then outside and so the <strong>reduction in effective stress inside the caisson is greater than the increase in effective stress outside the caisson</strong>.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Quick note on the pore pressure factor $a$">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Bonus: Moment check
+Quick note on the pore pressure factor <span class="math inline">\(a\)</span>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>This wasn’t requested in the initial brief, but as a quick check of the moments, we can compare the overturning moments (by wind and waves) to the restoring moments (self-weight of the structure) by:</p>
+<p>Of course, it isn’t always that simple. Consider the numerical studies shown in <a href="#fig-pore-pressure-factor" class="quarto-xref">Figure&nbsp;10</a>, which shows that <span class="math inline">\(a\)</span> even changes with the caisson penetration. This also shows results as a function of <span class="math inline">\(k_f\)</span> which describes the initial permeabilities both inside and outside the caisson (<span class="math inline">\(k_f = k_i/k_o\)</span>).</p>
+<div id="fig-pore-pressure-factor" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pore-pressure-factor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/suction/houlsby-fig4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figure&nbsp;10: Variation of the pore pressure factor a with h/d and k_f [@houlsbyDesignProceduresInstallation2005]"><img src="pics/suction/houlsby-fig4.png" class="img-fluid figure-img" style="width:60.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pore-pressure-factor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10: Variation of the pore pressure factor <span class="math inline">\(a\)</span> with <span class="math inline">\(h/d\)</span> and <span class="math inline">\(k_f\)</span> <span class="citation" data-cites="houlsbyDesignProceduresInstallation2005">(<a href="#ref-houlsbyDesignProceduresInstallation2005" role="doc-biblioref">Houlsby and Byrne 2005</a>)</span>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>To consider this in an effective stress method for piles, let’s first look at the basic equation for a pile (or self-weight penetration of a caisson):</p>
+<p><span id="eq-effective-stress-method"><span class="math display">\[
+V' =
+\underbrace{\frac{\gamma'h^2}{2} (K \tan{\delta})_o(\pi D_o)}_{\text{Outer shaft friction}} +
+\underbrace{\frac{\gamma'h^2}{2} (K \tan{\delta})_i(\pi D_i)}_{\text{Inner shaft friction}} +
+\underbrace{(\gamma' h N_q + \gamma' \frac{t}{2} N_\gamma )(\pi D t)}_{\text{End-bearing on annulus}}
+\tag{3}\]</span></span></p>
+<p>In this equation, the shaft friction is modelled as the total applied horizontal stress on the outer and inner walls (i.e.&nbsp;<span class="math inline">\(\sigma'_v K \tan{\delta}\)</span>). To adjust this equation to account for seepage flow, we adjust the stress term <span class="math inline">\(\sigma'_v\)</span>. For simplicity, we’ll just adjust the unit weight term whereby:</p>
 <p><span class="math display">\[
-F h = V' D
-\]</span> where <span class="math inline">\(h\)</span> is the distance from the pile base to the point upon which the force <span class="math inline">\(F\)</span> acts.</p>
-<p>Therefore:</p>
-<div id="f443930d-e11a-4d1a-9dee-282c97e2a12d" class="cell" data-tags="[]" data-execution_count="36">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>restoring_moment <span class="op">=</span> V_demand <span class="op">*</span> R</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>overturning_moments <span class="op">=</span> <span class="fl">2.03</span><span class="op">*</span><span class="dv">120</span> <span class="op">+</span> <span class="fl">8.07</span><span class="op">*</span><span class="dv">5</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Restoring moment = </span><span class="sc">{</span>restoring_moment<span class="sc">:.0f}</span><span class="ss"> MNm"</span>)</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Overturning moment = </span><span class="sc">{</span>overturning_moments<span class="sc">:.0f}</span><span class="ss"> MNm"</span>)</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>      </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>Restoring moment = 534 MNm
-Overturning moment = 284 MNm</code></pre>
-</div>
-</div>
-<p>The restoring moment is greater than the overturning moment, so we’re ok!</p>
-</div>
-</div>
-</div>
-<!-- #End of Quarto callout -->
+\gamma'_o = \gamma'  + \frac{as}{h}
+\]</span></p>
+<p><span class="math display">\[
+\gamma'_i = \gamma'  - \frac{(1-a)s}{h}
+\]</span></p>
+<p>Just like clay, the left-hand side of the equation is also adjusted to accounted for the lower pressure between the mudline and the top of the caisson. The overburden stress will also need to adjusted in the end-bearing term, leading to:</p>
+<p><span id="eq-effective-stress-method"><span class="math display">\[
+V' \textcolor{red}{+ s(\frac{\pi D_i^2}{4})} =
+\frac{\textcolor{red}{\gamma'_o}h^2}{2} (K \tan{\delta})_o(\pi D_o) +
+\frac{\textcolor{red}{\gamma'_i}h^2}{2} (K \tan{\delta})_i(\pi D_i) +
+(\textcolor{red}{\gamma'_i} h N_q + \gamma' \frac{t}{2} N_\gamma)(\pi D t)
+\tag{4}\]</span></span></p>
+<p>Keep in mind that this equation is very much a simplification of what’s going on. Differences in effective stress both inside and outside the caisson will affect the asymmetry of the distributed load on the annulus. Moreover, the equation also does not account for the enhancement in stress caused by caisson displacing the soil laterally, as well as the internal restraint on the plug.</p>
+<p>More detail into analytical formulations for suction caissons is provided in <span class="citation" data-cites="houlsbyDesignProceduresInstallation2005">Houlsby and Byrne (<a href="#ref-houlsbyDesignProceduresInstallation2005" role="doc-biblioref">2005</a>)</span>.</p>
 </section>
-<section id="improvements-to-the-design" class="level2">
-<h2 class="anchored" data-anchor-id="improvements-to-the-design">4. Improvements to the design</h2>
-<p>Let’s look at our unity checks:</p>
-<div id="b3b4d3e2-b7cd-4140-a5bf-391650e53f03" class="cell" data-tags="[]" data-execution_count="37">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"V_demand/V_capacity = </span><span class="sc">{</span>V_demand<span class="op">/</span>V_capacity<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"H_demand/H_capacity = </span><span class="sc">{</span>H_demand<span class="op">/</span>H_capacity<span class="sc">:.3f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>V_demand/V_capacity = 0.94
-H_demand/H_capacity = 0.501</code></pre>
+<section id="layered-soils" class="level2">
+<h2 class="anchored" data-anchor-id="layered-soils">Layered soils</h2>
+<p>Of course, homogeneous sand or clay layers are seldom found in practice, especially for long suction piles that penetrate to depths of up to 30m.</p>
+<p>For a more detailed assessment, particularly regarding installation prediction, check out <span class="citation" data-cites="klinkvortPenetrationModelInstallation2019">Klinkvort, Sturm, and Andersen (<a href="#ref-klinkvortPenetrationModelInstallation2019" role="doc-biblioref">2019</a>)</span>.</p>
+<section id="clay-overlying-sand" class="level3">
+<h3 class="anchored" data-anchor-id="clay-overlying-sand">Clay overlying sand</h3>
+<p>A common assumption is that seepage flow won’t develop when a clay layer overlies sand, since the clay acts as an impermeable barrier between the pump and underlying sand. However, there are a couple of reasons as to why seepage flow through a clay layer overlying sand, and this all depends on the clay’s stiffness and thickness.</p>
+<p>Firstly, a reduction in the compartment pressure may lead to uplift of the clay layer itself (<a href="#fig-uplift" class="quarto-xref">Figure&nbsp;11</a>). This will happen when the pressure underneath the clay layer exceeds both the compartment pressure and the adhesion between the clay layer and the caisson. This is often accompanied by gapping between the clay layer and the skirt, allowing for a seepage path to develop around the clay layer.</p>
+<p>Alternatively, if the pressure differential on either side of the clay layer gets high enough, the clay layer might crack—especially for stiff, fissureable clay. This can also happen simultaneously with plug uplift.</p>
+<div id="fig-uplift" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-uplift-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/suction/plug-uplift.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Figure&nbsp;11: Plug uplift observed during particle image velocimetry (PIV) tests by @ragniObservationsEffectsClay2020"><img src="pics/suction/plug-uplift.png" class="img-fluid figure-img" style="width:80.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-uplift-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11: Plug uplift observed during particle image velocimetry (PIV) tests by <span class="citation" data-cites="ragniObservationsEffectsClay2020">Ragni et al. (<a href="#ref-ragniObservationsEffectsClay2020" role="doc-biblioref">2020</a>)</span>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="sand-overlying-clay" class="level3">
+<h3 class="anchored" data-anchor-id="sand-overlying-clay">Sand overlying clay</h3>
+<p>When sand overlies clay, no flow would expected once the caisson reaches the clay layer. Therefore, the effect of seepage flow on reducing the effective stress inside the caisson and underneath the caisson tip will not present.</p>
+<p>However, since the clay layer often provides a lower resistance compared to sand, some additional penetration through the clay layer would be expected—although this depends on the relative contributions of the soil resistance and pressure differential between inside and outside the caisson.</p>
+</section>
+</section>
+<section id="cpt-based-design" class="level2">
+<h2 class="anchored" data-anchor-id="cpt-based-design">CPT-based design</h2>
+<p>CPT-based methods for forecasting suction caisson installation are comparable to SRD formulations for piles—and often the SRD methods are used themselves with some modifications.</p>
+<p>DNV-RP-E303 provides a method designed specifically for suction caissons, based on a database of stiff clays and dense sands in the North Sea:</p>
+<p><span class="math display">\[
+R_b(z) = A_{tip} k_p(z) q_c(z)
+\]</span></p>
+<p><span class="math display">\[
+R_s(z) = A_{wall}(z) \int_0^z k_f(z) q_c(z) dz
+\]</span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Soil type</th>
+<th>Estimate</th>
+<th><span class="math inline">\(k_p\)</span></th>
+<th><span class="math inline">\(k_f\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Sand</td>
+<td>Most Probable</td>
+<td>0.30</td>
+<td>0.001</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>High Estimate</td>
+<td>0.60</td>
+<td>0.003</td>
+</tr>
+<tr class="odd">
+<td>Clay</td>
+<td>Most Probable</td>
+<td>0.40</td>
+<td>0.030</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>High Estimate</td>
+<td>0.60</td>
+<td>0.050</td>
+</tr>
+<tr class="odd">
+<td>Silt</td>
+<td>Most Probable</td>
+<td>0.35</td>
+<td>0.015</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>High Estimate</td>
+<td>0.60</td>
+<td>0.020</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="limitations-to-suction-installation" class="level2">
+<h2 class="anchored" data-anchor-id="limitations-to-suction-installation">Limitations to suction installation</h2>
+<section id="cavitation" class="level3">
+<h3 class="anchored" data-anchor-id="cavitation">Cavitation</h3>
+<p><strong>Cavitation</strong> describes the absolute pressure at which water turns into a vapour, resulting in the prdocution of cavities (or bubbles) in the water body. When these cavities go from a region of low pressure to high pressure through the pump, they may suddenly collapse—generating shockwaves which can severely damage the pump itself.</p>
+<p>For sea temperatures of 10-20°C, the cavitation point would be expected at around 1 to 2 kPa. Therefore, for installation we need to ensure that:</p>
+<p><span id="eq-cavitation"><span class="math display">\[
+p_a + \gamma_w h_w - s \ge 2 \text{kPa}
+\tag{5}\]</span></span></p>
+</section>
+<section id="piping" class="level3">
+<h3 class="anchored" data-anchor-id="piping">Piping</h3>
+<p>Piping (also known as ratholing) is one of the most critical limitations to suction installation in sand. Piping occurs when the upward seepage pressure equals the effective unit weight:</p>
+<p><span id="eq-piping"><span class="math display">\[
+\gamma' = \frac{\gamma_w (1-a)s}{\gamma_w h}
+\tag{6}\]</span></span></p>
+<p>Once this point is reached, a channel of sand particles is lifted up and taken along with the flow path, resutling in a complete destructuration of soil both inside and outside the caisson.</p>
+<p>In some sense, piping can be viewed as beneficial for installation, since the effective stress inside and outside the caisson is significantly reduced. However, piping can create excessive inclination in the foundation itself and it also becomes difficult to apply suction again once piping occurs. Moreover, there’ll be even more uncertainty regarding the soil conditions around the caisson, potentially creating issues for the capacity of the structure after installation.</p>
+<p>All-in-all, suction-assisted installation is about striking a balance between creating enough seepage, without letting piping occur</p>
+<div id="fig-piping" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-piping-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/suction/piping.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Figure&nbsp;12: Piping underneath a model dam (Real Engineering)"><img src="pics/suction/piping.gif" class="img-fluid figure-img" style="width:70.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-piping-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12: Piping underneath a model dam <a href="https://www.youtube.com/watch?v=eImtYyuQCZ8">(Real Engineering)</a>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="structural-failure" class="level3">
+<h3 class="anchored" data-anchor-id="structural-failure">Structural failure</h3>
+<p><strong>Structural failure</strong> may occur if the water and lateral earth pressure outside the caisson exceeds that within the caisson. Webs and stiffners are often included on the caisson to prevent this, although these may also add an additional resistance component, particularly in the case of joined stiffners (<a href="#fig-webs-stiffeners" class="quarto-xref">Figure&nbsp;13 (b)</a>).</p>
+<div id="fig-marine-zones" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-marine-zones-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-marine-zones" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-buckling" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-buckling-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/suction/buckling-wilhelmshaven.jpg" class="lightbox" data-gallery="fig-marine-zones" title="Figure&nbsp;13&nbsp;(a): Inward buckling of a caossion at Wilhelmshaven [@madsenNumericalBucklingAnalysis2013]"><img src="pics/suction/buckling-wilhelmshaven.jpg" class="img-fluid figure-img" style="width:80.0%" data-ref-parent="fig-marine-zones"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-buckling-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Inward buckling of a caossion at Wilhelmshaven <span class="citation" data-cites="madsenNumericalBucklingAnalysis2013">(<a href="#ref-madsenNumericalBucklingAnalysis2013" role="doc-biblioref">Madsen, Andersen, and Ibsen 2013</a>)</span>
+</figcaption>
+</figure>
 </div>
 </div>
-<p>Clearly, we have zero issues here with the horizontal capacity. Generally, drained conditions in sand don’t pose an issue to horizontal stability. However, the horizontal capacity begins to become more critical in undrained scenarios. Of course, this will include foundation capacity in clay, however, undrained scenarios can even occur in sands under the short duration of a single wave load. Therefore both drained and undrained checks are recommended when performing a full foundation calculation.</p>
-<p>Even more importantly, the vertical capacity is <em>reallllllyyyy</em> close to the final design load. If we also take into account cyclic loading and corresponding degradation, we could well be approaching ULS failure. Surely this can’t be the case?</p>
-<p>Well there’s a couple of things we’re missing:</p>
-<ul>
-<li>We don’t have the full details of the loads provided. Have these been factored? Are they absolutely the worst-case scenario?</li>
-<li>We’ve also just assumed that the foundation rests on the seabed yet in reality, there the foundation is embedded underneath 3.5m of fill.</li>
-</ul>
-<p>If we want to improve the design, some foundation embedment may be required. And in reality, this is exactly what was done at Thornton Bank: the foundation was indeed embedded under both a fill and scour protection layer (<a href="#fig-thornton-bank-structure" class="quarto-xref">Figure&nbsp;2</a>).</p>
-<p>If we include embedment into our calculation, the effective stress is therefore no longer zero at the base of the foundation. This means the second (surcharge) term of <a href="#eq-qlim" class="quarto-xref">Equation&nbsp;1</a> comes in to play. The first term remains the same.</p>
-<div id="724ed772-4ec5-4622-ac14-38119173b447" class="cell" data-tags="[]" data-execution_count="43">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>embedment <span class="op">=</span> <span class="fl">3.5</span> <span class="co"># [m]</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>water_depth <span class="op">=</span> <span class="dv">30</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>sig_eff <span class="op">=</span> unit_weight_eff<span class="op">*</span>embedment</span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Effective stress at foundation base = </span><span class="sc">{</span>sig_eff<span class="sc">:.0f}</span><span class="ss">kPa"</span>)</span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Bearing capacity factor</span></span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>Nq <span class="op">=</span> (np.tan(np.pi<span class="op">/</span><span class="dv">4</span> <span class="op">+</span> <span class="fl">0.5</span><span class="op">*</span>np.arctan(np.tan(friction_angle)<span class="op">/</span>model_factor))<span class="op">**</span><span class="dv">2</span>) <span class="op">*</span> np.exp(np.pi<span class="op">*</span>(np.tan(friction_angle)<span class="op">/</span>model_factor))</span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Nq = </span><span class="sc">{</span>Nq<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>iq <span class="op">=</span> <span class="dv">1</span><span class="op">-</span><span class="fl">0.5</span><span class="op">*</span>(H_demand<span class="op">/</span>V_demand)<span class="op">**</span><span class="dv">5</span></span>
-<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>sq <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> iq<span class="op">*</span>(B_eff<span class="op">/</span>L_eff) <span class="op">*</span> np.sin(np.arctan(np.tan(friction_angle)<span class="op">/</span>model_factor))</span>
-<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>dq <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> <span class="fl">1.2</span><span class="op">*</span>(R<span class="op">*</span><span class="dv">2</span><span class="op">/</span>B_eff) <span class="op">*</span> (np.tan(friction_angle)<span class="op">/</span>model_factor) <span class="op">*</span> (<span class="dv">1</span><span class="op">-</span>np.sin(np.arctan(np.tan(friction_angle)<span class="op">/</span>model_factor)))<span class="op">**</span><span class="dv">2</span></span>
-<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>Kq <span class="op">=</span> sq<span class="op">*</span>dq<span class="op">*</span>iq</span>
-<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Kq = </span><span class="sc">{</span>Kq<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
-<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>qlim <span class="op">=</span> <span class="fl">0.5</span><span class="op">*</span>unit_weight_eff<span class="op">*</span>B_eff<span class="op">*</span>Ngamma<span class="op">*</span>Kgamma <span class="op">+</span> sig_eff<span class="op">*</span>(Nq<span class="op">-</span><span class="dv">1</span>)<span class="op">*</span>Kq <span class="co"># kPa</span></span>
-<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>V_capacity_embedded <span class="op">=</span> (qlim<span class="op">*</span>A_eff)<span class="op">/</span><span class="dv">1000</span> <span class="co"># MN</span></span>
-<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
-<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The vertical capacity after embedment is </span><span class="sc">{</span>V_capacity_embedded<span class="sc">:.0f}</span><span class="ss"> MN"</span>)</span>
-<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"V_demand/V_capacity = </span><span class="sc">{</span>V_demand<span class="op">/</span>V_capacity_embedded<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>Effective stress at foundation base = 35kPa
-Nq = 12.59
-Kq = 1.83
-
-The vertical capacity after embedment is 163 MN
-V_demand/V_capacity = 0.28</code></pre>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-marine-zones" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-webs-stiffeners" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-webs-stiffeners-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="pics/suction/webs-stiffeners.png" class="lightbox" data-gallery="fig-marine-zones" title="Figure&nbsp;13&nbsp;(b): Webs and stiffeners [@randolphOffshoreGeotechnicalEngineering2011]"><img src="pics/suction/webs-stiffeners.png" class="img-fluid figure-img" data-ref-parent="fig-marine-zones"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-webs-stiffeners-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Webs and stiffeners <span class="citation" data-cites="randolphOffshoreGeotechnicalEngineering2011">(<a href="#ref-randolphOffshoreGeotechnicalEngineering2011" role="doc-biblioref">Randolph and Gouvernec 2011</a>)</span>
+</figcaption>
+</figure>
 </div>
 </div>
-<p>This is much better! This also gives “reserve capacity” when we start looking at long-term capacity, particularly under cyclic loading.</p>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-marine-zones-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13: Structural considerations for suction caissons
+</figcaption>
+</figure>
+</div>
 
 
 
@@ -1125,8 +1088,20 @@ V_demand/V_capacity = 0.28</code></pre>
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-peireGravityBaseFoundations2009" class="csl-entry" role="listitem">
-Peire, Kenneth, Hendrik Nonneman, and Eric Bosschem. 2009. <span>“Gravity Base Foundations for the <span>Thornton Bank</span> Offshore Wind Farm.”</span> <em>Terre Et Aqua</em>, no. 115: 19–29.
+<div id="ref-houlsbyDesignProceduresInstallation2005" class="csl-entry" role="listitem">
+Houlsby, G. T., and B. W. Byrne. 2005. <span>“Design Procedures for Installation of Suction Caissons in Sand.”</span> <em>Proceedings of the Institution of Civil Engineers - Geotechnical Engineering</em> 158 (3): 135–44. <a href="https://doi.org/10.1680/geng.2005.158.3.135">https://doi.org/10.1680/geng.2005.158.3.135</a>.
+</div>
+<div id="ref-klinkvortPenetrationModelInstallation2019" class="csl-entry" role="listitem">
+Klinkvort, Rasmus Tofte, Hendrik Sturm, and Knut H. Andersen. 2019. <span>“Penetration Model for Installation of Skirted Foundations in Layered Soils.”</span> <em>Journal of Geotechnical and Geoenvironmental Engineering</em> 145 (10): 04019085. <a href="https://doi.org/10.1061/(ASCE)GT.1943-5606.0002106">https://doi.org/10.1061/(ASCE)GT.1943-5606.0002106</a>.
+</div>
+<div id="ref-madsenNumericalBucklingAnalysis2013" class="csl-entry" role="listitem">
+Madsen, S., L. V. Andersen, and L. B. Ibsen. 2013. <span>“Numerical Buckling Analysis of Large Suction Caissons for Wind Turbines on Deep Water.”</span> <em>Engineering Structures</em> 57 (December): 443–52. <a href="https://doi.org/10.1016/j.engstruct.2013.09.041">https://doi.org/10.1016/j.engstruct.2013.09.041</a>.
+</div>
+<div id="ref-ragniObservationsEffectsClay2020" class="csl-entry" role="listitem">
+Ragni, Raffaele, Britta Bienen, Conleth D. O’Loughlin, Samuel A. Stanier, Mark J. Cassidy, and Neil Morgan. 2020. <span>“Observations of the Effects of a Clay Layer on Suction Bucket Installation in Sand.”</span> <em>Journal of Geotechnical and Geoenvironmental Engineering</em> 146 (5): 04020020. <a href="https://doi.org/10.1061/(ASCE)GT.1943-5606.0002217">https://doi.org/10.1061/(ASCE)GT.1943-5606.0002217</a>.
+</div>
+<div id="ref-randolphOffshoreGeotechnicalEngineering2011" class="csl-entry" role="listitem">
+Randolph, M. F., and Susan Gouvernec. 2011. <em>Offshore <span>Geotechnical Engineering</span></em>. Oxford, United Kingdom: Spon Press. <a href="https://doi.org/10.1201/9781315272474">https://doi.org/10.1201/9781315272474</a>.
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
